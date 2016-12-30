@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Servers>
+	<Putty>
+		<Node Type="0" Expanded="1">
+			<DisplayName>vbox</DisplayName>
+			<Node Type="1">
+				<SavedSession>Default Settings</SavedSession>
+				<DisplayName>vbox debian32 ip20</DisplayName>
+				<ServerName>192.168.56.20</ServerName>
+				<PuttyConType>4</PuttyConType>
+				<Port>0</Port>
+				<UserName>tboqi</UserName>
+				<Password>scu68ifB2dQ=</Password>
+				<PasswordDelay>0</PasswordDelay>
+				<CLParams>192.168.56.20 -ssh -l tboqi -pw *****</CLParams>
+				<ScriptDelay>0</ScriptDelay>
+			</Node>
+		</Node>
+	</Putty>
+</Servers>
