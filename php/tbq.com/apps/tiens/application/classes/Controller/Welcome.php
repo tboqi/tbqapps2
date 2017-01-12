@@ -27,6 +27,7 @@ class Controller_Welcome extends Controller_Base {
                     ["url" => URL::site('qianbao/chongzhi'), "text" => "充值"],
                     ["url" => URL::site('qianbao/tuihuo'), "text" => "退货退款"],
                     ["url" => URL::site('qianbao/duizhang'), "text" => "对账文件接口"],
+                    ["url" => URL::site('qianbao/dongjie'), "text" => "冻结"],
                 ],
             ],
         ];
