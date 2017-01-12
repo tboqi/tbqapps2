@@ -17,13 +17,7 @@ class Controller_Qianbao extends Controller_Base {
         $this->data = [];
     }
 
-    public function action_do_dongjie() {
-        $header = $_POST['head'];
-        $body_data = $_POST['body'];
-        $body_data['sign'] = $this->parse_sign($body_data);
-        $data = ['header' => $header, 'body' => $body_data];
-        $data_string = json_encode($data);
-
+    private function curl_post($data_string) {
         $url = $this->qianbao_pre_url . '/api/wallet.do';
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -40,7 +34,17 @@ class Controller_Qianbao extends Controller_Base {
         //curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2); // 检查证书中是否设置域名，并且是否与提供的主机名匹配
 
         $result = curl_exec($ch);
+        return $result;
+    }
 
+    public function action_do_dongjie() {
+        $header = $_POST['head'];
+        $body_data = $_POST['body'];
+        $body_data['sign'] = $this->parse_sign($body_data);
+        $data = ['header' => $header, 'body' => $body_data];
+        $data_string = json_encode($data);
+
+        $result = $this->curl_post($data_string);
         echo 'postData:<br>' . $data_string . '<hr>';
         echo 'url:<br>' . $url . '<hr>';
         echo 'return data:<br>' . $result . '<hr>';
@@ -53,23 +57,7 @@ class Controller_Qianbao extends Controller_Base {
         $body_data['sign'] = $this->parse_sign($body_data);
         $data = ['header' => $header, 'body' => $body_data];
         $data_string = json_encode($data);
-
-        $url = $this->qianbao_pre_url . '/api/wallet.do';
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_FAILONERROR, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json',
-            'Content-Length: ' . strlen($data_string))
-        );
-        $cacert = getcwd() . '/truststore.jks'; //CA根证书
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // 只信任CA颁布的证书
-        //curl_setopt($ch, CURLOPT_CAINFO, $cacert); // CA根证书（用来验证的网站证书是否是CA颁布）
-        //curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2); // 检查证书中是否设置域名，并且是否与提供的主机名匹配
-
-        $result = curl_exec($ch);
+        $result = $this->curl_post($data_string);
 
         echo 'postData:<br>' . $data_string . '<hr>';
         echo 'url:<br>' . $url . '<hr>';
@@ -88,23 +76,7 @@ class Controller_Qianbao extends Controller_Base {
         $body_data['sign'] = $this->parse_sign($body_data);
         $data = ['header' => $header, 'body' => $body_data];
         $data_string = json_encode($data);
-
-        $url = $this->qianbao_pre_url . '/api/wallet.do';
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_FAILONERROR, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json',
-            'Content-Length: ' . strlen($data_string))
-        );
-        $cacert = getcwd() . '/truststore.jks'; //CA根证书
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // 只信任CA颁布的证书
-        //curl_setopt($ch, CURLOPT_CAINFO, $cacert); // CA根证书（用来验证的网站证书是否是CA颁布）
-        //curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2); // 检查证书中是否设置域名，并且是否与提供的主机名匹配
-
-        $result = curl_exec($ch);
+        $result = $this->curl_post($data_string);
 
         echo 'postData:<br>' . $data_string . '<hr>';
         echo 'url:<br>' . $url . '<hr>';
@@ -124,23 +96,7 @@ class Controller_Qianbao extends Controller_Base {
         $body_data['sign'] = $this->parse_sign($body_data);
         $data = ['header' => $header, 'body' => $body_data];
         $data_string = json_encode($data);
-
-        $url = $this->qianbao_pre_url . '/api/wallet.do';
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_FAILONERROR, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json',
-            'Content-Length: ' . strlen($data_string))
-        );
-        $cacert = getcwd() . '/truststore.jks'; //CA根证书
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // 只信任CA颁布的证书
-        //curl_setopt($ch, CURLOPT_CAINFO, $cacert); // CA根证书（用来验证的网站证书是否是CA颁布）
-        //curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2); // 检查证书中是否设置域名，并且是否与提供的主机名匹配
-
-        $result = curl_exec($ch);
+        $result = $this->curl_post($data_string);
 
         echo 'postData:<br>' . $data_string . '<hr>';
         echo 'url:<br>' . $url . '<hr>';
