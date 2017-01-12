@@ -2,13 +2,13 @@
 <html>
 <head>
 <title>表单插件</title>
-<link href="http://tbq_ligerui.com/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
-<link href="http://tbq_ligerui.com/lib/ligerUI/skins/Gray2014/css/all.css" rel="stylesheet" />
-<script src="http://tbq_ligerui.com/lib/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
-<script src="http://tbq_ligerui.com/lib/ligerUI/js/ligerui.all.js"></script>
-<script src="http://tbq_ligerui.com/lib/jquery-validation/jquery.validate.min.js"></script>
-<script src="http://tbq_ligerui.com/lib/jquery-validation/jquery.metadata.js"></script>
-<script src="http://tbq_ligerui.com/lib/jquery-validation/messages_cn.js"></script>
+<link href="http://tbq_static.com/ligerui/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+<link href="http://tbq_static.com/ligerui/lib/ligerUI/skins/Gray2014/css/all.css" rel="stylesheet" />
+<script src="http://tbq_static.com/ligerui/lib/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script src="http://tbq_static.com/ligerui/lib/ligerUI/js/ligerui.all.js"></script>
+<script src="http://tbq_static.com/ligerui/lib/jquery-validation/jquery.validate.min.js"></script>
+<script src="http://tbq_static.com/ligerui/lib/jquery-validation/jquery.metadata.js"></script>
+<script src="http://tbq_static.com/ligerui/lib/jquery-validation/messages_cn.js"></script>
 <script type="text/javascript">
 //$(document).ready(function() {
 //    $("#form1").ligerForm({

@@ -96,7 +96,7 @@ padding: 5px;
     <table>
 		<tr>
 			<td><label>key：</label>
-			<td><input type="text" value="4d2e92068ffb8f6aacfa5ed7fbc939d6" class="ui-textbox" name="key"/></td>
+			<td><input type="text" value="4d2e92068ffb8f6aacfa5ed7fbc939d5" class="ui-textbox" name="key"/></td>
 		</tr>
 		<tr>
 			<td><label>交易序号：</label></td>
@@ -104,7 +104,7 @@ padding: 5px;
 		</tr>
 		<tr>
 			<td><label>钱包号：</label></td>
-			<td><input type="text" name="body[walletid]"size="30" class="ui-textbox" /></td>
+			<td><input type="text" name="body[walletid]"size="30" value="9042dc35591548ac85c428b3842945d6" class="ui-textbox" /></td>
 		</tr>
 		<tr>
 			<td><label>充值金额：</label></td>
@@ -112,11 +112,11 @@ padding: 5px;
 		</tr>
 		<tr>
 			<td><label>商户号：</label></td>
-			<td><input value="000000000000001" type="text" name="body[merchno]" size="30" class="ui-textbox" /></td>
+			<td><input value="100000000000008" type="text" name="body[merchno]" size="30" class="ui-textbox" /></td>
 		</tr>
 		<tr>
 			<td><label>机构号：</label></td>
-			<td><input value="0000000001" type="text" name="body[organno]" size="30" class="ui-textbox" /></td>
+			<td><input value="00000002" type="text" name="body[organno]" size="30" class="ui-textbox" /></td>
 		</tr>
 		<tr>
 			<td><label>备注：</label></td>
