@@ -60,7 +60,7 @@ padding: 5px;
 </head>
 
 <body style="padding:10px">
-    <form id="form1" method="post" action="<?php echo URL::site('qianbao/do_chongzhi');?>" >
+    <form id="form1" method="post" action="<?php echo URL::site('qianbao/do');?>" >
     <h2>head</h2>
     <table>
         <tr>
