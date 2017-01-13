@@ -12,13 +12,17 @@ class Controller_Qianbao extends Controller_Base {
         $this->data = [];
     }
 
+    public function action_chaxunyue() {
+        $this->tpl = 'qianbao/chaxunyue';
+        $this->data = [];
+    }
+
     public function action_chongzhi() {
         $this->tpl = 'qianbao/chongzhi';
         $this->data = [];
     }
 
-    private function curl_post($data_string) {
-        $url = $this->qianbao_pre_url . '/api/wallet.do';
+    private function curl_post($url, $data_string) {
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
@@ -37,6 +41,20 @@ class Controller_Qianbao extends Controller_Base {
         return $result;
     }
 
+    public function action_do_chaxunyue() {
+        $header = $_POST['head'];
+        $body_data = $_POST['body'];
+        $body_data['sign'] = $this->parse_sign($body_data);
+        $data = ['header' => $header, 'body' => $body_data];
+        $data_string = json_encode($data);
+
+        $result = $this->curl_post($data_string);
+        echo 'postData:<br>' . $data_string . '<hr>';
+        echo 'url:<br>' . $url . '<hr>';
+        echo 'return data:<br>' . $result . '<hr>';
+
+        exit;
+    }
     public function action_do_dongjie() {
         $header = $_POST['head'];
         $body_data = $_POST['body'];
@@ -51,13 +69,14 @@ class Controller_Qianbao extends Controller_Base {
 
         exit;
     }
-    public function action_do_chongzhi() {
+    public function action_do() {
         $header = $_POST['head'];
         $body_data = $_POST['body'];
         $body_data['sign'] = $this->parse_sign($body_data);
         $data = ['header' => $header, 'body' => $body_data];
         $data_string = json_encode($data);
-        $result = $this->curl_post($data_string);
+        $url = $this->qianbao_pre_url . '/api/wallet.do';
+        $result = $this->curl_post($url, $data_string);
 
         echo 'postData:<br>' . $data_string . '<hr>';
         echo 'url:<br>' . $url . '<hr>';
