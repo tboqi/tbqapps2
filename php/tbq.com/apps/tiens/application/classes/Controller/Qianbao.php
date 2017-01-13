@@ -41,87 +41,14 @@ class Controller_Qianbao extends Controller_Base {
         return $result;
     }
 
-    public function action_do_chaxunyue() {
-        $header = $_POST['head'];
-        $body_data = $_POST['body'];
-        $body_data['sign'] = $this->parse_sign($body_data);
-        $data = ['header' => $header, 'body' => $body_data];
-        $data_string = json_encode($data);
-
-        $result = $this->curl_post($data_string);
-        echo 'postData:<br>' . $data_string . '<hr>';
-        echo 'url:<br>' . $url . '<hr>';
-        echo 'return data:<br>' . $result . '<hr>';
-
-        exit;
-    }
-    public function action_do_dongjie() {
-        $header = $_POST['head'];
-        $body_data = $_POST['body'];
-        $body_data['sign'] = $this->parse_sign($body_data);
-        $data = ['header' => $header, 'body' => $body_data];
-        $data_string = json_encode($data);
-
-        $result = $this->curl_post($data_string);
-        echo 'postData:<br>' . $data_string . '<hr>';
-        echo 'url:<br>' . $url . '<hr>';
-        echo 'return data:<br>' . $result . '<hr>';
-
-        exit;
-    }
-    public function action_do() {
-        $header = $_POST['head'];
-        $body_data = $_POST['body'];
-        $body_data['sign'] = $this->parse_sign($body_data);
-        $data = ['header' => $header, 'body' => $body_data];
-        $data_string = json_encode($data);
-        $url = $this->qianbao_pre_url . '/api/wallet.do';
-        $result = $this->curl_post($url, $data_string);
-
-        echo 'postData:<br>' . $data_string . '<hr>';
-        echo 'url:<br>' . $url . '<hr>';
-        echo 'return data:<br>' . $result . '<hr>';
-
-        exit;
-    }
     public function action_duizhang() {
         $this->tpl = 'qianbao/duizhang';
         $this->data = [];
     }
 
-    public function action_do_duizhang() {
-        $header = $_POST['head'];
-        $body_data = $_POST['body'];
-        $body_data['sign'] = $this->parse_sign($body_data);
-        $data = ['header' => $header, 'body' => $body_data];
-        $data_string = json_encode($data);
-        $result = $this->curl_post($data_string);
-
-        echo 'postData:<br>' . $data_string . '<hr>';
-        echo 'url:<br>' . $url . '<hr>';
-        echo 'return data:<br>' . $result . '<hr>';
-
-        exit;
-    }
-
     public function action_tuihuo() {
         $this->tpl = 'qianbao/tuihuo';
         $this->data = [];
-    }
-
-    public function action_do_tuihuo() {
-        $header = $_POST['head'];
-        $body_data = $_POST['body'];
-        $body_data['sign'] = $this->parse_sign($body_data);
-        $data = ['header' => $header, 'body' => $body_data];
-        $data_string = json_encode($data);
-        $result = $this->curl_post($data_string);
-
-        echo 'postData:<br>' . $data_string . '<hr>';
-        echo 'url:<br>' . $url . '<hr>';
-        echo 'return data:<br>' . $result . '<hr>';
-
-        exit;
     }
     function parse_sign($params) {
         $params_tmp = ksort($params);

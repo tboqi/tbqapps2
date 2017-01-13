@@ -60,7 +60,7 @@ padding: 5px;
 </head>
 
 <body style="padding:10px">
-    <form id="form1" method="post" action="<?php echo URL::site('qianbao/do_dongjie');?>" >
+    <form id="form1" method="post" action="<?php echo URL::site('qianbao/do');?>" >
     <h2>head</h2>
     <table>
         <tr>
@@ -106,7 +106,7 @@ padding: 5px;
 		</tr>
 		<tr>
 			<td><label>交易类型：</label></td>
-			<td><select name="head[transtype]">
+			<td><select name="body[transtype]">
 				<option value="1">1 - 冻结</option>
 				<option value="2">2 - 解冻</option>
 			</select></td>
@@ -117,7 +117,7 @@ padding: 5px;
 		</tr>
 		<tr>
 			<td><label>钱包号：</label></td>
-			<td><input type="text" name="body[walletid]"size="30" value="9042dc35591548ac85c428b3842945d6" class="ui-textbox" /></td>
+			<td><input type="text" name="body[walletid]"size="30" value="2150f4ba70dc43dc84df2a8c5d2aceb2" class="ui-textbox" /></td>
 		</tr>
 		<tr>
 			<td><label>金额：</label></td>
