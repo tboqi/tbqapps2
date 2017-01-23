@@ -21,6 +21,21 @@ class Controller_Qianbao extends Controller_Base {
         $this->tpl = 'qianbao/chongzhi';
         $this->data = [];
     }
+    public function action_do() {
+        $header = $_POST['head'];
+        $body_data = $_POST['body'];
+        $body_data['sign'] = $this->parse_sign($body_data);
+        $data = ['header' => $header, 'body' => $body_data];
+        $data_string = json_encode($data);
+        $url = $this->qianbao_pre_url . '/api/wallet.do';
+        $result = $this->curl_post($url, $data_string);
+
+        echo 'postData:<br>' . $data_string . '<hr>';
+        echo 'url:<br>' . $url . '<hr>';
+        echo 'return data:<br>' . $result . '<hr>';
+
+        exit;
+    }
 
     private function curl_post($url, $data_string) {
         $ch = curl_init($url);
