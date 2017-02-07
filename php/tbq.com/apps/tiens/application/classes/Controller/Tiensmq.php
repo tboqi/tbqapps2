@@ -1,26 +1,12 @@
 <?php
-class Controller_Qianbao extends Controller_Base {
+class Controller_Tiensmq extends Controller_Base {
     private $qianbao_pre_url = 'https://10.1.21.213:8888/vipcard';
 
     public function action_index() {
-        $this->tpl = 'qianbao/index';
+        $this->tpl = 'tiensmq/index';
         $this->data = [];
     }
 
-    public function action_dongjie() {
-        $this->tpl = 'qianbao/dongjie';
-        $this->data = [];
-    }
-
-    public function action_chaxunyue() {
-        $this->tpl = 'qianbao/chaxunyue';
-        $this->data = [];
-    }
-
-    public function action_chongzhi() {
-        $this->tpl = 'qianbao/chongzhi';
-        $this->data = [];
-    }
     public function action_do() {
         $header = $_POST['head'];
         $body_data = $_POST['body'];
@@ -33,8 +19,6 @@ class Controller_Qianbao extends Controller_Base {
         echo 'postData:<br>' . $data_string . '<hr>';
         echo 'url:<br>' . $url . '<hr>';
         echo 'return data:<br>' . $result . '<hr>';
-
-        exit;
     }
 
     private function curl_post($url, $data_string) {
@@ -54,28 +38,5 @@ class Controller_Qianbao extends Controller_Base {
 
         $result = curl_exec($ch);
         return $result;
-    }
-
-    public function action_duizhang() {
-        $this->tpl = 'qianbao/duizhang';
-        $this->data = [];
-    }
-
-    public function action_tuihuo() {
-        $this->tpl = 'qianbao/tuihuo';
-        $this->data = [];
-    }
-    function parse_sign($params) {
-        $params_tmp = ksort($params);
-        $params_str = '';
-        foreach ($params as $key => $value) {
-            if (empty($value)) {
-                continue;
-            }
-            $params_str .= $key . '=' . $value . '&';
-        }
-        $params_str .= "key=" . $_POST['key'];
-        $signature = md5($params_str);
-        return $signature;
     }
 }

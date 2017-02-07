@@ -31,6 +31,13 @@ class Controller_Welcome extends Controller_Base {
                     ["url" => URL::site('qianbao/chaxunyue'), "text" => "查询余额"],
                 ],
             ],
+            [
+                "text" => '消息中心接口测试',
+                "isexpand" => true,
+                "children" => [
+                    ["url" => URL::site('tiensmq/index'), "text" => "充值"],
+                ],
+            ],
         ];
         $data = [
             'tree1' => $tree,
