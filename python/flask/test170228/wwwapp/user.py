@@ -7,7 +7,10 @@ def user_index():
 
 @app.route('/user/login',methods=['GET', 'POST'])
 def user_login():
-    session['username'] = session['username']+1
+    if request.method == 'POST':
+        session['username'] = request.form['username']
+        return redirect(url_for('index'))
+    
     return render_template('user/login.html', u=session['username'])
 
 @app.route('/user/logout')
