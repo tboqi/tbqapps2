@@ -1,4 +1,5 @@
 from flask import Flask
 app = Flask(__name__)
 
-import test170228.views
+import wwwapp.index
+import wwwapp.user
