@@ -5,15 +5,14 @@
     <div>head</div>
     <div id="menu">
         <a href="{{ url_for('index') }}">首页</a>
-        {% if not session.logged_in %}
-        <a href="{{ url_for('user_login') }}">登录</a>
-        {% else %}
-        <a href="{{ url_for('user_index') }}">用户信息</a>
+        {% if 'username' in session %}
+        <a href="{{ url_for('user_index') }}">{{ session['username'] }}</a>
         <a href="{{ url_for('user_logout') }}">退出</a>
+        {% else %}
+        <a href="{{ url_for('user_login') }}">登录</a>
         {% endif %}
     </div>
 </div>
-sess={{ u }}
 <div id="body">
     {% block body %}{% endblock %}
 </div>
