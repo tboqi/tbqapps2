@@ -1,5 +1,5 @@
 from wwwapp import app
-from flask import abort, redirect, url_for, render_template, session
+from flask import abort, redirect, url_for, render_template, session, request
 
 @app.route('/user')
 def user_index():
