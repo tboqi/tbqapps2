@@ -4,7 +4,7 @@ define('BASE_URL', '/');
 define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'khnapps_website');
 define('DB_USER', 'root');
-define('DB_PASS', '111111');
+define('DB_PASS', '');
 define('USED_MODULES', 'base|article|auth|database|pagination|link|product');
 $modules = 'modules';
 $system = 'system';
