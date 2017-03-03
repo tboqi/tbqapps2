@@ -1,1 +1,0 @@
-DELETE FROM foodstore_food_compatibility WHERE compatibility_food_id=0
