@@ -5,8 +5,8 @@
     <div>head</div>
     <div id="menu">
         <a href="{{ url_for('index') }}">首页</a>
-        {% if 'username' in session %}
-        <a href="{{ url_for('user_index') }}">{{ session['username'] }}</a>
+        {% if session['isLogin'] %}
+        <a href="{{ url_for('user_index') }}">{{ session['name'] }}</a>
         <a href="{{ url_for('user_logout') }}">退出</a>
         {% else %}
         <a href="{{ url_for('user_login') }}">登录</a>
