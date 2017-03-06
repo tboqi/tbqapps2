@@ -32,3 +32,32 @@
 <?php exit;?>03-06 13:07:32 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
 <?php exit;?>03-06 13:07:32 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
 <?php exit;?>03-06 13:07:32 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>03-06 17:03:52 | 2 | mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>03-06 17:03:52 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-06 17:03:52 | 2 | mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>03-06 17:03:52 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:52 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-06 17:03:52 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:52 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:52 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-06 17:03:52 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:52 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>03-06 17:03:52 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-06 17:03:52 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>03-06 17:03:57 | 2 | mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-06 17:03:57 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>03-06 17:03:57 | 2 | mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-06 17:03:57 | 2 | mysqli::query(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 78
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::execute(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 78
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>03-06 17:03:57 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
