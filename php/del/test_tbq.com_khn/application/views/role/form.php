@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>添加角色</title>
-    <link href="http://tbq_ligerui.com/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
-    <link href="http://tbq_ligerui.com/lib/ligerUI/skins/Gray2014/css/all.css" rel="stylesheet" />
-    <script src="http://tbq_ligerui.com/lib/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
-    <script src="http://tbq_ligerui.com/lib/ligerUI/js/ligerui.all.js"></script>
-    <script src="http://tbq_ligerui.com/lib/ligerUI/js/plugins/ligerComboBox.js"></script>
-    <script src="http://tbq_ligerui.com/lib/ligerUI/js/plugins/ligerCheckBoxList.js"></script>
-    <script src="http://tbq_ligerui.com/lib/ligerUI/js/plugins/ligerRadioList.js"></script>
-    <script src="http://tbq_ligerui.com/lib/ligerUI/js/plugins/ligerListBox.js"></script>
+    <link href="http://tbq_static.com/ligerui/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+    <link href="http://tbq_static.com/ligerui/lib/ligerUI/skins/Gray2014/css/all.css" rel="stylesheet" />
+    <script src="http://tbq_static.com/ligerui/lib/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="http://tbq_static.com/ligerui/lib/ligerUI/js/ligerui.all.js"></script>
+    <script src="http://tbq_static.com/ligerui/lib/ligerUI/js/plugins/ligerComboBox.js"></script>
+    <script src="http://tbq_static.com/ligerui/lib/ligerUI/js/plugins/ligerCheckBoxList.js"></script>
+    <script src="http://tbq_static.com/ligerui/lib/ligerUI/js/plugins/ligerRadioList.js"></script>
+    <script src="http://tbq_static.com/ligerui/lib/ligerUI/js/plugins/ligerListBox.js"></script>
 
 
     <script type="text/javascript">
@@ -61,7 +61,7 @@
 
 <body>
 <h1>添加角色</h1>
-<form action="<?php echo URL::site('role/add')?>" method="post">
+<form action="<?php echo URL::site('role/add') ?>" method="post">
 <div id="form1" >
     <table>
         <tr>

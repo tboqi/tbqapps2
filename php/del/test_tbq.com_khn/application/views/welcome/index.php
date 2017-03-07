@@ -3,14 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>后台管理</title>
-    <link href="http://tbq_ligerui.com/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+    <link href="http://tbq_static.com/ligerui/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" id="mylink"/>
-    <script src="http://tbq_ligerui.com/lib/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
-    <script src="http://tbq_ligerui.com/lib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>
-    <script src="http://tbq_ligerui.com/lib/ligerUI/js/plugins/ligerTab.js"></script>
-    <script src="http://tbq_ligerui.com/lib/jquery.cookie.js"></script>
-    <script src="http://tbq_ligerui.com/lib/json2.js"></script>
-    <script src="<?php echo URL::site('welcome/indexdata');?>" type="text/javascript"></script>
+    <script src="http://tbq_static.com/ligerui/lib/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="http://tbq_static.com/ligerui/lib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>
+    <script src="http://tbq_static.com/ligerui/lib/ligerUI/js/plugins/ligerTab.js"></script>
+    <script src="http://tbq_static.com/ligerui/lib/jquery.cookie.js"></script>
+    <script src="http://tbq_static.com/ligerui/lib/json2.js"></script>
+    <script src="<?php echo URL::site('welcome/indexdata'); ?>" type="text/javascript"></script>
         <script type="text/javascript">
 
             var tab = null;
@@ -174,10 +174,10 @@
                 attachLinkToFrame(tabid, prevHref + skin_links[skin]);
             }
             var skin_links = {
-                "aqua": "http://tbq_ligerui.com/lib/ligerUI/skins/Aqua/css/ligerui-all.css",
-                "gray": "http://tbq_ligerui.com/lib/ligerUI/skins/Gray/css/all.css",
-                "silvery": "http://tbq_ligerui.com/lib/ligerUI/skins/Silvery/css/style.css",
-                "gray2014": "http://tbq_ligerui.com/lib/ligerUI/skins/gray2014/css/all.css"
+                "aqua": "http://tbq_static.com/ligerui/lib/ligerUI/skins/Aqua/css/ligerui-all.css",
+                "gray": "http://tbq_static.com/ligerui/lib/ligerUI/skins/Gray/css/all.css",
+                "silvery": "http://tbq_static.com/ligerui/lib/ligerUI/skins/Silvery/css/style.css",
+                "gray2014": "http://tbq_static.com/ligerui/lib/ligerUI/skins/gray2014/css/all.css"
             };
             function pages_init()
             {
@@ -262,14 +262,14 @@
     .l-link2{text-decoration:underline; color:white; margin-left:2px;margin-right:2px;}
     .l-layout-top{background:#102A49; color:White;}
     .l-layout-bottom{ background:#E5EDEF; text-align:center;}
-    #pageloading{position:absolute; left:0px; top:0px; background:white url('http://tbq_ligerui.com/lib/images/loading.gif') no-repeat center; width:100%; height:100%;z-index:99999;}
+    #pageloading{position:absolute; left:0px; top:0px; background:white url('http://tbq_static.com/ligerui/lib/images/loading.gif') no-repeat center; width:100%; height:100%;z-index:99999;}
     .l-link{ display:block; line-height:22px; height:22px; padding-left:16px;border:1px solid white; margin:4px;}
     .l-link-over{ background:#FFEEAC; border:1px solid #DB9F00;}
     .l-winbar{ background:#2B5A76; height:30px; position:absolute; left:0px; bottom:0px; width:100%; z-index:99999;}
     .space{ color:#E7E7E7;}
     /* 顶部 */
-    .l-topmenu{ margin:0; padding:0; height:31px; line-height:31px; background:url('http://tbq_ligerui.com/lib/images/top.jpg') repeat-x bottom;  position:relative; border-top:1px solid #1D438B;  }
-    .l-topmenu-logo{ color:#E7E7E7; padding-left:35px; line-height:26px;background:url('http://tbq_ligerui.com/lib/images/topicon.gif') no-repeat 10px 5px;}
+    .l-topmenu{ margin:0; padding:0; height:31px; line-height:31px; background:url('http://tbq_static.com/ligerui/lib/images/top.jpg') repeat-x bottom;  position:relative; border-top:1px solid #1D438B;  }
+    .l-topmenu-logo{ color:#E7E7E7; padding-left:35px; line-height:26px;background:url('http://tbq_static.com/ligerui/lib/images/topicon.gif') no-repeat 10px 5px;}
     .l-topmenu-welcome{  position:absolute; height:24px; line-height:24px;  right:30px; top:2px;color:#070A0C;}
     .l-topmenu-welcome a{ color:#E7E7E7; text-decoration:underline}
      .body-gray2014 #framecenter{
@@ -300,7 +300,7 @@
             <option value="gray">Gray</option>
             <option value="gray2014">Gray2014</option>
         </select>
-        <a target="_blank" href="http://tbq_ligerui.com/index.htm" class="l-link2">ligerUI</a>
+        <a target="_blank" href="http://tbq_static.com/ligerui/index.htm" class="l-link2">ligerUI</a>
         <a target="_blank" href="http://dwz_jui_tbq.com/" class="l-link2">dwz_jui_tbq</a>
         <span class="space">|</span>
         <span class="space">|</span>
@@ -312,14 +312,6 @@
 </div>
   <div id="layout1" style="width:99.2%; margin:0 auto; margin-top:4px; ">
         <div position="left"  title="主要菜单" id="accordion1">
-            <div title="系统管理">
-                <a class="l-link" href="javascript:f_addTab('role-index','角色列表','<?=URL::site('role/index')?>')">角色列表</a>
-                <a class="l-link" href="javascript:f_addTab('role-add','添加角色','<?=URL::site('role/add')?>')">添加角色</a>
-                <a class="l-link" href="javascript:f_addTab('auth-index','权限列表','<?=URL::site('auth/index')?>')">权限列表</a>
-                <a class="l-link" href="javascript:f_addTab('auth-add','添加权限','<?=URL::site('auth/add')?>')">添加权限</a>
-                <a class="l-link" href="javascript:f_addTab('user-index','用户列表','<?=URL::site('user/index')?>')">用户列表</a>
-                <a class="l-link" href="javascript:f_addTab('user-add','添加用户','<?=URL::site('user/add')?>')">添加用户</a>
-            </div>
             <div title="功能列表" class="l-scroll">
                 <ul id="tree1" style="margin-top:3px;" />
             </div>
