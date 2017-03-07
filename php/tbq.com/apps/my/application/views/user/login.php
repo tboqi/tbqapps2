@@ -5,10 +5,10 @@
 		<meta name="keywords" content="注册登录页面,注册登录模板页面,注册登录HTML页面,注册登录HTML" />
 		<meta name="description" content="JS代码网提供高质量注册登录页面模板下载" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <link rel="shortcut icon" type="image/x-icon" href="http://static.tbq.com/my/homepage/favicon.ico?v=3.9" />
-        <link href="http://static.tbq.com/my/ui/css/screen.css?v=3.9" media="screen, projection" rel="stylesheet" type="text/css" >
-        <link rel="stylesheet" type="text/css" href="http://static.tbq.com/my/ui/css/base.css?v=3.9">
-        <link rel="stylesheet" type="text/css" href="http://static.tbq.com/my/passport/css/login.css?v=3.9">
+        <link rel="shortcut icon" type="image/x-icon" href="http://tbq_static.com/my/homepage/favicon.ico?v=3.9" />
+        <link href="http://tbq_static.com/my/ui/css/screen.css?v=3.9" media="screen, projection" rel="stylesheet" type="text/css" >
+        <link rel="stylesheet" type="text/css" href="http://tbq_static.com/my/ui/css/base.css?v=3.9">
+        <link rel="stylesheet" type="text/css" href="http://tbq_static.com/my/passport/css/login.css?v=3.9">
         <!--[if lt IE 9]>
         <script>
         window.location="homepage/support";
@@ -19,7 +19,7 @@
         <!--
         <div class="logina-logo" style="height: 55px">
             <a href="">
-                <img src="http://static.tbq.com/my/passport/images/toplogo.png?v=3.9" height="60" alt="">
+                <img src="http://tbq_static.com/my/passport/images/toplogo.png?v=3.9" height="60" alt="">
             </a>
         </div>
         -->
@@ -82,8 +82,8 @@
         <div id="footer">
             <div class="copyright">Copyright © 2014 js-css.cn. All Rights Reserved. js代码网 版权所有</div>
         </div>
-        <script src="http://static.tbq.com/my/skin/js/lib/jquery-2.0.3.min.js?v=3.9"></script>
-        <script src="http://static.tbq.com/my/skin/js/ui.common.js?v=3.9"></script>
-        <script src="http://static.tbq.com/my/passport/js/login.js?v=3.9"></script>
+        <script src="http://tbq_static.com/my/skin/js/lib/jquery-2.0.3.min.js?v=3.9"></script>
+        <script src="http://tbq_static.com/my/skin/js/ui.common.js?v=3.9"></script>
+        <script src="http://tbq_static.com/my/passport/js/login.js?v=3.9"></script>
     </body>
 </html>
