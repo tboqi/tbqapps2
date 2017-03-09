@@ -61,3 +61,7 @@
 <?php exit;?>03-06 17:03:57 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
 <?php exit;?>03-06 17:03:57 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
 <?php exit;?>03-06 17:03:57 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>03-09 09:32:20 | 2 | Invalid argument supplied for foreach() | phpcms\libs\functions\global.func.php | 1437
+<?php exit;?>03-09 09:39:13 | 2 | Invalid argument supplied for foreach() | phpcms\modules\content\sitemodel.php | 25
+<?php exit;?>03-09 09:39:24 | 2 | Invalid argument supplied for foreach() | phpcms\modules\content\sitemodel.php | 25
+<?php exit;?>03-09 13:40:47 | 2 | Invalid argument supplied for foreach() | phpcms\modules\content\sitemodel.php | 25
