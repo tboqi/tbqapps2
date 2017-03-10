@@ -12,13 +12,6 @@
                 <div class="bk20 hr"><hr /></div>
 				{/loop}
 			{/pc}
-			{pc:content  action="lists" catid="$catid" order="id DESC" num="3"}
-                <ul class="list">
-                {loop $data $k $v}
-                	<li>·<a href="{$v[url]}" title="{$v[title]}" target="_blank"{title_style($v[style])}>{str_cut($v[title], 60)}</a></li>
-                {/loop}
-                </ul>
-             {/pc}
             </div>
         </div>
     </div>

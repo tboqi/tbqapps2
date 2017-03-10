@@ -65,3 +65,5 @@
 <?php exit;?>03-09 09:39:13 | 2 | Invalid argument supplied for foreach() | phpcms\modules\content\sitemodel.php | 25
 <?php exit;?>03-09 09:39:24 | 2 | Invalid argument supplied for foreach() | phpcms\modules\content\sitemodel.php | 25
 <?php exit;?>03-09 13:40:47 | 2 | Invalid argument supplied for foreach() | phpcms\modules\content\sitemodel.php | 25
+<?php exit;?>03-10 14:12:34 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>03-10 14:13:17 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
