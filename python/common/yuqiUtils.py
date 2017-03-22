@@ -49,7 +49,15 @@ def zuidagongyueshu(a, b, returnType=0):
     else:
         return '参数错误'
 
+
+def time():
+    import time
+    rt = time.time()
+    return int(rt)
+
 if __name__ == '__main__':
+    print("当前时间:" + str(time()))
+
     print('最大公约数=' + zuidagongyueshu(1920, 1080))
     print('比例为' + ":" + zuidagongyueshu(1920, 1080, 1))
 
