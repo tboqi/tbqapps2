@@ -6,7 +6,8 @@
     <div id="menu">
         <a href="{{ url_for('index') }}">首页</a>
         {% if session['isLogin'] %}
-        <a href="{{ url_for('user_index') }}">{{ session['name'] }}</a>
+        <a href="{{ url_for('user_index') }}">用户信息</a>
+        <a href="{{ url_for('user_editpass') }}">修改密码</a>
         <a href="{{ url_for('user_logout') }}">退出</a>
         {% else %}
         <a href="{{ url_for('user_login') }}">登录</a>

@@ -67,3 +67,7 @@
 <?php exit;?>03-09 13:40:47 | 2 | Invalid argument supplied for foreach() | phpcms\modules\content\sitemodel.php | 25
 <?php exit;?>03-10 14:12:34 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
 <?php exit;?>03-10 14:13:17 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>03-22 11:07:05 | 2 | file_put_contents(D:\tbqapp2\php\phpcms\caches\poster_js/1.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>03-22 11:07:05 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>03-22 11:10:15 | 2 | file_put_contents(D:\tbqapp2\php\phpcms\caches\poster_js/10.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>03-22 11:10:15 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
