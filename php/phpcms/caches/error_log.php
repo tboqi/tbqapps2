@@ -71,3 +71,15 @@
 <?php exit;?>03-22 11:07:05 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
 <?php exit;?>03-22 11:10:15 | 2 | file_put_contents(D:\tbqapp2\php\phpcms\caches\poster_js/10.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
 <?php exit;?>03-22 11:10:15 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>03-30 13:11:48 | 2 | file_put_contents(D:\tbqapp2\php\phpcms\caches\poster_js/10.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>03-30 13:11:48 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>03-30 13:12:06 | 2 | file_put_contents(D:\tbqapp2\php\phpcms\caches\poster_js/10.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>03-30 13:12:06 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>03-30 13:12:49 | 2 | file_put_contents(D:\tbqapp2\php\phpcms\caches\poster_js/10.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>03-30 13:12:49 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>03-30 13:13:30 | 2 | extract() expects parameter 1 to be array, string given | phpcms\modules\poster\space.php | 165
+<?php exit;?>03-30 13:13:58 | 2 | extract() expects parameter 1 to be array, string given | phpcms\modules\poster\space.php | 165
+<?php exit;?>03-30 13:14:42 | 2 | file_put_contents(D:\tbqapp2\php\phpcms\caches\poster_js/1.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>03-30 13:14:42 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>03-30 13:14:55 | 2 | file_put_contents(D:\tbqapp2\php\phpcms\caches\poster_js/1.js): failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>03-30 13:14:55 | 2 | chmod(): No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
