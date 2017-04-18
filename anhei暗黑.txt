@@ -9,3 +9,15 @@ anhei3.net
 
         tboqi1
             pal
+
+单机
+    sor
+    pal
+    ama
+    nec
+    asn
+    bar
+    dru
+
+装备:
+    
