@@ -55,7 +55,7 @@ Item ALevel Toggle:             0, VK_NUMPAD6       // 当前Alevel,仅黄金和蓝色物
 Item After Cube Toggle:         0, VK_NUMPAD6       // cube后新的ilvl和alvl显示,只针对蓝色和黄金物品，小键盘7
 
 
-Hidden Items Toggle:            0, VK_CONTROL            // 地面垃圾物品隐藏开关，小键盘+
+Hidden Items Toggle:            0, VK_CONTROL            // 地面垃圾物品隐藏开关，CTRL键
 Switch Item Show Mode:          VK_0                // 模式切换按键,大键盘0
 Default Item Show Mode :        1                   // 默认物品显示模式,默认1
 Show Identified Item :          1, -1               //显示已辨识物品，已辨识物品不做隐藏

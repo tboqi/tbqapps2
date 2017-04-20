@@ -17,7 +17,9 @@ FixSocketError:  1        //修正Socket出错判定，用于多开时防止出错
 SocketTimeOutValue: 100   //Socket超时时间，单位秒，游戏默认是100秒,用于特殊网络情况
 //-------------------------------常用快捷键设置-----------------------------
 
-Reload Config Key:              VK_NUMPAD9          //游戏内重新加载配置，小键盘9
+Reload Config Key:              VK_L        //游戏内重新加载配置，小键盘9 VK_NUMPAD9  
+//分辨率设置
+HighResolution: 1024,768
 Reveal Act Automap Key:         VK_SUBTRACT         //开整幕地图,小键盘-号
 Quick Exit Game Key:            VK_OEM_MINUS        //快速退出游戏,大键盘"-"
 Quick Next Game Key:            VK_OEM_PLUS         //快速退出游戏，游戏名自动+1,大键盘"+"
