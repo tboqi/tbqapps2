@@ -390,7 +390,11 @@ B:"MFCToolBar-593980-Buttons"=0000279f
  00 00 00 00 00 00 00 ff fe ff 08 4d 00 65 00 6e 00 75 00 20 00 42 00 61 00 72 00 ff 7f 00 00
 D:"Pane-593980-ID"=0000e806
 S:"Pane-593980-RectRecentFloat"=110, 110, 10, 10
+<<<<<<< HEAD:cfg/secure_config/SCRTMenuToolbarV2.inibak
+S:"Pane-593980-RectRecentDocked"=25, 1920, 0, 0
+=======
 S:"Pane-593980-RectRecentDocked"=25, 1366, 0, 0
+>>>>>>> 34e0d3b31a0419b9acd86fc1c0f7c109bb05e4fe:cfg/secure_config/SCRTMenuToolbarV2.ini
 D:"Pane-593980-RecentFrameAlignment"=00001000
 D:"Pane-593980-RecentRowIndex"=00000000
 D:"Pane-593980-IsFloating"=00000000
