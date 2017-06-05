@@ -9,3 +9,4 @@ engine = create_engine(
 import wwwapp.index
 import wwwapp.user
 import wwwapp.link
+import wwwapp.rss

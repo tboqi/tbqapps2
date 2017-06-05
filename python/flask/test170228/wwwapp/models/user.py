@@ -4,6 +4,7 @@ from wwwapp.libs import utils
 
 def checkLogin(username, pwd):
     pwdMd5 = utils.getMd5(pwd)
+    print(pwdMd5)
     item = engine.execute(
         'select password from users where username = %s', (username)).first()
     if item['password'] == pwdMd5:
