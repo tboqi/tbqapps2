@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
-    添加链接
-    <form action="{{ url_for('link_add') }}" method="post">
-        标题:<input type="text" name="title">
+    添加RSS
+    <form action="{{ url_for('rss_add') }}" method="post">
         url:<input type="text" name="url">
         <button type="submit">ok</button>
     </form>

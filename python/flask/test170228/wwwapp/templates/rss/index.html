@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 {% block body %}
-    链接
-    {% for item in links %}
-    <a target="_blank" href="{{ item.url }}">{{ item.title }}</a>
+    <h1>RSS</h1>
+    <a href="{{ url_for('rss_add') }}">添加</a>
+    {% for item in items %}
+    <li><a target="_blank" href="{{ item.url }}">{% if item.title %}{{ item.title }}{% else %}{{ item.url }}{% endif %}</a></li>
     {% endfor %}
 {% endblock %}
