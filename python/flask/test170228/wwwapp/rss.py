@@ -1,5 +1,6 @@
 from wwwapp import app
-from wwwapp.models import rss
+from wwwapp.models import rss, rss_entry
+from wwwapp.libs import utils
 from flask import abort, redirect, url_for, render_template, session, request
 
 
@@ -11,7 +12,13 @@ def rss_index():
 @app.route('/rss/add', methods=['GET', 'POST'])
 def rss_add():
     if request.method == 'POST':
-        rss.add(request.form['url'])
+        url = request.form['url']
+        if rss.check_url_exist(url):
+            return render_template('msg.html', msg='url已存在')
+
+        url = url.strip()
+        url_md5 = utils.getMd5(url)
+        rss.add(url, url_md5)
         return redirect(url_for('rss_index'))
     return render_template('rss/add.html')
 
@@ -34,7 +41,16 @@ def read_rss():
                    feed.feed.link, feed_generator, item.id)
 
         for entry in feed.entries:
-            print(entry)
-            return
+            if hasattr(entry, 'content'):
+                content = entry.content[0].value
+            else:
+                content = ''
+            if hasattr(entry, 'author'):
+                author = entry.author
+            else:
+                author = ''
+
+            rss_entry.add(entry.title, entry.link,
+                          author, entry.summary, content)
             pass
     pass
