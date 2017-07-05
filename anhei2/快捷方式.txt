@@ -1,0 +1,2 @@
+D:\g\anhei2-1.13\D2Loader.exe -direct  -pdir D:\tbqapp2\anhei2\113map170705 -locale kor -skiptobnet  -nofixaspect -w -nohide
+D:\g\anhei2-1.13\D2Loader.exe -direct  -pdir D:\tbqapp2\anhei2\113map170705 -locale kor -skiptobnet  -nofixaspect -w
