@@ -1,12 +1,12 @@
 #! /bin/bash
 #start nginx php
 
-cd /work/libs/nginx-1.9.9/conf/vhost/
-ln -s /work/d/code/phpcms.tiens.com/nginx.htaccess phpcms_tiens.conf
-ln -s /work/d/code/www.tiens.com/nginx.htaccess www_tiens.conf
-ln -s /work/d/code/tjtjs-ecstore/nginx.access testshop_taijisun.conf
-ln -s /work/d/code/tmq1/yii2/frontend/app.conf yii2_mq.conf
-cd -
+# cd /work/libs/nginx-1.9.9/conf/vhost/
+# ln -s /work/d/code/phpcms.tiens.com/nginx.htaccess phpcms_tiens.conf
+# ln -s /work/d/code/www.tiens.com/nginx.htaccess www_tiens.conf
+# ln -s /work/d/code/tjtjs-ecstore/nginx.access testshop_taijisun.conf
+# ln -s /work/d/code/tmq1/yii2/frontend/app.conf yii2_mq.conf
+# cd -
 
 /work/libs/php-7.1.6/sbin/php-fpm
 /work/libs/php-5.6.21/sbin/php-fpm
