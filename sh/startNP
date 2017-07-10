@@ -6,6 +6,7 @@
 # ln -s /work/d/code/www.tiens.com/nginx.htaccess www_tiens.conf
 # ln -s /work/d/code/tjtjs-ecstore/nginx.access testshop_taijisun.conf
 # ln -s /work/d/code/tmq1/yii2/frontend/app.conf yii2_mq.conf
+# ln -s /work/d/tbqapp2/php/ci/apps/www/nginx.htaccess cidev.conf
 # cd -
 
 /work/libs/php-7.1.6/sbin/php-fpm
