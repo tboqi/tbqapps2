@@ -1,4 +1,7 @@
 #! /bin/bash
+
+export PATH=$PATH:/work/libs/php-7.1.6/bin
+
 #start nginx php
 
 # cd /work/libs/nginx-1.9.9/conf/vhost/
