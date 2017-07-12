@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>首页 - tbq.com</title>
+    <title>首页</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
 </head>
