@@ -31,11 +31,12 @@ if (defined('STDIN')) {
 // Path to the system directory 框架安装目录
 define('BASEPATH', dirname(dirname(dirname(__FILE__))) . DIRECTORY_SEPARATOR);
 define('APPPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR); //应用目录
-$view_folder = APPPATH . 'views'; //视图目录
-define('VIEWPATH', $view_folder . DIRECTORY_SEPARATOR);
+define('VIEWPATH', APPPATH . 'views'); //视图目录
 
 //静态文件地址
-define('S_PATH', '/statics/'); //可以直接填入带域名的地址, 实现动静分离
+define('SPATH', '/statics/'); //可以直接填入带域名的地址, 实现动静分离
+
+define('LOGPATH', APPPATH . 'logs/runtime/');
 
 /*
  * --------------------------------------------------------------------

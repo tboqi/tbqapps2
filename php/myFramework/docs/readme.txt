@@ -1,7 +1,7 @@
 设计需求
     不使用namepace, 麻烦, 需要自己写入namepace, 多敲代码
 
-使用ci的路由 khn的加载class的方式,
+使用ci的路由 khn的加载class的方式, khn的log
 
 //使用smarty做模版(理由: 更通用, 前端也会), 或
 模版: Mustache js php python通用, 支持多语言(http://mustache.github.io/)
