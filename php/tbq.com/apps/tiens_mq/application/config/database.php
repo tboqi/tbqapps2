@@ -13,9 +13,9 @@ return array
              * string   password    database password
              * boolean  persistent  use persistent connections?
              */
-            'dsn' => 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME,
-            'username' => DB_USER,
-            'password' => DB_PASS,
+            'dsn' => 'mysql:host='10.0.75.1';dbname=amqmanager',
+            'username' => 'root',
+            'password' => 'root',
             'persistent' => FALSE,
         ),
         /**
