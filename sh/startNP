@@ -5,13 +5,28 @@ export PATH=$PATH:/work/libs/nginx-1.9.9/sbin
 
 #start nginx php
 
-# cd /work/libs/nginx-1.9.9/conf/vhost/
-# ln -s /work/d/code/phpcms.tiens.com/nginx.htaccess phpcms_tiens.conf
-# ln -s /work/d/code/www.tiens.com/nginx.htaccess www_tiens.conf
-# ln -s /work/d/code/tjtjs-ecstore/nginx.access testshop_taijisun.conf
-# ln -s /work/d/code/tmq1/yii2/frontend/app.conf yii2_mq.conf
-# ln -s /work/d/tbqapp2/php/ci/apps/www/nginx.htaccess cidev.conf
-# cd -
+cd /work/libs/nginx-1.9.9/conf/vhost/
+ln -s /work/d/code/phpcms.tiens.com/nginx.htaccess phpcms_tiens.conf
+ln -s /work/d/code/www.tiens.com/nginx.htaccess www_tiens.conf
+ln -s /work/d/code/tjtjs-ecstore/nginx.access testshop_taijisun.conf
+ln -s /work/d/code/tmq1/yii2/frontend/app.conf yii2_mq.conf
+ln -s /work/d/tbqapp2/php/ci/apps/www/nginx.htaccess cidev.conf
+ln -s /work/d/tbqapp2/php/chentu.info.wp/nginx.htaccess chentu_info_wp.conf
+ln -s /work/d/tbqapp2/php/tbq.com/apps/tiens_mq/nginx.htaccess tiens_mq_khn.conf
+ln -s /work/d/code/tiens_hualang/nginx.htaccess tiens_hualang.conf
+cd -
+
+cd /work/libs/php-5.3.29/var/log
+ln -s /work/d/docker_php_log/php-fpm.53.log php-fpm.log
+cd -
+
+cd /work/libs/php-5.6.21/var/log
+ln -s /work/d/docker_php_log/php-fpm.57.log php-fpm.log
+cd -
+
+cd /work/libs/php-7.1.6/var/log
+ln -s /work/d/docker_php_log/php-fpm.71.log php-fpm.log
+cd -
 
 /work/libs/php-7.1.6/sbin/php-fpm
 /work/libs/php-5.6.21/sbin/php-fpm
