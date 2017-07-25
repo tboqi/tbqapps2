@@ -1,6 +1,6 @@
 server {
         server_name myfw.com;
-        root /work/d/tbqapp2/php/myFramework/apps/main/;
+        root /work/d/tbqapp2/php/myFramework/apps/default/;
         index index.php;
 
         # set expiration of assets to MAX for caching
@@ -15,7 +15,10 @@ server {
         }
 
         location ~* \.php$ {
-                fastcgi_pass 127.0.0.1:9000;
-                include fastcgi.conf;
+                #fastcgi_pass 127.0.0.1:9000;#php7.1
+                #include fastcgi.conf;
+                fastcgi_pass 127.0.0.1:9001;#php5.6
+                fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+                include fastcgi_params;
         }
 }
