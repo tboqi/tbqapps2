@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+    添加RSS
+    <form action="{{ url_for('rss_add') }}" method="post">
+        url:<input type="text" name="url" style="width: 500px;">
+        <button type="submit">ok</button>
+    </form>
+{% endblock %}

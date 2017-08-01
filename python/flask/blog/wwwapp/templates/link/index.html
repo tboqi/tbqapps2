@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block body %}
+    链接
+    {% for item in links %}
+    <a target="_blank" href="{{ item.url }}">{{ item.title }}</a>
+    {% endfor %}
+{% endblock %}

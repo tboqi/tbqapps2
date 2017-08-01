@@ -1,0 +1,1437 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"class",
+				"classes"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"ms",
+				"msid_11001"
+			],
+			[
+				"tiens",
+				"tiens_hualang"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"html",
+				"htmlentities"
+			],
+			[
+				"view",
+				"views"
+			],
+			[
+				"exec",
+				"Execute"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"add",
+				"addslashes"
+			],
+			[
+				"mem",
+				"memberSerial"
+			],
+			[
+				"create",
+				"create_time"
+			],
+			[
+				"toup",
+				"Toupiao"
+			],
+			[
+				"arr",
+				"arr"
+			],
+			[
+				"me",
+				"message"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"busine",
+				"businessName"
+			],
+			[
+				"message",
+				"messageJson"
+			],
+			[
+				"recei",
+				"receiveMQ"
+			],
+			[
+				"qu",
+				"queue"
+			],
+			[
+				"method",
+				"methodIDs"
+			],
+			[
+				"send",
+				"sendMQ"
+			],
+			[
+				"new",
+				"newPwdMd5"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"md",
+				"md5Encode"
+			],
+			[
+				"star",
+				"start_time"
+			],
+			[
+				"start",
+				"start_date"
+			],
+			[
+				"table",
+				"tablename"
+			],
+			[
+				"tab",
+				"tablename"
+			],
+			[
+				"修改",
+				"修改软件信息"
+			],
+			[
+				"ad",
+				"addslashes"
+			],
+			[
+				"arra",
+				"array"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "python/flask2/blog/wwwapp/__init__.py",
+			"settings":
+			{
+				"buffer_size": 325,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "python/flask2/blog/runserver.py",
+			"settings":
+			{
+				"buffer_size": 44,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "python/flask/test170228/runserver.py",
+			"settings":
+			{
+				"buffer_size": 44,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inset",
+				"Package Control: Install Package"
+			],
+			[
+				"phpfmt ",
+				"phpfmt: generate PHPDoc block"
+			],
+			[
+				"phpfmt ind",
+				"phpfmt: indentation with spaces"
+			],
+			[
+				"phpfmt",
+				"phpfmt: toggle PSR2"
+			],
+			[
+				"Package Control: isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"mas",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remov",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 488.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/tbqapp2/python/flask2/blog",
+		"/D/tbqapp2/python/flask2/blog/wwwapp",
+		"/D/tbqapp2/python",
+		"/D/tbqapp2/python/flask",
+		"/D/tbqapp2/python/flask/test170228",
+		"/D/tbqapp2/python/flask2"
+	],
+	"file_history":
+	[
+		"/D/code/www.tiens.com/wap/ms_tiens_mobile/support_10001.php",
+		"/D/tbqapp2/python/flask2/blog/runserver.py",
+		"/D/tbqapp2/python/flask2/blog/wwwapp/index.py",
+		"/D/tbqapp2/python/flask2/blog/wwwapp/templates/index.html",
+		"/D/tbqapp2/python/flask/test170228/wwwapp/__init__.py",
+		"/D/tbqapp2/python/flask/test170228/run.py",
+		"/D/tbqapp2/python/flask/test170228/runserver.py",
+		"/D/code/www.tiens.com/wap/ms_tiens_mobile/support.html",
+		"/D/tbqapp2/python/flask2/blog/main.py",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10001.php",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10002.php",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10003.php",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10004.php",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10005.php",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10006.php",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10007.php",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10008.php",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10009.php",
+		"/D/code/www.tiens.com/html/ms_tiens/personal_profile_10010.php",
+		"/D/code/www.tiens.com/wap/ms_tiens_mobile/index.php",
+		"/E/ms_tiens_mobile(20170728)/ms_tiens_mobile/support.html",
+		"/D/code/www.tiens.com/html/ms_tiens/index.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/order.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/order.php",
+		"/E/b.php",
+		"/E/a.php",
+		"/D/code/www.tiens.com/wap/ms_tiens_mobile/support_10002.php",
+		"/D/code/www.tiens.com/wap/ms_tiens_mobile/support_10003.php",
+		"/D/code/www.tiens.com/wap/ms_tiens_mobile/support_10004.php",
+		"/D/code/www.tiens.com/wap/ms_tiens_mobile/support_10005.php",
+		"/D/code/www.tiens.com/wap/ms_tiens_mobile/support_10006.php",
+		"/E/ms.tiens_latest(20170728)/ms.tiens_latest/personal_profile.html",
+		"/D/tbqapp2/php/myFramework/classes/Base/Application.php",
+		"/D/tbqapp2/php/tbq.com/apps/www/index.php",
+		"/D/tbqapp2/php/myFramework/classes/Application.php",
+		"/D/tbqapp2/php/myFramework/classes/Base/Component.php",
+		"/D/tbqapp2/php/myFramework/classes/Base/Module.php",
+		"/D/tbqapp2/php/myFramework/classes/Di/Service/Locator.php",
+		"/D/tbqapp2/php/myFramework/classes/Base/Object.php",
+		"/D/tbqapp2/php/myFramework/classes/Base/Configurable.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/base/Configurable.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/base/Component.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/di/ServiceLocator.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/base/Object.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/base/Module.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/base/Application.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/web/Application.php",
+		"/D/tbqapp2/php/myFramework/apps/default/index.php",
+		"/D/code/tmq1/yii2/frontend/web/index.php",
+		"/D/code/www.tiens.com/wap/ms_tiens_mobile/succeed.html",
+		"/D/code/www.tiens.com/html/ms_tiens_mobile/index.php",
+		"/D/code/www.tiens.com/toupiao.php",
+		"/D/code/www.tiens.com/include/common.inc.php",
+		"/D/code/www.tiens.com/include/config.inc.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/web/Request.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/web/UrlManager.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/base/Request.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/Yii.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/BaseYii.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/base/Response.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/web/Response.php",
+		"/D/code/tmq1/yii2/vendor/yiisoft/yii2/base/Model.php",
+		"/D/code/Flask-Blogging/example/main.py",
+		"/D/tbqapp2/php/myFramework/apps/default/nginx.htaccess",
+		"/D/tbqapp2/sh/debian9Start.sh",
+		"/D/code/tjtjs-ecstore/custom/webapi/lib/api/rpc/request.php",
+		"/D/code/tjtjs-ecstore/custom/webapi/lib/api/rpc/request/order.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/lib/tasks/order/addencrypt.php",
+		"/D/code/www.tiens.com/html/ms_tiens/index.html",
+		"/D/code/tjtjs-ecstore/app/webapi/controller/admin/apilog.php",
+		"/D/code/tjtjs-ecstore/app/webapi/lib/order.php",
+		"/D/code/tjtjs-ecstore/custom/webapi/lib/order.php",
+		"/D/code/tjtjs-ecstore/app/webapi/lib/api/rpc/request/order.php",
+		"/D/code/tjtjs-ecstore/app/tiens/model/changdaojiance/order/tongji.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/dbschema/orders.php",
+		"/D/code/tjtjs-ecstore/app/tiens/controller/admin/changdao.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/order/tongji.php",
+		"/D/code/tiens_hualang/statics/hualang/jd/css/app.css",
+		"/D/code/tiens_hualang/phpcms/templates/hualang/content/index.html",
+		"/D/code/tiens_hualang/statics/hualang/jd/index.html",
+		"/D/code/tiens_hualang/statics/hualang/styles/style.css",
+		"/E/jiaoben835/index.html",
+		"/D/tbqapp2/Dockerfile",
+		"/D/code/tiens_hualang/caches/configs/database_dev.php",
+		"/D/tbqapp2/sh/startNP",
+		"/D/code/tiens_hualang/nginx.htaccess",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/dopayment.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/task/changdaojiance.php",
+		"/D/code/tmq1/sender/src/activeMQ/jms/JMSSendder.java",
+		"/D/code/tjtjs-ecstore/app/b2c/model/orders.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/order/create.php",
+		"/D/tbqapp2/php/chentu.info.wp/nginx.htaccess",
+		"/D/code/tmq1/yii2/vendor/ezyang/htmlpurifier/library/HTMLPurifier/ConfigSchema/schema/HTML.TargetNoopener.txt",
+		"/D/code/tjtjs-ecstore/app/b2c/controller/wap/order.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/cart.php",
+		"/D/code/tiens_hualang/phpcms/templates/hualang/content/category_zpzs.html",
+		"/D/code/tiens_hualang/phpcms/templates/hualang/content/category.html",
+		"/D/code/tiens_hualang/phpcms/templates/hualang/content/page.html",
+		"/D/code/tiens_hualang/phpcms/templates/hualang/content/header.html",
+		"/D/code/tiens_hualang/phpcms/modules/content/classes/content_tag.class.php",
+		"/D/code/tmq1/receiver/src/acviteMQ/client/MyHttpClient.java",
+		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/application/classes/Controller/Mq.php",
+		"/D/code/tiens_hualang/caches/caches_commons/caches_data/category_content_1.cache.php",
+		"/D/code/tiens_hualang/phpcms/templates/hualang/content/footer.html",
+		"/D/code/tiens_hualang/statics/hualang/g/themes/drayton/1.0/styles/layout.css",
+		"/D/code/tiens_hualang/statics/hualang/g/1.0/styles/base.css",
+		"/D/code/tiens_hualang/statics/hualang/core/user_custom.css",
+		"/D/code/tiens_hualang/statics/hualang/core/dynamic_responsive.css-c=1.0.5.css",
+		"/D/code/tiens_hualang/statics/hualang/core/dynamic_main.css-c=1.0.5.css",
+		"/D/code/tiens_hualang/statics/hualang/core/dynamic_base.css-c=1.0.5.css",
+		"/D/code/tiens_hualang/statics/hualang/archimedes/styles/archimedes-frontend-core.css-c=1.0.5.css",
+		"/D/code/tiens_hualang/statics/hualang/archimedes/scripts/archimedes-frontend-modules.js-c=1.0.5",
+		"/D/code/tiens_hualang/statics/hualang/archimedes/scripts/archimedes-frontend-core.js-c=1.0.5",
+		"/D/code/tiens_hualang/statics/hualang/g/1.0/styles/layout.css",
+		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/application/classes/Controller/Router.php",
+		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/application/config/database.php",
+		"/D/html/leogallery/www.leogallery.com.cn/index.htm",
+		"/D/code/tmq1/sender/src/activeMQ/processor/RouterProcessor.java",
+		"/D/tbqapp2/php/ci/apps/tiens_mq/application/config/database.php",
+		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/nginx.htaccess",
+		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/application/classes/Controller/Apitest.php",
+		"/D/tbqapp2/php/ci/apps/tiens_mq/application/controllers/Apitest.php",
+		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/application/views/welcome/index.php",
+		"/D/tbqapp2/cfg/vbox_centos_v6.8_conf/nginx_vhost/tbq_ligerui.com.conf",
+		"/D/tbqapp2/cfg/vbox_centos_v6.8_conf/nginx_vhost/tienstest.com.conf",
+		"/D/tbqapp2/cfg/vbox_centos_v6.8_conf/nginx_vhost/chentu.info.conf",
+		"/D/tbqapp2/cfg/vbox_centos_v6.8_conf/nginx_vhost/dokuwiki.conf",
+		"/D/tbqapp2/cfg/vbox_centos_v6.8_conf/nginx_vhost/kohana.dev.conf"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 103.0,
+		"where_history":
+		[
+			"D:\\code\\www.tiens.com\\html",
+			"D:\\code\\tmq1\\yii2\\vendor\\yiisoft",
+			"D:\\code\\tmq1\\yii2",
+			"D:\\code\\www.tiens.com\\html\\ms_tiens\\js",
+			"D:\\code\\tmq1\\yii2",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tmq1\\sender",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tmq1\\receiver",
+			"D:\\code\\tiens_hualang",
+			"D:\\code\\tiens_hualang\\statics\\hualang",
+			"D:\\code\\tmq1\\sender",
+			"D:\\tbqapp2\\php\\tbq.com\\apps\\my",
+			"D:\\tbqapp2\\php\\ci\\3.1.5",
+			"D:\\code\\www.tiens.com,*.php",
+			"D:\\code\\tiens-msg-middleware\\trunk\\TMQ\\TiensMQSender",
+			"D:\\code\\tiens-msg-middleware\\trunk\\TMQ\\TiensMQSender,*.java",
+			"D:\\code\\tiens-msg-middleware\\trunk\\TMQ\\TiensMQReceiver",
+			"D:\\code\\tiens-msg-middleware\\trunk\\TMQ\\TiensMQReceiver,*.java",
+			"D:\\code\\www.tiens.com,*.php",
+			"D:\\code\\www.tiens.com,*.php,*.html",
+			"D:\\code\\www.tiens.com,*.php",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tmq1\\yii2\\frontend",
+			"D:\\code\\tmq1\\receiver",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tmq1\\receiver",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore,*.xml",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore,*.xml",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tmq1\\yii2\\frontend",
+			"D:\\code\\mq_sender_khn",
+			"D:\\code\\www.tiens.com,*.php",
+			"D:\\code\\www.tiens.com",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\www.tiens.com",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\phpcms.tiens.com,*.html",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\phpcms.tiens.com",
+			"D:\\code\\phpcms.tiens.com,*.php",
+			"D:\\code\\phpcms.tiens.com",
+			"D:\\code\\phpcms.tiens.com,*.php",
+			"D:\\code\\phpcms.tiens.com",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore,*.html",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\tbqapp2\\php\\phpcms",
+			"D:\\code\\tjtjs-ecstore,*.php,*.html",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tjtjs-ecstore,*.xml",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tjtjs-ecstore,*.html",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\tbqapp2\\php\\phpcms\\phpcms\\templates\\default.dev",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tjtjs-ecstore\\custom",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\tbqapp2\\php\\wwwtienskhn",
+			"D:\\code\\www.tiens.com",
+			"D:\\tbqapp2\\php",
+			"D:\\tbqapp2\\php\\tbq.com\\apps\\my\\application\\views",
+			"D:\\tbqapp2\\php",
+			"D:\\tbqapp2\\php\\tbq.com\\apps\\my",
+			"D:\\tbqapp2\\php\\tbq.com\\apps\\admin",
+			"D:\\tbqapp2\\php\\tbq.com\\apps\\test\\application",
+			"D:\\code\\mqtest\\application",
+			"D:\\tbqapp2\\php\\chentu.info.wp",
+			"D:\\code\\www.tiens.com",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tjtjs-ecstore\\",
+			"D:\\code\\tjtjs-ecstore\\,*.html",
+			"D:\\code\\tjtjs-ecstore\\,*.php",
+			"D:\\code\\tjtjs-ecstore\\",
+			"D:\\code\\tjtjs-ecstore\\custom",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore,*.xml",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore,*.xml",
+			"D:\\code\\tjtjs-ecstore;*.xml",
+			"D:\\code\\tjtjs-ecstore\\",
+			"D:\\code\\tjtjs-ecstore\\app\\tiens",
+			"D:\\code\\tjtjs-ecstore\\custom",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore,*.xml",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tjtjs-ecstore\\app,",
+			"D:\\code\\tjtjs-ecstore\\app,*\\model\\*",
+			"D:\\code\\tjtjs-ecstore\\app",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tmq1\\receiver",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tmq1\\sender",
+			"D:\\code\\tmq1\\receiver",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tiens-msg-middleware",
+			"D:\\tbqapp2\\php\\tbq.com\\apps",
+			"D:\\code\\tiens-msg-middleware",
+			"D:\\code\\tmq1\\sender",
+			"D:\\code\\tmq1\\receiver",
+			"D:\\code\\tjtjs-ecstore,*.xml",
+			"D:\\code\\tiens-msg-middleware",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tjtjs-ecstore\\app",
+			"D:\\code\\www.tiens.com\\abdmin",
+			"D:\\code\\www.tiens.com",
+			"D:\\tbqapp2\\php\\wp\\number1g.com",
+			"D:\\code\\tmq1,*.java",
+			"D:\\code\\www.tiens.com,*.php",
+			"D:\\code\\www.tiens.com",
+			"D:\\code\\www.tiens.com\\abdmin",
+			"D:\\code\\tiens-msg-middleware\\target",
+			"D:\\code\\tjs.shop,*.xml",
+			"D:\\code\\tjs.shop,*.php",
+			"D:\\code\\tjs.shop,*.xml",
+			"D:\\code\\tjs.shop,*.php",
+			"D:\\code\\tjs.shop,*.xml",
+			"D:\\code\\tjs.shop",
+			"D:\\code\\tjs.shop\\",
+			"D:\\code\\tjs.shop\\app\\ectools",
+			"D:\\code\\tjs.shop\\app\\b2c\\model",
+			"D:\\code\\tjs.shop,*.php"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Vote</a>",
+			"Who said women should not stand out? Women should never be the one to keep a low profile In Tiens",
+			"t stand out? Women should never be the one",
+			"ou are the one we are looking fo",
+			"===",
+			"<div id=\"support_mobile\">\n",
+			"<div id=\"support_mobile\">",
+			"support_mobile",
+			"top_right_menu",
+			"back to",
+			"<h1>Tiensgirl SHOW</h1>",
+			"Tiensgirl SHOW",
+			"Women should never be the one to keep a low profile I",
+			"Support her now",
+			"Voting Statistics",
+			"function run",
+			"<button class=\"button_hover\"",
+			"button_hover",
+			"-    ",
+			"<div class=\"swiper-slide\"",
+			"<div class=\"read_more\">",
+			"support_button pink",
+			"support_button",
+			"-      ",
+			"index.php",
+			"->getUrl",
+			"resolveRequestUri",
+			"function resolve",
+			"->runAction",
+			"runAction",
+			"createController",
+			"controllerNamespace",
+			"controller",
+			"controll",
+			"support_block",
+			"javascr",
+			"personal_profile.html",
+			"personal_profile",
+			"person",
+			"support",
+			"support her",
+			"msid_",
+			"main.js",
+			"<script",
+			"addencrypt",
+			"00300",
+			"member_login_name",
+			"购买数量已大于",
+			"购买数量",
+			"购买资格",
+			"_changdaoOrderCreate",
+			"changdao",
+			"您无资格",
+			"00505",
+			"tppabs",
+			"footer",
+			"cangxin_ho",
+			"009",
+			"js-c",
+			"module",
+			".module",
+			"slick.min.js",
+			"fancybox",
+			"cycle2",
+			"lib",
+			"\"../lib",
+			"\"../core/",
+			"\"../lib",
+			"无调用权限",
+			"消息体不能为空",
+			"request",
+			"modu",
+			"BASEPATH",
+			"SELF",
+			"SYSDIR",
+			"BASEPATH",
+			"FCPATH",
+			"function Execute",
+			"dataObj",
+			"同步调用失败",
+			"my_toupiao_user",
+			"changdao",
+			"cfg_mysql_type",
+			"dosql",
+			"栏目内容管理",
+			"leftMenu02_Str",
+			"leftMenu02_Arr",
+			"toupiao",
+			"没有权限",
+			"\"",
+			"display_errors",
+			"product_data",
+			"已发货量",
+			"product_data",
+			"invalidencrypt",
+			"invalidqty",
+			"invalidencrypt",
+			"退货",
+			"status",
+			"$_server",
+			"{\n",
+			"返回：",
+			"function return_save",
+			"display_error",
+			"function getrow",
+			"getrow",
+			"getOne",
+			"调用业务系统接口出错",
+			"aftersales_data_return_policy",
+			"aftersales.return_policy",
+			"b2c_api_rpc_notify_aftersales",
+			"api.aftersales.request",
+			"function return_save",
+			"stomp",
+			"券商",
+			"贵州茅台",
+			"五粮液",
+			"山西汾酒",
+			"洋河股份",
+			"博深工具",
+			"中化岩土",
+			"山西证券",
+			"东吴证券",
+			"广发证券",
+			"中信证券",
+			"青龙管业",
+			"建投能源",
+			"美的集团"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Read More</a>\n",
+			"Who said women should not stand out? Women should never be the one to keep a low profile\n",
+			"<div id=\"support_mobile\">\n<div class=\"top_right_menu col-lg-12\">\n  <span class=\"right_nav_mobile\"><a href=\"index.php\">Back to Home</a></span>\n  </div>\n",
+			"    ",
+			"      ",
+			"personal_profile.php",
+			"\"/statics/hualang",
+			"\"/statics/hualang/core/",
+			"\"/statics/hualang",
+			"'",
+			"",
+			"/",
+			"\"",
+			"src=\"/static/wwwtiens/images",
+			"/css",
+			"",
+			"/",
+			"",
+			"    ",
+			"<link href=\"http://tbq_static.com/ligerui/lib/",
+			"<script src=\"http://tbq_static.com/ligerui/lib/",
+			"tbq_static.com",
+			"http://tbq_static.com/ligerui",
+			"/static",
+			"/",
+			"href=\"http://testshop.taiji-sun.com/index.php/",
+			"\"text\"",
+			"\"",
+			"=>",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "python/flask2/blog/wwwapp/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								262,
+								262
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "python/flask2/blog/runserver.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 44,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "python/flask/test170228/runserver.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 44,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "a.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"custom/b2c/controller/wap/order.php",
+				"tjtjs-ecstore\\custom\\b2c\\controller\\wap\\order.php"
+			],
+			[
+				"custom/b2c/controller/site/order.php",
+				"tjtjs-ecstore\\custom\\b2c\\controller\\site\\order.php"
+			],
+			[
+				"htm/msti/inde",
+				"www.tiens.com\\html\\ms_tiens\\index.php"
+			],
+			[
+				"include/config.inc.php",
+				"www.tiens.com\\include\\config.inc.php"
+			],
+			[
+				"tjtjs-/custo/webapi",
+				"tjtjs-ecstore\\custom\\webapi\\lib\\api\\rpc\\request.php"
+			],
+			[
+				"dbsc/orders",
+				"tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"tienshual/ca/conf/data",
+				"tiens_hualang\\caches\\configs\\database_dev.php"
+			],
+			[
+				"huang/ng.ht",
+				"tiens_hualang\\nginx.htaccess"
+			],
+			[
+				"starnp",
+				"tbqapp2\\sh\\startNP"
+			],
+			[
+				"sh/starng",
+				"tmq1\\yii2\\vendor\\ezyang\\htmlpurifier\\library\\HTMLPurifier\\ConfigSchema\\schema\\HTML.TargetNoopener.txt"
+			],
+			[
+				"wap/order",
+				"tjtjs-ecstore\\app\\b2c\\controller\\wap\\order.php"
+			],
+			[
+				"tiens_hl/usercustom.css",
+				"tiens_hualang\\statics\\hualang\\core\\user_custom.css"
+			],
+			[
+				"tiens_hl/hual/layout.c",
+				"tiens_hualang\\statics\\hualang\\g\\themes\\drayton\\1.0\\styles\\layout.css"
+			],
+			[
+				"startnp",
+				"tbqapp2\\sh\\startNP"
+			],
+			[
+				"core/codeigniter.php",
+				"www.tiens.com\\app\\system\\core\\CodeIgniter.php"
+			],
+			[
+				"baseyii",
+				"tmq1\\yii2\\vendor\\yiisoft\\yii2\\BaseYii.php"
+			],
+			[
+				"yii/web/app",
+				"tmq1\\yii2\\vendor\\yiisoft\\yii2\\web\\Application.php"
+			],
+			[
+				"left_menu_user",
+				"www.tiens.com\\abdmin\\left_menu_user.php"
+			],
+			[
+				"home_user",
+				"www.tiens.com\\abdmin\\home_user.php"
+			],
+			[
+				"templates/html/default_user.html",
+				"www.tiens.com\\abdmin\\templates\\html\\default_user.html"
+			],
+			[
+				"templates/html/default.html",
+				"www.tiens.com\\abdmin\\templates\\html\\default.html"
+			],
+			[
+				"app.conf",
+				"tmq1\\yii2\\frontend\\app.conf"
+			],
+			[
+				"tmq/yii/app",
+				"tmq1\\yii2\\frontend\\app.conf"
+			],
+			[
+				"tjtjs/c/b/v/w/a/afterinfo.ht",
+				"tjtjs-ecstore\\custom\\b2c\\view\\wap\\afterlist\\afterinfo.html"
+			],
+			[
+				"tjtjs/dbsc/orders.",
+				"tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"tjtj/after/",
+				"tjtjs-ecstore\\app\\aftersales\\app.xml"
+			],
+			[
+				"admingroup_update.php",
+				"www.tiens.com\\abdmin\\admingroup_update.php"
+			],
+			[
+				"tmq1/yii2/vendor/yiisoft/yii2/db/connection.ph",
+				"tmq1\\yii2\\vendor\\yiisoft\\yii2\\db\\Connection.php"
+			],
+			[
+				"yii/connection",
+				"tmq1\\yii2\\vendor\\yiisoft\\yii2\\db\\Connection.php"
+			],
+			[
+				"tm/yii/web.php",
+				"tmq1\\yii2\\frontend\\web\\index.php"
+			],
+			[
+				"dbs/orde",
+				"tjtjs-ecstore\\app\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"model.class.php",
+				"phpcms.tiens.com\\phpcms\\libs\\classes\\model.class.php"
+			],
+			[
+				"content_model",
+				"phpcms.tiens.com\\phpcms\\model\\content_model.class.php"
+			],
+			[
+				"mysql.class.php",
+				"phpcms.tiens.com\\phpcms\\libs\\classes\\mysql.class.php"
+			],
+			[
+				"b/a/sale",
+				"tjtjs-ecstore\\app\\b2c\\lib\\analysis\\sale.php"
+			],
+			[
+				"cus/b2/dbsc/order",
+				"tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"dbsc/orders.php",
+				"tjtjs-ecstore\\app\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"wap/cart/item/goods.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\wap\\cart\\item\\goods.html"
+			],
+			[
+				"wap/cart/item/goods_checkout.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\wap\\cart\\item\\goods_checkout.html"
+			],
+			[
+				"wap/cart/item/index.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\wap\\cart\\item\\index.html"
+			],
+			[
+				"site/cart/item/goods.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\item\\goods.html"
+			],
+			[
+				"site/cart/item/index.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\item\\index.html"
+			],
+			[
+				"site/cart/cart_items.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\cart_items.html"
+			],
+			[
+				"extention",
+				"tbqapp2\\php\\phpcms\\phpcms\\libs\\functions\\extention.func.php"
+			],
+			[
+				"phpcms/base.php",
+				"tbqapp2\\php\\phpcms\\phpcms\\base.php"
+			],
+			[
+				"dbeavmodel",
+				"tjtjs-ecstore\\app\\dbeav\\lib\\model.php"
+			],
+			[
+				"model/product",
+				"tjtjs-ecstore\\app\\b2c\\model\\products.php"
+			],
+			[
+				"mode/goods",
+				"tjtjs-ecstore\\app\\b2c\\model\\goods.php"
+			],
+			[
+				"tjtj/db/model.php",
+				"tjtjs-ecstore\\app\\base\\lib\\db\\model.php"
+			],
+			[
+				"site/gallery/index.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\site\\gallery\\index.html"
+			],
+			[
+				"theme_widget_sales_rank.php",
+				"tjtjs-ecstore\\themes\\1480992289\\widgets\\sales_rank\\theme_widget_sales_rank.php"
+			],
+			[
+				"cus/webapi/api/rpc/request",
+				"code\\tjtjs-ecstore\\custom\\webapi\\lib\\api\\rpc\\request.php"
+			],
+			[
+				"webapiapi/rpc/request",
+				"code\\tjtjs-ecstore\\app\\webapi\\lib\\api\\rpc\\request.php"
+			],
+			[
+				"cus/b2/cont/sitepayc",
+				"code\\tjtjs-ecstore\\custom\\b2c\\controller\\site\\paycenter.php"
+			],
+			[
+				"tiens/request",
+				"code\\tjtjs-ecstore\\app\\tiens\\lib\\request.php"
+			],
+			[
+				"dbs/cront",
+				"code\\tjtjs-ecstore\\app\\base\\dbschema\\crontab.php"
+			],
+			[
+				"admin/crontab/detail.html",
+				"code\\tjtjs-ecstore\\app\\system\\view\\admin\\crontab\\detail.html"
+			],
+			[
+				"sys/contr/admin/cr",
+				"code\\tjtjs-ecstore\\app\\system\\controller\\admin\\crontab.php"
+			],
+			[
+				"tiens/ser",
+				"code\\tjtjs-ecstore\\app\\tiens\\services.xml"
+			],
+			[
+				"desktop/finder/builder/prototype",
+				"code\\tjtjs-ecstore\\app\\desktop\\lib\\finder\\builder\\prototype.php"
+			],
+			[
+				"desktop/finder/builder/view",
+				"code\\tjtjs-ecstore\\app\\desktop\\lib\\finder\\builder\\view.php"
+			],
+			[
+				"desktop/controller",
+				"code\\tjtjs-ecstore\\app\\desktop\\lib\\controller.php"
+			],
+			[
+				"tiens/changdaojiance/order",
+				"code\\tjtjs-ecstore\\app\\tiens\\lib\\changdaojiance\\order.php"
+			],
+			[
+				"system/admin/cr",
+				"code\\tjtjs-ecstore\\app\\system\\controller\\admin\\crontab.php"
+			],
+			[
+				"site/cart/mini/item/goods.html",
+				"code\\tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini\\item\\goods.html"
+			],
+			[
+				"site/cart/checkout/invoice.html",
+				"code\\tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\checkout\\invoice.html"
+			],
+			[
+				"site/cart/checkout/index.html",
+				"code\\tjtjs-ecstore\\custom\\b2c\\view\\site\\cart\\checkout\\index.html"
+			],
+			[
+				"site/cart/checkout/cart_main.html",
+				"code\\tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\checkout\\cart_main.html"
+			],
+			[
+				"site/cart/checkout/goods.html",
+				"code\\tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\checkout\\goods.html"
+			],
+			[
+				"order_item.html",
+				"code\\tjtjs-ecstore\\app\\b2c\\view\\site\\member\\order_item.html"
+			],
+			[
+				"dbs/orders.php",
+				"code\\tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"wap/member/orders.html",
+				"code\\tjtjs-ecstore\\app\\b2c\\view\\wap\\member\\orders.html"
+			],
+			[
+				"dbs/orders",
+				"code\\tjtjs-ecstore\\app\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"dbs/delivery",
+				"code\\tjtjs-ecstore\\app\\b2c\\dbschema\\delivery.php"
+			],
+			[
+				"return_product",
+				"code\\tjtjs-ecstore\\app\\aftersales\\dbschema\\return_product.php"
+			],
+			[
+				"dbs/order_delivery",
+				"code\\tjtjs-ecstore\\app\\b2c\\dbschema\\order_delivery.php"
+			],
+			[
+				"dbs/orders.",
+				"code\\tjtjs-ecstore\\app\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"ectool/lib/refudn",
+				"code\\tjtjs-ecstore\\app\\ectools\\lib\\refund.php"
+			],
+			[
+				"b2c/deposit/refund",
+				"code\\tjtjs-ecstore\\app\\b2c\\lib\\deposit\\refund.php"
+			],
+			[
+				"b2c/api/rpc/request",
+				"code\\tjtjs-ecstore\\app\\b2c\\lib\\api\\rpc\\request.php"
+			],
+			[
+				"ectools/refund/update",
+				"code\\tjtjs-ecstore\\app\\ectools\\lib\\refund\\update.php"
+			],
+			[
+				"ectool/lib/ref",
+				"code\\tjtjs-ecstore\\app\\ectools\\lib\\refund.php"
+			],
+			[
+				"ectools/refund",
+				"code\\tjtjs-ecstore\\app\\ectools\\lib\\refund.php"
+			],
+			[
+				"b2c/api/callback/app",
+				"code\\tjtjs-ecstore\\app\\b2c\\lib\\api\\callback\\app.php"
+			],
+			[
+				"base/db/model",
+				"code\\tjtjs-ecstore\\app\\base\\lib\\db\\model.php"
+			],
+			[
+				"dbeav/model",
+				"code\\tjtjs-ecstore\\app\\dbeav\\lib\\model.php"
+			],
+			[
+				"dbs/refund",
+				"code\\tjtjs-ecstore\\app\\ectools\\dbschema\\refunds.php"
+			],
+			[
+				"dbs/fund",
+				"code\\tjtjs-ecstore\\app\\ectools\\dbschema\\refunds.php"
+			],
+			[
+				"ectools/mdl/refunds",
+				"code\\tjtjs-ecstore\\app\\ectools\\model\\refunds.php"
+			],
+			[
+				"ectoo/admin/refund",
+				"code\\tjtjs-ecstore\\app\\ectools\\controller\\admin\\refund.php"
+			],
+			[
+				"contro/admin/order",
+				"code\\tjtjs-ecstore\\app\\b2c\\controller\\admin\\order.php"
+			],
+			[
+				"dbs/prod",
+				"code\\tjtjs-ecstore\\app\\b2c\\dbschema\\products.php"
+			],
+			[
+				"dbs/order",
+				"code\\tjtjs-ecstore\\app\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"model/return/produ",
+				"code\\tjtjs-ecstore\\app\\aftersales\\model\\return\\product.php"
+			],
+			[
+				"b2c/order/create",
+				"code\\tjtjs-ecstore\\custom\\b2c\\lib\\order\\create.php"
+			],
+			[
+				"tjtjs/contro/site/order",
+				"code\\tjtjs-ecstore\\custom\\b2c\\controller\\site\\order.php"
+			],
+			[
+				"tjs-ecstore/model/cart",
+				"code\\tjtjs-ecstore\\app\\b2c\\model\\cart.php"
+			],
+			[
+				"controllpassport.php",
+				"code\\tjtjs-ecstore\\custom\\b2c\\controller\\site\\passport.php"
+			],
+			[
+				"ctroll/member",
+				"code\\tjtjs-ecstore\\app\\b2c\\controller\\site\\member.php"
+			],
+			[
+				"controll/member",
+				"code\\tjtjs-ecstore\\app\\aftersales\\controller\\site\\member.php"
+			],
+			[
+				"b2c/user/ob",
+				"code\\tjtjs-ecstore\\app\\b2c\\lib\\user\\object.php"
+			],
+			[
+				"action.class.php",
+				"code\\www.tiens.com\\abdmin\\inc\\action.class.php"
+			],
+			[
+				"nav_save",
+				"code\\www.tiens.com\\abdmin\\nav_save.php"
+			],
+			[
+				"softdo",
+				"code\\www.tiens.com\\abdmin\\soft_do.php"
+			],
+			[
+				"softsave",
+				"code\\www.tiens.com\\abdmin\\soft_save.php"
+			],
+			[
+				"infoimgdo",
+				"code\\www.tiens.com\\abdmin\\infoimg_do.php"
+			],
+			[
+				"infoimgsa",
+				"code\\www.tiens.com\\abdmin\\infoimg_save.php"
+			],
+			[
+				"ajax",
+				"code\\www.tiens.com\\abdmin\\ajax_do.php"
+			],
+			[
+				"infolistsav",
+				"code\\www.tiens.com\\abdmin\\infolist_save.php"
+			],
+			[
+				"infolistdo.",
+				"code\\www.tiens.com\\abdmin\\infolist_do.php"
+			],
+			[
+				"wap/header.php",
+				"code\\www.tiens.com\\wap\\header.php"
+			],
+			[
+				"wap/index",
+				"code\\www.tiens.com\\wap\\index.php"
+			],
+			[
+				"info_save",
+				"code\\www.tiens.com\\abdmin\\info_save.php"
+			],
+			[
+				"uplo_fil_s",
+				"code\\www.tiens.com\\abdmin\\upload_filemgr_save.php"
+			],
+			[
+				"uploadsql",
+				"code\\www.tiens.com\\abdmin\\upload_filemgr_sql.php"
+			],
+			[
+				"admin.func.php",
+				"code\\www.tiens.com\\abdmin\\inc\\admin.func.php"
+			],
+			[
+				"/inc/config.inc.php",
+				"code\\www.tiens.com\\abdmin\\inc\\config.inc.php"
+			],
+			[
+				"admin.func.ph",
+				"code\\www.tiens.com\\abdmin\\inc\\admin.func.php"
+			],
+			[
+				"inc/config.inc.php",
+				"code\\www.tiens.com\\abdmin\\inc\\config.inc.php"
+			],
+			[
+				"b2/contr/admin/orer",
+				"app\\b2c\\controller\\admin\\order.php"
+			],
+			[
+				"systemqueue",
+				"app\\system\\lib\\queue.php"
+			],
+			[
+				"model/qu",
+				"app\\system\\model\\queue\\mysql.php"
+			],
+			[
+				"model/apilog",
+				"app\\webapi\\model\\apilog.php"
+			],
+			[
+				"customrequest.php",
+				"custom\\webapi\\lib\\api\\rpc\\request.php"
+			],
+			[
+				"script/crontab/crontab.php",
+				"script\\crontab\\crontab.php"
+			],
+			[
+				"script/queue/queue.sh",
+				"script\\queue\\queue.sh"
+			],
+			[
+				"app/base/kernel.php",
+				"app\\base\\kernel.php"
+			],
+			[
+				"base/rpc/ser",
+				"app\\base\\lib\\rpc\\service.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"base_application_prototype_content",
+				"base_application_prototype_content"
+			]
+		],
+		"width": 696.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 250.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
