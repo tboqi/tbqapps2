@@ -1,7 +1,7 @@
 #! /bin/bash
 
-export PATH=$PATH:/work/libs/php-7.1.6/bin
-export PATH=$PATH:/work/libs/nginx-1.9.9/sbin
+#export PATH=$PATH:/work/libs/php-7.1.6/bin
+#export PATH=$PATH:/work/libs/nginx-1.9.9/sbin
 
 #start nginx php
 
@@ -14,6 +14,8 @@ ln -s /work/d/tbqapp2/php/ci/apps/www/nginx.htaccess cidev.conf
 ln -s /work/d/tbqapp2/php/chentu.info.wp/nginx.htaccess chentu_info_wp.conf
 ln -s /work/d/tbqapp2/php/tbq.com/apps/tiens_mq/nginx.htaccess tiens_mq_khn.conf
 ln -s /work/d/code/tiens_hualang/nginx.htaccess tiens_hualang.conf
+ln -s /work/d/tbqapp2/php/yii2_advanced/frontend/nginx.htaccess yii_frontend.conf
+ln -s /work/d/tbqapp2/php/yii2_advanced/backend/nginx.htaccess yii_backend.conf
 cd -
 
 cd /work/libs/php-5.3.29/var/log
