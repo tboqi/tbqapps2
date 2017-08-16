@@ -44,4 +44,9 @@ return [
         ],
     ],
     'params' => $params,
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Admin',
+        ],
+    ],
 ];
