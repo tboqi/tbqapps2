@@ -3,17 +3,14 @@
 // -- Environment setup --------------------------------------------------------
 
 // Load the core Kohana class
-require SYSPATH.'classes/Kohana/Core'.EXT;
+require SYSPATH . 'classes/Kohana/Core' . EXT;
 
-if (is_file(APPPATH.'classes/Kohana'.EXT))
-{
-	// Application extends the core
-	require APPPATH.'classes/Kohana'.EXT;
-}
-else
-{
-	// Load empty core extension
-	require SYSPATH.'classes/Kohana'.EXT;
+if (is_file(APPPATH . 'classes/Kohana' . EXT)) {
+    // Application extends the core
+    require APPPATH . 'classes/Kohana' . EXT;
+} else {
+    // Load empty core extension
+    require SYSPATH . 'classes/Kohana' . EXT;
 }
 
 /**
@@ -61,9 +58,8 @@ I18n::lang('en-us');
  * Note: If you supply an invalid environment name, a PHP warning will be thrown
  * saying "Couldn't find constant Kohana::<INVALID_ENV_NAME>"
  */
-if (isset($_SERVER['KOHANA_ENV']))
-{
-	Kohana::$environment = constant('Kohana::'.strtoupper($_SERVER['KOHANA_ENV']));
+if (isset($_SERVER['KOHANA_ENV'])) {
+    Kohana::$environment = constant('Kohana::' . strtoupper($_SERVER['KOHANA_ENV']));
 }
 
 /**
@@ -80,14 +76,14 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/',
-	'index_file'   => '',
+    'base_url' => '/',
+    'index_file' => '',
 ));
 
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
-Kohana::$log->attach(new Log_File(APPPATH.'logs'));
+Kohana::$log->attach(new Log_File(APPPATH . 'logs'));
 
 /**
  * Attach a file reader to config. Multiple readers are supported.
@@ -98,25 +94,34 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	'auth'       => MODPATH.'auth',       // Basic authentication
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	'pagination'   => MODPATH.'pagination',
-	));
-
+    'auth' => MODPATH . 'auth', // Basic authentication
+    // 'cache'      => MODPATH.'cache',      // Caching with multiple backends
+    // 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
+    'database' => MODPATH . 'database', // Database access
+    // 'image'      => MODPATH.'image',      // Image manipulation
+    // 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+    // 'unittest'   => MODPATH.'unittest',   // Unit testing
+    // 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+    'pagination' => MODPATH . 'pagination',
+));
+/**
+ * 3级目录
+ */
+Route::set('section', '<directory>(/<controller>(/<action>(/<id>)))', array(
+    'directory' => 'admin|center',
+))
+    ->defaults(array(
+        'controller' => 'welcome',
+        'action' => 'index',
+    ));
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
 Route::set('default', '(<controller>(/<action>(/<param1>(/<param2>(/<param3>)))))')
-	->defaults(array(
-		'controller' => 'article',
-		'action'     => 'index',
-	));
-	
+    ->defaults(array(
+        'controller' => 'article',
+        'action' => 'index',
+    ));
+
 Cookie::$salt = 'Cookie::$salt';
