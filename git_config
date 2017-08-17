@@ -1,0 +1,27 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	autocrlf = false
+[remote "github"]
+	url = git@github.com:tboqi/tbqapps2.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+[remote "bitbucket"]
+	url = git@bitbucket.org:tboqi/tbqapps2.git
+	fetch = +refs/heads/*:refs/remotes/bitbucket/*
+[remote "origin"]
+	#url = git@git.coding.net:tboqi/tbqapp2.git
+	url = git@git.oschina.net:tbq2616/tbqapps2.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "a"]
+	remote = origin
+	merge = refs/heads/a
+[gui]
+	wmstate = normal
+	geometry = 841x483+104+104 189 218
