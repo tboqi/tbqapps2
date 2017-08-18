@@ -47,6 +47,8 @@ return [
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Admin',
+            'defaultRoute' => 'site/index',
+            // 'defaultController' => 'site',
         ],
     ],
 ];

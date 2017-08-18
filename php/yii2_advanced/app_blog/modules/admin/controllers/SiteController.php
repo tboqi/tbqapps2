@@ -2,8 +2,8 @@
 namespace app\modules\admin\controllers;
 use yii\web\Controller;
 
-class CustomController extends Controller {
-    public function actionGreet() {
+class SiteController extends Controller {
+    public function actionIndex() {
         return $this->render('greet');
     }
 }
