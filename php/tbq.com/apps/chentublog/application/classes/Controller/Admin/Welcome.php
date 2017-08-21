@@ -2,7 +2,9 @@
 class Controller_Admin_Welcome extends Controller {
     public function action_index() {
         $view = View::factory('admin/index.html');
-        $view->var = '123123';
+        $view->urls = [
+            'logout' => URL::site('user/logout'),
+        ];
         $this->response->body($view);
     }
 }
