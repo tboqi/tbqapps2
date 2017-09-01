@@ -6,15 +6,11 @@
 	symlinks = false
 	ignorecase = true
 	autocrlf = false
-[remote "github"]
-	url = git@github.com:tboqi/tbqapps2.git
-	fetch = +refs/heads/*:refs/remotes/github/*
-[remote "bitbucket"]
-	url = git@bitbucket.org:tboqi/tbqapps2.git
-	fetch = +refs/heads/*:refs/remotes/bitbucket/*
 [remote "origin"]
 	#url = git@git.coding.net:tboqi/tbqapp2.git
 	url = git@git.oschina.net:tbq2616/tbqapps2.git
+	url = git@bitbucket.org:tboqi/tbqapps2.git
+	url = git@github.com:tboqi/tbqapps2.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
 	remote = origin
