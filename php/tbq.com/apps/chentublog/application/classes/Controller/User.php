@@ -1,9 +1,11 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_User extends Controller {
+class Controller_User extends Controller
+{
     private $auth_config;
 
-    public function action_login() {
+    public function action_login()
+    {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $username = trim($_POST['username']);
             $password = trim($_POST['password']);
@@ -11,7 +13,7 @@ class Controller_User extends Controller {
             $auth = Auth::instance();
 
             $url = URL::site('admin');
-            if ($auth->login($username, $password, TRUE)) {
+            if ($auth->login($username, $password, true)) {
                 $url = $_POST['url'];
                 $url = !empty($url) ? $url : URL::site('admin');
                 //写入cookie
@@ -21,13 +23,14 @@ class Controller_User extends Controller {
             exit;
         }
 
-        $view = View::factory('user_login.html');
+        $view = View::factory('site/user/login.html');
         $view->url = '';
         $view->action = url::site('user/login');
         $this->response->body($view);
     }
 
-    public function action_logout() {
+    public function action_logout()
+    {
         Auth::instance()->logout();
         $this->auth_destroy();
         // $this->auth_destroy();
@@ -35,7 +38,8 @@ class Controller_User extends Controller {
         exit;
     }
 
-    private function remember_login($username, $password) {
+    private function remember_login($username, $password)
+    {
         $password_hash = Auth::instance()->hash($password);
         $cookie_lifetime = $this->auth_config['lifetime'];
         $webkey = $this->auth_config['hash_key'];
@@ -45,7 +49,8 @@ class Controller_User extends Controller {
         Cookie::set($cookie_name, $base64str, $cookie_lifetime);
     }
 
-    private function auth_destroy() {
+    private function auth_destroy()
+    {
         $cookie_name = $this->auth_config['session_key'];
         Cookie::delete($cookie_name);
     }
