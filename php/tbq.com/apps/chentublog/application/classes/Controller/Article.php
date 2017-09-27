@@ -1,6 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Article extends Controller_Template
+// class Controller_Article extends Controller_Template
+class Controller_Article extends Controller
 {
 
     public function action_index()
@@ -20,13 +21,20 @@ class Controller_Article extends Controller_Template
             'action' => $this->request->action()));
 
         $start = $pagination->offset;
-        $content = View::factory('article/articles');
-        $content->articles = $article_model->find($limit, $start);
-        $content->pagination = $pagination;
 
-        $this->template->content = $content;
+        $view = View::factory('site/article/index.html');
+        $view->articles = $article_model->find($limit, $start);
+        $view->pagination = $pagination;
+        $view->isLogin = 1;
+        $this->response->body($view);
 
-        $this->sub_title = '文章列表';
+        // $content = View::factory('article/articles');
+        // $content->articles = $article_model->find($limit, $start);
+        // $content->pagination = $pagination;
+
+        // $this->template->content = $content;
+
+        // $this->sub_title = '文章列表';
     }
 
     public function action_category()
