@@ -8,26 +8,10 @@ class Controller_Welcome extends Controller
 
     public function action_index()
     {
-        $this->tpl = 'welcome/index';
-
-        $session = Session::instance();
-        $data = $session->as_array();
-        $this->data = $data;
-    }
-
-    public function action_ajax()
-    {
-        $this->show_type = 'json';
-        $this->data = ['aa' => 0, 'bb' => 'test'];
-    }
-
-    public function action_smarty()
-    {
-        $view = View::factory('welcome/smarty.html');
+        $view = View::factory('welcome/index.html');
         $view->urls = [
-            'logout' => URL::site('user/logout'),
+            'khn_docs' => URL::site('guide'),
         ];
-        $view->urls = json_encode($view->urls);
         $this->response->body($view);
     }
 
