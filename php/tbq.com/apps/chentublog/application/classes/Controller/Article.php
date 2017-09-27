@@ -27,14 +27,6 @@ class Controller_Article extends Controller
         $view->pagination = $pagination;
         $view->isLogin = 1;
         $this->response->body($view);
-
-        // $content = View::factory('article/articles');
-        // $content->articles = $article_model->find($limit, $start);
-        // $content->pagination = $pagination;
-
-        // $this->template->content = $content;
-
-        // $this->sub_title = '文章列表';
     }
 
     public function action_category()
