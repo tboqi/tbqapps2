@@ -211,35 +211,19 @@
 			"file": "/D/code/yii2apps/appbackend/controllers/SiteController.php",
 			"settings":
 			{
-				"buffer_size": 2073,
+				"buffer_size": 2120,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/code/yii2apps/appbackend/config/bootstrap.php",
+			"contents": "<?php\nnamespace common\\models;\n\nuse Yii;\nuse yii\\base\\NotSupportedException;\nuse yii\\behaviors\\TimestampBehavior;\nuse yii\\db\\ActiveRecord;\nuse yii\\web\\IdentityInterface;\n\n/**\n * User model\n *\n * @property integer $id\n * @property string $username\n * @property string $password_hash\n * @property string $password_reset_token\n * @property string $email\n * @property string $auth_key\n * @property integer $status\n * @property integer $created_at\n * @property integer $updated_at\n * @property string $password write-only password\n */\nclass User extends ActiveRecord implements IdentityInterface\n{\n    const STATUS_DELETED = 0;\n    const STATUS_ACTIVE = 10;\n\n\n    /**\n     * @inheritdoc\n     */\n    public static function tableName()\n    {\n        return '{{%user}}';\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function behaviors()\n    {\n        return [\n            TimestampBehavior::className(),\n        ];\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function rules()\n    {\n        return [\n            ['status', 'default', 'value' => self::STATUS_ACTIVE],\n            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],\n        ];\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public static function findIdentity($id)\n    {\n        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public static function findIdentityByAccessToken($token, $type = null)\n    {\n        throw new NotSupportedException('\"findIdentityByAccessToken\" is not implemented.');\n    }\n\n    /**\n     * Finds user by username\n     *\n     * @param string $username\n     * @return static|null\n     */\n    public static function findByUsername($username)\n    {\n        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);\n    }\n\n    /**\n     * Finds user by password reset token\n     *\n     * @param string $token password reset token\n     * @return static|null\n     */\n    public static function findByPasswordResetToken($token)\n    {\n        if (!static::isPasswordResetTokenValid($token)) {\n            return null;\n        }\n\n        return static::findOne([\n            'password_reset_token' => $token,\n            'status' => self::STATUS_ACTIVE,\n        ]);\n    }\n\n    /**\n     * Finds out if password reset token is valid\n     *\n     * @param string $token password reset token\n     * @return bool\n     */\n    public static function isPasswordResetTokenValid($token)\n    {\n        if (empty($token)) {\n            return false;\n        }\n\n        $timestamp = (int) substr($token, strrpos($token, '_') + 1);\n        $expire = Yii::$app->params['user.passwordResetTokenExpire'];\n        return $timestamp + $expire >= time();\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function getId()\n    {\n        return $this->getPrimaryKey();\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function getAuthKey()\n    {\n        return $this->auth_key;\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function validateAuthKey($authKey)\n    {\n        return $this->getAuthKey() === $authKey;\n    }\n\n    /**\n     * Validates password\n     *\n     * @param string $password password to validate\n     * @return bool if password provided is valid for current user\n     */\n    public function validatePassword($password)\n    {\n        return Yii::$app->security->validatePassword($password, $this->password_hash);\n    }\n\n    /**\n     * Generates password hash from password and sets it to the model\n     *\n     * @param string $password\n     */\n    public function setPassword($password)\n    {\n        $this->password_hash = Yii::$app->security->generatePasswordHash($password);\n    }\n\n    /**\n     * Generates \"remember me\" authentication key\n     */\n    public function generateAuthKey()\n    {\n        $this->auth_key = Yii::$app->security->generateRandomString();\n    }\n\n    /**\n     * Generates new password reset token\n     */\n    public function generatePasswordResetToken()\n    {\n        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();\n    }\n\n    /**\n     * Removes password reset token\n     */\n    public function removePasswordResetToken()\n    {\n        $this->password_reset_token = null;\n    }\n}\n",
+			"file": "/D/code/yii2apps/common/models/User.php",
+			"file_size": 4263,
+			"file_write_time": 131489817653557843,
 			"settings":
 			{
-				"buffer_size": 76,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/code/yii2apps/common/models/LoginForm.php",
-			"settings":
-			{
-				"buffer_size": 2028,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/code/yii2apps/appbackend/config/main.php",
-			"settings":
-			{
-				"buffer_size": 1663,
-				"encoding": "UTF-8",
+				"buffer_size": 4263,
 				"line_ending": "Unix"
 			}
 		}
@@ -358,12 +342,14 @@
 	"expanded_folders":
 	[
 		"/D/code/yii2apps",
-		"/D/code/yii2apps/common",
-		"/D/code/yii2apps/common/config",
-		"/D/code/yii2apps/common/models"
+		"/D/code/yii2apps/common"
 	],
 	"file_history":
 	[
+		"/D/code/yii2apps/appbackend/config/bootstrap.php",
+		"/D/code/yii2apps/common/models/LoginForm.php",
+		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Security.php",
+		"/D/code/yii2apps/appbackend/config/main.php",
 		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Model.php",
 		"/D/code/yii2apps/common/config/bootstrap.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/cart.php",
@@ -487,15 +473,11 @@
 		"/D/code/yii2apps/appfrontend/views/site/resetPassword.tpl",
 		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Module.php",
 		"/D/code/yii2apps/appblog/models/User.php",
-		"/D/code/yii2apps/appblog/views/user/login.tpl",
-		"/D/code/yii2apps/frontend/models/SignupForm.php",
-		"/D/code/yii2apps/vendor/yiisoft/yii2/web/User.php",
-		"/D/code/yii2apps/appblog/controllers/UserController.php",
-		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Security.php"
+		"/D/code/yii2apps/appblog/views/user/login.tpl"
 	],
 	"find":
 	{
-		"height": 65.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -832,7 +814,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -841,20 +823,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2073,
+						"buffer_size": 2120,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1583,
-								1648
+								1575,
+								1575
 							]
 						],
 						"settings":
 						{
-							"git_gutter_is_enabled": false,
+							"git_gutter_is_enabled": true,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
@@ -863,99 +845,32 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1386.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/D/code/yii2apps/appbackend/config/bootstrap.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 76,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								65
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/code/yii2apps/common/models/LoginForm.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2028,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1815,
-								1815
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1121.0,
+						"translation.y": 1319.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/D/code/yii2apps/appbackend/config/main.php",
+					"buffer": 1,
+					"file": "/D/code/yii2apps/common/models/User.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1663,
+						"buffer_size": 4263,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1108,
-								1108
+								3639,
+								3691
 							]
 						],
 						"settings":
 						{
-							"git_gutter_is_enabled": false,
+							"git_gutter_is_enabled": true,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
@@ -964,10 +879,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 330.0,
+						"translation.y": 3367.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1025,6 +940,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"yii2apps/vendor/yiisoft/yii2/base/security.php",
+				"yii2apps\\vendor\\yiisoft\\yii2\\base\\Security.php"
+			],
 			[
 				"yii/base/model",
 				"yii2apps\\vendor\\yiisoft\\yii2\\base\\Model.php"
@@ -1220,10 +1139,6 @@
 			[
 				"yii/web/user",
 				"yii2apps\\vendor\\yiisoft\\yii2\\web\\User.php"
-			],
-			[
-				"yii2apps/vendor/yiisoft/yii2/base/security.php",
-				"yii2apps\\vendor\\yiisoft\\yii2\\base\\Security.php"
 			],
 			[
 				"yiiappuseridentity",
