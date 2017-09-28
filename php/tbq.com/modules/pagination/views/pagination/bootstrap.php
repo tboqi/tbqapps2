@@ -3,17 +3,17 @@
 	<?php if ($first_page !== false): ?>
 		<a class="btn" href="<?php echo HTML::chars($page->url($first_page)); ?>" rel="first">首页</a>
 	<?php else: ?>
-		首页
+		<span class="btn">首页</span>
 	<?php endif;?>
 
 	<?php if ($previous_page !== false): ?>
 		<a class="btn" href="<?php echo HTML::chars($page->url($previous_page)); ?>" rel="prev">前一页</a>
 	<?php else: ?>
-		前一页
+		<span class="btn">前一页</span>
 	<?php endif;?>
 
 <?php
-$start = $current_page - 3;
+$start = $current_page - 2;
 $end = $current_page + 2;
 if ($start < 1) {
     $start = 1;
@@ -21,6 +21,7 @@ if ($start < 1) {
 }
 if ($end > $total_pages) {
     $end = $total_pages;
+    $start = $end - 4;
 }
 ?>
 	<?php for ($i = $start; $i <= $end; $i++): ?>
@@ -34,15 +35,15 @@ if ($end > $total_pages) {
 	<?php endfor;?>
 
 	<?php if ($next_page !== false): ?>
-		<a class="btn" href="<?php echo HTML::chars($page->url($next_page)); ?>" rel="next"><?php echo __('Next'); ?></a>
+		<a class="btn" href="<?php echo HTML::chars($page->url($next_page)); ?>" rel="next">下一页</a>
 	<?php else: ?>
-		<?php echo __('Next'); ?>
+		<span class="btn">下一页</span>
 	<?php endif;?>
 
 	<?php if ($last_page !== false): ?>
-		<a class="btn" href="<?php echo HTML::chars($page->url($last_page)); ?>" rel="last"><?php echo __('Last'); ?></a>
+		<a class="btn" href="<?php echo HTML::chars($page->url($last_page)); ?>" rel="last">尾页</a>
 	<?php else: ?>
-		<?php echo __('Last'); ?>
+		<span class="btn">尾页</span>
 	<?php endif;?>
 
 </p><!-- .pagination -->

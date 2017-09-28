@@ -208,23 +208,20 @@
 	"buffers":
 	[
 		{
-			"file": "/D/code/yii2apps/appbackend/controllers/SiteController.php",
+			"file": "sh/startNP",
 			"settings":
 			{
-				"buffer_size": 2120,
+				"buffer_size": 1730,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<?php\nnamespace common\\models;\n\nuse Yii;\nuse yii\\base\\NotSupportedException;\nuse yii\\behaviors\\TimestampBehavior;\nuse yii\\db\\ActiveRecord;\nuse yii\\web\\IdentityInterface;\n\n/**\n * User model\n *\n * @property integer $id\n * @property string $username\n * @property string $password_hash\n * @property string $password_reset_token\n * @property string $email\n * @property string $auth_key\n * @property integer $status\n * @property integer $created_at\n * @property integer $updated_at\n * @property string $password write-only password\n */\nclass User extends ActiveRecord implements IdentityInterface\n{\n    const STATUS_DELETED = 0;\n    const STATUS_ACTIVE = 10;\n\n\n    /**\n     * @inheritdoc\n     */\n    public static function tableName()\n    {\n        return '{{%user}}';\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function behaviors()\n    {\n        return [\n            TimestampBehavior::className(),\n        ];\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function rules()\n    {\n        return [\n            ['status', 'default', 'value' => self::STATUS_ACTIVE],\n            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],\n        ];\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public static function findIdentity($id)\n    {\n        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public static function findIdentityByAccessToken($token, $type = null)\n    {\n        throw new NotSupportedException('\"findIdentityByAccessToken\" is not implemented.');\n    }\n\n    /**\n     * Finds user by username\n     *\n     * @param string $username\n     * @return static|null\n     */\n    public static function findByUsername($username)\n    {\n        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);\n    }\n\n    /**\n     * Finds user by password reset token\n     *\n     * @param string $token password reset token\n     * @return static|null\n     */\n    public static function findByPasswordResetToken($token)\n    {\n        if (!static::isPasswordResetTokenValid($token)) {\n            return null;\n        }\n\n        return static::findOne([\n            'password_reset_token' => $token,\n            'status' => self::STATUS_ACTIVE,\n        ]);\n    }\n\n    /**\n     * Finds out if password reset token is valid\n     *\n     * @param string $token password reset token\n     * @return bool\n     */\n    public static function isPasswordResetTokenValid($token)\n    {\n        if (empty($token)) {\n            return false;\n        }\n\n        $timestamp = (int) substr($token, strrpos($token, '_') + 1);\n        $expire = Yii::$app->params['user.passwordResetTokenExpire'];\n        return $timestamp + $expire >= time();\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function getId()\n    {\n        return $this->getPrimaryKey();\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function getAuthKey()\n    {\n        return $this->auth_key;\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function validateAuthKey($authKey)\n    {\n        return $this->getAuthKey() === $authKey;\n    }\n\n    /**\n     * Validates password\n     *\n     * @param string $password password to validate\n     * @return bool if password provided is valid for current user\n     */\n    public function validatePassword($password)\n    {\n        return Yii::$app->security->validatePassword($password, $this->password_hash);\n    }\n\n    /**\n     * Generates password hash from password and sets it to the model\n     *\n     * @param string $password\n     */\n    public function setPassword($password)\n    {\n        $this->password_hash = Yii::$app->security->generatePasswordHash($password);\n    }\n\n    /**\n     * Generates \"remember me\" authentication key\n     */\n    public function generateAuthKey()\n    {\n        $this->auth_key = Yii::$app->security->generateRandomString();\n    }\n\n    /**\n     * Generates new password reset token\n     */\n    public function generatePasswordResetToken()\n    {\n        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();\n    }\n\n    /**\n     * Removes password reset token\n     */\n    public function removePasswordResetToken()\n    {\n        $this->password_reset_token = null;\n    }\n}\n",
-			"file": "/D/code/yii2apps/common/models/User.php",
-			"file_size": 4263,
-			"file_write_time": 131489817653557843,
+			"file": "php/tbq.com/apps/www/nginx.htaccess",
 			"settings":
 			{
-				"buffer_size": 4263,
-				"line_ending": "Unix"
+				"buffer_size": 517,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -341,15 +338,60 @@
 	},
 	"expanded_folders":
 	[
-		"/D/code/yii2apps",
-		"/D/code/yii2apps/common"
+		"/D/tbqapp2",
+		"/D/tbqapp2/php",
+		"/D/tbqapp2/php/tbq.com",
+		"/D/tbqapp2/php/tbq.com/apps",
+		"/D/tbqapp2/php/tbq.com/modules",
+		"/D/tbqapp2/php/tbq.com/modules/pagination",
+		"/D/tbqapp2/php/tbq.com/modules/pagination/views",
+		"/D/tbqapp2/php/tbq.com/modules/pagination/views/pagination",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3/classes",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3/classes/Controller",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3/classes/Kohana",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3/classes/Kohana/Smarty",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3/classes/Smarty"
 	],
 	"file_history":
 	[
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Article.php",
+		"/D/tbqapp2/php/tbq.com/modules/pagination/views/pagination/bootstrap.php",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/site/article/index.html",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/layout.html",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/index.html",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/layout.html",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/site/welcome/index.html",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/bootstrap.php",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/site/user/login.html",
+		"/D/tbqapp2/php/tbq.com/apps/www/application/classes/Controller/Welcome.php",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/config/pagination.php",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Admin/Welcome.php",
+		"/D/code/yii2apps/appblog/views/site/login.tpl",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/User.php",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/cache/smarty_compiled/49f1277fb0d258f0345783a9ac178d7a26b8234a.file.index.html.php",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/site/layout.html",
+		"/D/tbqapp2/php/tbq.com/apps/www/application/views/welcome/index.html",
+		"/D/code/yii2apps/appblog/views/layout/base.tpl",
+		"/D/tbqapp2/php/tbq.com/apps/www/application/bootstrap.php",
+		"/D/code/tbq_static/static.tbq.com.conf",
+		"/D/code/tbq_static/bootstrap/docs/4.0/examples/starter-template/index.html",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3/config/smarty.php",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3/vendor/smarty/libs/Smarty.class.php",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3/classes/View.php",
+		"/D/tbqapp2/php/tbq.com/apps/www/index.php",
+		"/D/tbqapp2/php/tbq.com/apps/www/www.tbq.com.conf",
+		"/D/tbqapp2/php/index.php",
+		"/D/code/yii2apps/common/config/main.php",
+		"/D/code/yii2apps/vendor/yiisoft/yii2-admin/models/AuthItem.php",
+		"/D/code/yii2apps/appbackend/config/main.php",
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/welcome/smarty.html",
+		"/D/code/yii2apps/composer.json",
+		"/D/code/yii2apps/common/models/User.php",
+		"/D/code/yii2apps/appbackend/controllers/SiteController.php",
 		"/D/code/yii2apps/appbackend/config/bootstrap.php",
 		"/D/code/yii2apps/common/models/LoginForm.php",
 		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Security.php",
-		"/D/code/yii2apps/appbackend/config/main.php",
 		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Model.php",
 		"/D/code/yii2apps/common/config/bootstrap.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/cart.php",
@@ -440,40 +482,7 @@
 		"/D/code/tjtjs-ecstore/app/b2c/controller/site/product.php",
 		"/D/code/tjtjs-ecstore/app/tiens/model/b2c/login/log.php",
 		"/D/code/tjtjs-ecstore/app/b2c/view/site/product/info/price.html",
-		"/D/code/tjtjs-ecstore/app/desktop/lib/cert/certcheck.php",
-		"/D/code/tjtjs-ecstore/app/desktop/view/codetip.html",
-		"/D/code/tjtjs-ecstore/app/b2c/lib/desktop/widgets/exstatistics.php",
-		"/D/code/tjtjs-ecstore/app/b2c/view/desktop/widgets/exstatistics.html",
-		"/D/code/tjtjs-ecstore/app/desktop/controller/code.php",
-		"/D/code/tjtjs-ecstore/custom/pam/lib/callback.php",
-		"/D/code/tjtjs-ecstore/custom/desktop/lib/cert/certcheck.php",
-		"/D/code/tjtjs-ecstore/app/stats/view/desktop/widgets/exstatistics.html",
-		"/D/code/tjtjs-ecstore/app/pam/lib/callback.php",
-		"/D/code/tjtjs-ecstore/app/b2c/lib/stats/listener/pam/login.php",
-		"/D/code/tjtjs-ecstore/app/pam/lib/passport/desktop/basic.php",
-		"/D/code/tjtjs-ecstore/app/desktop/lib/controller.php",
-		"/D/code/yii2apps/appblog/modules/admin/controllers/SiteController.php",
-		"/D/code/yii2apps/appblog/modules/admin/controllers/UserController.php",
-		"/D/code/yii2apps/appblog/views/admin/user/resetPassword.tpl",
-		"/D/code/yii2apps/appblog/views/layout/base.tpl",
-		"/D/code/yii2apps/qiyu/ControllerAdmin.php",
-		"/D/code/yii2apps/vendor/yiisoft/yii2/web/Controller.php",
-		"/D/code/yii2apps/vendor/yiisoft/yii2/web/BadRequestHttpException.php",
-		"/D/code/yii2apps/appblog/views/admin/site/index.tpl",
-		"/D/code/yii2apps/appblog/views/layout/admin.tpl",
-		"/D/code/yii2apps/appblog/views/site/login.tpl",
-		"/D/code/yii2apps/appfrontend/models/ResetPasswordForm.php",
-		"/D/code/yii2apps/frontend/controllers/SiteController.php",
-		"/D/code/yii2apps/common/models/User.php",
-		"/D/code/yii2apps/apptiensmq/controllers/SiteController.php",
-		"/D/code/yii2apps/apptiensmq/models/ResetPasswordForm.php",
-		"/D/code/yii2apps/qiyu/Controller.php",
-		"/D/code/yii2apps/appblog/controllers/SiteController.php",
-		"/D/code/yii2apps/appblog/views/site/resetPassword.tpl",
-		"/D/code/yii2apps/appfrontend/views/site/resetPassword.tpl",
-		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Module.php",
-		"/D/code/yii2apps/appblog/models/User.php",
-		"/D/code/yii2apps/appblog/views/user/login.tpl"
+		"/D/code/tjtjs-ecstore/app/desktop/lib/cert/certcheck.php"
 	],
 	"find":
 	{
@@ -484,6 +493,11 @@
 		"height": 110.0,
 		"where_history":
 		[
+			"D:\\tbqapp2\\php\\tbq.com\\apps\\chentublog",
+			"D:\\tbqapp2\\php\\tbq.com",
+			"D:\\tbqapp2\\php\\tbq.com\\apps",
+			"D:\\tbqapp2\\php\\tbq.com\\apps\\chentublog",
+			"D:\\tbqapp2\\php\\tbq.com\\modules\\smarty3",
 			"D:\\code\\tjtjs-ecstore\\,*.php",
 			"D:\\code\\tjtjs-ecstore\\,*.xml",
 			"D:\\code\\tjtjs-ecstore\\,*.php",
@@ -606,12 +620,7 @@
 			"D:\\code\\tjtjs-ecstore",
 			"D:\\code\\tjtjs-ecstore\\custom",
 			"D:\\code\\tjtjs-ecstore",
-			"D:\\tbqapp2\\php\\wwwtienskhn",
-			"D:\\code\\www.tiens.com",
-			"D:\\tbqapp2\\php",
-			"D:\\tbqapp2\\php\\tbq.com\\apps\\my\\application\\views",
-			"D:\\tbqapp2\\php",
-			"D:\\tbqapp2\\php\\tbq.com\\apps\\my"
+			"D:\\tbqapp2\\php\\wwwtienskhn"
 		]
 	},
 	"find_state":
@@ -619,6 +628,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"The Bootstrap Blog",
+			"}}",
+			"{{",
+			"I18n::lang",
+			"ie10-viewport-bug-workaround.",
+			"isLogin",
+			"/admin/user/reset-password",
+			"isLogin",
+			"{{",
+			"}}",
+			"{{",
+			"}}",
+			"{{",
+			"}}",
+			"{{",
+			"left_delimiter",
+			"left",
+			"smarty",
+			"aliases",
 			");\n",
 			",",
 			"    ",
@@ -727,26 +755,7 @@
 			"act",
 			"acti",
 			"activation_code",
-			"activation_code:",
-			"b2c_stats_listener_pam_login",
-			"pam_login_listener",
-			"activation_code_check",
-			"desktop_cert_certcheck",
-			"pam_login_listener",
-			"pam_passport_desktop_basic",
-			"pam_callback",
-			"aHR0cDovL3Nob3AudGFpamktc3VuLmNvbS9zaG9wYWRtaW4v",
-			"redirect",
-			"pam_passport_desktop_basic",
-			"您的站点不存在激活信息或者未在中心未激活",
-			"islogin",
-			"Missing required parameters",
-			"function goBack",
-			"->validatePassword",
-			"userinfo",
-			"../../../..",
-			"path",
-			"site"
+			"activation_code:"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -754,6 +763,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"}>",
+			"<{",
+			"}>",
+			"<{",
+			"}>",
+			"<{",
 			"",
 			"|",
 			"",
@@ -819,19 +834,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/D/code/yii2apps/appbackend/controllers/SiteController.php",
+					"file": "sh/startNP",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2120,
+						"buffer_size": 1730,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1575,
-								1575
+								1259,
+								1259
 							]
 						],
 						"settings":
@@ -840,12 +855,10 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1319.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -853,19 +866,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/D/code/yii2apps/common/models/User.php",
-					"semi_transient": false,
+					"file": "php/tbq.com/apps/www/nginx.htaccess",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 4263,
+						"buffer_size": 517,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3639,
-								3691
+								0,
+								0
 							]
 						],
 						"settings":
@@ -874,12 +887,12 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3367.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -940,6 +953,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"yii2apps/vendor/yiisoft/yii2-admin/models/authitem.php",
+				"yii2apps\\vendor\\yiisoft\\yii2-admin\\models\\AuthItem.php"
+			],
 			[
 				"yii2apps/vendor/yiisoft/yii2/base/security.php",
 				"yii2apps\\vendor\\yiisoft\\yii2\\base\\Security.php"
@@ -1447,10 +1464,6 @@
 			[
 				"tjtj/db/model.php",
 				"tjtjs-ecstore\\app\\base\\lib\\db\\model.php"
-			],
-			[
-				"site/gallery/index.html",
-				"tjtjs-ecstore\\app\\b2c\\view\\site\\gallery\\index.html"
 			]
 		],
 		"width": 0.0
@@ -1485,7 +1498,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 204.0,
+	"side_bar_width": 263.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
