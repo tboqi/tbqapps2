@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 // class Controller_Article extends Controller_Template
-class Controller_Article extends Controller
+class Controller_Article extends Controller_Base
 {
 
     public function action_index()
@@ -28,7 +28,11 @@ class Controller_Article extends Controller
         $view = View::factory('site/article/index.html');
         $view->articles = $article_model->find($limit, $start);
         $view->pagination = $pagination;
-        $view->isLogin = 1;
+        $view->is_login = $this->is_login();
+        $model_article_category = new Model_Article_Category();
+        $view->categories = $model_article_category->find_all();
+        $model_article = new Model_Article();
+        $view->hot_articles = $model_article->find_hot_articles();
         $this->response->body($view);
     }
 
