@@ -17,8 +17,11 @@ class Controller_Article extends Controller
         )
         );
 
-        $pagination->route_params(array('controller' => $this->request->controller(),
-            'action' => $this->request->action()));
+        $arr = array(
+            'controller' => $this->request->controller(),
+            'action' => $this->request->action(),
+        );
+        $pagination->route_params($arr);
 
         $start = $pagination->offset;
 
