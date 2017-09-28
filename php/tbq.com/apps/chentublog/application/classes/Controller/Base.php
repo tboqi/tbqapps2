@@ -14,4 +14,10 @@ class Controller_Base extends Controller
         }
         return false;
     }
+
+    protected function display($view)
+    {
+        $view->is_login = $this->is_login();
+        $this->response->body($view);
+    }
 }

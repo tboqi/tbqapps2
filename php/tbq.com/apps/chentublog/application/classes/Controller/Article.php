@@ -28,12 +28,11 @@ class Controller_Article extends Controller_Base
         $view = View::factory('site/article/index.html');
         $view->articles = $article_model->find($limit, $start);
         $view->pagination = $pagination;
-        $view->is_login = $this->is_login();
         $model_article_category = new Model_Article_Category();
         $view->categories = $model_article_category->find_all();
         $model_article = new Model_Article();
         $view->hot_articles = $model_article->find_hot_articles();
-        $this->response->body($view);
+        $this->display($view);
     }
 
     public function action_category()
@@ -184,7 +183,7 @@ fck1.ReplaceTextarea() ;
         $article['update_time'] = time();
         $article['category_id'] = intval($_POST['category_id']);
         $model_article_category = new Model_Article_Category();
-//         $category = $model_article_category->get($article ['category_id']);
+        //         $category = $model_article_category->get($article ['category_id']);
 
         $tabs = trim($_POST['tabs']);
         $tabs = explode(',', $tabs);
@@ -219,19 +218,22 @@ fck1.ReplaceTextarea() ;
         //阅读次数
         $model_article->add_read_times($id);
 
-        $content = View::factory('article/detail');
+        $content = View::factory('site/article/detail.html');
         $content->article = $model_article->get($id);
-        $this->template->content = $content;
-        $this->sub_title = $content->article->title;
-        $this->keywords = $content->article->category_name;
+        $content->sub_title = $content->article->title;
+        $content->keywords = $content->article->category_name;
         if (!empty($content->article->tabs_detail)) {
             $tabs = json_decode($content->article->tabs_detail);
             $split = ',';
             foreach ($tabs as $tab) {
-                $this->keywords .= $split . $tab->tab;
+                $content->keywords .= $split . $tab->tab;
             }
         }
-        $this->description = $content->article->summary;
+        $model_article_category = new Model_Article_Category();
+        $content->categories = $model_article_category->find_all();
+        $model_article = new Model_Article();
+        $content->hot_articles = $model_article->find_hot_articles();
+        $this->display($content);
     }
 
     public function action_del()
