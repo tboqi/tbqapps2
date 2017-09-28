@@ -55,18 +55,21 @@ class Controller_Article extends Controller_Base
         )
         );
         $start = $pagination->offset;
-        $content = View::factory('article/articles');
-        $content->articles = $article_model->find_by_category_id($category_id,
-            $limit, $start);
 
-        $content->pagination = $pagination;
-
-        $this->template->content = $content;
+        $view = View::factory('site/article/index.html');
+        $view->articles = $article_model->find_by_category_id($category_id, $limit, $start);
+        $view->pagination = $pagination;
+        $model_article_category = new Model_Article_Category();
+        $view->categories = $model_article_category->find_all();
+        $model_article = new Model_Article();
+        $view->hot_articles = $model_article->find_hot_articles();
 
         $model_category = new Model_Article_Category();
         $category = $model_category->get($category_id);
-        $this->sub_title = "分类 {$category->name} 下的文章列表";
-        $this->keywords = $this->description = $category->name;
+        $view->sub_title = "分类 {$category->name} 下的文章列表";
+        $view->keywords = $view->description = $category->name;
+
+        $this->display($view);
     }
 
     public function action_tab()
@@ -123,14 +126,14 @@ class Controller_Article extends Controller_Base
         $this->set_js_array('jquery.form.js');
         $this->set_js_array('yuqi_utils.js');
         $this->template->js = '
-window.onload = function()
-{
-var fck1 = new FCKeditor(\'content\');
-fck1.Width = 560;
-fck1.Height = 400;
-fck1.BasePath = "' . Resource::js('fck/') . '";
-fck1.ReplaceTextarea() ;
-}';
+        window.onload = function()
+        {
+        var fck1 = new FCKeditor(\'content\');
+        fck1.Width = 560;
+        fck1.Height = 400;
+        fck1.BasePath = "' . Resource::js('fck/') . '";
+        fck1.ReplaceTextarea() ;
+        }';
     }
 
     public function action_edit()
@@ -156,14 +159,14 @@ fck1.ReplaceTextarea() ;
         $this->set_js_array('jquery.form.js');
         $this->set_js_array('yuqi_utils.js');
         $this->template->js = '
-window.onload = function()
-{
-var fck1 = new FCKeditor(\'content\');
-fck1.Width = 560;
-fck1.Height = 400;
-fck1.BasePath = "' . Resource::js('fck/') . '";
-fck1.ReplaceTextarea() ;
-}';
+        window.onload = function()
+        {
+        var fck1 = new FCKeditor(\'content\');
+        fck1.Width = 560;
+        fck1.Height = 400;
+        fck1.BasePath = "' . Resource::js('fck/') . '";
+        fck1.ReplaceTextarea() ;
+        }';
     }
 
     public function action_save()
