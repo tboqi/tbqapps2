@@ -25,14 +25,15 @@ class Controller_Article extends Controller_Base
 
         $start = $pagination->offset;
 
-        $view = View::factory('site/article/index.html');
-        $view->articles = $article_model->find($limit, $start);
-        $view->pagination = $pagination;
         $model_article_category = new Model_Article_Category();
-        $view->categories = $model_article_category->find_all();
         $model_article = new Model_Article();
-        $view->hot_articles = $model_article->find_hot_articles();
-        $this->display($view);
+        $arr = [
+            'articles' => $article_model->find($limit, $start),
+            'pagination' => $pagination,
+            'categories' => $model_article_category->find_all(),
+            'hot_articles' => $model_article->find_hot_articles(),
+        ];
+        $this->display('site/article/index.html', $arr);
     }
 
     public function action_category()
@@ -56,20 +57,22 @@ class Controller_Article extends Controller_Base
         );
         $start = $pagination->offset;
 
-        $view = View::factory('site/article/index.html');
-        $view->articles = $article_model->find_by_category_id($category_id, $limit, $start);
-        $view->pagination = $pagination;
         $model_article_category = new Model_Article_Category();
-        $view->categories = $model_article_category->find_all();
         $model_article = new Model_Article();
-        $view->hot_articles = $model_article->find_hot_articles();
 
         $model_category = new Model_Article_Category();
         $category = $model_category->get($category_id);
-        $view->sub_title = "分类 {$category->name} 下的文章列表";
-        $view->keywords = $view->description = $category->name;
 
-        $this->display($view);
+        $arr = [
+            'articles' => $article_model->find_by_category_id($category_id, $limit, $start),
+            'pagination' => $pagination,
+            'categories' => $model_article_category->find_all(),
+            'hot_articles' => $model_article->find_hot_articles(),
+            'sub_title' => "分类 {$category->name} 下的文章列表",
+            'keywords' => $category->name,
+            'description' => $category->name,
+        ];
+        $this->display('site/article/index.html', $arr);
     }
 
     public function action_tab()
@@ -92,18 +95,20 @@ class Controller_Article extends Controller_Base
         )
         );
         $start = $pagination->offset;
-        $content = View::factory('article/articles');
-        $content->articles = $article_model->find_by_tab_id($tab_id,
-            $limit, $start);
-
-        $content->pagination = $pagination;
-
-        $this->template->content = $content;
 
         $model_tab = new Model_Article_Tab();
         $tab = $model_tab->get($tab_id);
-        $this->sub_title = "标签 {$tab->tab} 下的文章列表";
-        $this->keywords = $this->description = $tab->tab;
+
+        $arr = [
+            'articles' => $article_model->find_by_tab_id($tab_id, $limit, $start),
+            'pagination' => $pagination,
+            'categories' => $model_article_category->find_all(),
+            'hot_articles' => $model_article->find_hot_articles(),
+            'sub_title' => "标签 {$tab->tab} 下的文章列表",
+            'keywords' => $tab->tab,
+            'description' => $tab->tab,
+        ];
+        $this->display('site/article/index.html', $arr);
     }
 
     public function action_create()
@@ -220,23 +225,28 @@ class Controller_Article extends Controller_Base
         $id = intval($this->request->param('param1'));
         //阅读次数
         $model_article->add_read_times($id);
+        $article = $model_article->get($id);
 
-        $content = View::factory('site/article/detail.html');
-        $content->article = $model_article->get($id);
-        $content->sub_title = $content->article->title;
-        $content->keywords = $content->article->category_name;
-        if (!empty($content->article->tabs_detail)) {
-            $tabs = json_decode($content->article->tabs_detail);
+        $keywords = '';
+        if (!empty($article->tabs_detail)) {
+            $tabs = json_decode($article->tabs_detail);
             $split = ',';
             foreach ($tabs as $tab) {
-                $content->keywords .= $split . $tab->tab;
+                $keywords .= $split . $tab->tab;
             }
         }
         $model_article_category = new Model_Article_Category();
-        $content->categories = $model_article_category->find_all();
         $model_article = new Model_Article();
-        $content->hot_articles = $model_article->find_hot_articles();
-        $this->display($content);
+
+        $arr = [
+            'article' => $article,
+            'categories' => $model_article_category->find_all(),
+            'hot_articles' => $model_article->find_hot_articles(),
+            'sub_title' => $article->title,
+            'keywords' => $keywords,
+            'description' => $tab->tab,
+        ];
+        $this->display('site/article/detail.html', $arr);
     }
 
     public function action_del()

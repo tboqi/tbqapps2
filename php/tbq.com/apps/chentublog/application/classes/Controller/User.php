@@ -23,10 +23,7 @@ class Controller_User extends Controller_Base
             exit;
         }
 
-        $view = View::factory('site/user/login.html');
-        $view->url = '';
-        $view->action = url::site('user/login');
-        $this->response->body($view);
+        $this->display('site/user/login.html', ['url' => '', 'action' => url::site('user/login')]);
     }
 
     public function action_logout()
@@ -37,6 +34,21 @@ class Controller_User extends Controller_Base
         header('location:' . URL::base());
         exit;
     }
+    /*
+    public function action_reset_password()
+    {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $password_old = trim($_POST['password_old']);
+    $password_new = trim($_POST['password_new']);
+    $password_new2 = trim($_POST['password_new2']);
+
+    if (empty($password_new) || empty($password_old) || $password_new != $password_new2) {
+    die('密码错误');
+    }
+
+    }
+    $this->display('site/user/reset_password.html');
+    }*/
 
     private function remember_login($username, $password)
     {

@@ -15,8 +15,12 @@ class Controller_Base extends Controller
         return false;
     }
 
-    protected function display($view)
+    protected function display($tpl, $data = [])
     {
+        $view = View::factory($tpl);
+        foreach ($data as $key => $value) {
+            $view->{$key} = $value;
+        }
         $view->is_login = $this->is_login();
         $this->response->body($view);
     }
