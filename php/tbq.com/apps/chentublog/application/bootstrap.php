@@ -108,7 +108,7 @@ Kohana::modules(array(
 /**
  * 3级目录
  */
-Route::set('section', '<directory>(/<controller>(/<action>(/<id>)))', array(
+Route::set('section', '<directory>(/<controller>(/<action>(/<param1>(/<param2>(/<param3>)))))', array(
     'directory' => 'admin|center',
 ))
     ->defaults(array(

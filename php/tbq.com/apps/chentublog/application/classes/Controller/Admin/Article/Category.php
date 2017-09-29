@@ -42,7 +42,7 @@ class Controller_Admin_Article_Category extends Controller_Base
     {
         //验证是否登录状态
         if ($user = Auth::instance()->logged_in()) {
-            $id = intval($this->request->param('id'));
+            $id = intval($this->request->param('param1'));
             $model_article_category = new Model_Article_Category();
 
             $this->display('admin/article/category_form.html', [
@@ -82,7 +82,7 @@ class Controller_Admin_Article_Category extends Controller_Base
     {
         //验证是否登录状态
         if ($user = Auth::instance()->logged_in()) {
-            $id = intval($this->request->param('id'));
+            $id = intval($this->request->param('param1'));
             DB::update('articles')->set(array('category_id' => 0,
                 'category_name' => '未分类'))
                 ->where('category_id', '=', $id)->execute();

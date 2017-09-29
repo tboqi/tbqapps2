@@ -17,7 +17,7 @@ class Controller_Article extends Controller_Base
         );
 
         $arr = array(
-            'controller' => $this->request->controller(),
+            'controller' => strtolower($this->request->controller()),
             'action' => $this->request->action(),
         );
         $pagination->route_params($arr);

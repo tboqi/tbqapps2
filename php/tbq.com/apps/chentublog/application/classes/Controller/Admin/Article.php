@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 // class Controller_Article extends Controller_Template
-class Controller_ADMIN_Article extends Controller_Base
+class Controller_Admin_Article extends Controller_Base
 {
 
     public function action_index()
@@ -18,8 +18,8 @@ class Controller_ADMIN_Article extends Controller_Base
         );
 
         $arr = array(
-            'directory' => $this->request->directory(),
-            'controller' => $this->request->controller(),
+            'directory' => strtolower($this->request->directory()),
+            'controller' => strtolower($this->request->controller()),
             'action' => $this->request->action(),
         );
         $pagination->route_params($arr);
@@ -72,7 +72,7 @@ class Controller_ADMIN_Article extends Controller_Base
         //验证是否登录状态
         if (Auth::instance()->logged_in()) {
             $model_article_category = new Model_Article_Category();
-            $id = intval($this->request->param('id'));
+            $id = intval($this->request->param('param1'));
             $model_article = new Model_Article();
 
             $arr = [
