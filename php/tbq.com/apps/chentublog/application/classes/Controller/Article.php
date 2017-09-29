@@ -29,8 +29,8 @@ class Controller_Article extends Controller_Base
         $model_article = new Model_Article();
         $articles = $article_model->find($limit, $start);
         foreach ($articles as $key => $art) {
-            if (!empty($tabs_detail)) {
-                $tabs_detail = json_decode($art->$tabs_detail, 0);
+            if (!empty($art->tabs_detail)) {
+                $tabs_detail = json_decode($art->tabs_detail, 1);
                 if (!empty($tabs_detail)) {
                     $articles[$key]->tabs_detail = $tabs_detail;
                 } else {
@@ -39,7 +39,6 @@ class Controller_Article extends Controller_Base
             } else {
                 $articles[$key]->tabs_detail = [];
             }
-
         }
         $arr = [
             'articles' => $articles,
@@ -243,11 +242,18 @@ class Controller_Article extends Controller_Base
 
         $keywords = '';
         if (!empty($article->tabs_detail)) {
-            $tabs = json_decode($article->tabs_detail);
+            $tabs = json_decode($article->tabs_detail, 1);
+            if (empty($tabs)) {
+                $article->tabs_detail = [];
+            } else {
+                $article->tabs_detail = $tabs;
+            }
             $split = ',';
             foreach ($tabs as $tab) {
-                $keywords .= $split . $tab->tab;
+                $keywords .= $split . $tab['tab'];
             }
+        } else {
+            $article->tabs_detail = [];
         }
         $model_article_category = new Model_Article_Category();
         $model_article = new Model_Article();
@@ -258,7 +264,7 @@ class Controller_Article extends Controller_Base
             'hot_articles' => $model_article->find_hot_articles(),
             'sub_title' => $article->title,
             'keywords' => $keywords,
-            'description' => $tab->tab,
+            'description' => $tab['tab'],
         ];
         $this->display('site/article/detail.html', $arr);
     }
