@@ -1,0 +1,38 @@
+
+<h1><?php echo $title; ?></h1>
+<form action="/admin/article/save" id="article_form" method="post">
+<table>
+    <tr>
+        <td>标题</td>
+        <td><input id="title" name="title" style="width: 450px;" value="<{$article->title}>" type="text" /></td>
+    </tr>
+    <tr>
+        <td>分类</td>
+        <td><select name="category_id" id="category_id">
+				  <{foreach $categories as $category}>
+				  <option value="<{$category->id}>"<{if $category->id == $article->category_id?>' selected'<{/if}>><{$category->name}></option>
+				  <{/foreach}>
+				</select><a href="/admin/article_category/create">创建分类</a></td>
+    </tr>
+    <tr>
+        <td>摘要</td>
+        <td><textarea name="summary" id="summary" style="width: 450px; height: 110px;"><{$article->summary}></textarea></td>
+    </tr>
+    <tr>
+        <td>内容</td>
+        <td><textarea name="content" id="content" style="width: 450px; height: 110px;"><{$article->content}></textarea></td>
+    </tr>
+    <tr>
+        <td>标签</td>
+        <td><input id="tabs" name="tabs" value="" type="text" /></td>
+    </tr>
+    <tr>
+        <td>原文地址</td>
+        <td><input id="refurl" name="refurl" value="<{$article->refurl}>" type="text" /></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input value="保存" type="submit" /></td>
+    </tr>
+</table>
+<input type="hidden" name="id" value="<{$article->id}>" />
+</form>

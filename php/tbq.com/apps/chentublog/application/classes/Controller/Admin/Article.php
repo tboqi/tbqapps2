@@ -58,7 +58,7 @@ class Controller_Admin_Article extends Controller_Base
             $arr = [
                 'categories' => $model_article_category->find_all(),
             ];
-            $this->display('admin/article/article_form.html', $arr);
+            $this->display('admin/article/article_form_create.html', $arr);
         } else {
             die('没有权限');
         }
@@ -103,14 +103,15 @@ class Controller_Admin_Article extends Controller_Base
         $article['update_time'] = time();
         $article['category_id'] = intval($_POST['category_id']);
         $model_article_category = new Model_Article_Category();
-        //         $category = $model_article_category->get($article ['category_id']);
+        $category = $model_article_category->get($article['category_id']);
+        $article['category_name'] = $category->name;
 
         $tabs = trim($_POST['tabs']);
         $tabs = explode(',', $tabs);
 
         $model_article = new Model_Article();
         $model_article_tab = new Model_Article_Tab();
-        $id = intval($_POST['id']);
+        $id = isset($_POST['id']) ? intval($_POST['id']) : 0;
         $tabs_detail = array();
         foreach ($tabs as $tab) {
             $tab_id = $model_article_tab->get_tab_id($tab);
