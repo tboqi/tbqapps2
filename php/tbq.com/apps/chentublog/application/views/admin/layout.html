@@ -14,13 +14,6 @@
           <li class="nav-item <{*active*}>">
             <a class="nav-link" href="/">网站首页</a>
           </li>
-          <{*
-          <li class="nav-item">
-            <a class="nav-link" href="#">Settings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/admin/user/reset-password">修改密码</a>
-          </li>*}>
           <li class="nav-item">
             <a class="nav-link" href="/site/logout">退出</a>
           </li>
@@ -41,9 +34,6 @@
             <li class="nav-item">
               <a class="nav-link<{if $controller=='site' && $action=='index'}> active<{/if}>" href="/admin">控制台首页</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link<{if $controller=='user' && $action=='reset-password'}> active<{/if}>" href="/admin/user/reset-password">修改密码</a>
-            </li>
           </ul>
 
           <ul class="nav nav-pills flex-column">
@@ -51,7 +41,7 @@
               <a class="nav-link<{if $controller=='article' && $action=='index'}> active<{/if}>" href="/admin/article/index">文章</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link<{if $controller=='article-category' && $action=='index'}> active<{/if}>" href="/admin/article-category/index">文章分类</a>
+              <a class="nav-link<{if $controller=='article-category' && $action=='index'}> active<{/if}>" href="/admin/article_category/index">文章分类</a>
             </li>
           </ul>
         </nav>
