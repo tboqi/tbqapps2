@@ -27,8 +27,22 @@ class Controller_Article extends Controller_Base
 
         $model_article_category = new Model_Article_Category();
         $model_article = new Model_Article();
+        $articles = $article_model->find($limit, $start);
+        foreach ($articles as $key => $art) {
+            if (!empty($tabs_detail)) {
+                $tabs_detail = json_decode($art->$tabs_detail, 0);
+                if (!empty($tabs_detail)) {
+                    $articles[$key]->tabs_detail = $tabs_detail;
+                } else {
+                    $articles[$key]->tabs_detail = [];
+                }
+            } else {
+                $articles[$key]->tabs_detail = [];
+            }
+
+        }
         $arr = [
-            'articles' => $article_model->find($limit, $start),
+            'articles' => $articles,
             'pagination' => $pagination,
             'categories' => $model_article_category->find_all(),
             'hot_articles' => $model_article->find_hot_articles(),
