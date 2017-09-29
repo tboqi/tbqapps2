@@ -39,19 +39,19 @@
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link<{if $module=='admin' && $controller=='site' && $action=='index'}> active<{/if}>" href="/admin">控制台首页</a>
+              <a class="nav-link<{if $controller=='site' && $action=='index'}> active<{/if}>" href="/admin">控制台首页</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link<{if $module=='admin' && $controller=='user' && $action=='reset-password'}> active<{/if}>" href="/admin/user/reset-password">修改密码</a>
+              <a class="nav-link<{if $controller=='user' && $action=='reset-password'}> active<{/if}>" href="/admin/user/reset-password">修改密码</a>
             </li>
           </ul>
 
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link<{if $module=='admin' && $controller=='article' && $action=='index'}> active<{/if}>" href="/admin/article/index">文章</a>
+              <a class="nav-link<{if $controller=='article' && $action=='index'}> active<{/if}>" href="/admin/article/index">文章</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link<{if $module=='admin' && $controller=='article-category' && $action=='index'}> active<{/if}>" href="/admin/article-category/index">文章分类</a>
+              <a class="nav-link<{if $controller=='article-category' && $action=='index'}> active<{/if}>" href="/admin/article-category/index">文章分类</a>
             </li>
           </ul>
         </nav>

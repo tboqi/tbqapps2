@@ -22,6 +22,8 @@ class Controller_Base extends Controller
             $view->{$key} = $value;
         }
         $view->is_login = $this->is_login();
+        $view->controller = $this->request->controller();
+        $view->action = $this->request->action();
         $this->response->body($view);
     }
 }
