@@ -34,21 +34,6 @@ class Controller_User extends Controller_Base
         header('location:' . URL::base());
         exit;
     }
-    /*
-    public function action_reset_password()
-    {
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $password_old = trim($_POST['password_old']);
-    $password_new = trim($_POST['password_new']);
-    $password_new2 = trim($_POST['password_new2']);
-
-    if (empty($password_new) || empty($password_old) || $password_new != $password_new2) {
-    die('密码错误');
-    }
-
-    }
-    $this->display('site/user/reset_password.html');
-    }*/
 
     private function remember_login($username, $password)
     {
