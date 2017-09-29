@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 // class Controller_Article extends Controller_Template
-class Controller_Article extends Controller_Base
+class Controller_ADMIN_Article extends Controller_Base
 {
 
     public function action_index()
@@ -18,6 +18,7 @@ class Controller_Article extends Controller_Base
         );
 
         $arr = array(
+            'directory' => $this->request->directory(),
             'controller' => $this->request->controller(),
             'action' => $this->request->action(),
         );
@@ -43,85 +44,8 @@ class Controller_Article extends Controller_Base
         $arr = [
             'articles' => $articles,
             'pagination' => $pagination,
-            'categories' => $model_article_category->find_all(),
-            'hot_articles' => $model_article->find_hot_articles(),
         ];
-        $this->display('site/article/index.html', $arr);
-    }
-
-    public function action_category()
-    {
-        $article_model = new Model_Article();
-
-        $category_id = intval($this->request->param('param1'));
-
-        $limit = 10;
-
-        //分页
-        $pagination = Pagination::factory(array(
-            'total_items' => $article_model->count_by_category_id($category_id),
-            'items_per_page' => $limit,
-        )
-        );
-        $pagination->route_params(array('controller' => $this->request->controller(),
-            'action' => $this->request->action(),
-            'param1' => $category_id,
-        )
-        );
-        $start = $pagination->offset;
-
-        $model_article_category = new Model_Article_Category();
-        $model_article = new Model_Article();
-
-        $model_category = new Model_Article_Category();
-        $category = $model_category->get($category_id);
-
-        $arr = [
-            'articles' => $article_model->find_by_category_id($category_id, $limit, $start),
-            'pagination' => $pagination,
-            'categories' => $model_article_category->find_all(),
-            'hot_articles' => $model_article->find_hot_articles(),
-            'sub_title' => "分类 {$category->name} 下的文章列表",
-            'keywords' => $category->name,
-            'description' => $category->name,
-        ];
-        $this->display('site/article/index.html', $arr);
-    }
-
-    public function action_tab()
-    {
-        $article_model = new Model_Article();
-
-        $tab_id = intval($this->request->param('param1'));
-
-        $limit = 10;
-
-        //分页
-        $pagination = Pagination::factory(array(
-            'total_items' => $article_model->count_by_tab_id($tab_id),
-            'items_per_page' => $limit,
-        )
-        );
-        $pagination->route_params(array('controller' => $this->request->controller(),
-            'action' => $this->request->action(),
-            'param1' => $tab_id,
-        )
-        );
-        $start = $pagination->offset;
-
-        $model_tab = new Model_Article_Tab();
-        $tab = $model_tab->get($tab_id);
-
-        $arr = [
-            'articles' => $article_model->find_by_tab_id($tab_id, $limit, $start),
-            'pagination' => $pagination,
-            'categories' => $model_article_category->find_all(),
-            'hot_articles' => $model_article->find_hot_articles(),
-            'sub_title' => "标签 {$tab->tab} 下的文章列表",
-            'keywords' => $tab->tab,
-            'description' => $tab->tab,
-        ];
-        $this->display('site/article/index.html', $arr);
+        $this->display('admin/article/articles.html', $arr);
     }
 
     public function action_create()
@@ -130,28 +54,15 @@ class Controller_Article extends Controller_Base
 
         //验证是否登录状态
         if ($user = Auth::instance()->logged_in()) {
-            $content = View::factory('article/article_form');
-            $content->title = '添加文章';
             $model_article_category = new Model_Article_Category();
-            $content->categories = $model_article_category->find_all();
+            $arr = [
+                'categories' => $model_article_category->find_all(),
+            ];
+            $this->display('admin/article/article_form.html', $arr);
         } else {
-            $content = '没有权限';
+            die('没有权限');
         }
 
-        $this->template->content = $content;
-        $this->sub_title = "创建文章";
-        $this->set_js_array('fck/fckeditor.js');
-        $this->set_js_array('jquery.form.js');
-        $this->set_js_array('yuqi_utils.js');
-        $this->template->js = '
-        window.onload = function()
-        {
-        var fck1 = new FCKeditor(\'content\');
-        fck1.Width = 560;
-        fck1.Height = 400;
-        fck1.BasePath = "' . Resource::js('fck/') . '";
-        fck1.ReplaceTextarea() ;
-        }';
     }
 
     public function action_edit()
@@ -160,31 +71,19 @@ class Controller_Article extends Controller_Base
 
         //验证是否登录状态
         if (Auth::instance()->logged_in()) {
-            $content = View::factory('article/article_form');
-            $content->title = '编辑文章';
             $model_article_category = new Model_Article_Category();
-            $content->categories = $model_article_category->find_all();
-            $id = intval($this->request->param('param1'));
+            $id = intval($this->request->param('id'));
             $model_article = new Model_Article();
-            $content->article = $model_article->get($id);
-        } else {
-            $content = '没有权限';
-        }
 
-        $this->template->content = $content;
-        $this->sub_title = "编辑文章";
-        $this->set_js_array('fck/fckeditor.js');
-        $this->set_js_array('jquery.form.js');
-        $this->set_js_array('yuqi_utils.js');
-        $this->template->js = '
-        window.onload = function()
-        {
-        var fck1 = new FCKeditor(\'content\');
-        fck1.Width = 560;
-        fck1.Height = 400;
-        fck1.BasePath = "' . Resource::js('fck/') . '";
-        fck1.ReplaceTextarea() ;
-        }';
+            $arr = [
+                'categories' => $model_article_category->find_all(),
+                'article' => $model_article->get($id),
+            ];
+            $this->display('admin/article/article_form.html', $arr);
+
+        } else {
+            die('没有权限');
+        }
     }
 
     public function action_save()
@@ -230,43 +129,6 @@ class Controller_Article extends Controller_Base
         $model_article->update_article_tab_link($tabs_detail, $id);
 
         header("location:" . URL::site('article/index'));exit;
-    }
-
-    public function action_detail()
-    {
-        $model_article = new Model_Article();
-        $id = intval($this->request->param('param1'));
-        //阅读次数
-        $model_article->add_read_times($id);
-        $article = $model_article->get($id);
-
-        $keywords = '';
-        if (!empty($article->tabs_detail)) {
-            $tabs = json_decode($article->tabs_detail, 1);
-            if (empty($tabs)) {
-                $article->tabs_detail = [];
-            } else {
-                $article->tabs_detail = $tabs;
-            }
-            $split = ',';
-            foreach ($tabs as $tab) {
-                $keywords .= $split . $tab['tab'];
-            }
-        } else {
-            $article->tabs_detail = [];
-        }
-        $model_article_category = new Model_Article_Category();
-        $model_article = new Model_Article();
-
-        $arr = [
-            'article' => $article,
-            'categories' => $model_article_category->find_all(),
-            'hot_articles' => $model_article->find_hot_articles(),
-            'sub_title' => $article->title,
-            'keywords' => $keywords,
-            'description' => $tab['tab'],
-        ];
-        $this->display('site/article/detail.html', $arr);
     }
 
     public function action_del()

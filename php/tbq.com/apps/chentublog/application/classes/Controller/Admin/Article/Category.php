@@ -42,7 +42,7 @@ class Controller_Admin_Article_Category extends Controller_Base
     {
         //验证是否登录状态
         if ($user = Auth::instance()->logged_in()) {
-            $id = intval($this->request->param('param1'));
+            $id = intval($this->request->param('id'));
             $model_article_category = new Model_Article_Category();
 
             $this->display('admin/article/category_form.html', [

@@ -1,0 +1,22 @@
+<{extends file='../layout.html'}>
+<{block name=title1}>文章列表<{/block}>
+
+<{block name=adminMain}>
+<h1>文章列表</h1>
+<div><a href="/admin/article_category/create">添加</a></div>
+<ul>
+	<{foreach $articles as $art}>
+	<li>
+		<a href="/article/category/<{$art->id}>"><{$art->title}></a>
+		[<a href="/admin/article/edit/<{$art->id}>">编辑</a>]
+		[<a href="/admin/article/del/<{$art->id}>">删除</a>]
+	</li>
+	<{/foreach}>
+</ul>
+
+          <nav class="blog-pagination">
+            <{*<a class="btn btn-outline-primary" href="#">Older</a>*}>
+            <{$pagination}>
+            <{*<a class="btn btn-outline-secondary disabled" href="#">Newer</a>*}>
+          </nav>
+<{/block}>
