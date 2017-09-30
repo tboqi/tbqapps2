@@ -65,6 +65,7 @@ class Model_Article extends Model_Base
         $results = $query->as_object()->execute();
 
         foreach ($results as $row) {
+            $row->tabs_detail = json_decode($row->tabs_detail, 1);
             $arr[] = $row;
         }
         return $arr;
@@ -112,6 +113,7 @@ class Model_Article extends Model_Base
         $results = $query->as_object()->execute();
 
         foreach ($results as $row) {
+            $row->tabs_detail = json_decode($row->tabs_detail, 1);
             $arr[] = $row;
         }
         return $arr;

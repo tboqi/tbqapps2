@@ -110,7 +110,8 @@ class Controller_Article extends Controller_Base
 
         $model_tab = new Model_Article_Tab();
         $tab = $model_tab->get($tab_id);
-
+        $model_article_category = new Model_Article_Category();
+        $model_article = new Model_Article();
         $arr = [
             'articles' => $article_model->find_by_tab_id($tab_id, $limit, $start),
             'pagination' => $pagination,

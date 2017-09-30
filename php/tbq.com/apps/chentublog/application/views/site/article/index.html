@@ -17,10 +17,10 @@
             <p class="blog-post-meta">
               <{$item->create_time|date_format}>
               <{foreach $item->tabs_detail as $tab}>
-              <a href="<{$tab.id}>"><{$tab.tab}></a>
+              <a href="/article/tab/<{$tab.id}>"><{$tab.tab}></a>
               <{/foreach}>
               | 阅读:<{$item->read_times}>
-              | 分类:<a href="<{$item->category_id}>"><{$item->category_name}></a>
+              | 分类:<a href="/article/category/<{$item->category_id}>"><{$item->category_name}></a>
             </p>
 
             <p><{$item->summary}></p>
