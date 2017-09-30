@@ -129,7 +129,7 @@ class Controller_Admin_Article extends Controller_Base
         }
         $model_article->update_article_tab_link($tabs_detail, $id);
 
-        header("location:" . URL::site('article/index'));exit;
+        header("location:" . URL::site('/admin/article/index'));exit;
     }
 
     public function action_del()
@@ -142,7 +142,7 @@ class Controller_Admin_Article extends Controller_Base
             echo '没有权限';
         }
 
-        header("location:" . URL::site('article/index'));exit;
+        header("location:" . URL::site('admin/article/index'));exit;
     }
 
 } // End Article

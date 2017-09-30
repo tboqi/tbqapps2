@@ -1,5 +1,8 @@
+<{extends file='../layout.html'}>
+<{block name=title1}>编辑文章<{/block}>
 
-<h1><?php echo $title; ?></h1>
+<{block name=adminMain}>
+<h1>编辑文章</h1>
 <form action="/admin/article/save" id="article_form" method="post">
 <table>
     <tr>
@@ -10,7 +13,7 @@
         <td>分类</td>
         <td><select name="category_id" id="category_id">
 				  <{foreach $categories as $category}>
-				  <option value="<{$category->id}>"<{if $category->id == $article->category_id?>' selected'<{/if}>><{$category->name}></option>
+				  <option value="<{$category->id}>"<{if $category->id == $article->category_id}>' selected'<{/if}>><{$category->name}></option>
 				  <{/foreach}>
 				</select><a href="/admin/article_category/create">创建分类</a></td>
     </tr>
@@ -36,3 +39,4 @@
 </table>
 <input type="hidden" name="id" value="<{$article->id}>" />
 </form>
+<{/block}>

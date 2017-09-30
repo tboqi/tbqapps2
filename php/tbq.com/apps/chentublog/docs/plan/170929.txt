@@ -17,3 +17,7 @@ seo : title, keywords, description
 清理早起的静态代码
 
 页面美化
+
+url的id换为md5形式的数
+
+标签问题

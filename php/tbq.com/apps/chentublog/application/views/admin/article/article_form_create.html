@@ -1,4 +1,7 @@
+<{extends file='../layout.html'}>
+<{block name=title1}>添加文章<{/block}>
 
+<{block name=adminMain}>
 <h1>添加文章</h1>
 <form action="/admin/article/save" id="article_form" method="post">
 <table>
@@ -35,3 +38,4 @@
     </tr>
 </table>
 </form>
+<{/block}>

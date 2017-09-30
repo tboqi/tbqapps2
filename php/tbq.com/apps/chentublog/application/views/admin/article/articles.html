@@ -7,7 +7,7 @@
 <ul>
 	<{foreach $articles as $art}>
 	<li>
-		<a href="/article/category/<{$art->id}>"><{$art->title}></a>
+		<a href="/article/detail/<{$art->id}>"><{$art->title}></a>
 		[<a href="/admin/article/edit/<{$art->id}>">编辑</a>]
 		[<a href="/admin/article/del/<{$art->id}>">删除</a>]
 	</li>
