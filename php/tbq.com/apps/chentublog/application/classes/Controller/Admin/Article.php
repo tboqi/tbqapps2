@@ -74,10 +74,12 @@ class Controller_Admin_Article extends Controller_Base
             $model_article_category = new Model_Article_Category();
             $id = intval($this->request->param('param1'));
             $model_article = new Model_Article();
+            $article = $model_article->get($id);
+            $article->tabs_detail = json_decode($article->tabs_detail, 1);
 
             $arr = [
                 'categories' => $model_article_category->find_all(),
-                'article' => $model_article->get($id),
+                'article' => $article,
             ];
             $this->display('admin/article/article_form.html', $arr);
 

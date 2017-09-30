@@ -27,7 +27,7 @@
     </tr>
     <tr>
         <td>标签</td>
-        <td><input id="tabs" name="tabs" value="" type="text" /></td>
+        <td><input id="tabs" name="tabs" value="<{foreach $article->tabs_detail as $key => $tab}><{if $key>0}>,<{/if}><{$tab.tab}><{/foreach}>" type="text" /></td>
     </tr>
     <tr>
         <td>原文地址</td>
