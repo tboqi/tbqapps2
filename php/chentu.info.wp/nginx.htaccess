@@ -1,5 +1,5 @@
 server {
-        server_name chent.info www.chentu.info;
+        server_name chentu.info www.chentu.info;
 
         root /work/d/tbqapp2/php/chentu.info.wp;
         index index.php;

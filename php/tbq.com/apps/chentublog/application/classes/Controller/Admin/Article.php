@@ -1,8 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 // class Controller_Article extends Controller_Template
-class Controller_Admin_Article extends Controller_Base
+class Controller_Admin_Article extends Controller_Admin
 {
+
+    public function before()
+    {
+        parent::before();
+    }
 
     public function action_index()
     {
@@ -52,40 +57,28 @@ class Controller_Admin_Article extends Controller_Base
     {
         $content = '';
 
-        //验证是否登录状态
-        if ($user = Auth::instance()->logged_in()) {
-            $model_article_category = new Model_Article_Category();
-            $arr = [
-                'categories' => $model_article_category->find_all(),
-            ];
-            $this->display('admin/article/article_form_create.html', $arr);
-        } else {
-            die('没有权限');
-        }
-
+        $model_article_category = new Model_Article_Category();
+        $arr = [
+            'categories' => $model_article_category->find_all(),
+        ];
+        $this->display('admin/article/article_form_create.html', $arr);
     }
 
     public function action_edit()
     {
         $content = '';
 
-        //验证是否登录状态
-        if (Auth::instance()->logged_in()) {
-            $model_article_category = new Model_Article_Category();
-            $id = intval($this->request->param('param1'));
-            $model_article = new Model_Article();
-            $article = $model_article->get($id);
-            $article->tabs_detail = json_decode($article->tabs_detail, 1);
+        $model_article_category = new Model_Article_Category();
+        $id = intval($this->request->param('param1'));
+        $model_article = new Model_Article();
+        $article = $model_article->get($id);
+        $article->tabs_detail = json_decode($article->tabs_detail, 1);
 
-            $arr = [
-                'categories' => $model_article_category->find_all(),
-                'article' => $article,
-            ];
-            $this->display('admin/article/article_form.html', $arr);
-
-        } else {
-            die('没有权限');
-        }
+        $arr = [
+            'categories' => $model_article_category->find_all(),
+            'article' => $article,
+        ];
+        $this->display('admin/article/article_form.html', $arr);
     }
 
     public function action_save()
@@ -136,13 +129,9 @@ class Controller_Admin_Article extends Controller_Base
 
     public function action_del()
     {
-        if (Auth::instance()->logged_in()) {
-            $model_article = new Model_Article();
-            $id = intval($this->request->param('param1'));
-            $model_article->del($id);
-        } else {
-            echo '没有权限';
-        }
+        $model_article = new Model_Article();
+        $id = intval($this->request->param('param1'));
+        $model_article->del($id);
 
         header("location:" . URL::site('admin/article/index'));exit;
     }
