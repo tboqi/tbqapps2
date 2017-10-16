@@ -13,8 +13,8 @@ ln -s /work/d/code/yii2apps/appfrontend/nginx.htaccess              yii_appfront
 ln -s /work/d/tbqapp2/php/ci/apps/www/nginx.htaccess                cidev.conf
 ln -s /work/d/tbqapp2/php/chentu.info.wp/nginx.htaccess             wp_chentu_info.conf
 ln -s /work/d/tbqapp2/php/tbq.com/apps/tiens_mq/nginx.htaccess      khn_tiens_mq.conf
-ln -s /work/d/tbqapp2/php/tbq.com/apps/chentublog/nginx.htaccess    khn_chentublog.conf
-ln -s /work/d/tbqapp2/php/tbq.com/apps/www/nginx.htaccess           khn_www.conf
+ln -s /work/d/code/koseven/apps/chentublog/nginx.htaccess           khn_chentublog.conf
+ln -s /work/d/code/koseven/apps/www/nginx.htaccess                  khn_www.conf
 ln -s /work/d/code/tbq_static/nginx.htaccess                        static.conf
 cd -
 
