@@ -35,5 +35,5 @@ cd -
 /work/libs/php-5.3.29/sbin/php-fpm
 /work/libs/nginx-1.9.9/sbin/nginx
 
-/etc/init.d/crond restart
+#/etc/init.d/crond restart
 /bin/bash
