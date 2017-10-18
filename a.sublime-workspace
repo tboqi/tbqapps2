@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"var_",
+				"var_export"
+			],
+			[
 				"va",
 				"var_export"
 			],
@@ -232,83 +236,29 @@
 	"buffers":
 	[
 		{
-			"file": "/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/update.php",
+			"file": "/D/code/koseven/apps/tiens_mqtest/application/classes/Controller/Welcome.php",
 			"settings":
 			{
-				"buffer_size": 4775,
+				"buffer_size": 1446,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Searching 14 files for \"管理后台\"\n\nD:\\tbqapp2\\php\\tbq.com\\apps\\chentublog\\application\\views\\admin\\welcome\\index.html:\n    3  \n    4  <{block name=adminMain}>\n    5: 管理后台\n    6  <{/block}>\n    7  \n\n1 match in 1 file\n\n\nSearching 12518 files for \"unloack\"\n\n\n\nSearching 12518 files for \"unlock\"\n\nD:\\code\\tjtjs-ecstore\\app\\base\\lib\\cache\\secache\\model.php:\n  132              $schema_id = $this->_get_size_schema_id($info['size']);\n  133              if($schema_id===false){\n  134:                 if($locked) $this->unlock();\n  135                  return false;\n  136              }\n  ...\n  141  \n  142              if($return===false){\n  143:                 if($locked) $this->unlock();\n  144                  return false;\n  145              }\n  ...\n  148                  $this->_lru_push($schema_id,$info['offset']);\n  149                  $this->_set_schema($schema_id,'hits',$this->_get_schema($schema_id,'hits')+1);\n  150:                 return $this->unlock();\n  151              }else{\n  152                  return true;\n  153              }\n  154          }else{\n  155:             if($locked) $this->unlock();\n  156              return false;\n  157          }\n  ...\n  172  \n  173      /**\n  174:      * unlock\n  175       * 如果flock不管用，请继承本类，并重载此方法\n  176       *\n  ...\n  178       * @return void\n  179       */\n  180:     function unlock(){\n  181          ignore_user_abort(false);\n  182          return flock($this->_rs, LOCK_UN);\n  ...\n  214              $schema_id = $this->_get_size_schema_id($size);\n  215              if($schema_id===false){\n  216:                 $this->unlock();\n  217                  return false;\n  218              }\n  ...\n  227                      $this->_lru_delete($info);\n  228                      if(!($dataoffset = $this->_dalloc($schema_id))){\n  229:                         $this->unlock();\n  230                          return false;\n  231                      }\n  ...\n  240  \n  241                  if(!($dataoffset = $this->_dalloc($schema_id))){\n  242:                     $this->unlock();\n  243                      return false;\n  244                  }\n  ...\n  269  \n  270              $this->_lru_push($schema_id,$hdseq);\n  271:             $this->unlock();\n  272              return true;\n  273          }else{\n  ...\n  371              $this->_puts($this->idx_core_pos,str_repeat(\"\\0\",262144));\n  372              $this->_puts($this->idx_seq_pos,pack('V',1));\n  373:             $this->unlock();\n  374              return true;\n  375          }else{\n\nD:\\code\\tjtjs-ecstore\\app\\search\\Zend\\Search\\Lucene\\Index\\Writer.php:\n  830          $segmentsFile->writeInt($segmentNameCounter + 1);\n  831  \n  832:         // Flash output to guarantee that wrong value will not be loaded between unlock and\n  833          // return (which calls $segmentsFile destructor)\n  834          $segmentsFile->flush();\n\nD:\\code\\tjtjs-ecstore\\app\\search\\Zend\\Search\\Lucene\\LockManager.php:\n   69      {\n   70          $lock = $lockDirectory->getFileObject(self::WRITE_LOCK_FILE);\n   71:         $lock->unlock();\n   72      }\n   73  \n   ..\n  117      {\n  118          $lock = $lockDirectory->getFileObject(self::READ_LOCK_PROCESSING_LOCK_FILE);\n  119:         $lock->unlock();\n  120      }\n  121  \n  ...\n  148      {\n  149          $lock = $lockDirectory->getFileObject(self::READ_LOCK_FILE);\n  150:         $lock->unlock();\n  151      }\n  152  \n  ...\n  167          // \"exclusive\" while the shared lock is held (even when we are\n  168          // the only holder).\n  169:         $lock->unlock();\n  170  \n  171:         // GFS is really poor.  While the above \"unlock\" returns, GFS\n  172          // doesn't clean up it's tables right away (which will potentially\n  173          // cause the conditional locking for the \"exclusive\" lock to fail.\n  ...\n  231      {\n  232          $lock = $lockDirectory->getFileObject(self::OPTIMIZATION_LOCK_FILE);\n  233:         $lock->unlock();\n  234      }\n  235  \n\nD:\\code\\tjtjs-ecstore\\app\\search\\Zend\\Search\\Lucene\\Storage\\File.php:\n   94  \n   95      /**\n   96:      * Unlock file\n   97       */\n   98:     abstract public function unlock();\n   99  \n  100      /**\n\nD:\\code\\tjtjs-ecstore\\app\\search\\Zend\\Search\\Lucene\\Storage\\File\\Filesystem.php:\n  203  \n  204      /**\n  205:      * Unlock file\n  206       *\n  207       * Returns true on success\n  ...\n  209       * @return boolean\n  210       */\n  211:     public function unlock()\n  212      {\n  213          if ($this->_fileHandle !== null ) {\n\nD:\\code\\tjtjs-ecstore\\app\\search\\Zend\\Search\\Lucene\\Storage\\File\\Memory.php:\n  172  \n  173      /**\n  174:      * Unlock file\n  175       */\n  176:     public function unlock()\n  177      {\n  178          // Memory files can't be shared\n\nD:\\code\\tjtjs-ecstore\\app\\tiens\\lib\\changdaojiance\\docancel.php:\n   13          $objChangdaoProduct = new tiens_changdaojiance_product();\n   14          $changdaoOrder = $changdaoOrderList[0];\n   15:         $rt = $objChangdaoProduct->unlockZige($orderId, $changdaoOrder['joyo_code']);\n   16          if ($rt['status'] == 'faild') {\n   17              logger::info(__METHOD__ . ';;' . $rt['msg']);\n\nD:\\code\\tjtjs-ecstore\\app\\tiens\\lib\\changdaojiance\\product.php:\n  132      }\n  133      //解锁资格\n  134:     public function unlockZige($orderId, $joyoCard)\n  135      {\n  136          logger::info(__METHOD__ . \"::orderId=$orderId\");\n  ...\n  172          );\n  173          $sdf['signCode'] = md5(\"{$sdf['JoyoCode']}{$sdf['OrderNumber']}{$sdf['OperatorType']}{$sdf['RightNumber']}{$sdf['BuyType']}{$sdf['TimeStamp']}\");\n  174:         $result = $obj_rpc->request('Zg_Lock_Unlock', $sdf, '', 'array');\n  175          if ($result['status'] == 0) {\n  176              $msg = \"锁定资格失败\";\n  ...\n  181                  'createtime' => time(),\n  182                  'status' => 'faild',\n  183:                 'businessname' => 'Zg_Lock_Unlock',\n  184                  'request_result' => json_encode($result),\n  185                  'request_msg' => $result['message'],\n\nD:\\code\\tjtjs-ecstore\\app\\tiens\\lib\\jiyin\\docancel.php:\n   12          $objJiyinProduct = new tiens_jiyin_product();\n   13          $jiyinOrder = $orderList[0];\n   14:         $rt = $objJiyinProduct->unlockZige($orderId, $jiyinOrder['joyo_card_buy']);\n   15  \n   16          if ($rt['status'] == 'faild') {\n\nD:\\code\\tjtjs-ecstore\\app\\tiens\\lib\\jiyin\\product.php:\n   43  \n   44      //解锁资格\n   45:     public function unlockZige($orderId, $joyoCard) {\n   46          logger::info(__METHOD__ . \"::orderId=$orderId\");\n   47          $modelOrder = app::get('b2c')->model('orders');\n\nD:\\code\\tjtjs-ecstore\\app\\tiens\\lib\\request.php:\n   41          );\n   42          $sdf['signCode'] = md5(\"{$sdf['JoyoCode']}{$sdf['OrderNumber']}{$sdf['OperatorType']}{$sdf['RightNumber']}{$sdf['BuyType']}{$sdf['TimeStamp']}\");\n   43:         $result = $obj_rpc->request('Zg_Lock_Unlock', $sdf, '', 'array');\n   44          if ($result['status'] != 1) {\n   45              $msg = $result['message'];\n\nD:\\code\\tjtjs-ecstore\\app\\tiens\\lib\\task\\changdaojiance.php:\n   54                  //解锁资格\n   55                  $objChangdaojiaceProduct = new tiens_changdaojiance_product();\n   56:                 $rs = $objChangdaojiaceProduct->unlockZige($orderId, $item['joyo_code']);\n   57                  if ($rs['status'] == 'faild') {\n   58                      logger::info(__METHOD__ . \"::未付款::orderId={$orderId}::pay_status={$order['pay_status']}::解锁资格出错::{$rs['msg']}\");\n\nD:\\code\\tjtjs-ecstore\\custom\\webapi\\lib\\api\\rpc\\request.php:\n   54              'invalidencrypt' => 'webapi_api_rpc_request_order@invalidencrypt', // 作废权益码\n   55              'zigehuoqu' => 'webapi_api_rpc_request_member@zigehuoqu', //肠道检测\n   56:             'Zg_Lock_Unlock' => 'webapi_api_rpc_request_member@Zg_Lock_Unlock', //肠道检测\n   57              'getProductInfoForErp' => 'webapi_api_rpc_request_member@getProductInfoForErp', //肠道检测\n   58              'check_tuihuo' => 'webapi_api_rpc_request_member@check_tuihuo', //肠道检测\n\nD:\\code\\tjtjs-ecstore\\custom\\webapi\\lib\\api\\rpc\\request\\member.php:\n   66      }\n   67  \n   68:     public function Zg_Lock_unlock($sdf) {\n   69          return $sdf;\n   70      }\n\nD:\\code\\tjtjs-ecstore\\data\\cache\\secache.php:\n    File too large, skipping\n\nD:\\code\\tjtjs-ecstore\\data\\logs\\site\\20170921\\172_17_0_1.php:\n   16  2017-09-21 16:20:29\tINFO\ttiens_changdaojiance_order_create::pre_check_fromB2c$this->aCart[object][goods]=[{\"obj_ident\":\"goods_162_252\",\"obj_type\":\"goods\",\"obj_items\":{\"products\":[{\"bn\":\"000382-2\",\"price\":{\"price\":\"1.110\",\"cost\":\"0.200\",\"member_lv_price\":\"0.78\",\"buy_price\":\"1.00\"},\"product_id\":\"252\",\"goods_id\":\"162\",\"goods_type\":\"normal\",\"name\":\"\\u4e2d\\u533b\\u6cbb\\u7597-\\u6613\\u611f\\u57fa\\u56e0\",\"consume_score\":0,\"gain_score\":\"0.00\",\"type_setting\":{\"use_brand\":\"1\",\"use_props\":\"1\",\"use_params\":\"1\"},\"type_id\":\"3\",\"cat_id\":\"8\",\"min_buy\":null,\"spec_info\":null,\"spec_desc\":false,\"weight\":\"0.000\",\"quantity\":1,\"params\":{\"\\u4ea7\\u54c1\\u53c2\\u6570\":{\"\\u5e02\\u573a\\u4ef7\":\"\",\"\\u4fc3\\u9500\\u4ef7\":\"\",\"\\u6fc0\\u52b1\\u503c\":\"\"}},\"floatstore\":0,\"store\":935,\"package_scale\":\"1.00\",\"package_unit\":\"\",\"package_use\":null,\"is_virtual\":\"false\",\"default_image\":{\"thumbnail\":\"5a8b300f3e87641fc27d487c47d29c49\"},\"json_price\":{\"price\":\"1.11\",\"cost\":\"0.20\",\"member_lv_price\":\"0.78\",\"buy_price\":\"1.00\"},\"thumbnail\":\"5a8b300f3e87641fc27d487c47d29c49\",\"new_name\":\"\\u4e2d\\u533b\\u6cbb\\u7597-\\u6613\\u611f\\u57fa\\u56e0\",\"subtotal\":\"2.34\"}]},\"quantity\":3,\"params\":{\"goods_id\":\"162\",\"product_id\":\"252\",\"adjunct\":[],\"extends_params\":null},\"subtotal_consume_score\":\"0.00\",\"subtotal_gain_score\":\"0.00\",\"subtotal\":2.34,\"subtotal_price\":3.33,\"subtotal_weight\":\"0.00\",\"discount_amount\":0,\"store\":{\"real\":935,\"less\":3,\"store\":935,\"name\":\"\\u4e2d\\u533b\\u6cbb\\u7597-\\u6613\\u611f\\u57fa\\u56e0\"},\"subtotal_prefilter_after\":\"3.00\",\"discount_amount_prefilter\":\"-0.66\",\"item_quantity_count\":0,\"min_buy\":{\"goods_id\":\"162\",\"min_buy\":null,\"name\":\"\\u4e2d\\u533b\\u6cbb\\u7597-\\u6613\\u611f\\u57fa\\u56e0\"}}]\n   17  2017-09-21 16:20:30\tINFO\t OK\n   18: 2017-09-21 16:20:30\tINFO\twebapi_api_rpc_request::webapi_request!!!s:128:\"{\"message\":\": 会员不存在！\",\"messageJson\":\"{\\\"PLACE\\\":\\\"\\\",\\\"STORE\\\":\\\"\\\",\\\"BSNSSPNO\\\":\\\"\\\",\\\"WEEK\\\":\\\"\\\"}\",\"status\":\"-2\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":null,\"BuyType\":\"1\",\"OrderNumber\":\"\",\"OperatorType\":2,\"RightNumber\":3,\"TimeStamp\":\"2017-09-21_16:20:29\",\"signCode\":\"acace2857c0058ab92c6a78f249b16db\"}\n   19  2017-09-21 16:20:30\tINFO\ttiens_request::zige;;msg(: 会员不存在！)\n   20  2017-09-21 16:20:30\tINFO\ttiens_changdaojiance_order_create::pre_check_fromB2c{\"status\":0,\"msg\":\": \\u4f1a\\u5458\\u4e0d\\u5b58\\u5728\\uff01\"}\n\nD:\\code\\tjtjs-ecstore\\data\\logs\\site\\20170925\\172_17_0_1.php:\n   78  2017-09-25 11:32:49\tINFO\twebapi_api_rpc_request::webapi_request!!!s:298:\"{\"message\":\"成功\",\"messageJson\":\"{\\\"Code\\\":\\\"100382\\\",\\\"ERPCode\\\":\\\"100382\\\",\\\"Name\\\":\\\"肠道微生态检测基础版\\\",\\\"Gender\\\":\\\"\\\",\\\"Price\\\":3990.00,\\\"FactPrice\\\":3990.00,\\\"OAPrice\\\":3000.00,\\\"ReportBVValue\\\":3000.00,\\\"ReportPVValue\\\":3000.00,\\\"BVRate\\\":1.00,\\\"PVRate\\\":1.00}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=getProductInfoForErp&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"ErpCode\":\"100382\"}\n   79  2017-09-25 11:32:50\tINFO\t OK\n   80: 2017-09-25 11:32:50\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201709\\\",\\\"WEEK\\\":\\\"20170904\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60510446\",\"BuyType\":\"1\",\"OrderNumber\":\"\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-09-25_11:32:49\",\"signCode\":\"85372f84dd8435247f8777154414b996\"}\n   81  2017-09-25 11:32:50\tINFO\ttiens_changdaojiance_order_create::pre_check_fromB2c{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201709\\\",\\\"WEEK\\\":\\\"20170904\\\"}\",\"status\":\"1\"}\n   82  2017-09-25 11:32:50\tINFO\tb2c_ctl_site_order::create;;_POST={\"md5_cart_info\":\"6c26d158d8246c8d993a3b5e213456c2\",\"extends_args\":\"{\",\"def_addr_id\":\"792\",\"payment\":{\"currency\":\"CNY\",\"pay_app_id\":\"alipay\"},\"point\":{\"rate\":\"1\",\"score\":\"\"},\"memo\":\"\",\"response_json\":\"true\",\"delivery\":{\"addr_id\":\"792\",\"ship_area\":\"mainland:\\u5409\\u6797\\/\\u767d\\u57ce\\u5e02\\/\\u9547\\u8d49\\u53bf:1587\",\"ship_addr\":\"\\u5409\\u6797\\u767d\\u57ce\\u5e02\\u9547\\u8d49\\u53bfertgfd\",\"ship_zip\":\"111111\",\"ship_name\":\"dfg\",\"ship_mobile\":\"13521467895\",\"ship_tel\":\"\",\"day\":\"\\u4efb\\u610f\\u65f6\\u95f4\",\"time\":\"\\u4efb\\u610f\\u65f6\\u95f4\\u6bb5\",\"shipping_id\":\"1\",\"is_protect\":{\"1\":\"\"}},\"order_id\":\"170925113247296\",\"member_id\":\"15838\"};;;aCart={\"object\":{\"is_virtual_cart\":\"false\",\"goods\":[{\"obj_ident\":\"goods_169_268\",\"obj_type\":\"goods\",\"obj_items\":{\"products\":[{\"bn\":\"100382\",\"price\":{\"price\":\"3990.000\",\"cost\":\"0.000\",\"member_lv_price\":\"3990.000\",\"buy_price\":\"3990.000\"},\"product_id\":\"268\",\"goods_id\":\"169\",\"goods_type\":\"normal\",\"name\":\"\\u80a0\\u9053\\u5fae\\u751f\\u6001\\u68c0\\u6d4b\",\"consume_score\":0,\"gain_score\":\"0.00\",\"type_setting\":{\"use_brand\":\"1\",\"use_props\":\"1\",\"use_params\":\"1\"},\"type_id\":\"14\",\"cat_id\":\"88\",\"min_buy\":null,\"spec_info\":\"\\u914d\\u7f6e\\u89c4\\u683c\\uff1a\\u6807\\u51c6\\u7248\",\"spec_desc\":{\"spec_private_value_id\":{\"11\":\"148921181985\"},\"spec_value\":{\"11\":\"\\u6807\\u51c6\\u7248\"},\"spec_value_id\":{\"11\":\"85\"}},\"weight\":null,\"quantity\":1,\"params\":{\"\\u4ea7\\u54c1\\u53c2\\u6570\":{\"\\u5e02\\u573a\\u4ef7\":\"\",\"\\u4fc3\\u9500\\u4ef7\":\"\",\"\\u6fc0\\u52b1\\u503c\":\"\"}},\"floatstore\":0,\"store\":4987,\"package_scale\":\"1.00\",\"package_unit\":\"\",\"package_use\":null,\"is_virtual\":\"false\",\"default_image\":{\"thumbnail\":\"ab8718c7d34b67b87391686c7926c061\"},\"json_price\":{\"price\":\"3990.00\",\"cost\":\"0.00\",\"member_lv_price\":\"3990.00\",\"buy_price\":\"3990.00\"},\"thumbnail\":\"ab8718c7d34b67b87391686c7926c061\",\"new_name\":\"\\u80a0\\u9053\\u5fae\\u751f\\u6001\\u68c0\\u6d4b (\\u914d\\u7f6e\\u89c4\\u683c\\uff1a\\u6807\\u51c6\\u7248)\",\"subtotal\":\"3990.00\"}]},\"quantity\":1,\"params\":{\"goods_id\":\"169\",\"product_id\":\"268\",\"adjunct\":[],\"extends_params\":null},\"subtotal_consume_score\":\"0.00\",\"subtotal_gain_score\":\"0.00\",\"subtotal\":3990,\"subtotal_price\":3990,\"subtotal_weight\":\"0.00\",\"discount_amount\":0,\"store\":{\"real\":4987,\"less\":1,\"store\":4987,\"name\":\"\\u80a0\\u9053\\u5fae\\u751f\\u6001\\u68c0\\u6d4b (\\u914d\\u7f6e\\u89c4\\u683c\\uff1a\\u6807\\u51c6\\u7248)\"},\"subtotal_prefilter_after\":\"3990.00\",\"discount_amount_prefilter\":\"0.00\",\"item_quantity_count\":0,\"min_buy\":{\"goods_id\":\"169\",\"min_buy\":null,\"name\":\"\\u80a0\\u9053\\u5fae\\u751f\\u6001\\u68c0\\u6d4b\"}}],\"coupon\":[],\"gift\":[]},\"subtotal_consume_score\":0,\"subtotal_gain_score\":0,\"subtotal\":3990,\"subtotal_price\":3990,\"subtotal_discount\":0,\"items_quantity\":1,\"items_count\":1,\"subtotal_weight\":0,\"discount_amount_prefilter\":0,\"discount_amount_order\":0,\"discount_amount\":0,\"subtotal_prefilter_after\":3990,\"items_quantity_widgets\":1,\"items_count_widgets\":1,\"goods_min_buy\":{\"169\":{\"info\":{\"goods_id\":\"169\",\"min_buy\":null,\"name\":\"\\u80a0\\u9053\\u5fae\\u751f\\u6001\\u68c0\\u6d4b\"},\"real_quantity\":1}},\"_cookie\":{\"CART_COUNT\":1,\"CART_NUMBER\":1,\"CART_TOTAL_PRICE\":3990},\"apply_platform\":\"1\"}\n\nD:\\code\\tjtjs-ecstore\\data\\logs\\site\\20171010\\172_17_0_1.php:\n  113  2017-10-10 11:37:03\tINFO\tb2c_order_total::payment_detail;;;cost_item=2.22\n  114  2017-10-10 11:37:05\tINFO\t OK\n  115: 2017-10-10 11:37:05\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171010113728711\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-10_11:37:04\",\"signCode\":\"272ecd414d82e4adb589a7d21b691c8b\"}\n  116  2017-10-10 11:37:12\tINFO\t OK\n  117  2017-10-10 11:37:12\tINFO\twebapi_api_rpc_request::webapi_request!!!s:321:\"{\"message\":\"\",\"messageJson\":\"{\\\"card_Id\\\":\\\"60001757\\\",\\\"certId\\\":\\\"60001757\\\",\\\"custType\\\":1,\\\"dist_Id\\\":\\\"69000397\\\",\\\"gender\\\":3,\\\"id\\\":\\\"3bda85780ff745918c023b753fa086f5\\\",\\\"isConfirmNoDiscount\\\":false,\\\"isRead\\\":true,\\\"joyo_Card\\\":\\\"60001757\\\",\\\"mobile\\\":\\\"\\\",\\\"nickName\\\":\\\"天狮仲裁\\\",\\\"rank\\\":2}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=tjsuserinfo&syncFlag=1&appKey=101866D8CFSDXKV6&messageJson={\"UserId\":\"3bda85780ff745918c023b753fa086f5\"}\n\nD:\\code\\tjtjs-ecstore\\data\\logs\\site\\20171011\\172_17_0_1.php:\n  136  2017-10-11 13:41:35\tINFO\tb2c_order_total::payment_detail;;;cost_item=12.21\n  137  2017-10-11 13:41:36\tINFO\t OK\n  138: 2017-10-11 13:41:36\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011134169813\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-11_13:41:36\",\"signCode\":\"12622fb8adbb4a1d8d4f7247d7933c46\"}\n  139  2017-10-11 13:41:36\tINFO\ttiens_order_create::prev_save;;;获取业绩周期\n  140  2017-10-11 13:41:42\tINFO\t OK\n  ...\n  166  2017-10-11 14:35:43\tINFO\tb2c_order_total::payment_detail;;;cost_item=2.22\n  167  2017-10-11 14:35:44\tINFO\t OK\n  168: 2017-10-11 14:35:44\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011143506765\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-11_14:35:44\",\"signCode\":\"53e58104ebe9f7938a811231cd024264\"}\n  169  2017-10-11 14:35:44\tINFO\ttiens_order_create::prev_save;;;获取业绩周期\n  170  2017-10-11 14:35:46\tINFO\twidget cache miss => app:,theme:default,type:logo.\n  ...\n  211  2017-10-11 15:12:06\tINFO\tb2c_order_total::payment_detail;;;cost_item=1.11\n  212  2017-10-11 15:12:06\tINFO\t OK\n  213: 2017-10-11 15:12:06\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011151266381\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-11_15:12:06\",\"signCode\":\"0fea4c76e46be194fe2506bac9b9dd21\"}\n  214  2017-10-11 15:12:06\tINFO\ttiens_order_create::prev_save;;;获取业绩周期\n  215  2017-10-11 15:12:08\tINFO\twidget cache miss => app:,theme:default,type:logo.\n  ...\n  235  2017-10-11 15:28:09\tINFO\tb2c_order_total::payment_detail;;;cost_item=1.11\n  236  2017-10-11 15:28:09\tINFO\t OK\n  237: 2017-10-11 15:28:09\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011152812619\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-11_15:28:09\",\"signCode\":\"bed3a8992d30a7d3f71a201206d2da27\"}\n  238  2017-10-11 15:28:09\tINFO\ttiens_order_create::prev_save;;;获取业绩周期\n  239  2017-10-11 15:28:11\tINFO\twidget cache miss => app:,theme:default,type:logo.\n  ...\n  257  2017-10-11 15:31:52\tINFO\tb2c_order_create::_order_items;;;arrObjItems['obj_items']['products'][0]['price']={\"price\":\"1.110\",\"cost\":\"0.200\",\"member_lv_price\":\"1.11\",\"buy_price\":\"1.00\"}\n  258  2017-10-11 15:31:52\tINFO\t OK\n  259: 2017-10-11 15:31:52\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011153144647\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-11_15:31:52\",\"signCode\":\"dda15bb02435c3ba0f9b2ac030c82436\"}\n  260  2017-10-11 15:31:52\tINFO\ttiens_order_create::prev_save;;;获取业绩周期\n  261  2017-10-11 15:31:55\tINFO\twidget cache miss => app:,theme:default,type:logo.\n  ...\n  278  2017-10-11 15:41:36\tINFO\tb2c_order_create::_order_items;;;arrObjItems['obj_items']['products'][0]['price']={\"price\":\"1.110\",\"cost\":\"0.200\",\"member_lv_price\":\"1.11\",\"buy_price\":\"1.00\"}\n  279  2017-10-11 15:41:36\tINFO\t OK\n  280: 2017-10-11 15:41:36\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011154107798\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-11_15:41:36\",\"signCode\":\"3ff85a5ddf0ee9a4a3208895c43e24a3\"}\n  281  2017-10-11 15:41:36\tINFO\ttiens_order_create::prev_save;;;获取业绩周期\n  282  2017-10-11 15:41:38\tINFO\twidget cache miss => app:,theme:default,type:logo.\n  ...\n  299  2017-10-11 15:43:57\tINFO\tb2c_order_create::_order_items;;;arrObjItems['obj_items']['products'][0]['price']={\"price\":\"1.110\",\"cost\":\"0.200\",\"member_lv_price\":\"1.11\",\"buy_price\":\"1.11\"}\n  300  2017-10-11 15:43:57\tINFO\t OK\n  301: 2017-10-11 15:43:57\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011154373133\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-11_15:43:57\",\"signCode\":\"ceb17b95d4b2136e35ee4c8530e61eeb\"}\n  302  2017-10-11 15:43:57\tINFO\ttiens_order_create::prev_save;;;获取业绩周期\n  303  2017-10-11 15:43:59\tINFO\twidget cache miss => app:,theme:default,type:logo.\n  ...\n  331  2017-10-11 15:48:41\tINFO\tb2c_order_create::_order_items;;;arrObjItems['obj_items']['products'][0]['price']={\"price\":\"1.110\",\"cost\":\"0.200\",\"member_lv_price\":\"1.11\",\"buy_price\":\"1.11\"}\n  332  2017-10-11 15:48:41\tINFO\t OK\n  333: 2017-10-11 15:48:41\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011154852169\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-11_15:48:41\",\"signCode\":\"c5c0008c51369cef0aa02d57928105a9\"}\n  334  2017-10-11 15:48:41\tINFO\ttiens_order_create::prev_save;;;获取业绩周期\n  335  2017-10-11 15:48:46\tINFO\t OK\n  ...\n  545  2017-10-11 17:21:41\tINFO\twebapi_api_rpc_request::webapi_request!!!s:298:\"{\"message\":\"成功\",\"messageJson\":\"{\\\"Code\\\":\\\"000598\\\",\\\"ERPCode\\\":\\\"TS0100081\\\",\\\"Name\\\":\\\"颈脑血管、全脊柱系列\\\",\\\"Gender\\\":\\\"\\\",\\\"Price\\\":6900.00,\\\"FactPrice\\\":5800.00,\\\"OAPrice\\\":0.00,\\\"ReportBVValue\\\":4420.00,\\\"ReportPVValue\\\":4420.00,\\\"BVRate\\\":0.00,\\\"PVRate\\\":0.00}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=getProductInfoForErp&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"ErpCode\":\"TS0100081\"}\n  546  2017-10-11 17:21:41\tINFO\t OK\n  547: 2017-10-11 17:21:41\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011152812619\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-11_17:21:41\",\"signCode\":\"883195a9c9fc35908971591aa175faa1\"}\n  548  2017-10-11 17:21:42\tINFO\t OK\n  549  2017-10-11 17:21:42\tINFO\twebapi_api_rpc_request::webapi_request!!!s:129:\"{\"message\":\"ORA-01400: cannot insert NULL into (\\\"DBUSRINF\\\".\\\"TJS_BUSINESS_LIST\\\".\\\"BILLNO\\\")\\n\",\"messageJson\":\"\",\"status\":\"-1\"}\";###http://192.168.3.218:8080/router?businessName=addperformance&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"BuyType\":0,\"BUYERCUSTNO\":\"60001757\",\"CUSTNO\":\"60001757\",\"FinishTime\":\"\",\"CancelTime\":\"2017-10-11_17:21:41\",\"HSDAY\":\"2017-10-11\",\"TRANID\":\"F\",\"BILLNO\":null,\"PLACE\":\"CN001\",\"STORE\":\"CN001000\",\"OPOSID\":\"171011152812619\",\"GDID\":\"TS0100081\",\"PRICE\":\"1.000\",\"OAPRICE\":4420,\"AMOUNT\":\"1\",\"MONEY\":1,\"PRATE2\":1,\"PVALUE2\":4420,\"PRATE3\":1,\"PVALUE3\":4420,\"BSNSSPNO\":\"201710\",\"WEEK\":\"20171002\",\"YJZT\":0,\"XSTYPE\":0,\"STAMP\":\"2017-10-11_17:21:41\",\"STOCKID\":99}\n\nD:\\code\\tjtjs-ecstore\\data\\logs\\site\\20171012\\172_17_0_1.php:\n  217  2017-10-12 09:41:29\tINFO\twebapi_api_rpc_request::webapi_request!!!s:298:\"{\"message\":\"成功\",\"messageJson\":\"{\\\"Code\\\":\\\"000598\\\",\\\"ERPCode\\\":\\\"TS0100081\\\",\\\"Name\\\":\\\"颈脑血管、全脊柱系列\\\",\\\"Gender\\\":\\\"\\\",\\\"Price\\\":6900.00,\\\"FactPrice\\\":5800.00,\\\"OAPrice\\\":0.00,\\\"ReportBVValue\\\":4420.00,\\\"ReportPVValue\\\":4420.00,\\\"BVRate\\\":0.00,\\\"PVRate\\\":0.00}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=getProductInfoForErp&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"ErpCode\":\"TS0100081\"}\n  218  2017-10-12 09:41:30\tINFO\t OK\n  219: 2017-10-12 09:41:30\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011151266381\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-12_09:41:29\",\"signCode\":\"0a8257254f72eae13c5b361ae6b8c456\"}\n  220  2017-10-12 09:41:31\tINFO\t OK\n  221  2017-10-12 09:41:31\tINFO\twebapi_api_rpc_request::webapi_request!!!s:71:\"{\"message\":\"泰济生订单创建成功\",\"messageJson\":\"\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=addperformance&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"BuyType\":0,\"BUYERCUSTNO\":\"60001757\",\"CUSTNO\":\"60001757\",\"FinishTime\":\"\",\"CancelTime\":\"2017-10-12_09:41:30\",\"HSDAY\":\"2017-10-12\",\"TRANID\":\"F\",\"BILLNO\":\"20171012097307\",\"PLACE\":\"CN001\",\"STORE\":\"CN001000\",\"OPOSID\":\"171011151266381\",\"GDID\":\"TS0100081\",\"PRICE\":\"1.000\",\"OAPRICE\":4420,\"AMOUNT\":\"1\",\"MONEY\":1,\"PRATE2\":1,\"PVALUE2\":4420,\"PRATE3\":1,\"PVALUE3\":4420,\"BSNSSPNO\":\"201710\",\"WEEK\":\"20171002\",\"YJZT\":0,\"XSTYPE\":0,\"STAMP\":\"2017-10-12_09:41:30\",\"STOCKID\":99}\n  ...\n  429  2017-10-12 10:39:02\tINFO\tb2c_order_create::_order_items;;;arrObjItems['obj_items']['products'][0]['price']={\"price\":\"1.110\",\"cost\":\"0.200\",\"member_lv_price\":\"1.11\",\"buy_price\":\"1.11\"}\n  430  2017-10-12 10:39:02\tINFO\t OK\n  431: 2017-10-12 10:39:02\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171012103990693\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-12_10:39:02\",\"signCode\":\"ae2778081a2cf97f61acb9b70c8794f0\"}\n  432  2017-10-12 10:39:02\tINFO\ttiens_order_create::prev_save;;;获取业绩周期\n  433  2017-10-12 10:39:07\tINFO\t OK\n  ...\n  919  2017-10-12 13:32:42\tINFO\twebapi_api_rpc_request::webapi_request!!!s:298:\"{\"message\":\"成功\",\"messageJson\":\"{\\\"Code\\\":\\\"000598\\\",\\\"ERPCode\\\":\\\"TS0100081\\\",\\\"Name\\\":\\\"颈脑血管、全脊柱系列\\\",\\\"Gender\\\":\\\"\\\",\\\"Price\\\":6900.00,\\\"FactPrice\\\":5800.00,\\\"OAPrice\\\":0.00,\\\"ReportBVValue\\\":4420.00,\\\"ReportPVValue\\\":4420.00,\\\"BVRate\\\":0.00,\\\"PVRate\\\":0.00}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=getProductInfoForErp&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"ErpCode\":\"TS0100081\"}\n  920  2017-10-12 13:32:43\tINFO\t OK\n  921: 2017-10-12 13:32:43\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171010113728711\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-12_13:32:42\",\"signCode\":\"b72cdac8ad4b6d120dc0a7a3522a71a2\"}\n  922  2017-10-12 13:32:43\tINFO\t OK\n  923  2017-10-12 13:32:43\tINFO\twebapi_api_rpc_request::webapi_request!!!s:71:\"{\"message\":\"泰济生订单创建成功\",\"messageJson\":\"\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=addperformance&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"BuyType\":0,\"BUYERCUSTNO\":\"60001757\",\"CUSTNO\":\"60001757\",\"FinishTime\":\"\",\"CancelTime\":\"2017-10-12_13:32:43\",\"HSDAY\":\"2017-10-12\",\"TRANID\":\"F\",\"BILLNO\":\"20171012136920\",\"PLACE\":\"CN001\",\"STORE\":\"CN001000\",\"OPOSID\":\"171010113728711\",\"GDID\":\"TS0100081\",\"PRICE\":\"1.000\",\"OAPRICE\":4420,\"AMOUNT\":\"2\",\"MONEY\":2,\"PRATE2\":1,\"PVALUE2\":8840,\"PRATE3\":1,\"PVALUE3\":8840,\"BSNSSPNO\":\"201710\",\"WEEK\":\"20171002\",\"YJZT\":0,\"XSTYPE\":0,\"STAMP\":\"2017-10-12_13:32:43\",\"STOCKID\":99}\n  ...\n  989  2017-10-12 13:37:18\tINFO\twebapi_api_rpc_request::webapi_request!!!s:298:\"{\"message\":\"成功\",\"messageJson\":\"{\\\"Code\\\":\\\"000598\\\",\\\"ERPCode\\\":\\\"TS0100081\\\",\\\"Name\\\":\\\"颈脑血管、全脊柱系列\\\",\\\"Gender\\\":\\\"\\\",\\\"Price\\\":6900.00,\\\"FactPrice\\\":5800.00,\\\"OAPrice\\\":0.00,\\\"ReportBVValue\\\":4420.00,\\\"ReportPVValue\\\":4420.00,\\\"BVRate\\\":0.00,\\\"PVRate\\\":0.00}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=getProductInfoForErp&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"ErpCode\":\"TS0100081\"}\n  990  2017-10-12 13:37:19\tINFO\t OK\n  991: 2017-10-12 13:37:19\tINFO\twebapi_api_rpc_request::webapi_request!!!s:134:\"{\"message\":\"\",\"messageJson\":\"{\\\"PLACE\\\":\\\"CN001\\\",\\\"STORE\\\":\\\"CN001000\\\",\\\"BSNSSPNO\\\":\\\"201710\\\",\\\"WEEK\\\":\\\"20171002\\\"}\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=Zg_Lock_Unlock&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"JoyoCode\":\"60001757\",\"BuyType\":0,\"OrderNumber\":\"171011154373133\",\"OperatorType\":2,\"RightNumber\":1,\"TimeStamp\":\"2017-10-12_13:37:18\",\"signCode\":\"0ab5ff49847cba62467ba9c3bd1ba4d8\"}\n  992  2017-10-12 13:37:19\tINFO\t OK\n  993  2017-10-12 13:37:19\tINFO\twebapi_api_rpc_request::webapi_request!!!s:71:\"{\"message\":\"泰济生订单创建成功\",\"messageJson\":\"\",\"status\":\"1\"}\";###http://192.168.3.218:8080/router?businessName=addperformance&syncFlag=1&appKey=10199VKVR6B8N4C7&messageJson={\"BuyType\":0,\"BUYERCUSTNO\":\"60001757\",\"CUSTNO\":\"60001757\",\"FinishTime\":\"\",\"CancelTime\":\"2017-10-12_13:37:19\",\"HSDAY\":\"2017-10-12\",\"TRANID\":\"F\",\"BILLNO\":\"20171012134350\",\"PLACE\":\"CN001\",\"STORE\":\"CN001000\",\"OPOSID\":\"171011154373133\",\"GDID\":\"TS0100081\",\"PRICE\":\"1.110\",\"OAPRICE\":4420,\"AMOUNT\":\"1\",\"MONEY\":1.11,\"PRATE2\":1,\"PVALUE2\":4420,\"PRATE3\":1,\"PVALUE3\":4420,\"BSNSSPNO\":\"201710\",\"WEEK\":\"20171002\",\"YJZT\":0,\"XSTYPE\":0,\"STAMP\":\"2017-10-12_13:37:19\",\"STOCKID\":99}\n\n51 matches across 19 files\n",
+			"file": "php/tbq.com/apps/tiens_mq/application/classes/Controller/Welcome.php",
 			"settings":
 			{
-				"buffer_size": 31179,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "/D/code/tjtjs-ecstore/app/tiens/lib/request.php",
-			"settings":
-			{
-				"buffer_size": 1771,
-				"encoding": "UTF-8",
+				"buffer_size": 208,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/code/koseven/apps/www/nginx.htaccess",
+			"file": "php/tbq.com/apps/tiens_mq/application/views/welcome/index.php",
 			"settings":
 			{
-				"buffer_size": 510,
+				"buffer_size": 376,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/code/koseven/apps/chentublog/nginx.htaccess",
-			"settings":
-			{
-				"buffer_size": 500,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "http://testshop.taiji-sun.com/wap/passport-loginFromB2cCallback.html?appid=EcStoreIntestinalWap&userid=3bda85780ff745918c023b753fa086f5&login=1&signCode=20ebb7d3a71afc4e541e1dc60b8f19f8&timeStamp=2017-10-13_10:56:28&buytype=9999&discount=1&BuyCode=&BuyNumber=&SampleCatalog=Gene",
-			"settings":
-			{
-				"buffer_size": 278,
-				"line_ending": "Unix",
-				"name": "http://testshop.taiji-sun.com/wap/passport-loginFr"
-			}
-		},
-		{
-			"contents": "<{extends file='../layout.html'}>\n<{block name=title}><{block name=title1}><{/block}> - 后台管理<{/block}>\n\n<{block name=css}>\n    <link href=\"http://tbq_static.com/bootstrap/docs/examples/dashboard/dashboard.css\" rel=\"stylesheet\">\n\n    <!-- Bootstrap core CSS -->\n    <link href=\"http://tbq_static.com/bootstrap/docs/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <link href=\"http://tbq_static.com/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css\" rel=\"stylesheet\">\n\n    <!-- Custom styles for this template -->\n    <link href=\"dashboard.css\" rel=\"stylesheet\">\n\n    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->\n    <!--[if lt IE 9]><script src=\"../../assets/js/ie8-responsive-file-warning.js\"></script><![endif]-->\n    <script src=\"http://tbq_static.com/bootstrap/docs/assets/js/ie-emulation-modes-warning.js\"></script>\n\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n    <!--[if lt IE 9]>\n      <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n      <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n<{/block}>\n\n<{block name=nav}>\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"#\">Project name</a>\n        </div>\n        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n          <ul class=\"nav navbar-nav navbar-right\">\n            <li><a href=\"/\">网站首页</a></li>\n            <li><a href=\"/site/logout\">退出</li>\n          </ul>\n          <form class=\"navbar-form navbar-right\">\n            <input type=\"text\" class=\"form-control\" placeholder=\"Search...\">\n          </form>\n        </div>\n      </div>\n    </nav>\n<{/block}>\n\n<{block name=content}>\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-3 col-md-2 sidebar\">\n          <ul class=\"nav nav-sidebar\">\n            <li<{if $controller=='site' && $action=='index'}> class=\"active\"<{/if}>><a href=\"/admin\">控制台首页 <span class=\"sr-only\">(current)</span></a></li>\n          </ul>\n          <ul class=\"nav nav-sidebar\">\n            <li><{if $controller=='article' && $action=='index'}> class=\"active\"<{/if}>><a href=\"/admin/article/index\">文章</a></li>\n            <li><{if $controller=='article_category' && $action=='index'}> class=\"active\"<{/if}>><a href=\"/admin/article_category/index\">文章分类</a></li>\n          </ul>\n        </div>\n\n        <div class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\">\n        <{block name=adminMain}>\n        <{/block}>\n        </div>\n      </div>\n    </div>\n<{/block}>\n\n<{block name=footer}><{/block}>\n",
-			"settings":
-			{
-				"buffer_size": 3138,
-				"line_ending": "Unix",
-				"name": "<{extends file='../layout.html'}>"
-			}
-		},
-		{
-			"file": "/D/code/tbq_static/bootstrap/docs/examples/dashboard/index.html",
-			"settings":
-			{
-				"buffer_size": 9652,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/code/tbq_static/bootstrap/docs/examples/starter-template/index.html",
-			"settings":
-			{
-				"buffer_size": 3227,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -425,19 +375,79 @@
 	},
 	"expanded_folders":
 	[
+		"/D/code/tbq_static",
 		"/D/code/koseven",
 		"/D/code/koseven/apps",
-		"/D/code/koseven/apps/chentublog",
-		"/D/code/koseven/apps/www"
+		"/D/code/koseven/apps/tiens_mqtest",
+		"/D/code/koseven/apps/tiens_mqtest/application",
+		"/D/code/koseven/apps/tiens_mqtest/application/classes",
+		"/D/code/koseven/apps/tiens_mqtest/application/classes/Controller",
+		"/D/code/koseven/apps/tiens_mqtest/application/classes/Helper",
+		"/D/code/koseven/apps/tiens_mqtest/application/classes/Model",
+		"/D/code/koseven/apps/tiens_mqtest/application/views",
+		"/D/code/koseven/apps/tiens_mqtest/application/views/welcome"
 	],
 	"file_history":
 	[
+		"/D/code/koseven/apps/tiens_mqtest/application/classes/Model/Base.php",
+		"/D/code/koseven/apps/tiens_mqtest/index.php",
+		"/D/code/koseven/apps/tiens_mqtest/application/classes/Helper/String.php",
+		"/D/code/koseven/apps/tiens_mqtest/application/classes/Model/Base2.php",
+		"/D/code/koseven/apps/tiens_mqtest/application/classes/Helper/String2.php",
+		"/D/code/koseven/apps/chentublog/index.php",
+		"/D/code/koseven/apps/chentublog/application/views/admin/article/categories.html",
+		"/D/code/koseven/apps/chentublog/application/views/admin/article/category_form.html",
+		"/D/tbqapp2/sh/startNP",
+		"/D/code/koseven/apps/tiens_mqtest/nginx.htaccess",
+		"/D/code/tbq_static/H-ui.admin.page/admin-add.html",
+		"/D/code/koseven/apps/chentublog/application/views/admin/layout.html",
+		"/D/code/tbq_static/H-ui.admin.page/static/h-ui.admin/js/H-ui.admin.page.js",
+		"/D/code/tbq_static/H-ui.admin.page/static/h-ui/js/H-ui.js",
+		"/D/code/tbq_static/h-ui/static/h-ui/src/js/jQuery.Huifold.js",
+		"/D/code/tbq_static/H-ui.admin.page/admin-role.html",
+		"/D/code/tbq_static/H-ui.admin.page/member-list.html",
+		"/D/code/tbq_static/H-ui.admin.page/lib/layer/2.4/layer.js",
+		"/D/code/koseven/apps/chentublog/application/views/admin/article/article_form.html",
+		"/D/code/koseven/apps/chentublog/application/views/admin/article/articles.html",
+		"/D/code/tbq_static/H-ui.admin.page/article-list.html",
+		"/D/code/koseven/apps/chentublog/application/views/admin/welcome/index.html",
+		"/D/code/koseven/apps/chentublog/application/classes/Controller/Admin/Article.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/b2c/login.php",
+		"/D/code/tbq_static/H-ui.admin.page/article-add.html",
+		"/D/code/tbq_static/H-ui.admin.page/index.html",
+		"/D/code/koseven/apps/chentublog/application/classes/Controller/Admin/Welcome.php",
+		"/D/code/koseven/apps/chentublog/application/classes/Controller/Admin.php",
+		"/D/code/koseven/apps/chentublog/application/classes/Controller/User.php",
+		"/D/code/koseven/apps/chentublog/application/classes/Controller/Base.php",
+		"/D/code/koseven/apps/chentublog/application/views/site/user/login.html",
+		"/D/code/tbq_static/H-ui.admin.page/login.html",
+		"/D/code/tjtjs-ecstore/app/pam/lib/passport/desktop/basic.php",
+		"/D/code/tjtjs-ecstore/config/config.dev.php",
+		"/D/code/tjtjs-ecstore/app/b2c/view/site/passport/signin/signin.html",
+		"/D/code/tjtjs-ecstore/app/base/kernel.php",
+		"/D/code/tjtjs-ecstore/index.php",
+		"/D/code/koseven/apps/chentublog/application/classes/Controller/Article.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/order/create.php",
+		"/D/code/koseven/apps/chentublog/nginx.htaccess",
+		"/D/code/koseven/apps/chentublog/application/bootstrap.php",
+		"/D/code/koseven/apps/www/application/bootstrap.php",
+		"/D/tbqapp2/php/tbq.com/modules/smarty3/config/smarty.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/dbschema/orders.php",
+		"/D/code/koseven/modules/smarty/classes/View.php",
+		"/D/code/koseven/modules/smarty/.git",
+		"/D/code/koseven/.gitmodules",
+		"/D/code/koseven/.git/modules/modules/smarty/config",
+		"/D/code/koseven/modules/smarty/classes/Controller/SmartyDemo.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/update.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/request.php",
+		"/D/code/koseven/apps/www/nginx.htaccess",
+		"/D/code/tbq_static/bootstrap/docs/examples/dashboard/index.html",
+		"/D/code/tbq_static/bootstrap/docs/examples/starter-template/index.html",
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/layout.html",
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/welcome/index.html",
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/layout - 副本.html",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/jiyinhe.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/product.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/b2c/login.php",
 		"/D/code/tbq_static/h-ui/【目录结构】必读.txt",
 		"/D/tbqapp2/php/tbq.com/apps/www/application/views/welcome/index.html",
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/site/article/index.html",
@@ -458,7 +468,6 @@
 		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/member.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/passport.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/afterpay.php",
-		"/D/tbqapp2/sh/startNP",
 		"/D/code/tjtjs-ecstore/custom/b2c/view/site/member/orderdetail.html",
 		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini/view.html",
 		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini/item/goods.html",
@@ -466,13 +475,11 @@
 		"/D/code/tjtjs-ecstore/custom/b2c/lib/cart/object/goods.php",
 		"/D/code/tjtjs-ecstore/app/b2c/dbschema/order_objects.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/dbschema/order_items.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/order/create.php",
 		"/D/code/tjtjs-ecstore/app/b2c/lib/cart/object/goods.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/cart.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/cart.php",
 		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini_cart.html",
 		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/checkout/checkout_total.html",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/request.php",
 		"/D/code/tjtjs-ecstore/app/tiens/crontab.xml",
 		"/D/code/tjtjs-ecstore/custom/b2c/lib/order/total.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/checkout/index_jiyin.html",
@@ -480,7 +487,6 @@
 		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/item/goods_jiyin.html",
 		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/index.html",
 		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/cart_main_jiyin.html",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/update.php",
 		"/D/code/tjtjs-ecstore/custom/webapi/lib/api/rpc/request.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/passport.php",
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/article/article_form_create.html",
@@ -510,66 +516,22 @@
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/docs/plan/20120612.txt",
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/index.html",
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/User.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Comment.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Model/Article/Comment.php",
-		"/D/tbqapp2/php/tbqwebsite/modules/article/classes/model/article/comment.php",
-		"/D/tbqapp2/php/del/khn/khn3/khn3blog1/modules/article/classes/model/article/comment.php",
-		"/D/tbqapp2/del/tbqwebsite/modules/article/classes/model/article/comment.php",
-		"/D/tbqapp2/del/khnapps/modules/article/classes/Model/Article/Comment.php",
-		"/D/tbqapp2/php/tbq.com/modules/auth/classes/Kohana/Auth.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/site/user/reset_password.html",
-		"/D/tbqapp2/php/tbq.com/modules/auth/classes/Auth/Mysql.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Template.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Block/Article.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/blocks/article/hotArticles.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/blocks/article/categories.html",
-		"/D/tbqapp2/php/tbq.com/system/classes/Kohana/Controller/Template.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/config/pagination.php",
-		"/D/tbqapp2/php/tbq.com/system/classes/Kohana/Route.php",
-		"/D/tbqapp2/php/tbq.com/system/classes/Kohana/Request.php",
-		"/D/tbqapp2/php/tbq.com/modules/pagination/views/pagination/bootstrap.php",
-		"/D/tbqapp2/php/tbq.com/system/classes/Route.php",
-		"/D/tbqapp2/php/tbq.com/modules/userguide/classes/Kohana/Kodoc/Markdown.php",
-		"/D/tbqapp2/php/tbq.com/apps/www/nginx.htaccess",
-		"/D/tbqapp2/php/tbq.com/modules/userguide/vendor/markdown/markdown.php",
-		"/D/tbqapp2/php/tbq.com/system/classes/Kohana/Kohana/Exception.php",
-		"/D/tbqapp2/php/tbq.com/modules/userguide/init.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/site/welcome/index.html",
-		"/D/tbqapp2/php/tbq.com/apps/www/application/classes/Controller/Welcome.php",
-		"/D/code/yii2apps/appblog/views/site/login.tpl",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/cache/smarty_compiled/49f1277fb0d258f0345783a9ac178d7a26b8234a.file.index.html.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/site/layout.html",
-		"/D/code/yii2apps/appblog/views/layout/base.tpl",
-		"/D/tbqapp2/php/tbq.com/apps/www/application/bootstrap.php",
-		"/D/code/tbq_static/static.tbq.com.conf",
-		"/D/code/tbq_static/bootstrap/docs/4.0/examples/starter-template/index.html",
-		"/D/tbqapp2/php/tbq.com/modules/smarty3/config/smarty.php",
-		"/D/tbqapp2/php/tbq.com/modules/smarty3/vendor/smarty/libs/Smarty.class.php",
-		"/D/tbqapp2/php/tbq.com/modules/smarty3/classes/View.php",
-		"/D/tbqapp2/php/tbq.com/apps/www/index.php",
-		"/D/tbqapp2/php/tbq.com/apps/www/www.tbq.com.conf",
-		"/D/tbqapp2/php/index.php",
-		"/D/code/yii2apps/common/config/main.php",
-		"/D/code/yii2apps/vendor/yiisoft/yii2-admin/models/AuthItem.php",
-		"/D/code/yii2apps/appbackend/config/main.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/welcome/smarty.html",
-		"/D/code/yii2apps/composer.json",
-		"/D/code/yii2apps/common/models/User.php",
-		"/D/code/yii2apps/appbackend/controllers/SiteController.php",
-		"/D/code/yii2apps/appbackend/config/bootstrap.php",
-		"/D/code/yii2apps/common/models/LoginForm.php",
-		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Security.php",
-		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Model.php"
+		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Comment.php"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
 		"height": 110.0,
 		"where_history":
 		[
+			"D:\\code\\tbq_static\\H-ui.admin.page,*.js",
+			"D:\\code\\tbq_static\\H-ui.admin.page",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\tbqapp2\\php\\tbq.com\\modules\\smarty3",
+			"D:\\code\\koseven\\modules\\smarty",
 			"D:\\code\\tjtjs-ecstore",
 			"D:\\tbqapp2\\php\\tbq.com\\apps\\chentublog\\application\\views",
 			"D:\\code\\tjtjs-ecstore",
@@ -692,12 +654,7 @@
 			"D:\\code\\www.tiens.com",
 			"D:\\code\\tjtjs-ecstore",
 			"D:\\code\\www.tiens.com",
-			"D:\\code\\tjtjs-ecstore",
-			"D:\\code\\phpcms.tiens.com,*.html",
-			"D:\\code\\tjtjs-ecstore",
-			"D:\\code\\phpcms.tiens.com",
-			"D:\\code\\phpcms.tiens.com,*.php",
-			"D:\\code\\phpcms.tiens.com"
+			"D:\\code\\tjtjs-ecstore"
 		]
 	},
 	"find_state":
@@ -705,6 +662,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Huifold",
+			"menu_dropdown",
+			"&#xe6d5;",
+			"menu_dropdown-arrow",
+			"article_save_submit",
+			"editor",
+			"article_add",
+			"logout",
+			"cache",
+			"memcache",
+			"uname",
+			"用户登录",
+			"check.php",
+			"pagination/bootstra",
+			"<{",
+			"tpl",
+			"smart",
 			"unlock",
 			"unloack",
 			"管理后台",
@@ -815,24 +789,7 @@
 			"changdaojiance_order",
 			"changdao.quanjiazuixiang",
 			"function do_yeji",
-			"bsnsspno",
-			"->checkPrePay",
-			"bsnsspno",
-			"->do_yeji",
-			"status",
-			"isChangdao",
-			"最近的订单",
-			"redirect_pre",
-			"gene_discount",
-			"joyo_code",
-			"session",
-			"order_deduction",
-			"deduction",
-			"该会员不存在",
-			"会员不存在",
-			"discount_amount_prefilter",
-			"subtotal_current",
-			"discount_amount_prefilter"
+			"bsnsspno"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -908,24 +865,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/update.php",
+					"file": "/D/code/koseven/apps/tiens_mqtest/application/classes/Controller/Welcome.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4775,
+						"buffer_size": 1446,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3039,
-								3039
+								280,
+								280
 							]
 						],
 						"settings":
@@ -935,318 +892,36 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 31179,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										161,
-										165
-									],
-									[
-										508,
-										514
-									],
-									[
-										672,
-										678
-									],
-									[
-										954,
-										960
-									],
-									[
-										1107,
-										1113
-									],
-									[
-										1210,
-										1216
-									],
-									[
-										1337,
-										1343
-									],
-									[
-										1584,
-										1590
-									],
-									[
-										1826,
-										1832
-									],
-									[
-										2030,
-										2036
-									],
-									[
-										2202,
-										2208
-									],
-									[
-										2441,
-										2447
-									],
-									[
-										2737,
-										2743
-									],
-									[
-										3033,
-										3039
-									],
-									[
-										3197,
-										3203
-									],
-									[
-										3345,
-										3351
-									],
-									[
-										3518,
-										3524
-									],
-									[
-										3592,
-										3598
-									],
-									[
-										3902,
-										3908
-									],
-									[
-										4041,
-										4047
-									],
-									[
-										4104,
-										4110
-									],
-									[
-										4256,
-										4262
-									],
-									[
-										4398,
-										4404
-									],
-									[
-										4586,
-										4592
-									],
-									[
-										4640,
-										4646
-									],
-									[
-										4945,
-										4951
-									],
-									[
-										5231,
-										5237
-									],
-									[
-										5577,
-										5583
-									],
-									[
-										5834,
-										5840
-									],
-									[
-										6169,
-										6175
-									],
-									[
-										6385,
-										6391
-									],
-									[
-										6827,
-										6833
-									],
-									[
-										7180,
-										7186
-									],
-									[
-										7686,
-										7692
-									],
-									[
-										7736,
-										7742
-									],
-									[
-										8073,
-										8079
-									],
-									[
-										10218,
-										10224
-									],
-									[
-										11511,
-										11517
-									],
-									[
-										15530,
-										15536
-									],
-									[
-										16804,
-										16810
-									],
-									[
-										17542,
-										17548
-									],
-									[
-										18327,
-										18333
-									],
-									[
-										19112,
-										19118
-									],
-									[
-										20007,
-										20013
-									],
-									[
-										20902,
-										20908
-									],
-									[
-										21797,
-										21803
-									],
-									[
-										22692,
-										22698
-									],
-									[
-										23846,
-										23852
-									],
-									[
-										25754,
-										25760
-									],
-									[
-										27234,
-										27240
-									],
-									[
-										28388,
-										28394
-									],
-									[
-										30174,
-										30180
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								6827,
-								6827
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"git_gutter_is_enabled": false,
-							"incomplete_sync": null,
-							"line_numbers": false,
-							"output_tag": 3,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2420.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/code/tjtjs-ecstore/app/tiens/lib/request.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1771,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1517,
-								1503
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 544.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
-					"buffer": 3,
-					"file": "/D/code/koseven/apps/www/nginx.htaccess",
+					"buffer": 1,
+					"file": "php/tbq.com/apps/tiens_mq/application/classes/Controller/Welcome.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 510,
+						"buffer_size": 208,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								510,
-								510
+								208,
+								208
 							]
 						],
 						"settings":
@@ -1255,43 +930,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/D/code/koseven/apps/chentublog/nginx.htaccess",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 500,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								387,
-								387
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1301,78 +940,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 2,
+					"file": "php/tbq.com/apps/tiens_mq/application/views/welcome/index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 278,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								278,
-								278
-							]
-						],
-						"settings":
-						{
-							"auto_name": "http://testshop.taiji-sun.com/wap/passport-loginFr",
-							"git_gutter_is_enabled": false,
-							"incomplete_sync": null,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3138,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2741,
-								2741
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<{extends file='../layout.html'}>",
-							"git_gutter_is_enabled": false,
-							"incomplete_sync": null,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1260.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/D/code/tbq_static/bootstrap/docs/examples/dashboard/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9652,
+						"buffer_size": 376,
 						"regions":
 						{
 						},
@@ -1380,7 +953,7 @@
 						[
 							[
 								0,
-								9652
+								0
 							]
 						],
 						"settings":
@@ -1389,49 +962,15 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1060.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/D/code/tbq_static/bootstrap/docs/examples/starter-template/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3227,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2081,
-								2081
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2481.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1465,7 +1004,7 @@
 		"cols":
 		[
 			0.0,
-			0.528120626247,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1496,6 +1035,34 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"starnp",
+				"tbqapp2\\sh\\startNP"
+			],
+			[
+				"jquery.huifold.js",
+				"tbq_static\\h-ui\\static\\h-ui\\src\\js\\jQuery.Huifold.js"
+			],
+			[
+				"h-ui.admin.page.js",
+				"tbq_static\\H-ui.admin.page\\static\\h-ui.admin\\js\\H-ui.admin.page.js"
+			],
+			[
+				"h-ui.admin.page/static/h-ui/js/h-ui.js",
+				"tbq_static\\H-ui.admin.page\\static\\h-ui\\js\\H-ui.js"
+			],
+			[
+				"h-ui.admin.page/lib/layer/2.4/layer.js",
+				"tbq_static\\H-ui.admin.page\\lib\\layer\\2.4\\layer.js"
+			],
+			[
+				"startnp",
+				"tbqapp2\\sh\\startNP"
+			],
+			[
+				"tjtj/cus/b2c/dbsc/orders",
+				"tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
+			],
 			[
 				"model/orders.",
 				"tjtjs-ecstore\\app\\b2c\\model\\orders.php"
@@ -1837,10 +1404,6 @@
 				"tjtjs-ecstore\\script\\crontab\\crontab.php"
 			],
 			[
-				"startnp",
-				"tbqapp2\\sh\\startNP"
-			],
-			[
 				"tjtjs/dbsc/orders.",
 				"tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
 			],
@@ -1937,10 +1500,6 @@
 				"tiens_hualang\\nginx.htaccess"
 			],
 			[
-				"starnp",
-				"tbqapp2\\sh\\startNP"
-			],
-			[
 				"sh/starng",
 				"tmq1\\yii2\\vendor\\ezyang\\htmlpurifier\\library\\HTMLPurifier\\ConfigSchema\\schema\\HTML.TargetNoopener.txt"
 			],
@@ -1987,26 +1546,6 @@
 			[
 				"app.conf",
 				"tmq1\\yii2\\frontend\\app.conf"
-			],
-			[
-				"tmq/yii/app",
-				"tmq1\\yii2\\frontend\\app.conf"
-			],
-			[
-				"tjtjs/c/b/v/w/a/afterinfo.ht",
-				"tjtjs-ecstore\\custom\\b2c\\view\\wap\\afterlist\\afterinfo.html"
-			],
-			[
-				"tjtj/after/",
-				"tjtjs-ecstore\\app\\aftersales\\app.xml"
-			],
-			[
-				"admingroup_update.php",
-				"www.tiens.com\\abdmin\\admingroup_update.php"
-			],
-			[
-				"tmq1/yii2/vendor/yiisoft/yii2/db/connection.ph",
-				"tmq1\\yii2\\vendor\\yiisoft\\yii2\\db\\Connection.php"
 			]
 		],
 		"width": 0.0
@@ -2033,9 +1572,24 @@
 		],
 		"width": 696.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		]
 	},
 	"show_minimap": false,
 	"show_open_files": false,
