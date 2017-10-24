@@ -21,6 +21,9 @@
 		},
 		{
 			"path": "."
+		},
+		{
+			"path": "D:\\code\\Yii2-Plus"
 		}
 	]
 }

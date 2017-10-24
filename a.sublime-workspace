@@ -236,27 +236,71 @@
 	"buffers":
 	[
 		{
-			"file": "/D/code/koseven/apps/tiens_mqtest/application/classes/Controller/Welcome.php",
+			"file": "/D/code/tjtjs-ecstore/app/tiens/model/jiyin/order/tongji.php",
 			"settings":
 			{
-				"buffer_size": 1446,
+				"buffer_size": 12580,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "php/tbq.com/apps/tiens_mq/application/classes/Controller/Welcome.php",
+			"file": "/D/code/tjtjs-ecstore/app/tiens/model/jiyin/jiancehe/update/tongji.php",
 			"settings":
 			{
-				"buffer_size": 208,
+				"buffer_size": 6280,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "php/tbq.com/apps/tiens_mq/application/views/welcome/index.php",
+			"file": "sh/startNP",
 			"settings":
 			{
-				"buffer_size": 376,
+				"buffer_size": 1902,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Administrator/AppData/Local/Temp/fz3temp-2/jdbc.properties",
+			"settings":
+			{
+				"buffer_size": 332,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "cfg/hosts_for_tiens_dell_win10",
+			"settings":
+			{
+				"buffer_size": 1401,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sh/debian8NginxPhpStart.sh",
+			"settings":
+			{
+				"buffer_size": 1904,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/code/tjtjs-ecstore/custom/b2c/dbschema/orders.php",
+			"settings":
+			{
+				"buffer_size": 21942,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/code/tjtjs-ecstore/app/tiens/model/changdaojiance/order/tongji.php",
+			"settings":
+			{
+				"buffer_size": 14500,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -375,20 +419,76 @@
 	},
 	"expanded_folders":
 	[
-		"/D/code/tbq_static",
-		"/D/code/koseven",
-		"/D/code/koseven/apps",
-		"/D/code/koseven/apps/tiens_mqtest",
-		"/D/code/koseven/apps/tiens_mqtest/application",
-		"/D/code/koseven/apps/tiens_mqtest/application/classes",
-		"/D/code/koseven/apps/tiens_mqtest/application/classes/Controller",
-		"/D/code/koseven/apps/tiens_mqtest/application/classes/Helper",
-		"/D/code/koseven/apps/tiens_mqtest/application/classes/Model",
-		"/D/code/koseven/apps/tiens_mqtest/application/views",
-		"/D/code/koseven/apps/tiens_mqtest/application/views/welcome"
+		"/D/code/tjtjs-ecstore",
+		"/D/code/tjtjs-ecstore/app",
+		"/D/code/tjtjs-ecstore/app/tiens",
+		"/D/code/tjtjs-ecstore/app/tiens/model",
+		"/D/code/tjtjs-ecstore/app/tiens/model/jiyin",
+		"/D/code/tjtjs-ecstore/app/tiens/model/jiyin/jiancehe",
+		"/D/code/tjtjs-ecstore/app/tiens/model/jiyin/jiancehe/update",
+		"/D/code/tjtjs-ecstore/app/tiens/model/jiyin/order",
+		"/D/code/tjtjs-ecstore/custom",
+		"/D/code/tjtjs-ecstore/custom/b2c",
+		"/D/code/tjtjs-ecstore/custom/b2c/dbschema",
+		"/D/tbqapp2",
+		"/D/tbqapp2/sh"
 	],
 	"file_history":
 	[
+		"/D/code/tjtjs-ecstore/app/tiens/controller/admin/jiyin.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/jiyin/order/tongji.php",
+		"/D/code/tjtjs-ecstore/app/tiens/model/jiyin/order/tongji.php",
+		"/D/code/tjtjs-ecstore/custom/aftersales/view/admin/return_product/detail.html",
+		"/D/code/tjtjs-ecstore/custom/aftersales/lib/finder/return/product.php",
+		"/D/code/tjtjs-ecstore/custom/aftersales/controller/site/member.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/member.php",
+		"/D/code/tjtjs-ecstore/app/aftersales/controller/site/member.php",
+		"/D/code/tjtjs-ecstore/app/b2c/view/site/product/info/props.html",
+		"/D/code/tjtjs-ecstore/custom/aftersales/controller/admin/returnproduct.php",
+		"/D/code/tjtjs-ecstore/app/aftersales/model/return/product.php",
+		"/D/code/tjtjs-ecstore/app/b2c/lib/api/rpc/notify/aftersales.php",
+		"/D/code/tjtjs-ecstore/app/aftersales/lib/data/return/policy.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/view/site/member/order_item.html",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/member.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/view/site/product/basic.html",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/cart.php",
+		"/D/code/tjtjs-ecstore/app/gift/view/site/product/info/basic.html",
+		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini_cart.html",
+		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini/view.html",
+		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini/item/goods.html",
+		"/E/丁怀晨交接资料/5、奥蓝际德与ERP系统接口/奥蓝际德数据同步/erp数据同步清表.txt",
+		"/D/code/tjtjs-ecstore/custom/b2c/view/site/product/info/price_yiganjiyin.html",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/product.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/product.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/passport.php",
+		"/D/code/tjtjs-ecstore/app/b2c/lib/user/object.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/b2c/login.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/jiyin/product.php",
+		"/D/code/Yii2-Plus/backend/controllers/SiteController.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/afterpay.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/order.php",
+		"/D/code/Yii2-Plus/backend/views/site/index.php",
+		"/D/code/Yii2-Plus/backend/controllers/UserController.php",
+		"/D/code/Yii2-Plus/backend/views/index/index.php",
+		"/D/code/Yii2-Plus/backend/views/index/welcome.php",
+		"/D/code/Yii2-Plus/common/models/LoginForm.php",
+		"/D/tbqapp2/sh/startNP",
+		"/D/code/Yii2-Plus/backend/nginx.htaccess",
+		"/D/code/Yii2-Plus/common/config/main-local.php",
+		"/D/code/Yii2-Plus/backend/config/main.php",
+		"/D/code/Yii2-Plus/nginx.htaccess",
+		"/D/code/koseven/apps/chentublog/application/bootstrap.php",
+		"/D/code/koseven/modules/admin/classes/controller/admin/auth.php",
+		"/D/code/koseven/modules/admin/classes/controller/template/admin.php",
+		"/D/code/koseven/modules/admin/classes/controller/admin.php",
+		"/D/code/koseven/modules/admin/classes/view/admin/auth/login.php",
+		"/D/code/koseven/modules/admin/classes/view/admin/layout.php",
+		"/D/code/koseven/modules/kostache/classes/Kohana/Kostache/Layout.php",
+		"/D/code/koseven/modules/kostache/classes/Kohana/Kostache.php",
+		"/D/code/koseven/apps/tiens_mqtest/application/classes/Controller/Welcome.php",
+		"/D/code/koseven/.gitmodules",
+		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/application/classes/Controller/Welcome.php",
+		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/application/views/welcome/index.php",
 		"/D/code/koseven/apps/tiens_mqtest/application/classes/Model/Base.php",
 		"/D/code/koseven/apps/tiens_mqtest/index.php",
 		"/D/code/koseven/apps/tiens_mqtest/application/classes/Helper/String.php",
@@ -397,7 +497,6 @@
 		"/D/code/koseven/apps/chentublog/index.php",
 		"/D/code/koseven/apps/chentublog/application/views/admin/article/categories.html",
 		"/D/code/koseven/apps/chentublog/application/views/admin/article/category_form.html",
-		"/D/tbqapp2/sh/startNP",
 		"/D/code/koseven/apps/tiens_mqtest/nginx.htaccess",
 		"/D/code/tbq_static/H-ui.admin.page/admin-add.html",
 		"/D/code/koseven/apps/chentublog/application/views/admin/layout.html",
@@ -412,7 +511,6 @@
 		"/D/code/tbq_static/H-ui.admin.page/article-list.html",
 		"/D/code/koseven/apps/chentublog/application/views/admin/welcome/index.html",
 		"/D/code/koseven/apps/chentublog/application/classes/Controller/Admin/Article.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/b2c/login.php",
 		"/D/code/tbq_static/H-ui.admin.page/article-add.html",
 		"/D/code/tbq_static/H-ui.admin.page/index.html",
 		"/D/code/koseven/apps/chentublog/application/classes/Controller/Admin/Welcome.php",
@@ -429,13 +527,11 @@
 		"/D/code/koseven/apps/chentublog/application/classes/Controller/Article.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/order/create.php",
 		"/D/code/koseven/apps/chentublog/nginx.htaccess",
-		"/D/code/koseven/apps/chentublog/application/bootstrap.php",
 		"/D/code/koseven/apps/www/application/bootstrap.php",
 		"/D/tbqapp2/php/tbq.com/modules/smarty3/config/smarty.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/dbschema/orders.php",
 		"/D/code/koseven/modules/smarty/classes/View.php",
 		"/D/code/koseven/modules/smarty/.git",
-		"/D/code/koseven/.gitmodules",
 		"/D/code/koseven/.git/modules/modules/smarty/config",
 		"/D/code/koseven/modules/smarty/classes/Controller/SmartyDemo.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/update.php",
@@ -460,63 +556,13 @@
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/site/user/login.html",
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Admin.php",
 		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Admin/Article.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/member.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/aftersales.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/order.php",
-		"/D/code/tjtjs-ecstore/custom/aftersales/controller/site/member.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/order.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/member.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/passport.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/afterpay.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/view/site/member/orderdetail.html",
-		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini/view.html",
-		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini/item/goods.html",
 		"/D/code/tjtjs-ecstore/custom/b2c/lib/order/create.php",
 		"/D/code/tjtjs-ecstore/custom/b2c/lib/cart/object/goods.php",
 		"/D/code/tjtjs-ecstore/app/b2c/dbschema/order_objects.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/dbschema/order_items.php",
-		"/D/code/tjtjs-ecstore/app/b2c/lib/cart/object/goods.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/cart.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/cart.php",
-		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini_cart.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/checkout/checkout_total.html",
-		"/D/code/tjtjs-ecstore/app/tiens/crontab.xml",
-		"/D/code/tjtjs-ecstore/custom/b2c/lib/order/total.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/checkout/index_jiyin.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/checkout/cart_main_jiyin.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/item/goods_jiyin.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/index.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/cart/cart_main_jiyin.html",
-		"/D/code/tjtjs-ecstore/custom/webapi/lib/api/rpc/request.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/passport.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/article/article_form_create.html",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/article/article_form.html",
-		"/D/code/tbq_static/ueditor/_examples/simpleDemo.html",
-		"/D/code/tbq_static/ueditor/_examples/editor_api.js",
-		"/D/tbqapp2/anhei暗黑.txt",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/docs/plan/170929.txt",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Article.php",
-		"/E/丁怀晨交接资料/5、奥蓝际德与ERP系统接口/奥蓝际德数据同步/erp数据同步清表.txt",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Model/Article.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/article/articles.html",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Admin/Article/Category.php",
-		"/D/tbqapp2/php/tbq.com/modules/pagination/classes/Kohana/Pagination.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/bootstrap.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/article/category_form.html",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Admin/Welcome.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Model/Base.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/article/categories.html",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Model/Article/Category.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Base.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Rss.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/rss.html",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Sitemap.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/sitemap.html",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/docs/plan/20120704.txt",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/docs/plan/20120612.txt",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/views/admin/index.html",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/User.php",
-		"/D/tbqapp2/php/tbq.com/apps/chentublog/application/classes/Controller/Comment.php"
+		"/D/code/tjtjs-ecstore/custom/b2c/dbschema/order_items.php"
 	],
 	"find":
 	{
@@ -527,6 +573,13 @@
 		"height": 110.0,
 		"where_history":
 		[
+			"D:\\code\\tjtjs-ecstore,*.php,*.html",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore,*.xml",
+			"D:\\code\\tjtjs-ecstore,*.html",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore,*.html",
 			"D:\\code\\tbq_static\\H-ui.admin.page,*.js",
 			"D:\\code\\tbq_static\\H-ui.admin.page",
 			"D:\\code\\tjtjs-ecstore",
@@ -647,13 +700,6 @@
 			"D:\\code\\tjtjs-ecstore,*.xml",
 			"D:\\code\\tjtjs-ecstore,*.php",
 			"D:\\code\\tjtjs-ecstore,*.xml",
-			"D:\\code\\tjtjs-ecstore",
-			"D:\\code\\tmq1\\yii2\\frontend",
-			"D:\\code\\mq_sender_khn",
-			"D:\\code\\www.tiens.com,*.php",
-			"D:\\code\\www.tiens.com",
-			"D:\\code\\tjtjs-ecstore",
-			"D:\\code\\www.tiens.com",
 			"D:\\code\\tjtjs-ecstore"
 		]
 	},
@@ -662,6 +708,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"付款",
+			"payment",
+			"支付方式",
+			"function detail_basic",
+			"aftersales_mdl_return_product",
+			"detail",
+			"申请售后服务的商品",
+			"b2c_api_rpc_notify_aftersales",
+			"api.aftersales.request",
+			"申请退货",
+			"site/product/info/props.html",
+			"product-params",
+			"激励值",
+			"function ajax_product_price",
+			"折扣价",
+			"\n",
+			"site",
+			"database",
+			"db",
 			"Huifold",
 			"menu_dropdown",
 			"&#xe6d5;",
@@ -770,26 +835,7 @@
 			"积分",
 			"销售单价",
 			"log",
-			"sql_filter",
-			"sqlfilter",
-			"b2c_cart_object_apps",
-			"function get_update_num",
-			"edit_ajax_data",
-			"总价",
-			"cate",
-			"add_pre_check",
-			"tiens_changdaojiance_product",
-			"_cate",
-			"sample_cate",
-			"price",
-			"jiyin_zhekoujia",
-			"购物车中有商品不是易感基因",
-			"->_changdaoOrderCreate",
-			"->do_changdaojiance",
-			"changdaojiance_order",
-			"changdao.quanjiazuixiang",
-			"function do_yeji",
-			"bsnsspno"
+			"sql_filter"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -865,95 +911,60 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/code/koseven/apps/tiens_mqtest/application/classes/Controller/Welcome.php",
+					"file": "/D/code/tjtjs-ecstore/app/tiens/model/jiyin/order/tongji.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1446,
+						"buffer_size": 12580,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								280,
-								280
+								1255,
+								1371
 							]
 						],
 						"settings":
 						{
 							"git_gutter_is_enabled": true,
+							"history_list_is_closing": true,
 							"incomplete_sync": null,
 							"remote_loading": false,
+							"sftp_duplicate_views": 0,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 1,
-					"file": "php/tbq.com/apps/tiens_mq/application/classes/Controller/Welcome.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 208,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								208,
-								208
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "php/tbq.com/apps/tiens_mq/application/views/welcome/index.php",
+					"buffer": 1,
+					"file": "/D/code/tjtjs-ecstore/app/tiens/model/jiyin/jiancehe/update/tongji.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 376,
+						"buffer_size": 6280,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								709,
+								709
 							]
 						],
 						"settings":
@@ -967,10 +978,206 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sh/startNP",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1902,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1474,
+								1474
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Administrator/AppData/Local/Temp/fz3temp-2/jdbc.properties",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 332,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Java/JavaProperties.sublime-syntax"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "cfg/hosts_for_tiens_dell_win10",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1393,
+								1393
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 149.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sh/debian8NginxPhpStart.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1904,
+								1904
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/code/tjtjs-ecstore/custom/b2c/dbschema/orders.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4522,
+								4899
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2205.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/D/code/tjtjs-ecstore/app/tiens/model/changdaojiance/order/tongji.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3612,
+								4140
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1305.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -978,7 +1185,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 41.0
 	},
 	"input":
 	{
@@ -993,18 +1200,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -1036,6 +1236,62 @@
 		"selected_items":
 		[
 			[
+				"startnp",
+				"tbqapp2\\sh\\startNP"
+			],
+			[
+				"custom/orders.php",
+				"tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
+			],
+			[
+				"app/b2c/view/site/product/info/props.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\site\\product\\info\\props.html"
+			],
+			[
+				"tjtjs-ecstore/aftersales/lib/finder/return/produc",
+				"tjtjs-ecstore\\custom\\aftersales\\lib\\finder\\return\\product.php"
+			],
+			[
+				"tjtjs/cus/after/contr/admin/retu",
+				"tjtjs-ecstore\\custom\\aftersales\\controller\\admin\\returnproduct.php"
+			],
+			[
+				"site/cart/mini_cart.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini_cart.html"
+			],
+			[
+				"site/cart/mini/item/goods.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini\\item\\goods.html"
+			],
+			[
+				"site/cart/mini/view.html",
+				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini\\view.html"
+			],
+			[
+				"custom/passport",
+				"tjtjs-ecstore\\custom\\b2c\\controller\\site\\passport.php"
+			],
+			[
+				"yii2-plus/common/models/loginform.php",
+				"Yii2-Plus\\common\\models\\LoginForm.php"
+			],
+			[
+				"admin/classes/controller/template/admin.ph",
+				"koseven\\modules\\admin\\classes\\controller\\template\\admin.php"
+			],
+			[
+				"admin/classes/controller/admin/auth.ph",
+				"koseven\\modules\\admin\\classes\\controller\\admin\\auth.php"
+			],
+			[
+				"koseven/modules/admin/classes/controller/admin.php",
+				"koseven\\modules\\admin\\classes\\controller\\admin.php"
+			],
+			[
+				"view/admin/auth/login",
+				"koseven\\modules\\admin\\classes\\view\\admin\\auth\\login.php"
+			],
+			[
 				"starnp",
 				"tbqapp2\\sh\\startNP"
 			],
@@ -1054,10 +1310,6 @@
 			[
 				"h-ui.admin.page/lib/layer/2.4/layer.js",
 				"tbq_static\\H-ui.admin.page\\lib\\layer\\2.4\\layer.js"
-			],
-			[
-				"startnp",
-				"tbqapp2\\sh\\startNP"
 			],
 			[
 				"tjtj/cus/b2c/dbsc/orders",
@@ -1090,18 +1342,6 @@
 			[
 				"tjtj/cus/passport",
 				"tjtjs-ecstore\\custom\\b2c\\controller\\site\\passport.php"
-			],
-			[
-				"site/cart/mini_cart.html",
-				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini_cart.html"
-			],
-			[
-				"site/cart/mini/item/goods.html",
-				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini\\item\\goods.html"
-			],
-			[
-				"site/cart/mini/view.html",
-				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini\\view.html"
 			],
 			[
 				"site/cart/checkout/checkout_total.html",
@@ -1506,46 +1746,6 @@
 			[
 				"wap/order",
 				"tjtjs-ecstore\\app\\b2c\\controller\\wap\\order.php"
-			],
-			[
-				"tiens_hl/usercustom.css",
-				"tiens_hualang\\statics\\hualang\\core\\user_custom.css"
-			],
-			[
-				"tiens_hl/hual/layout.c",
-				"tiens_hualang\\statics\\hualang\\g\\themes\\drayton\\1.0\\styles\\layout.css"
-			],
-			[
-				"core/codeigniter.php",
-				"www.tiens.com\\app\\system\\core\\CodeIgniter.php"
-			],
-			[
-				"baseyii",
-				"tmq1\\yii2\\vendor\\yiisoft\\yii2\\BaseYii.php"
-			],
-			[
-				"yii/web/app",
-				"tmq1\\yii2\\vendor\\yiisoft\\yii2\\web\\Application.php"
-			],
-			[
-				"left_menu_user",
-				"www.tiens.com\\abdmin\\left_menu_user.php"
-			],
-			[
-				"home_user",
-				"www.tiens.com\\abdmin\\home_user.php"
-			],
-			[
-				"templates/html/default_user.html",
-				"www.tiens.com\\abdmin\\templates\\html\\default_user.html"
-			],
-			[
-				"templates/html/default.html",
-				"www.tiens.com\\abdmin\\templates\\html\\default.html"
-			],
-			[
-				"app.conf",
-				"tmq1\\yii2\\frontend\\app.conf"
 			]
 		],
 		"width": 0.0
@@ -1572,32 +1772,18 @@
 		],
 		"width": 696.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
-		"last_automatic_layout":
-		[
-			[
-				0,
-				0,
-				1,
-				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
-			]
-		]
 	},
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 226.0,
+	"side_bar_width": 194.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
+		"max_columns": 3
 	}
 }

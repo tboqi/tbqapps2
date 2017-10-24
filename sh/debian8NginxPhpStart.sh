@@ -1,6 +1,6 @@
 #! /bin/bash
 
-cd /work/libs/nginx-1.9.9/conf/vhost/
+cd /work/libs/nginx-1.12.1/conf/vhost/
 rm *.conf -rf
 ln -s /work/d/code/phpcms.tiens.com/nginx.htaccess                  tiens_phpcms_alllengend.conf
 ln -s /work/d/code/www.tiens.com/nginx.htaccess                     tiens_www.conf
@@ -24,8 +24,8 @@ cd /work/libs/php-5.3.29/var/log
 ln -s /work/d/docker_php_log/php-fpm.53.log php-fpm.log
 cd -
 
-cd /work/libs/php-5.6.21/var/log
-ln -s /work/d/docker_php_log/php-fpm.57.log php-fpm.log
+cd /work/libs/php-5.6.30/var/log
+ln -s /work/d/docker_php_log/php-fpm.56.log php-fpm.log
 cd -
 
 cd /work/libs/php-7.1.6/var/log
@@ -33,9 +33,9 @@ ln -s /work/d/docker_php_log/php-fpm.71.log php-fpm.log
 cd -
 
 /work/libs/php-7.1.6/sbin/php-fpm
-/work/libs/php-5.6.21/sbin/php-fpm
+/work/libs/php-5.6.30/sbin/php-fpm
 /work/libs/php-5.3.29/sbin/php-fpm
-/work/libs/nginx-1.9.9/sbin/nginx
+/work/libs/nginx-1.12.1/sbin/nginx
 
 #/etc/init.d/crond restart
 /bin/bash
