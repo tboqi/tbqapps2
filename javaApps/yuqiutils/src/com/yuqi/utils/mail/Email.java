@@ -27,10 +27,10 @@ public class Email {
 	}
 
 	public String buildContent(){
-		String str1 = util.StringUtil.file2string("src/mail/mail.html");
+		String str1 = com.yuqi.utils.StringUtil.file2string("src/mail/mail.html");
 		str1 = str1.replaceFirst("#receverName#", this.receverName);
 		str1 = str1.replaceFirst("#senderName#", this.senderName);
-		str1 = str1.replaceFirst("#data#", util.StringUtil.getCNData());
+		str1 = str1.replaceFirst("#data#", com.yuqi.utils.StringUtil.getCNData());
  		return str1;
 	}
 

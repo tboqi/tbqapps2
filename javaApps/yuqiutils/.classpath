@@ -2,7 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/htmlparser"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/log"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/jericho-html-3.4.jar"/>
+	<classpathentry kind="lib" path="lib/mail-1.4.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
