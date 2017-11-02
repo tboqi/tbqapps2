@@ -7,10 +7,10 @@ ln -s /work/d/code/www.tiens.com/nginx.htaccess                     tiens_www.co
 ln -s /work/d/code/tjtjs-ecstore/nginx.access                       tiens_testshop_taijisun.conf
 ln -s /work/d/code/tiens_hualang/nginx.htaccess                     tiens_hualang.conf
 ln -s /work/d/code/koseven/apps/tiens_mqtest/nginx.htaccess         tiens_mqtest.conf
-# ln -s /work/d/code/yii2apps/appbackend/nginx.htaccess               yii_appbackend.conf
-# ln -s /work/d/code/yii2apps/appblog/nginx.htaccess                  yii_appblog.conf
-# ln -s /work/d/code/yii2apps/appfrontend/nginx.htaccess              yii_appfrontend.conf
-#ln -s /work/d/code/yii2apps/apptiensmq/nginx.htaccess apptiensmq.conf
+ln -s /work/d/code/yii2apps/appbackend/nginx.htaccess               yii_appbackend.conf
+ln -s /work/d/code/yii2apps/appblog/nginx.htaccess                  yii_appblog.conf
+ln -s /work/d/code/yii2apps/appfrontend/nginx.htaccess              yii_appfrontend.conf
+ln -s /work/d/code/yii2apps/apptiensmq/nginx.htaccess               apptiensmq.conf
 # ln -s /work/d/tbqapp2/php/ci/apps/www/nginx.htaccess                cidev.conf
 ln -s /work/d/tbqapp2/php/chentu.info.wp/nginx.htaccess             wp_chentu_info.conf
 # ln -s /work/d/tbqapp2/php/tbq.com/apps/tiens_mq/nginx.htaccess      khn_tiens_mq.conf
