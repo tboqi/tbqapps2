@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"getit",
+				"getItems"
+			],
+			[
+				"yii",
+				"Yii"
+			],
+			[
 				"con",
 				"console"
 			],
@@ -236,71 +244,36 @@
 	"buffers":
 	[
 		{
-			"file": "/D/code/Yii2-Plus/vendor/mdmsoft/yii2-admin/controllers/RouteController.php",
+			"file": "/D/code/yii2apps/appbackend/config/main-local.php",
 			"settings":
 			{
-				"buffer_size": 3704,
-				"encoding": "UTF-8",
+				"buffer_size": 602,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/code/Yii2-Plus/vendor/mdmsoft/yii2-admin/models/Route.php",
+			"file": "/D/code/yii2apps/appbackend/config/test-local.php",
 			"settings":
 			{
-				"buffer_size": 9085,
+				"buffer_size": 232,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/code/Yii2-Plus/backend/views/layouts/main.php",
+			"contents": "Searching 766 files for \"cookieValidationKey\"\n\nD:\\code\\yii2apps\\appblog\\config\\main-local.php:\n    6          'request' => [\n    7              // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation\n    8:             'cookieValidationKey' => 'z4ZDlH0vU59EpUqGsvw6vavdmLA2J3fK',\n    9          ],\n   10          'i18n' => [\n\n1 match in 1 file\n",
 			"settings":
 			{
-				"buffer_size": 2332,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"buffer_size": 389,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
-			"file": "/D/code/Yii2-Plus/vendor/mdmsoft/yii2-admin/views/route/index.php",
+			"file": "/D/code/yii2apps/appblog/config/main-local.php",
 			"settings":
 			{
-				"buffer_size": 2635,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/code/Yii2-Plus/backend/views/admin/route/index.tpl",
-			"settings":
-			{
-				"buffer_size": 7006,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/code/del/yii2apps/appblog/config/main.php",
-			"settings":
-			{
-				"buffer_size": 2042,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/code/del/yii2apps/appblog/modules/admin/controllers/SiteController.php",
-			"settings":
-			{
-				"buffer_size": 226,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/code/Yii2-Plus/backend/views/site/index.tpl",
-			"settings":
-			{
-				"buffer_size": 4245,
-				"encoding": "UTF-8",
+				"buffer_size": 968,
 				"line_ending": "Unix"
 			}
 		}
@@ -418,147 +391,178 @@
 	},
 	"expanded_folders":
 	[
+		"/D/code/yii2apps",
+		"/D/code/yii2apps/vendor",
+		"/D/code/yii2apps/vendor/mdmsoft",
+		"/D/code/yii2apps/vendor/mdmsoft/yii2-admin"
 	],
 	"file_history":
 	[
-		"/D/code/Yii2-Plus/backend/views/admin/index.tpl",
-		"/D/code/del/yii2apps/appblog/config/bootstrap.php",
-		"/D/code/del/yii2apps/appblog/config/main-local.php",
-		"/D/code/del/yii2apps/appblog/config/params.php",
-		"/D/code/del/yii2apps/appblog/config/params-local.php",
-		"/D/code/del/yii2apps/appblog/config/test.php",
-		"/D/code/del/yii2apps/appblog/config/test-local.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/product/info/price.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/dbschema/orders.php",
-		"/D/code/tjtjs-ecstore/app/tiens/model/jiyin/jiancehe/update/tongji.php",
-		"/D/code/tjtjs-ecstore/app/tiens/model/jiyin/order/tongji.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/product/info/price_yiganjiyin.html",
-		"/D/code/Yii2-Plus/backend/views/user/update.tpl",
-		"/D/code/Yii2-Plus/common/models/LoginForm.php",
-		"/D/code/Yii2-Plus/backend/views/user/list.tpl",
-		"/D/code/Yii2-Plus/backend/controllers/UserController.php",
-		"/D/code/Yii2-Plus/backend/controllers/IndexController.php",
-		"/D/code/Yii2-Plus/backend/views/layout.tpl",
-		"/D/code/tbq_static/H-ui.admin.page/admin-add.html",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/jiyinhe.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/member/jiyinhe_shengji.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/wap/member/jiyinhe_update.html",
-		"/D/code/tjtjs-ecstore/config/config.php",
-		"/D/code/tjtjs-ecstore/config/config.test.php",
-		"/D/code/tjtjs-ecstore/public/statics/yiganjiyin/up_succ.css",
-		"/C/Users/Administrator/Pictures/新建文件夹/taijisun/taijishengtanchu.html",
-		"/D/code/tjtjs-ecstore/custom/aftersales/controller/site/member.php",
-		"/D/code/Yii2-Plus/backend/views/user/_form.php",
-		"/D/code/Yii2-Plus/.gitignore",
-		"/D/code/Yii2-Plus/backend/views/site/index.tpl",
-		"/D/code/Yii2-Plus/qiyu/Controller.php",
-		"/D/code/Yii2-Plus/backend/models/Menu.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/aftersales.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/afterpay.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/update.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/task/changdaojiance.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/request.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/order.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/member.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/member.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/order.php",
-		"/D/code/Yii2-Plus/qiyu/ControllerAdmin.php",
-		"/D/code/Yii2-Plus/backend/controllers/SiteController.php",
-		"/D/code/Yii2-Plus/qiyu/ViewRender.php",
-		"/D/code/del/yii2apps/appblog/controllers/SiteController.php",
-		"/D/code/Yii2-Plus/backend/views/site/login.tpl",
-		"/D/code/koseven/apps/chentublog/application/views/site/user/login.html",
-		"/D/code/Yii2-Plus/composer.json",
-		"/D/code/Yii2-Plus/vendor/yiisoft/yii2/base/View.php",
-		"/D/code/Yii2-Plus/vendor/composer/autoload_static.php",
-		"/D/code/Yii2-Plus/vendor/composer/autoload_files.php",
-		"/D/code/Yii2-Plus/vendor/composer/autoload_psr4.php",
-		"/D/code/Yii2-Plus/vendor/yiisoft/yii2-smarty/ViewRenderer.php",
-		"/D/code/del/yii2apps/composer.json",
-		"/D/code/del/yii2apps/codeception.yml",
-		"/D/code/del/yii2apps/appblog/config/main.php",
-		"/D/code/Yii2-Plus/backend/web/index.php",
-		"/D/code/Yii2-Plus/backend/config/main.php",
-		"/D/code/del/yii2apps/common/config/bootstrap.php",
-		"/D/code/tjtjs-ecstore/app/b2c/services.xml",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/wap/product/index.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/wap/product/info/btn.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/product.php",
-		"/D/code/tjtjs-ecstore/app/base/kernel.php",
-		"/D/code/tjtjs-ecstore/app/base/ego/ego.php",
-		"/D/code/tjtjs-ecstore/app/b2c/model/member/goods.php",
-		"/D/code/tjtjs-ecstore/config/config.dev.php",
-		"/D/code/tjtjs-ecstore/app/base/lib/static/syscache.php",
-		"/D/code/tjtjs-ecstore/app/b2c/controller/wap/product.php",
-		"/D/code/tjtjs-ecstore/app/b2c/view/wap/product/index.html",
-		"/D/code/tjtjs-ecstore/app/apiactionlog/view/admin/finder/finder_panel_filter.html",
-		"/D/code/tjtjs-ecstore/app/aftersales/view/site/member/add.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/wap/cart/index.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/product/basic.html",
-		"/D/code/tjtjs-ecstore/custom/wap/lib/router.php",
-		"/D/code/tjtjs-ecstore/app/wap/lib/module/base.php",
-		"/D/code/tjtjs-ecstore/app/b2c/lib/site/sitemaps.php",
-		"/D/code/tjtjs-ecstore/app/base/lib/interface/router.php",
-		"/D/code/tjtjs-ecstore/index.php",
-		"/E/jquery_danchu/index.html",
-		"/E/jquery_danchu/jquery.reveal.js",
-		"/D/code/tjtjs-ecstore/app/b2c/dbschema/delivery.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/passport.php",
-		"/D/tbqapp2/sh/startNP",
+		"/D/code/yii2apps/appblog/modules/admin/controllers/PermissionController.php",
+		"/D/code/yii2apps/appblog/modules/admin/components/ItemController.php",
+		"/D/code/yii2apps/appblog/modules/admin/controllers/RouteController.php",
+		"/D/code/yii2apps/appblog/modules/admin/controllers/RuleController.php",
+		"/D/code/yii2apps/appblog/modules/admin/controllers/UserController.php",
+		"/D/code/yii2apps/qiyu/ControllerAdmin.php",
+		"/D/code/yii2apps/appblog/modules/admin/controllers/AssignmentController.php",
+		"/D/code/yii2apps/appfrontend/config/main.php",
+		"/D/code/yii2apps/appfrontend/web/index.php",
+		"/D/code/yii2apps/appblog/modules/admin/controllers/MenuController.php",
+		"/D/code/yii2apps/qiyu/ControllerPlus.php",
+		"/D/code/yii2apps/vendor/yiisoft/yii2/rbac/DbManager.php",
+		"/D/code/yii2apps/vendor/yiisoft/yii2/rbac/BaseManager.php",
+		"/D/code/yii2apps/qiyu/DbManager.php",
+		"/D/code/yii2apps/appblog/config/main.php",
+		"/D/code/yii2apps/appblog/views/layouts/admin.tpl",
+		"/D/code/yii2apps/appblog/views/admin/site/index.tpl",
+		"/D/code/yii2apps/vendor/yiisoft/yii2/web/User.php",
+		"/D/code/tjtjs-ecstore/app/b2c/lib/cart/object/goods.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/lib/cart/object/goods.php",
+		"/D/code/yii2apps/appblog/modules/admin/views/permission/index.php",
+		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Application.php",
+		"/D/code/yii2apps/appblog/models/AuthItemChild.php",
+		"/D/code/yii2apps/appblog/modules/admin/models/AuthItem.php",
+		"/D/code/yii2apps/vendor/yiisoft/yii2/rbac/Item.php",
+		"/D/code/yii2apps/vendor/mdmsoft/yii2-admin/Module.php",
+		"/D/code/yii2apps/appblog/modules/admin/components/DbManager.php",
+		"/D/code/yii2apps/vendor/yiisoft/yii2/base/Component.php",
+		"/D/code/yii2apps/vendor/yiisoft/yii2/base/BaseObject.php",
+		"/D/code/yii2apps/appblog/modules/admin/Admin.php",
+		"/D/code/yii2apps/appplus/views/layouts/main.php",
+		"/D/code/yii2apps/appblog/modules/admin/controllers/SiteController.php",
+		"/D/code/yii2apps/appblog/models/Menu.php",
+		"/D/code/yii2apps/appblog/modules/admin/components/Helper.php",
+		"/D/code/yii2apps/appplus/controllers/SiteController.php",
+		"/D/code/yii2apps/appplus/views/site/index.php",
+		"/D/code/yii2apps/appplus/controllers/IndexController.php",
+		"/D/code/yii2apps/appplus/config/main.php",
+		"/D/code/yii2apps/appblog/controllers/SiteController.php",
+		"/D/code/yii2apps/common/models/LoginForm.php",
+		"/D/code/yii2apps/qiyu/Controller.php",
+		"/D/code/yii2apps/appblog/modules/admin/controllers/RoleController.php",
+		"/D/code/yii2apps/appblog/modules/admin/models/searchs/AuthItem.php",
+		"/D/code/yii2apps/appblog/modules/admin/models/searchs/Assignment.php",
+		"/D/code/yii2apps/appblog/modules/admin/models/Assignment.php",
+		"/D/code/yii2apps/appblog/modules/admin/models/searchs/BizRule.php",
+		"/D/code/yii2apps/appblog/modules/admin/components/RouteRule.php",
+		"/D/code/yii2apps/appblog/modules/admin/models/BizRule.php",
+		"/D/code/yii2apps/appblog/modules/admin/models/searchs/Menu.php",
+		"/D/code/yii2apps/appblog/modules/admin/models/Menu.php",
+		"/D/code/yii2apps/appblog/modules/admin/components/Configs.php",
+		"/D/code/yii2apps/appplus/config/main-local.php",
+		"/D/code/yii2apps/appblog/config/main-local.php",
+		"/D/code/yii2apps/vendor/mdmsoft/yii2-admin/messages/de/rbac-admin.php",
+		"/D/code/yii2apps/appblog/models/AuthRule.php",
+		"/D/code/yii2apps/appblog/modules/admin/views/user/update.php",
+		"/D/code/yii2apps/appblog/views/site/login.tpl",
+		"/D/code/yii2apps/appblog/models/User.php",
+		"/D/code/yii2apps/appblog/models/AuthAssignment.php",
+		"/D/code/yii2apps/appplus/views/user/update.php",
+		"/D/code/yii2apps/appblog/models/AuthItem.php",
+		"/D/code/yii2apps/appplus/models/User.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/controllers/RouteController.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/controllers/SiteController.php",
 		"/D/tbqapp2/sh/debian8NginxPhpStart.sh",
-		"/D/code/tjtjs-ecstore/app/tiens/model/changdaojiance/order/tongji.php",
-		"/D/tbqapp2/cfg/hosts_for_tiens_dell_win10",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-2/jdbc.properties",
-		"/D/code/tjtjs-ecstore/app/tiens/controller/admin/jiyin.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/jiyin/order/tongji.php",
-		"/D/code/tjtjs-ecstore/custom/aftersales/view/admin/return_product/detail.html",
-		"/D/code/tjtjs-ecstore/custom/aftersales/lib/finder/return/product.php",
-		"/D/code/tjtjs-ecstore/app/aftersales/controller/site/member.php",
-		"/D/code/tjtjs-ecstore/app/b2c/view/site/product/info/props.html",
-		"/D/code/tjtjs-ecstore/custom/aftersales/controller/admin/returnproduct.php",
-		"/D/code/tjtjs-ecstore/app/aftersales/model/return/product.php",
-		"/D/code/tjtjs-ecstore/app/b2c/lib/api/rpc/notify/aftersales.php",
-		"/D/code/tjtjs-ecstore/app/aftersales/lib/data/return/policy.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/site/member/order_item.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/cart.php",
-		"/D/code/tjtjs-ecstore/app/gift/view/site/product/info/basic.html",
-		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini_cart.html",
-		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini/view.html",
-		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini/item/goods.html",
-		"/E/丁怀晨交接资料/5、奥蓝际德与ERP系统接口/奥蓝际德数据同步/erp数据同步清表.txt",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/product.php",
-		"/D/code/tjtjs-ecstore/app/b2c/lib/user/object.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/b2c/login.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/jiyin/product.php",
-		"/D/code/Yii2-Plus/backend/views/site/index.php",
-		"/D/code/Yii2-Plus/backend/views/index/index.php",
-		"/D/code/Yii2-Plus/backend/views/index/welcome.php",
 		"/D/code/Yii2-Plus/backend/nginx.htaccess",
-		"/D/code/Yii2-Plus/common/config/main-local.php",
-		"/D/code/Yii2-Plus/nginx.htaccess",
-		"/D/code/koseven/apps/chentublog/application/bootstrap.php",
-		"/D/code/koseven/modules/admin/classes/controller/admin/auth.php",
-		"/D/code/koseven/modules/admin/classes/controller/template/admin.php",
-		"/D/code/koseven/modules/admin/classes/controller/admin.php",
-		"/D/code/koseven/modules/admin/classes/view/admin/auth/login.php",
-		"/D/code/koseven/modules/admin/classes/view/admin/layout.php",
-		"/D/code/koseven/modules/kostache/classes/Kohana/Kostache/Layout.php",
-		"/D/code/koseven/modules/kostache/classes/Kohana/Kostache.php",
-		"/D/code/koseven/apps/tiens_mqtest/application/classes/Controller/Welcome.php",
-		"/D/code/koseven/.gitmodules",
-		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/application/classes/Controller/Welcome.php",
-		"/D/tbqapp2/php/tbq.com/apps/tiens_mq/application/views/welcome/index.php",
-		"/D/code/koseven/apps/tiens_mqtest/application/classes/Model/Base.php"
+		"/D/code/tbq_static/H-ui.admin/admin-list.html",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/searchs/AuthItem.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/searchs/Assignment.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/searchs/BizRule.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/searchs/Menu.php",
+		"/D/code/yii2apps/appplusBlog/controllers/SiteController.php",
+		"/D/code/yii2apps/appplusBlog/nginx.htaccess",
+		"/D/code/yii2apps/appplusBlog/config/main.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/Module.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/controllers/AssignmentController.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/controllers/DefaultController.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/controllers/MenuController.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/controllers/PermissionController.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/controllers/RoleController.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/controllers/RuleController.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/controllers/UserController.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/components/AccessControl.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/components/Configs.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/components/DbManager.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/components/GuestRule.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/components/Helper.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/components/ItemController.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/components/MenuHelper.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/components/RouteRule.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/Assignment.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/AuthItem.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/BizRule.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/Menu.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/Route.php",
+		"/D/code/yii2apps/appplusBlog/modules/admin/models/User.php",
+		"/D/code/yii2apps/appplusBlog/config/bootstrap.php",
+		"/D/code/yii2apps/vendor/mdmsoft/yii2-admin/controllers/RouteController.php",
+		"/D/code/yii2apps/appblog/modules/admin/views/route/index.php",
+		"/D/code/yii2apps/appblog/config/bootstrap.php",
+		"/D/code/yii2apps/appblog/modules/admin/controllers/User2Controller.php",
+		"/D/code/Yii2-Plus/backend/config/main.php",
+		"/D/code/yii2apps/appblog/views/admin/site/main.tpl",
+		"/D/code/tbq_static/H-ui.admin/index.html",
+		"/D/code/tbq_static/H-ui.admin/welcome.html",
+		"/D/code/yii2apps/appplus/web/index.php",
+		"/D/code/yii2apps/appplus/nginx.htaccess",
+		"/D/code/yii2apps/appplus/config/main.php.bak",
+		"/D/code/yii2apps/vendor/yiisoft/yii2/web/ErrorHandler.php",
+		"/D/code/yii2apps/appplus/controllers/UserController.php",
+		"/D/code/yii2apps/appplus/config/bootstrap.php",
+		"/D/code/Yii2-Plus/common/models/LoginForm.php",
+		"/D/code/yii2apps/appblog/views/site/index.tpl",
+		"/D/code/yii2apps/appblog/views/admin/user/resetPassword.tpl",
+		"/D/code/Yii2-Plus/backend/controllers/SiteController.php",
+		"/D/code/yii2apps/appblog/controllers/Site2Controller.php",
+		"/D/code/yii2apps/appbackend/web/assets/.gitignore",
+		"/D/code/yii2apps/appblog/log/.gitignore",
+		"/D/code/yii2apps/appblog/runtime/.gitignore",
+		"/D/code/yii2apps/appblog/tests/_support/.gitignore",
+		"/D/code/yii2apps/appblog/tests/_output/.gitignore",
+		"/D/code/yii2apps/vendor/yiisoft/yii2-admin/tests/codeception/templates/.gitignore",
+		"/D/code/yii2apps/vendor/yiisoft/yii2-admin/tests/runtime/.gitignore",
+		"/D/code/yii2apps/vendor/yiisoft/yii2-admin/tests/web/assets/.gitignore",
+		"/D/code/yii2apps/appfrontend/tests/_output/.gitignore",
+		"/D/code/yii2apps/appfrontend/runtime/.gitignore",
+		"/D/code/yii2apps/appfrontend/log/.gitignore",
+		"/D/code/yii2apps/appfrontend/config/.gitignore"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
 		"height": 110.0,
 		"where_history":
 		[
+			"D:\\code\\yii2apps\\appblog",
+			"D:\\code\\yii2apps\\appbackend",
+			"D:\\code\\yii2apps",
+			"D:\\code\\yii2apps,*.php",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\yii2apps,*.php",
+			"D:\\code\\yii2apps",
+			"D:\\code\\yii2apps\\appplus",
+			"D:\\code\\yii2apps\\appblog",
+			"D:\\code\\yii2apps",
+			"D:\\code\\yii2apps\\",
+			"D:\\code\\yii2apps\\appplus",
+			"D:\\code\\yii2apps\\appplus\\views",
+			"D:\\code\\koseven",
+			"D:\\code\\yii2apps\\appplus",
+			"D:\\code\\yii2apps",
+			"D:\\code\\yii2apps\\appplus",
+			"D:\\code\\yii2apps\\appblog",
+			"D:\\code\\yii2apps\\appplus",
+			"D:\\code\\Yii2-Plus",
+			"D:\\code\\yii2apps\\appblog",
+			"D:\\code\\yii2apps\\appplus",
+			"D:\\code\\yii2apps",
+			"D:\\code\\Yii2-Plus",
+			"D:\\code\\yii2apps\\vendor\\mdmsoft\\yii2-admin",
+			"D:\\code\\yii2apps\\appplus",
+			"D:\\code\\yii2apps\\appblog\\views",
 			"D:\\code\\tjtjs-ecstore\\custom\\b2c\\view\\site",
 			"D:\\code\\tjtjs-ecstore\\custom\\b2c\\view\\site\\product",
 			"D:\\code\\tjtjs-ecstore",
@@ -659,34 +663,7 @@
 			"D:\\code\\tjtjs-ecstore",
 			"D:\\tbqapp2\\php,*bootstrap.php",
 			"D:\\tbqapp2\\php,*.php",
-			"D:\\tbqapp2\\php",
-			"D:\\code\\tjtjs-ecstore,*.html",
-			"D:\\code\\tiens_hualang\\statics",
-			"D:\\code\\www.tiens.com\\wap\\ms_tiens_mobile",
-			"D:\\code\\www.tiens.com\\html",
-			"D:\\code\\tmq1\\yii2\\vendor\\yiisoft",
-			"D:\\code\\tmq1\\yii2",
-			"D:\\code\\www.tiens.com\\html\\ms_tiens\\js",
-			"D:\\code\\tmq1\\yii2",
-			"D:\\code\\tjtjs-ecstore,*.php",
-			"D:\\code\\tmq1\\sender",
-			"D:\\code\\tjtjs-ecstore,*.php",
-			"D:\\code\\tjtjs-ecstore",
-			"D:\\code\\tmq1\\receiver",
-			"D:\\code\\tiens_hualang",
-			"D:\\code\\tiens_hualang\\statics\\hualang",
-			"D:\\code\\tmq1\\sender",
-			"D:\\tbqapp2\\php\\tbq.com\\apps\\my",
-			"D:\\tbqapp2\\php\\ci\\3.1.5",
-			"D:\\code\\www.tiens.com,*.php",
-			"D:\\code\\tiens-msg-middleware\\trunk\\TMQ\\TiensMQSender",
-			"D:\\code\\tiens-msg-middleware\\trunk\\TMQ\\TiensMQSender,*.java",
-			"D:\\code\\tiens-msg-middleware\\trunk\\TMQ\\TiensMQReceiver",
-			"D:\\code\\tiens-msg-middleware\\trunk\\TMQ\\TiensMQReceiver,*.java",
-			"D:\\code\\www.tiens.com,*.php",
-			"D:\\code\\www.tiens.com,*.php,*.html",
-			"D:\\code\\www.tiens.com,*.php",
-			"D:\\code\\tjtjs-ecstore"
+			"D:\\tbqapp2\\php"
 		]
 	},
 	"find_state":
@@ -694,6 +671,71 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cookieValidationKey",
+			"dbmana",
+			"getRole",
+			"checkAccessRecursive",
+			"_checkAccessAssignments",
+			"function checkAccess(",
+			"function can(",
+			"加入购物车失败",
+			"checkAccessRecursive",
+			"Yii::",
+			"log",
+			"checkAccessRecursive",
+			"function checkAccess",
+			"function can(",
+			"function can",
+			"var_dump",
+			"renewAuthStatus",
+			"setIdentity",
+			"_access",
+			"function can",
+			"requestedRoute",
+			"created_at",
+			"myselfinfo",
+			"function getRolesByUser",
+			"admin",
+			"var_dum",
+			"role",
+			"db",
+			"function getRolesByUser",
+			"beforeAction",
+			"function getRolesByUser",
+			"user_info",
+			"f=\"#\">切换账户</a>",
+			"mdm\\admin",
+			"i18n",
+			"New route(s)",
+			"rbac-admin",
+			"backend\\models\\AuthItem",
+			"AuthItem",
+			"usergroup",
+			"member_add",
+			"mdm\\admin",
+			"modules",
+			"aliases",
+			"mdm",
+			"Yii::t(",
+			"alias",
+			"mdm",
+			"authManager",
+			"myselfinfo",
+			"没有登录",
+			"}>",
+			"<{",
+			"{{",
+			"YII_DEBUG",
+			"display_error",
+			"POST_DATA",
+			"HTTP_RAW_POST_DATA",
+			"请输入您需要查找的内容",
+			"修改头像",
+			"base.tpl",
+			"admin.tpl",
+			"VK 100.01 (P), Germany",
+			"iger (P), Germany, Tier",
+			"E 100, Germany",
 			"routes",
 			"<?=",
 			"Conqueror, Great Britain",
@@ -756,72 +798,7 @@
 			"aftersales_mdl_return_product",
 			"detail",
 			"申请售后服务的商品",
-			"b2c_api_rpc_notify_aftersales",
-			"api.aftersales.request",
-			"申请退货",
-			"site/product/info/props.html",
-			"product-params",
-			"激励值",
-			"function ajax_product_price",
-			"折扣价",
-			"\n",
-			"site",
-			"database",
-			"db",
-			"Huifold",
-			"menu_dropdown",
-			"&#xe6d5;",
-			"menu_dropdown-arrow",
-			"article_save_submit",
-			"editor",
-			"article_add",
-			"logout",
-			"cache",
-			"memcache",
-			"uname",
-			"用户登录",
-			"check.php",
-			"pagination/bootstra",
-			"<{",
-			"tpl",
-			"smart",
-			"unlock",
-			"unloack",
-			"管理后台",
-			"b2c_tasks_order_addencrypt",
-			"addencrypt",
-			"ie10-viewport-bug-workaround.js",
-			"popper.min.js",
-			"starter-template.css",
-			"ie10",
-			"popper.min.js",
-			"没有权限",
-			"favicon",
-			"img03.gif",
-			"img01.gif",
-			"static/css/style.css",
-			"return_yeji",
-			"sample_catalog",
-			"returnId",
-			"function return_save",
-			"_return_yeji",
-			"_checkYiganjiyin",
-			"discout",
-			"buy_price",
-			"_order_items",
-			"商品清单和结算信息",
-			"此次登录只能购买肠道商品",
-			"b2c_place",
-			"tiens_task_jiyin_afterpay",
-			"discount",
-			"member_lv_price",
-			"jiyinhe_update_status",
-			"base_kvstore::instance",
-			"jiyinhe_do_update",
-			"jiyinhe_check_update",
-			"->jiyinhe_check_update",
-			"function jiyinhe_shengji",
-			"非法跳转"
+			"b2c_api_rpc_notify_aftersales"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -829,6 +806,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"app\\modules\\admin",
+			"}}",
+			"{{",
 			"<{$url.static}>",
 			"",
 			" ",
@@ -898,24 +878,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/code/Yii2-Plus/vendor/mdmsoft/yii2-admin/controllers/RouteController.php",
+					"file": "/D/code/yii2apps/appbackend/config/main-local.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3704,
+						"buffer_size": 602,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								395,
-								395
+								467,
+								467
 							]
 						],
 						"settings":
@@ -932,24 +912,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/D/code/Yii2-Plus/vendor/mdmsoft/yii2-admin/models/Route.php",
-					"semi_transient": false,
+					"file": "/D/code/yii2apps/appbackend/config/test-local.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 9085,
+						"buffer_size": 232,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2497,
-								2509
+								0,
+								0
 							]
 						],
 						"settings":
@@ -958,32 +938,79 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/D/code/Yii2-Plus/backend/views/layouts/main.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2332,
+						"buffer_size": 389,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										265,
+										284
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"git_gutter_is_enabled": false,
+							"incomplete_sync": null,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/code/yii2apps/appblog/config/main-local.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 968,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								244,
-								244
+								307,
+								307
 							]
 						],
 						"settings":
@@ -1002,181 +1029,13 @@
 					},
 					"stack_index": 2,
 					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/D/code/Yii2-Plus/vendor/mdmsoft/yii2-admin/views/route/index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2635,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								380,
-								370
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/D/code/Yii2-Plus/backend/views/admin/route/index.tpl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7006,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6301,
-								6301
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 389.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/D/code/del/yii2apps/appblog/config/main.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2042,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 720.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/D/code/del/yii2apps/appblog/modules/admin/controllers/SiteController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 226,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								192,
-								214
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/D/code/Yii2-Plus/backend/views/site/index.tpl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4245,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								524,
-								3875
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2484.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -1217,7 +1076,7 @@
 	"project": "a.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1226,6 +1085,166 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"yii2apps/appfrontend/web/index.ph",
+				"yii2apps\\appfrontend\\web\\index.php"
+			],
+			[
+				"yii2apps/appfrontend/config/main.ph",
+				"yii2apps\\appfrontend\\config\\main.php"
+			],
+			[
+				"ii2apps/appblog/modules/admin/models/authitem.ph",
+				"yii2apps\\appblog\\modules\\admin\\models\\AuthItem.php"
+			],
+			[
+				"yii/base/component",
+				"yii2apps\\vendor\\yiisoft\\yii2\\base\\Component.php"
+			],
+			[
+				"dbmana",
+				"yii2apps\\appblog\\modules\\admin\\components\\DbManager.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/controllers/permissioncontrolle",
+				"yii2apps\\appblog\\modules\\admin\\controllers\\PermissionController.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/components/helper.php",
+				"yii2apps\\appblog\\modules\\admin\\components\\Helper.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/models/bizrule.ph",
+				"yii2apps\\appblog\\modules\\admin\\models\\BizRule.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/components/routerule.ph",
+				"yii2apps\\appblog\\modules\\admin\\components\\RouteRule.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/models/searchs/bizrule.ph",
+				"yii2apps\\appblog\\modules\\admin\\models\\searchs\\BizRule.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/controllers/rulecontroller.ph",
+				"yii2apps\\appblog\\modules\\admin\\controllers\\RuleController.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/components/configs.ph",
+				"yii2apps\\appblog\\modules\\admin\\components\\Configs.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/models/menu.ph",
+				"yii2apps\\appblog\\modules\\admin\\models\\Menu.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/models/searchs/menu.p",
+				"yii2apps\\appblog\\modules\\admin\\models\\searchs\\Menu.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/models/assignment.php",
+				"yii2apps\\appblog\\modules\\admin\\models\\Assignment.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/models/searchs/assignment.p",
+				"yii2apps\\appblog\\modules\\admin\\models\\searchs\\Assignment.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/models/authitem.php",
+				"yii2apps\\appblog\\modules\\admin\\models\\AuthItem.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/models/searchs/authitem.php",
+				"yii2apps\\appblog\\modules\\admin\\models\\searchs\\AuthItem.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/components/itemcontroller.p",
+				"yii2apps\\appblog\\modules\\admin\\components\\ItemController.php"
+			],
+			[
+				"yii2apps/appblog/models/authitemchild.ph",
+				"yii2apps\\appblog\\models\\AuthItemChild.php"
+			],
+			[
+				"rbac-admin",
+				"yii2apps\\vendor\\mdmsoft\\yii2-admin\\messages\\de\\rbac-admin.php"
+			],
+			[
+				"yii2apps/appblog/models/authrule.php",
+				"yii2apps\\appblog\\models\\AuthRule.php"
+			],
+			[
+				"yii2apps/appblog/models/authitem.ph",
+				"yii2apps\\appblog\\models\\AuthItem.php"
+			],
+			[
+				"yii2apps/appblog/models/authitem.php",
+				"yii2apps\\appblog\\models\\AuthItem.php"
+			],
+			[
+				"views/user/update.php",
+				"yii2apps\\appplus\\views\\user\\update.php"
+			],
+			[
+				"yii2apps/appblog/modules/admin/controllers/usercontroller.php",
+				"yii2apps\\appblog\\modules\\admin\\controllers\\UserController.php"
+			],
+			[
+				"yii2apps/appblog/models/user.php",
+				"yii2apps\\appblog\\models\\User.php"
+			],
+			[
+				"yii2-plus/backend/nginx.htaccess",
+				"Yii2-Plus\\backend\\nginx.htaccess"
+			],
+			[
+				"debianstar",
+				"tbqapp2\\sh\\debian8NginxPhpStart.sh"
+			],
+			[
+				"yii2apps/appplusblog/modules/admin/models/searchs/menu.ph",
+				"yii2apps\\appplusBlog\\modules\\admin\\models\\searchs\\Menu.php"
+			],
+			[
+				"yii2apps/appplusblog/modules/admin/models/searchs/bizrule.p",
+				"yii2apps\\appplusBlog\\modules\\admin\\models\\searchs\\BizRule.php"
+			],
+			[
+				"appplusblog/modules/admin/models/searchs/assignment.ph",
+				"yii2apps\\appplusBlog\\modules\\admin\\models\\searchs\\Assignment.php"
+			],
+			[
+				"yii2apps/appplusblog/modules/admin/models/searchs/authitem.php",
+				"yii2apps\\appplusBlog\\modules\\admin\\models\\searchs\\AuthItem.php"
+			],
+			[
+				"ii2apps/appplusblog/nginx.htacces",
+				"yii2apps\\appplusBlog\\nginx.htaccess"
+			],
+			[
+				"debi8st",
+				"tbqapp2\\sh\\debian8NginxPhpStart.sh"
+			],
+			[
+				"ii2apps/appblog/modules/admin/views/route/index.ph",
+				"yii2apps\\appblog\\modules\\admin\\views\\route\\index.php"
+			],
+			[
+				"common/models/loginform.php",
+				"yii2apps\\common\\models\\LoginForm.php"
+			],
+			[
+				"common/models/loginform",
+				"Yii2-Plus\\common\\models\\LoginForm.php"
+			],
+			[
+				"debi8start",
+				"tbqapp2\\sh\\debian8NginxPhpStart.sh"
+			],
+			[
+				"deb8start",
+				"tbqapp2\\sh\\debian8NginxPhpStart.sh"
+			],
 			[
 				"yii2-plus/backend/views/layouts/main.php",
 				"Yii2-Plus\\backend\\views\\layouts\\main.php"
@@ -1577,166 +1596,6 @@
 			[
 				"yii/web/controll",
 				"yii2apps\\vendor\\yiisoft\\yii2\\web\\Controller.php"
-			],
-			[
-				"yiiapp/qiyu/contro",
-				"yii2apps\\qiyu\\Controller.php"
-			],
-			[
-				"yii2apps/vendor/yiisoft/yii2/web/controller.ph",
-				"yii2apps\\vendor\\yiisoft\\yii2\\web\\Controller.php"
-			],
-			[
-				"yii2apps/vendor/yiisoft/yii2/web/controller.php",
-				"yii2apps\\vendor\\yiisoft\\yii2\\web\\Controller.php"
-			],
-			[
-				"yii2apps/vendor/yiisoft/yii2/base/module.",
-				"yii2apps\\vendor\\yiisoft\\yii2\\base\\Module.php"
-			],
-			[
-				"yii/web/user",
-				"yii2apps\\vendor\\yiisoft\\yii2\\web\\User.php"
-			],
-			[
-				"yiiappuseridentity",
-				"yii2apps\\vendor\\phpunit\\phpunit-mock-objects\\src\\Builder\\Identity.php"
-			],
-			[
-				"common/models/user",
-				"yii2apps\\common\\models\\User.php"
-			],
-			[
-				"vendor/yiisoft/yii2/base/view.php",
-				"yii2apps\\vendor\\yiisoft\\yii2\\base\\View.php"
-			],
-			[
-				"vendor/autoload.php",
-				"yii2apps\\vendor\\autoload.php"
-			],
-			[
-				"yii2apps/vendor/composer/classloader.php",
-				"yii2apps\\vendor\\composer\\ClassLoader.php"
-			],
-			[
-				"autoload_static",
-				"yii2apps\\vendor\\composer\\autoload_static.php"
-			],
-			[
-				"cfg/secure_config/sessions/192.168.3.24(socked).ini",
-				"tbqapp2\\cfg\\secure_config\\Sessions\\192.168.3.24 (socked).ini"
-			],
-			[
-				"cfg/secure_config/recentfilelistsecurecrt.ini",
-				"tbqapp2\\cfg\\secure_config\\Recent File List SecureCRT.ini"
-			],
-			[
-				"tjtj/webapi/setting",
-				"tjtjs-ecstore\\custom\\webapi\\controller\\admin\\setting.php"
-			],
-			[
-				"tjtjs/webapisetting",
-				"tjtjs-ecstore\\app\\webapi\\setting.php"
-			],
-			[
-				"tjtjs/aftersa/contr/admin/retrun",
-				"tjtjs-ecstore\\custom\\aftersales\\controller\\admin\\returnproduct.php"
-			],
-			[
-				"tjtjt/confi/confg.dev",
-				"tjtjs-ecstore\\config\\config.dev.php"
-			],
-			[
-				"tjtj/dbsc/orders.",
-				"tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
-			],
-			[
-				"tjtj/tiens/update",
-				"tjtjs-ecstore\\app\\tiens\\lib\\task\\jiyin\\update.php"
-			],
-			[
-				"tjtj/db/mode",
-				"tjtjs-ecstore\\app\\base\\lib\\db\\model.php"
-			],
-			[
-				"tjtjs-ecstore/script/queue/queue.sh",
-				"tjtjs-ecstore\\script\\queue\\queue.sh"
-			],
-			[
-				"tjtjs-ecstore/script/crontab/crontab.ph",
-				"tjtjs-ecstore\\script\\crontab\\crontab.php"
-			],
-			[
-				"tjtjs/dbsc/orders.",
-				"tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
-			],
-			[
-				"tjtj/model",
-				"tjtjs-ecstore\\app\\dbeav\\lib\\model.php"
-			],
-			[
-				"tiens/changdaojiance/order/tongji",
-				"tjtjs-ecstore\\app\\tiens\\lib\\changdaojiance\\order\\tongji.php"
-			],
-			[
-				"tjtjs/contro/admin/member",
-				"tjtjs-ecstore\\custom\\b2c\\controller\\admin\\member.php"
-			],
-			[
-				"tjtj/contr/admin/member",
-				"tjtjs-ecstore\\custom\\b2c\\controller\\admin\\member.php"
-			],
-			[
-				"appker",
-				"tjtjs-ecstore\\app\\base\\kernel.php"
-			],
-			[
-				"tjtjs/pamcall",
-				"tjtjs-ecstore\\app\\pam\\lib\\callback.php"
-			],
-			[
-				"tjtjs/openapi",
-				"tjtjs-ecstore\\app\\openid\\dbschema\\openid.php"
-			],
-			[
-				"tjtjs/desk/cont/def",
-				"tjtjs-ecstore\\app\\desktop\\controller\\default.php"
-			],
-			[
-				"tjtjs/contr/admin/pass",
-				"tjtjs-ecstore\\app\\b2c\\controller\\admin\\passport.php"
-			],
-			[
-				"site/member/main.html",
-				"tjtjs-ecstore\\app\\b2c\\view\\site\\member\\main.html"
-			],
-			[
-				"toup.inc",
-				"www.tiens.com\\toupiao_info.inc.php"
-			],
-			[
-				"hual/sta/hual/g/1/st/lay",
-				"tiens_hualang\\statics\\hualang\\g\\1.0\\styles\\layout.css"
-			],
-			[
-				"www.tiens/wap/style",
-				"www.tiens.com\\wap\\cn\\css\\style.css"
-			],
-			[
-				"dbscmember_point",
-				"tjtjs-ecstore\\app\\b2c\\dbschema\\member_point.php"
-			],
-			[
-				"toup",
-				"www.tiens.com\\toupiao_info.inc.php"
-			],
-			[
-				"custom/b2c/controller/wap/order.php",
-				"tjtjs-ecstore\\custom\\b2c\\controller\\wap\\order.php"
-			],
-			[
-				"custom/b2c/controller/site/order.php",
-				"tjtjs-ecstore\\custom\\b2c\\controller\\site\\order.php"
 			]
 		],
 		"width": 0.0
