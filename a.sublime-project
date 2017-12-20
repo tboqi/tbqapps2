@@ -20,16 +20,22 @@
 			"path": "D:\\code\\phpcms.tiens.com"
 		},
 		{
+			"path": "D:\\code\\yii2advanced"
+		},
+		{
 			"path": "D:\\code\\yii2apps_tiens"
 		},
 		{
-			"path": "D:\\code\\yii2apps"
+			"path": "D:\\code\\yii2blog"
 		},
 		{
-			"path": "D:\\code\\yii2basic"
+			"path": "D:\\code\\Blog_mini"
 		},
 		{
-			"path": "D:\\code\\yii2advanced"
+			"path": "D:\\code\\flask-admin"
+		},
+		{
+			"path": "py2-flask"
 		}
 	]
 }

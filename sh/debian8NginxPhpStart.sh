@@ -9,11 +9,13 @@ ln -s /work/d/code/tiens_hualang/nginx.htaccess                     tiens_hualan
 
 ln -s /work/d/code/koseven/apps/tiens_mqtest/nginx.htaccess         tiens_mqtest.conf
 
-# ln -s /work/d/code/yii2apps/appblog/nginx.htaccess                  yii_appblog.conf
-ln -s /work/d/code/yii2advanced/apps/frontend/nginx.htaccess        yii2frontend.conf
-ln -s /work/d/code/yii2apps/appTiensMq/nginx.htaccess               appTiensMq.conf
-ln -s /work/d/code/yii2apps/appTiensZhaopinBackend/nginx.htaccess   appTiensZhaopinBackend.conf
-ln -s /work/d/code/yii2apps/appTiensZhaopinFrontend/nginx.htaccess  appTiensZhaopinFrontend.conf
+ln -s /work/d/code/yii2blog/nginx.htaccess                  yii_appblog.conf
+# ln -s /work/d/code/yii2advanced/apps/frontend/nginx.htaccess        yii2frontend.conf
+# ln -s /work/d/code/yii2apps/appTiensMq/nginx.htaccess               appTiensMq.conf
+ln -s /work/d/code/yii2apps_tiens/backend/nginx.htaccess   appTiensZhaopinBackend.conf
+ln -s /work/d/code/yii2apps_tiens/frontend/nginx.htaccess  appTiensZhaopinFrontend.conf
+
+# ln -s /work/d/code/yii2advanced/apps/basic/nginx.htaccess yii_advanced_basic.conf
 
 # ln -s /work/d/tbqapp2/php/ci/apps/www/nginx.htaccess                cidev.conf
 ln -s /work/d/tbqapp2/php/chentu.info.wp/nginx.htaccess             wp_chentu_info.conf
