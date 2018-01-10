@@ -18,17 +18,20 @@ class User(UserMixin):
 
 # Create menu links classes with reloaded accessible
 class AuthenticatedMenuLink(MenuLink):
+
     def is_accessible(self):
         return current_user.is_authenticated
 
 
 class NotAuthenticatedMenuLink(MenuLink):
+
     def is_accessible(self):
         return not current_user.is_authenticated
 
 
 # Create custom admin view for authenticated users
 class MyAdminView(BaseView):
+
     @expose('/')
     def index(self):
         return self.render('authenticated-admin.html')
@@ -85,8 +88,10 @@ if __name__ == '__main__':
                                             endpoint='login_view'))
 
     # Add links with categories
-    admin.add_link(MenuLink(name='Google', category='Links', url='http://www.google.com/'))
-    admin.add_link(MenuLink(name='Mozilla', category='Links', url='http://mozilla.org/'))
+    admin.add_link(MenuLink(name='Google', category='Links',
+                            url='http://www.google.com/'))
+    admin.add_link(MenuLink(name='Mozilla', category='Links',
+                            url='http://mozilla.org/'))
 
     # Add logout link by endpoint
     admin.add_link(AuthenticatedMenuLink(name='Logout',
@@ -95,4 +100,4 @@ if __name__ == '__main__':
     admin.init_app(app)
 
     # Start app
-    app.run(debug=True)
+    app.run(debug=True, port=5003)
