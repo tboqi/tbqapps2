@@ -4,7 +4,27 @@
 		"selected_items":
 		[
 			[
+				"desc",
+				"description"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
 				"arti",
+				"article"
+			],
+			[
+				"auth",
+				"author_id"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"arit",
 				"Article"
 			],
 			[
@@ -42,10 +62,6 @@
 			[
 				"js",
 				"json_decode"
-			],
-			[
-				"cate",
-				"category"
 			],
 			[
 				"model",
@@ -248,38 +264,46 @@
 	"buffers":
 	[
 		{
-			"contents": "Searching 5359 files for \"加入购物车成功\"\n\nD:\\code\\tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini_cart.html:\n    1  <div class=\"minicart-infos\">\n    2:   <p><q class=\"icon\">&#x25;</q><span class=\"caution-content\"><{t}>加入购物车成功。<{/t}><br><{t}>目前选购商品共<{/t}><em><{$cartCount}></em><{t}>种<{/t}><em><{$cartNumber}></em><{t}>件<{/t}>。<{t}>合计：<{/t}><i class=\"price\"><{if $cartTotalPrice < 0}><{0|cur_odr}><{else}><{$cartTotalPrice|cur_odr}><{/if}></i></span></p>\n    3    <div class=\"actions\">\n    4      <{button type=\"button\" class=\"btn-simple popup-btn-close\" label=$__b2c=\"继续购物\"|t:b2c}>\n\nD:\\code\\tjtjs-ecstore\\app\\gift\\controller\\site\\gift.php:\n  449                  unset($return);\n  450                  $return['begin'] = array('app'=>'b2c', 'ctl'=>'site_cart', 'act'=>'index');\n  451:                 $return['end']   = array('status'=>true,  'msg'=>app::get('gift')->_('加入购物车成功！'));\n  452              }\n  453          }\n\nD:\\code\\tjtjs-ecstore\\app\\giftpackage\\controller\\site\\giftpackage.php:\n  118                  unset($return);\n  119                  $status = true;\n  120:                 $msg = app::get('giftpackage')->_('加入购物车成功！');\n  121                  if( $arr['checkout'] ) {\n  122                      $url = array('app'=>'b2c', 'ctl'=>'site_cart', 'act'=>'checkout');\n\nD:\\code\\tjtjs-ecstore\\data\\cache\\secache.php:\n    File too large, skipping\n\n3 matches across 3 files\n\n\nSearching 5359 files for \"mini_cart.html\"\n\nD:\\code\\tjtjs-ecstore\\app\\b2c\\controller\\site\\cart.php:\n  229                      $this->pagedata['cartNumber']     = $temp['CART_NUMBER'];\n  230                      $this->pagedata['cartTotalPrice'] = $temp['CART_TOTAL_PRICE'];\n  231:                     $this->page('site/cart/mini_cart.html', true);\n  232                      return;\n  233                  }\n\nD:\\code\\tjtjs-ecstore\\app\\b2c\\controller\\wap\\cart.php:\n  228                      $this->pagedata['cartNumber']     = $temp['CART_NUMBER'];\n  229                      $this->pagedata['cartTotalPrice'] = $temp['CART_TOTAL_PRICE'];\n  230:                     $this->page('wap/cart/mini_cart.html', true);\n  231                      return;\n  232                  }\n\nD:\\code\\tjtjs-ecstore\\app\\gift\\controller\\site\\gift.php:\n  444                  $this->pagedata['cartTotalPrice'] = $temp['CART_TOTAL_PRICE'];\n  445  \n  446:                 $this->page('site/cart/mini_cart.html', true);\n  447                  return;\n  448              } else {\n\nD:\\code\\tjtjs-ecstore\\app\\giftpackage\\controller\\site\\giftpackage.php:\n  141                  $this->pagedata['cartNumber']     = $temp['CART_NUMBER'];\n  142                  $this->pagedata['cartTotalPrice'] = $temp['CART_TOTAL_PRICE'];\n  143:                 $this->page('site/cart/mini_cart.html', true,'b2c');return;\n  144              }\n  145          }\n\nD:\\code\\tjtjs-ecstore\\custom\\b2c\\controller\\site\\cart.php:\n  257                      $this->pagedata['cartNumber'] = $temp['CART_NUMBER'];\n  258                      $this->pagedata['cartTotalPrice'] = $temp['CART_TOTAL_PRICE'];\n  259:                     $this->page('site/cart/mini_cart.html', true);\n  260                      return;\n  261                  }\n\nD:\\code\\tjtjs-ecstore\\custom\\b2c\\controller\\wap\\cart.php:\n  244                      $this->pagedata['cartNumber'] = $temp['CART_NUMBER'];\n  245                      $this->pagedata['cartTotalPrice'] = $temp['CART_TOTAL_PRICE'];\n  246:                     $this->page('wap/cart/mini_cart.html', true);\n  247                      return;\n  248                  }\n\nD:\\code\\tjtjs-ecstore\\data\\cache\\secache.php:\n    File too large, skipping\n\n6 matches across 6 files\n",
+			"file": "/D/code/flaskblog/templates/index.html",
 			"settings":
 			{
-				"buffer_size": 3619,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "/D/code/flaskblog/README.md",
-			"settings":
-			{
-				"buffer_size": 201,
+				"buffer_size": 5385,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/code/flaskblog/env/lib/python3.6/site-packages/flask/app.py",
+			"file": "/D/code/flaskblog/templates/article_view.html",
 			"settings":
 			{
-				"buffer_size": 83167,
+				"buffer_size": 736,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/code/flaskblog/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/model/create.html",
+			"file": "/D/code/flaskblog/app.py",
 			"settings":
 			{
-				"buffer_size": 705,
+				"buffer_size": 5030,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/code/flaskblog/model/article.py",
+			"settings":
+			{
+				"buffer_size": 2179,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/code/flaskblog/.docs/待做工作.txt",
+			"settings":
+			{
+				"buffer_size": 54,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -399,14 +423,55 @@
 	"expanded_folders":
 	[
 		"/D/code/flaskblog",
+		"/D/code/flaskblog/.docs",
 		"/D/code/flaskblog/model",
 		"/D/code/flaskblog/templates",
-		"/D/code/flaskblog/templates/admin",
-		"/D/code/flask-admin",
-		"/D/code/flask-admin/examples"
+		"/D/code/flaskblog/templates/admin"
 	],
 	"file_history":
 	[
+		"/D/code/flaskblog/templates/_article.html",
+		"/D/code/flaskblog/app.py",
+		"/D/code/flaskblog/model/article.py",
+		"/D/code/flaskblog/.docs/待做工作.txt",
+		"/D/code/flaskblog/templates/admin/index.html",
+		"/D/code/flaskblog/templates/index.html",
+		"/D/code/flaskblog/templates/article_view.html",
+		"/D/code/flaskblog/base.py",
+		"/D/code/flaskblog/config.py",
+		"/D/code/flaskblog/requirements.txt",
+		"/D/code/flaskblog/README.md",
+		"/D/code/flaskblog/python3.stackdump",
+		"/D/code/flaskblog3/app.py",
+		"/D/code/flaskblog3/config.py",
+		"/D/code/flaskblog2/app.py",
+		"/D/code/flaskblog2/config.py",
+		"/D/code/flaskblog/.gitignore",
+		"/D/code/flaskblog3/requirements.txt",
+		"/D/code/yii2apps_tiens/backend/views/study-file/index.tpl",
+		"/D/code/yii2apps_tiens/backend/web/index.php",
+		"/D/code/yii2apps_tiens/backend/views/study-file/add.tpl",
+		"/D/code/yii2apps_tiens/backend/controllers/StudyFileController.php",
+		"/D/code/yii2apps_tiens/backend/runtime/logs/app.log",
+		"/D/code/yii2apps_tiens/common/libs/AdminLog.php",
+		"/E/余罪-常书欣.txt",
+		"/D/tiens_hualang.conf",
+		"/E/Postmanwin64493/使用说明 .txt",
+		"/D/code/yii2apps_tiens/backend/models/StudyDocument.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/order.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/order.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/afterpay.php",
+		"/D/code/yii2apps_tiens/backend/libs/ControllerAdmin.php",
+		"/D/code/yii2apps_tiens/backend/views/applicant/index.tpl",
+		"/D/code/yii2apps_tiens/backend/controllers/EmployeeLearningController.php",
+		"/D/code/yii2apps_tiens/backend/views/employee-learning/index.tpl",
+		"/D/code/yii2apps_tiens/backend/views/employee-learning/add.tpl",
+		"/D/code/yii2apps_tiens/backend/config/main.php",
+		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_login/mixins.py",
+		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_security/core.py",
+		"/D/code/flask-admin/examples/auth/app.py",
+		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask/app.py",
+		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/model/create.html",
 		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask_admin/model/base.py",
 		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask/templating.py",
 		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask_admin/base.py",
@@ -414,29 +479,17 @@
 		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini_cart.html",
 		"/D/code/flask-admin/flask_admin/templates/bootstrap3/admin/model/create.html",
 		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/cart.php",
-		"/D/code/flaskblog/app.py",
-		"/D/code/flaskblog/.gitignore",
-		"/D/code/flaskblog/templates/index.html",
-		"/D/code/flaskblog/README.md",
 		"/D/code/flaskblog/.docs/171228.txt",
-		"/D/code/flaskblog/templates/admin/index.html",
-		"/D/code/flaskblog/base.py",
 		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/base.py",
-		"/D/code/flask-admin/examples/auth/app.py",
 		"/D/code/flaskblog/static/H-ui.admin/lib/html5shiv.js",
-		"/D/code/flaskblog/model/article.py",
-		"/D/code/flaskblog2/app.py",
 		"/D/code/flaskblog2/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/master.html",
 		"/D/code/flaskblog2/base.py",
 		"/D/code/flaskblog2/templates/my_master.html",
 		"/D/code/flaskblog2/model/article.py",
 		"/D/code/flaskblog2/requirements.txt",
-		"/D/code/flaskblog/requirements.txt",
 		"/D/code/flaskblog2/templates/admin/base.html",
 		"/D/code/flaskblog2/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/base.html",
 		"/D/code/flaskblog2/templates/admin/base.htmlbak",
-		"/D/code/flaskblog/config.py",
-		"/D/code/flaskblog2/config.py",
 		"/D/code/flaskblog/.docs/171226.sql",
 		"/D/code/flaskblog2/sqllite.csv",
 		"/D/code/flaskblog2/sqllite2.csv",
@@ -476,7 +529,6 @@
 		"/D/code/flaskblog/templates/admin/file/list.html",
 		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/file/list.html",
 		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap3/admin/file/list.html",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_security/core.py",
 		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html",
 		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap3/admin/base.html",
 		"/D/code/flaskblog/templates/admin/index.htmlbak",
@@ -505,46 +557,20 @@
 		"/D/code/flask-admin/examples/auth/README.rst",
 		"/D/code/flask-admin/examples/auth-flask-login/app.py",
 		"/D/tbqapp2/py2-flask/admin-auth-flask-login/app.py",
-		"/D/code/flask-admin/flask_admin/templates/bootstrap2/admin/layout.html",
-		"/D/tbqapp2/py2-flask/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html",
-		"/D/code/flask-admin/examples/quickstart/app2.py",
-		"/D/tbqapp2/py2-flask/admin-quickstart/templates/index.html",
-		"/D/code/Blog_mini/README.md",
-		"/D/code/yii2blog/views/modules/blog/frontend/default/view.tpl",
-		"/D/code/flask-admin/examples/layout/templates/layout.html",
-		"/D/code/Blog_mini/manage.py",
-		"/D/code/Blog_mini/app/__init__.py",
-		"/D/tbqapp2/py2-flask/admin-quickstart/app2.py",
-		"/D/code/flask-admin/examples/layout_bootstrap3/app.py",
-		"/D/code/yii2blog/modules/blog/views/frontend/default/view.php",
-		"/D/code/yii2blog/modules/blog/views/frontend/default/_view.php",
-		"/D/code/yii2blog/controllers/SiteController.php",
-		"/D/code/yii2blog/views/blog/index.tpl",
-		"/D/code/Blog_mini/config.py",
-		"/D/code/yii2blog/views/blog/view.tpl",
-		"/D/code/flaskblog/flaskblog/config.py",
-		"/D/code/Blog_mini/.git/config",
-		"/D/code/yii2blog/modules/blog/controllers/backend/BlogCatalogController.php",
-		"/D/code/yii2blog/modules/blog/controllers/backend/BlogPostController.php",
-		"/D/code/yii2blog/views/admin/site/index.tpl",
-		"/D/code/yii2blog/vendor/yiisoft/yii2/web/Controller.php",
-		"/D/code/yii2blog/modules/admin/controllers/UserController.php",
-		"/D/code/yii2blog/views/site/index.tpl",
-		"/D/code/yii2blog/modules/admin/controllers/AssignmentController.php",
-		"/D/code/yii2blog/modules/admin/controllers/DefaultController.php",
-		"/D/code/yii2blog/modules/admin/controllers/MenuController.php",
-		"/D/code/yii2blog/modules/admin/controllers/PermissionController.php",
-		"/D/code/yii2blog/modules/admin/components/ItemController.php"
+		"/D/code/flask-admin/flask_admin/templates/bootstrap2/admin/layout.html"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
 		"height": 110.0,
 		"where_history":
 		[
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\flaskblog,*.py",
 			"D:\\code\\tjtjs-ecstore,*.html,*.php",
 			"D:\\code\\flaskblog",
 			"D:\\code\\flaskblog\\.env_py3\\lib\\python3.6\\site-packages",
@@ -669,10 +695,7 @@
 			"D:\\code\\tjtjs-ecstore",
 			"D:\\code\\tjtjs-ecstore,*.php",
 			"D:\\code\\tjtjs-ecstore,*.html",
-			"D:\\code\\tbq_static\\H-ui.admin.page,*.js",
-			"D:\\code\\tbq_static\\H-ui.admin.page",
-			"D:\\code\\tjtjs-ecstore",
-			"D:\\tbqapp2\\php\\tbq.com\\modules\\smarty3"
+			"D:\\code\\tbq_static\\H-ui.admin.page,*.js"
 		]
 	},
 	"find_state":
@@ -680,6 +703,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"delItem",
+			"::do_yeji",
+			"function do_yeji",
+			"submitIt",
+			"dynamic",
+			"class RoleMixin",
+			"class UserMixin",
+			"AttributeError",
+			"class UserMixin",
+			"BaseUserMixin",
+			"class BaseUserMixin",
+			"class UserMixin",
+			"auth_role_permission_ln",
 			"mini_cart.html",
 			"加入购物车成功",
 			"googleapi",
@@ -794,20 +830,7 @@
 			"–",
 			"actionEdit",
 			"applicantLib",
-			"actionIndex",
-			"pay_status",
-			"ChangePassword",
-			"AuthItem",
-			"Assignment",
-			"BizRule",
-			"AuthRule",
-			"ItemForm",
-			"AuthRule",
-			"AuthItemChild",
-			"AuthItem",
-			"AuthAssignment",
-			"DbManager",
-			"Configs"
+			"actionIndex"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -891,171 +914,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "/D/code/flaskblog/templates/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3619,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										206,
-										213
-									],
-									[
-										859,
-										866
-									],
-									[
-										1118,
-										1125
-									],
-									[
-										1700,
-										1714
-									],
-									[
-										2064,
-										2078
-									],
-									[
-										2346,
-										2360
-									],
-									[
-										2714,
-										2728
-									],
-									[
-										3070,
-										3084
-									],
-									[
-										3433,
-										3447
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								2750,
-								2750
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"git_gutter_is_enabled": false,
-							"incomplete_sync": null,
-							"line_numbers": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 195.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/D/code/flaskblog/README.md",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 201,
+						"buffer_size": 5385,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								201,
-								201
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/code/flaskblog/env/lib/python3.6/site-packages/flask/app.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 83167,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								81592,
-								81592
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 36807.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/D/code/flaskblog/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/model/create.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 705,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								705,
-								705
+								2549,
+								2549
 							]
 						],
 						"settings":
@@ -1069,10 +945,142 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 574.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/code/flaskblog/templates/article_view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								290,
+								290
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/code/flaskblog/app.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5030,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3289,
+								3289
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/code/flaskblog/model/article.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								946,
+								946
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/code/flaskblog/.docs/待做工作.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 54,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1130,6 +1138,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"flaskblog/model/article.p",
+				"flaskblog\\model\\article.py"
+			],
+			[
+				"apps_tiens/backend/controllers/studyfilecontroller.php",
+				"yii2apps_tiens\\backend\\controllers\\StudyFileController.php"
+			],
 			[
 				"flaskblog/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/model/create.htm",
 				"flaskblog\\env\\lib\\python3.6\\site-packages\\flask_admin\\templates\\bootstrap3\\admin\\model\\create.html"
@@ -1633,14 +1649,6 @@
 			[
 				"koseven/modules/admin/classes/controller/admin.php",
 				"koseven\\modules\\admin\\classes\\controller\\admin.php"
-			],
-			[
-				"view/admin/auth/login",
-				"koseven\\modules\\admin\\classes\\view\\admin\\auth\\login.php"
-			],
-			[
-				"starnp",
-				"tbqapp2\\sh\\startNP"
 			]
 		],
 		"width": 0.0
