@@ -18,12 +18,12 @@ ln -s /work/d/code/tbq_static/nginx.htaccess                        static.conf
 ln -s /work/d/code/yii2blog/nginx.htaccess                  yii_appblog.conf
 # ln -s /work/d/code/yii2advanced/apps/basic/nginx.htaccess yii_advanced_basic.conf
 # ln -s /work/d/code/yii2advanced/apps/frontend/nginx.htaccess        yii2frontend.conf
-ln -s /work/d/code/yii2apps_tiens/backend/nginx.htaccess   appTiensZhaopinBackend.conf
-ln -s /work/d/code/yii2apps_tiens/frontend/nginx.htaccess  appTiensZhaopinFrontend.conf
+# ln -s /work/d/code/yii2apps_tiens/backend/nginx.htaccess   appTiensZhaopinBackend.conf
+# ln -s /work/d/code/yii2apps_tiens/frontend/nginx.htaccess  appTiensZhaopinFrontend.conf
 # ln -s /work/d/tbqapp2/php/ci/apps/www/nginx.htaccess                cidev.conf
-ln -s /work/d/tbqapp2/php/chentu.info.wp/nginx.htaccess             wp_chentu_info.conf
-ln -s /work/d/code/koseven/apps/chentublog/nginx.htaccess           khn_chentublog.conf
-ln -s /work/d/code/koseven/apps/www/nginx.htaccess                  khn_www.conf
+# ln -s /work/d/tbqapp2/php/chentu.info.wp/nginx.htaccess             wp_chentu_info.conf
+# ln -s /work/d/code/koseven/apps/chentublog/nginx.htaccess           khn_chentublog.conf
+# ln -s /work/d/code/koseven/apps/www/nginx.htaccess                  khn_www.conf
 cd -
 
 /etc/init.d/nginx restart
