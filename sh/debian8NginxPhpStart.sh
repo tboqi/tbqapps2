@@ -9,20 +9,9 @@ ln -s /work/d/code/tiens_hualang/nginx.htaccess                     tiens_hualan
 
 ln -s /work/d/code/koseven/apps/tiens_mqtest/nginx.htaccess         tiens_mqtest.conf
 
-ln -s /work/d/code/yii2blog/nginx.htaccess                  yii_appblog.conf
-# ln -s /work/d/code/yii2advanced/apps/frontend/nginx.htaccess        yii2frontend.conf
 # ln -s /work/d/code/yii2apps/appTiensMq/nginx.htaccess               appTiensMq.conf
-ln -s /work/d/code/yii2apps_tiens/backend/nginx.htaccess   appTiensZhaopinBackend.conf
-ln -s /work/d/code/yii2apps_tiens/frontend/nginx.htaccess  appTiensZhaopinFrontend.conf
 
-# ln -s /work/d/code/yii2advanced/apps/basic/nginx.htaccess yii_advanced_basic.conf
-
-# ln -s /work/d/tbqapp2/php/ci/apps/www/nginx.htaccess                cidev.conf
-ln -s /work/d/tbqapp2/php/chentu.info.wp/nginx.htaccess             wp_chentu_info.conf
 # ln -s /work/d/tbqapp2/php/tbq.com/apps/tiens_mq/nginx.htaccess      khn_tiens_mq.conf
-ln -s /work/d/code/koseven/apps/chentublog/nginx.htaccess           khn_chentublog.conf
-ln -s /work/d/code/koseven/apps/www/nginx.htaccess                  khn_www.conf
-ln -s /work/d/code/tbq_static/nginx.htaccess                        static.conf
 cd -
 
 rm /work/libs/php-5.3.29/var/log/php-fpm.log -rf
