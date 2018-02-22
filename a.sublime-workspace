@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"unse",
+				"unset"
+			],
+			[
+				"str_",
+				"str_split"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"app",
+				"applicant_id"
+			],
+			[
+				"emp",
+				"employee-learning"
+			],
+			[
 				"desc",
 				"description"
 			],
@@ -54,10 +78,6 @@
 			[
 				"va",
 				"var_export"
-			],
-			[
-				"json",
-				"json_decode"
 			],
 			[
 				"js",
@@ -264,46 +284,46 @@
 	"buffers":
 	[
 		{
-			"file": "/D/code/flaskblog/templates/index.html",
+			"file": "sh/debian8NginxPy3Php7.sh",
 			"settings":
 			{
-				"buffer_size": 5385,
+				"buffer_size": 1074,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/code/flaskblog/templates/article_view.html",
+			"file": "sh/startNP",
 			"settings":
 			{
-				"buffer_size": 736,
+				"buffer_size": 1902,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 4674 files for \"/api/api/\"\n\nD:\\code\\yii2apps_tiens\\backend\\controllers\\UploadController.php:\n   86          $file_url = str_replace('\\\\', '/', $file_url);\n   87  \n   88:         $url = \\Yii::$app->params['weiyuan_api_host'] . '/api/api/document/saveFile';\n   89          $res = Curl::curl_post_file($file_url, $url);\n   90          $res = json_decode($res, true);\n\nD:\\code\\yii2apps_tiens\\backend\\controllers\\XieyimobanController.php:\n  138              }\n  139              $curl = new curl\\Curl();\n  140:             $url = \\Yii::$app->params['weiyuan_api_host'] . '/api/api/preView/pdfPreviewSignatureAdjust';\n  141              if ($curl->errorCode === null) {\n  142                  $response = $curl->setPostParams([\n\nD:\\code\\yii2apps_tiens\\common\\web_api\\weiyuan\\WeiyuanApi.php:\n   14       **/\n   15      static public  function getDocument($documentId,$is_full_url='',$document_type='png'){\n   16:         $res=Curl::curl_post_json(\\Yii::$app->params['weiyuan_api_host'].'/api/api/document/findDocumentListById',['documentId'=>$documentId]);\n   17          $res=json_decode($res,true);\n   18          if(!isset($res['status'])||$res['status']!=1000||!isset($res['result'])||$res['result']==''){\n\nD:\\code\\yii2apps_tiens\\frontend\\controllers\\UploadController.php:\n   93          $file_url = '@' . dirname(dirname(__FILE__)) . '/web/' . $filePath;\n   94          $file_url = str_replace('\\\\', '/', $file_url);\n   95:         $res = Curl::curl_post_file($file_url, \\Yii::$app->params['weiyuan_api_host'] . '/api/api/document/saveFile');\n   96          die(json_encode($res));\n   97          die('{\"jsonrpc\" : \"2.0\", \"error\" : {\"code\": 0}, \"result\": \"/' . $filePath . '\" ,\"real\":\"/' . $filePath . '\", \"id\" : \"id\"}');\n\n4 matches across 4 files\n",
+			"settings":
+			{
+				"buffer_size": 1756,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/D/code/yii2apps_tiens/common/web_api/weiyuan/WeiyuanApi.php",
+			"settings":
+			{
+				"buffer_size": 3134,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/code/flaskblog/app.py",
+			"file": "/D/code/yii2apps_tiens/common/web_api/Curl.php",
 			"settings":
 			{
-				"buffer_size": 5030,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/code/flaskblog/model/article.py",
-			"settings":
-			{
-				"buffer_size": 2179,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/code/flaskblog/.docs/待做工作.txt",
-			"settings":
-			{
-				"buffer_size": 54,
+				"buffer_size": 3262,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -316,10 +336,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 38.0,
+		"height": 203.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
 			[
 				"Package Control: install",
 				"Package Control: Install Package"
@@ -350,10 +374,6 @@
 			],
 			[
 				"Package Control: ",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: ins",
 				"Package Control: Install Package"
 			],
 			[
@@ -401,7 +421,7 @@
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 500.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -422,25 +442,100 @@
 	},
 	"expanded_folders":
 	[
-		"/D/code/flaskblog",
-		"/D/code/flaskblog/.docs",
-		"/D/code/flaskblog/model",
-		"/D/code/flaskblog/templates",
-		"/D/code/flaskblog/templates/admin"
+		"/D/tbqapp2",
+		"/D/tbqapp2/sh",
+		"/D/code/yiicms"
 	],
 	"file_history":
 	[
-		"/D/code/flaskblog/templates/_article.html",
-		"/D/code/flaskblog/app.py",
-		"/D/code/flaskblog/model/article.py",
+		"/D/code/yii2blog/nginx.htaccess",
+		"/D/code/yii2apps_tiens/backend/runtime/logs/app.log",
+		"/D/code/yii2-cms/common/config/main-local.php",
+		"/D/code/yii2-cms/README.md",
+		"/D/code/yii2-cms/frontend/nginx.conf",
+		"/D/code/yii2-cms/backend/nginx.conf",
+		"/D/code/yiicms/config/db.php",
+		"/D/code/yii2blog/config/db.php",
+		"/D/code/yiicms/nginx.conf",
+		"/D/code/yiicms/.gitignore",
+		"/D/code/yiicms/.git/config",
+		"/D/code/yiicms/init.txt",
+		"/D/code/yii2apps_tiens/backend/controllers/XieyimobanController.php",
+		"/D/code/yii2apps_tiens/backend/views/xieyimoban/add.tpl",
+		"/E/a.html",
 		"/D/code/flaskblog/.docs/待做工作.txt",
-		"/D/code/flaskblog/templates/admin/index.html",
-		"/D/code/flaskblog/templates/index.html",
-		"/D/code/flaskblog/templates/article_view.html",
-		"/D/code/flaskblog/base.py",
-		"/D/code/flaskblog/config.py",
-		"/D/code/flaskblog/requirements.txt",
+		"/D/code/yii2apps_tiens/backend/controllers/UploadController.php",
+		"/D/code/yii2apps_tiens/frontend/controllers/UploadController.php",
+		"/D/tbqapp2/sh/debian8NginxPhpStart.sh",
+		"/D/tbqapp2/sh/debian8NginxPy3Php7.sh",
 		"/D/code/flaskblog/README.md",
+		"/D/code/flaskblog/uwsgi.ini",
+		"/D/code/flaskblog/nginx.conf",
+		"/D/code/flaskblog/wsgi.py",
+		"/D/code/flaskblog/.env/lib/python3.5/site-packages/flask/app.py",
+		"/D/code/flaskblog/run.py",
+		"/D/tbqapp2/py2-flask/demoapp/demoapp_uwsgi.ini",
+		"/D/tbqapp2/py2-flask/demoapp/hello.py",
+		"/D/tbqapp2/py2-flask/demoapp/nginx.conf",
+		"/D/code/flaskblog/config.py",
+		"/D/code/flaskblog/base.py",
+		"/D/code/flaskblog/requirements.txt",
+		"/D/code/flaskblog/app.py",
+		"/D/code/yii2apps_tiens/common/libs/Code.php",
+		"/D/tbqapp2/.gitignore",
+		"/D/code/yii2apps_tiens/backend/runtime/Smarty/compile/8e0086b25fdb6ca7e910e5a0eaaba72a380b820c_0.file.add.tpl.php",
+		"/D/code/yii2apps_tiens/backend/libs/AdminLog.php",
+		"/D/code/yii2apps_tiens/backend/views/employee-learning/index.tpl",
+		"/D/code/yii2apps_tiens/backend/views/employee-learning/files_manager.tpl",
+		"/D/code/yii2apps_tiens/backend/views/employee-learning/files_view.tpl",
+		"/D/code/yii2apps_tiens/backend/controllers/EmployeeLearningController.php",
+		"/D/code/flaskblog/templates/index.html",
+		"/D/code/flaskblog/templates/admin/index.html",
+		"/D/code/flaskblog/.env/lib/python3.6/site-packages/flask_admin/menu.py",
+		"/D/tbqapp2/git_my.txt",
+		"/D/code/flaskblog/.env/lib/python3.6/site-packages/flask_admin/base.py",
+		"/D/code/yii2blog/.gitignore",
+		"/D/code/yii2apps_tiens/backend/controllers/CompanyController.php",
+		"/D/code/yii2apps_tiens/backend/views/xieyimoban/index.tpl",
+		"/D/code/yii2apps_tiens/backend/libs/ControllerAdmin.php",
+		"/D/code/yii2apps_tiens/backend/web/js/img_upload.js",
+		"/D/code/yii2apps_tiens/backend/views/company/add.tpl",
+		"/D/code/yii2apps_tiens/backend/views/layouts/hui_base.tpl",
+		"/D/code/tjtjs-ecstore/custom/b2c/view/wap/cart/index.html",
+		"/D/code/yii2apps_tiens/backend/views/study-file/index.tpl",
+		"/D/code/yii2apps_tiens/backend/models/ApplicantStudyDocument.php",
+		"/D/code/yii2apps_tiens/backend/models/StudyDocument.php",
+		"/D/code/yii2apps_tiens/backend/views/study-file/add.tpl",
+		"/D/code/tjtjs-ecstore/custom/b2c/view/wap/cart/item/index.html",
+		"/D/code/tjtjs-ecstore/app/pam/lib/account.php",
+		"/D/code/tjtjs-ecstore/config/config.test.php",
+		"/D/code/tjtjs-ecstore/app/pam/lib/auth.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/passport.php",
+		"/D/code/tjtjs-ecstore/app/base/lib/session.php",
+		"/D/code/tjtjs-ecstore/app/pam/lib/passport/desktop/basic.php",
+		"/D/code/tjtjs-ecstore/custom/pam/lib/callback.php",
+		"/D/code/tjtjs-ecstore/custom/desktop/lib/controller.php",
+		"/D/code/tjtjs-ecstore/app/desktop/controller/default.php",
+		"/D/code/tjtjs-ecstore/app/base/defined.php",
+		"/D/code/tjtjs-ecstore/app/entermembercenter/controller/default.php",
+		"/D/code/tjtjs-ecstore/app/entermembercenter/controller/register.php",
+		"/D/code/tjtjs-ecstore/app/desktop/lib/controller.php",
+		"/D/code/tjtjs-ecstore/app/aftersales/controller/admin/archive.php",
+		"/D/code/tjtjs-ecstore/app/entermembercenter/lib/auth/use.php",
+		"/D/code/tjtjs-ecstore/index.php",
+		"/D/code/tjtjs-ecstore/app/base/kernel.php",
+		"/D/code/yii2apps_tiens/backend/controllers/StudyFileController.php",
+		"/D/code/tjtjs-ecstore/.git/config",
+		"/D/code/yii2apps_tiens/backend/controllers/SiteController.php",
+		"/D/code/yii2apps_tiens/vendor/linslin/yii2-curl/Curl.php",
+		"/C/Users/Administrator/Documents/Tencent Files/51100112/FileRecv/document/controller/DocumentController.java",
+		"/D/code/yii2apps_tiens/common/models/ApplicantProfile.php",
+		"/D/code/yii2apps_tiens/common/models/VApplicantProfile.php",
+		"/D/code/flaskblog/model/article.py",
+		"/D/code/flaskblog/templates/article_view.html",
+		"/D/code/yii2apps_tiens/.git/config",
+		"/D/code/flaskblog/.env/lib/python3.6/site-packages/flask/helpers.py",
+		"/D/code/flaskblog/templates/_article.html",
 		"/D/code/flaskblog/python3.stackdump",
 		"/D/code/flaskblog3/app.py",
 		"/D/code/flaskblog3/config.py",
@@ -448,23 +543,15 @@
 		"/D/code/flaskblog2/config.py",
 		"/D/code/flaskblog/.gitignore",
 		"/D/code/flaskblog3/requirements.txt",
-		"/D/code/yii2apps_tiens/backend/views/study-file/index.tpl",
 		"/D/code/yii2apps_tiens/backend/web/index.php",
-		"/D/code/yii2apps_tiens/backend/views/study-file/add.tpl",
-		"/D/code/yii2apps_tiens/backend/controllers/StudyFileController.php",
-		"/D/code/yii2apps_tiens/backend/runtime/logs/app.log",
 		"/D/code/yii2apps_tiens/common/libs/AdminLog.php",
 		"/E/余罪-常书欣.txt",
 		"/D/tiens_hualang.conf",
 		"/E/Postmanwin64493/使用说明 .txt",
-		"/D/code/yii2apps_tiens/backend/models/StudyDocument.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/order.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/order.php",
 		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/afterpay.php",
-		"/D/code/yii2apps_tiens/backend/libs/ControllerAdmin.php",
 		"/D/code/yii2apps_tiens/backend/views/applicant/index.tpl",
-		"/D/code/yii2apps_tiens/backend/controllers/EmployeeLearningController.php",
-		"/D/code/yii2apps_tiens/backend/views/employee-learning/index.tpl",
 		"/D/code/yii2apps_tiens/backend/views/employee-learning/add.tpl",
 		"/D/code/yii2apps_tiens/backend/config/main.php",
 		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_login/mixins.py",
@@ -488,86 +575,33 @@
 		"/D/code/flaskblog2/model/article.py",
 		"/D/code/flaskblog2/requirements.txt",
 		"/D/code/flaskblog2/templates/admin/base.html",
-		"/D/code/flaskblog2/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/base.html",
-		"/D/code/flaskblog2/templates/admin/base.htmlbak",
-		"/D/code/flaskblog/.docs/171226.sql",
-		"/D/code/flaskblog2/sqllite.csv",
-		"/D/code/flaskblog2/sqllite2.csv",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_security/core.py",
-		"/D/code/flaskblog/templates/my_master.html",
-		"/D/code/flaskblog/app - 副本.py",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/examples/auth/app.py",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/examples/auth-flask-login/app.py",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/__init__.py",
-		"/D/code/flaskblog/app.pybak",
-		"/D/code/flask-admin/examples/auth/templates/admin/index.html",
-		"/C/Users/Administrator/Documents/数据库、中台接口文档/09-数据库、中台接口文档/tiens20171226.sql",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/order/create.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/order.php",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/model/base.py",
-		"/D/code/flaskblog/model/__init__.py",
-		"/D/code/flask-admin/examples/auth/templates/index.html",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_login/mixins.py",
-		"/D/code/flaskblog/adminModels.py",
-		"/D/code/flaskblog/AdminModel/MyModel.py",
-		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/pep8_autoformat.sublime-settings",
-		"/D/code/tbq_static/H-ui.admin/article-add.html",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/tests/fileadmin/test_fileadmin.py",
-		"/D/code/flaskblog/templates/admin/article_new.html",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/contrib/fileadmin/__init__.py",
-		"/D/code/flask-admin/examples/sqla/app.py",
-		"/D/code/flask-admin/examples/sqla/app2.py",
-		"/D/code/flaskblog/templates/admin/welcome.html",
-		"/D/code/flaskblog/templates/admin/base.html",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/base.html",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/templates/bootstrap2/admin/base.html",
-		"/D/code/flask-admin/flask_admin/contrib/sqla/__init__.py",
-		"/D/code/tbq_static/H-ui.admin/index-2.html",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/model/list.html",
-		"/D/code/flaskblog/templates/admin/model/list.html",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/templates/bootstrap2/admin/model/list.html",
-		"/D/code/flaskblog/templates/admin/file/list.html",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/file/list.html",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap3/admin/file/list.html",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap3/admin/base.html",
-		"/D/code/flaskblog/templates/admin/index.htmlbak",
-		"/D/code/tbq_static/bootstrap/docs/examples/blog/index.html",
-		"/D/code/tbq_static/amazeui/docs/examples/admin-404.html",
-		"/D/code/tbq_static/H-ui.admin/robots.txt",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/sqlalchemy/sql/dml.py",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_admin/model/base.py",
-		"/D/code/flaskblog/sample_db.sqlite",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_security/views.py",
-		"/D/code/flaskblog/templates/security/_macros.html",
-		"/D/code/flaskblog/templates/security/_messages.html",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_security/forms.py",
-		"/D/code/flaskblog/templates/security/register_user.html",
-		"/D/tbqapp2/py2-flask/admin-auth/app.py",
-		"/D/tbqapp2/py2-flask/admin-layout-bootstrap3/app.py",
-		"/D/tbqapp2/py2-flask/admin-menu-external-links/app.py",
-		"/D/tbqapp2/py2-flask/admin-quickstart/README.rst",
-		"/D/tbqapp2/py2-flask/admin-layout-bootstrap3/templates/layout.html",
-		"/D/tbqapp2/py2-flask/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap3/admin/base.html",
-		"/D/tbqapp2/py2-flask/env/lib/python2.7/site-packages/flask_admin/templates/bootstrap3/admin/layout.html",
-		"/D/code/yii2blog/modules/admin/controllers/SiteController.php",
-		"/D/code/yii2blog/modules/blog/controllers/frontend/DefaultController.php",
-		"/D/code/flask-admin/examples/quickstart/README.rst",
-		"/D/code/flask-admin/examples/layout/README.rst",
-		"/D/code/flask-admin/examples/auth/README.rst",
-		"/D/code/flask-admin/examples/auth-flask-login/app.py",
-		"/D/tbqapp2/py2-flask/admin-auth-flask-login/app.py",
-		"/D/code/flask-admin/flask_admin/templates/bootstrap2/admin/layout.html"
+		"/D/code/flaskblog2/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/base.html"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
-		"height": 110.0,
+		"height": 113.0,
 		"where_history":
 		[
+			"D:\\code\\yii2apps_tiens,*.php",
+			"D:\\code\\flaskblog",
+			"D:\\tbqapp2\\py2-flask\\demoapp",
+			"D:\\code\\yii2apps_tiens\\backend,*.php,*.html",
+			"D:\\code\\yii2apps_tiens\\backend,*.php",
+			"D:\\code\\yii2apps_tiens\\backend",
+			"D:\\code\\yii2apps_tiens\\backend\\views",
+			"D:\\code\\flaskblog,*.py",
+			"D:\\code\\yii2apps_tiens",
+			"D:\\code\\tjtjs-ecstore,*.html",
+			"D:\\code\\yii2apps_tiens\\backend\\views",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\yii2apps_tiens,*.php",
+			"D:\\code\\yii2apps_tiens",
+			"D:\\code\\yii2apps_tiens\\backend\\views",
+			"D:\\code\\flaskblog\\.env\\lib\\python3.6\\site-packages\\flask",
 			"D:\\code\\tjtjs-ecstore,*.php",
 			"D:\\code\\tjtjs-ecstore",
 			"D:\\code\\flaskblog,*.py",
@@ -679,23 +713,7 @@
 			"D:\\code\\yii2apps\\appblog\\views",
 			"D:\\code\\tjtjs-ecstore\\custom\\b2c\\view\\site",
 			"D:\\code\\tjtjs-ecstore\\custom\\b2c\\view\\site\\product",
-			"D:\\code\\tjtjs-ecstore",
-			"D:\\code\\Yii2-Plus\\backend",
-			"D:\\code\\del\\yii2apps,*.php",
-			"D:\\code\\del\\yii2apps",
-			"D:\\code\\del\\yii2apps,*.php",
-			"D:\\code\\del\\yii2apps",
-			"D:\\code\\tjtjs-ecstore,*.xml",
-			"D:\\code\\tjtjs-ecstore,*.php",
-			"D:\\code\\tjtjs-ecstore,*.html",
-			"D:\\code\\tjtjs-ecstore,*.php,*.html",
-			"D:\\code\\tjtjs-ecstore,*.php",
-			"D:\\code\\tjtjs-ecstore,*.xml",
-			"D:\\code\\tjtjs-ecstore,*.html",
-			"D:\\code\\tjtjs-ecstore",
-			"D:\\code\\tjtjs-ecstore,*.php",
-			"D:\\code\\tjtjs-ecstore,*.html",
-			"D:\\code\\tbq_static\\H-ui.admin.page,*.js"
+			"D:\\code\\tjtjs-ecstore"
 		]
 	},
 	"find_state":
@@ -703,6 +721,75 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Emil II, Sweden, Tier 9",
+			"KV-1, Soviet Union, Tier ",
+			"T-34-85, Soviet Unio",
+			"Cromwell, Great Britain, Tier 6",
+			"T-34, Soviet Union, Tier",
+			"M12, USA, Tier 7",
+			"Pz.Kpfw. IV Ausf. H, Germany",
+			"G.W. Panther, Germany, Tier 7",
+			"KV-2, Soviet Union, Tier 6",
+			"T71 DA, USA, Tier",
+			"M44, USA, Tier 6",
+			"M18 Hellcat, USA",
+			"T67, USA, Tier",
+			"curl_post",
+			"actionPreview",
+			"\\\"",
+			"][-][info][{\"documen",
+			"\\\"",
+			"seal_position",
+			"actionPreview",
+			"/api/api/",
+			"Yii::$app->params['weiyuan_api_host']",
+			"zp",
+			"touch-reload",
+			"Router",
+			"base.",
+			"def run",
+			"yourapplication",
+			"enterprise_chapter",
+			"create_time",
+			"content",
+			"admin_name",
+			"c_type",
+			":getBasicChinese",
+			"pps_tiens/common/libs/Code.php",
+			"Code::getBasicChinese",
+			"enterprise_chapter",
+			"date_f",
+			" MenuLink",
+			"MenuLink",
+			"class MenuLink",
+			"def add_view",
+			"MenuLink",
+			"web",
+			"登录失败",
+			"study-file",
+			"img_upload",
+			"pdf上传测试",
+			"J_settlement",
+			"checkout.html",
+			"cart-checkout.html",
+			"date_format",
+			"redis",
+			"KVStorage",
+			"Session",
+			"memcache",
+			"desktop_controller",
+			"shopadmin",
+			"enterprise_url",
+			"SHOP_USER_ENTERPRISE",
+			"passport.shopex.cn",
+			"pam_callback",
+			"function setPostParams",
+			"setPostParams",
+			"function setOption",
+			"router",
+			"created_stamp",
+			"{{if",
+			"def url_for",
 			"delItem",
 			"::do_yeji",
 			"function do_yeji",
@@ -761,76 +848,7 @@
 			"editor",
 			"form_excluded_columns",
 			"column_exclude_list",
-			"edit_template",
-			"form.html",
-			"flask.ext.admin",
-			"has_role",
-			"roles",
-			"文章",
-			"my_master",
-			"role",
-			"skin",
-			"welcome",
-			"index.html",
-			"regist",
-			"first_name",
-			"register_user_form",
-			"first_name",
-			"name",
-			"RegisterForm",
-			"regist",
-			"security",
-			"render_template",
-			"admin_blog",
-			"/site/",
-			"function goHome",
-			"myselfinfo",
-			"reset",
-			"BlogTa",
-			"Yii::$app->user->can",
-			"->can",
-			"admin_system",
-			"baidu",
-			"menu",
-			"new Menu()",
-			"ass=\"Hui-iconfont\">&#xe616;</",
-			"app\\models",
-			"{{",
-			"common\\models\\User",
-			"funson86",
-			"blog",
-			"mdm/admin",
-			"mdm/admin/assets",
-			"mdm/admin/mail",
-			"mdmsoft/yii2-admin",
-			"mdmsoft/yii2-admin/assets",
-			"mdm\\admin",
-			"mdm\\admin\\components\\AccessControl",
-			"admin",
-			"web.php",
-			"config",
-			"cache",
-			"mdm\\admin",
-			"admin",
-			"::do_yeji",
-			"yeji",
-			"language",
-			"qiyu",
-			"zhaopin",
-			"bower",
-			"bower-asset",
-			"bower-asset/",
-			"name",
-			"namespace",
-			"def",
-			"bower-asset",
-			"is_virtual",
-			"spg",
-			"pay_status",
-			"–",
-			"actionEdit",
-			"applicantLib",
-			"actionIndex"
+			"edit_template"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -838,6 +856,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"",
+			"",
+			"xieyimoban",
 			"--",
 			"backend",
 			"frontend",
@@ -914,24 +935,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/code/flaskblog/templates/index.html",
+					"file": "sh/debian8NginxPy3Php7.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5385,
+						"buffer_size": 1074,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2549,
-								2549
+								238,
+								238
 							]
 						],
 						"settings":
@@ -940,75 +961,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 574.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/D/code/flaskblog/templates/article_view.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 736,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								290,
-								290
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/code/flaskblog/app.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5030,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3289,
-								3289
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1018,20 +971,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/D/code/flaskblog/model/article.py",
-					"semi_transient": false,
+					"buffer": 1,
+					"file": "sh/startNP",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2179,
+						"buffer_size": 1902,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								946,
-								946
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1040,9 +993,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1052,20 +1003,81 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/D/code/flaskblog/.docs/待做工作.txt",
+					"buffer": 2,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 54,
+						"buffer_size": 1756,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										237,
+										246
+									],
+									[
+										577,
+										586
+									],
+									[
+										990,
+										999
+									],
+									[
+										1521,
+										1530
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								164,
+								164
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"git_gutter_is_enabled": false,
+							"incomplete_sync": null,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/code/yii2apps_tiens/common/web_api/weiyuan/WeiyuanApi.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3134,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10,
-								10
+								69,
+								69
 							]
 						],
 						"settings":
@@ -1074,13 +1086,49 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/code/yii2apps_tiens/common/web_api/Curl.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								544,
+								535
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1088,11 +1136,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 28.0
 	},
 	"input":
 	{
-		"height": 42.0
+		"height": 43.0
 	},
 	"layout":
 	{
@@ -1129,7 +1177,7 @@
 	"project": "a.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1138,6 +1186,50 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"ii2apps_tiens/backend/libs/adminlog.p",
+				"yii2apps_tiens\\backend\\libs\\AdminLog.php"
+			],
+			[
+				"ps_tiens/common/libs/code.",
+				"yii2apps_tiens\\common\\libs\\Code.php"
+			],
+			[
+				"laskblog/templates/admin/index.ht",
+				"flaskblog\\templates\\admin\\index.html"
+			],
+			[
+				"backend/controllers/companycontroller.php",
+				"yii2apps_tiens\\backend\\controllers\\CompanyController.php"
+			],
+			[
+				"/js/img_upload.j",
+				"yii2apps_tiens\\backend\\web\\js\\img_upload.js"
+			],
+			[
+				"cuscontro/pass",
+				"tjtjs-ecstore\\custom\\b2c\\controller\\site\\passport.php"
+			],
+			[
+				"pam/passpo/des/ba",
+				"tjtjs-ecstore\\app\\pam\\lib\\passport\\desktop\\basic.php"
+			],
+			[
+				"pam/callback",
+				"tjtjs-ecstore\\custom\\pam\\lib\\callback.php"
+			],
+			[
+				"de/lib/contro",
+				"tjtjs-ecstore\\custom\\desktop\\lib\\controller.php"
+			],
+			[
+				"/base/kernel.php",
+				"tjtjs-ecstore\\app\\base\\kernel.php"
+			],
+			[
+				"yii2apps_tiens/backend/controllers/studyfilecontroller.p",
+				"yii2apps_tiens\\backend\\controllers\\StudyFileController.php"
+			],
 			[
 				"flaskblog/model/article.p",
 				"flaskblog\\model\\article.py"
@@ -1605,50 +1697,6 @@
 			[
 				"startnp",
 				"tbqapp2\\sh\\startNP"
-			],
-			[
-				"custom/orders.php",
-				"tjtjs-ecstore\\custom\\b2c\\dbschema\\orders.php"
-			],
-			[
-				"app/b2c/view/site/product/info/props.html",
-				"tjtjs-ecstore\\app\\b2c\\view\\site\\product\\info\\props.html"
-			],
-			[
-				"tjtjs-ecstore/aftersales/lib/finder/return/produc",
-				"tjtjs-ecstore\\custom\\aftersales\\lib\\finder\\return\\product.php"
-			],
-			[
-				"tjtjs/cus/after/contr/admin/retu",
-				"tjtjs-ecstore\\custom\\aftersales\\controller\\admin\\returnproduct.php"
-			],
-			[
-				"site/cart/mini_cart.html",
-				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini_cart.html"
-			],
-			[
-				"site/cart/mini/item/goods.html",
-				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini\\item\\goods.html"
-			],
-			[
-				"site/cart/mini/view.html",
-				"tjtjs-ecstore\\app\\b2c\\view\\site\\cart\\mini\\view.html"
-			],
-			[
-				"custom/passport",
-				"tjtjs-ecstore\\custom\\b2c\\controller\\site\\passport.php"
-			],
-			[
-				"admin/classes/controller/template/admin.ph",
-				"koseven\\modules\\admin\\classes\\controller\\template\\admin.php"
-			],
-			[
-				"admin/classes/controller/admin/auth.ph",
-				"koseven\\modules\\admin\\classes\\controller\\admin\\auth.php"
-			],
-			[
-				"koseven/modules/admin/classes/controller/admin.php",
-				"koseven\\modules\\admin\\classes\\controller\\admin.php"
 			]
 		],
 		"width": 0.0
