@@ -20,19 +20,16 @@
 			"path": "D:\\code\\phpcms.tiens.com"
 		},
 		{
-			"path": "D:\\code\\flask-admin"
-		},
-		{
 			"path": "D:\\code\\yii2apps_tiens"
-		},
-		{
-			"path": "D:\\code\\yii2blog"
 		},
 		{
 			"path": "D:\\code\\flaskblog"
 		},
 		{
 			"path": "D:\\code\\yiicms_qiyezhan"
+		},
+		{
+			"path": "D:\\code\\yii2cms_liufee"
 		}
 	]
 }

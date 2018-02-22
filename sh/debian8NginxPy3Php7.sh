@@ -14,8 +14,11 @@ cd /etc/nginx/sites-enabled
 rm *.conf -rf
 ln -s /work/d/code/flaskblog/nginx.conf flaskblog.conf
 
-ln -s /work/d/code/tbq_static/nginx.htaccess    tbq_static.conf
-ln -s /work/d/code/yiicms_qiyezhan/nginx.conf   yiicms_qiyezhan.conf
+ln -s /work/d/code/tbq_static/nginx.htaccess                tbq_static.conf
+ln -s /work/d/code/yiicms_qiyezhan/nginx.conf               yiicms_qiyezhan.conf
+ln -s /work/d/code/yii2cms_liufee/frontend/nginx.conf       yii2cms_liufee_frontend.conf
+ln -s /work/d/code/yii2cms_liufee/backend/nginx.conf        yii2cms_liufee_backend.conf
+
 # ln -s /work/d/code/yii2blog/nginx.htaccess                      yii_appblog.conf
 # ln -s /work/d/code/yii2advanced/apps/basic/nginx.htaccess       yii_advanced_basic.conf
 # ln -s /work/d/code/yii2advanced/apps/frontend/nginx.htaccess    yii2frontend.conf
