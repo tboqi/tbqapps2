@@ -16,6 +16,7 @@ ln -s /work/d/code/flaskblog/nginx.conf flaskblog.conf
 
 ln -s /work/d/code/tbq_static/nginx.htaccess                tbq_static.conf
 ln -s /work/d/code/yiicms_qiyezhan/nginx.conf               yiicms_qiyezhan.conf
+ln -s /work/d/code/yii2BasicAdmin/nginx.conf                yii2BasicAdmin.conf
 ln -s /work/d/code/yii2cms_liufee/frontend/nginx.conf       yii2cms_liufee_frontend.conf
 ln -s /work/d/code/yii2cms_liufee/backend/nginx.conf        yii2cms_liufee_backend.conf
 

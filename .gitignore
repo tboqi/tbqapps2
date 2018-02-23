@@ -48,3 +48,5 @@ Temporary Items
 env
 venv
 *.pyc
+cfg/secure_config/Global.ini
+cfg/secure_config/Recent*
