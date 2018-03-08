@@ -11,7 +11,7 @@ cd -
 
 ####### nginx
 cd /etc/nginx/sites-enabled
-rm /etc/nginx/fecshop_fcgi.conf /etc/nginx/fecshop_none.conf *.conf -rf
+rm *.conf -rf
 
 ln -s /work/d/code/flaskblog/nginx.conf flaskblog.conf
 
@@ -20,9 +20,9 @@ ln -s /work/d/code/yiicms_qiyezhan/nginx.conf           yiicms_qiyezhan.conf
 ln -s /work/d/code/yii2BasicAdmin/nginx.conf            yii2BasicAdmin.conf
 ln -s /work/d/code/yii2cms_liufee/nginx.conf            yii2cms_liufee.conf
 
-ln -s /work/d/code/yii2_fecshop_app_advanced/nginx.conf fecshop.conf
-ln -s /work/d/code/yii2_fecshop_app_advanced/fcgi.conf  /etc/nginx/fecshop_fcgi.conf
-ln -s /work/d/code/yii2_fecshop_app_advanced/none.conf  /etc/nginx/fecshop_none.conf
+# ln -s /work/d/code/yii2_fecshop_app_advanced/nginx.conf fecshop.conf
+# ln -s /work/d/code/yii2_fecshop_app_advanced/fcgi.conf  /etc/nginx/fecshop_fcgi.conf
+# ln -s /work/d/code/yii2_fecshop_app_advanced/none.conf  /etc/nginx/fecshop_none.conf
 
 # ln -s /work/d/code/yii2blog/nginx.htaccess                      yii_appblog.conf
 # ln -s /work/d/code/yii2advanced/apps/basic/nginx.htaccess       yii_advanced_basic.conf
