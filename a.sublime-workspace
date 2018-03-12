@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"seap",
+				"sealPosition"
+			],
+			[
+				"c_",
+				"c_document_type"
+			],
+			[
+				"replac",
+				"str_replace"
+			],
+			[
 				"unse",
 				"unset"
 			],
@@ -284,47 +296,54 @@
 	"buffers":
 	[
 		{
-			"file": "sh/debian8NginxPy3Php7.sh",
+			"contents": "Searching 3823 files for \"ManagerInterface\"\n\nD:\\code\\galaxy\\vendor\\dektrium\\yii2-rbac\\Bootstrap.php:\n   13  \n   14  use dektrium\\rbac\\components\\DbManager;\n   15: use dektrium\\rbac\\components\\ManagerInterface;\n   16  use dektrium\\user\\Module as UserModule;\n   17  use yii\\base\\Application;\n   ..\n   47                      'class' => DbManager::className(),\n   48                  ]);\n   49:             } else if (!($authManager instanceof ManagerInterface)) {\n   50                  throw new InvalidConfigException('You have wrong authManager configuration');\n   51              }\n   ..\n   89      protected function checkAuthManagerConfigured(Application $app)\n   90      {\n   91:         return $app->authManager instanceof ManagerInterface;\n   92      }\n   93  }\n\nD:\\code\\galaxy\\vendor\\dektrium\\yii2-rbac\\components\\DbManager.php:\n   20   * @author Dmitry Erofeev <dmeroff@gmail.com>\n   21   */\n   22: class DbManager extends BaseDbManager implements ManagerInterface\n   23  {\n   24      /**\n\nD:\\code\\galaxy\\vendor\\dektrium\\yii2-rbac\\components\\ManagerInterface.php:\n   12  namespace dektrium\\rbac\\components;\n   13  \n   14: use yii\\rbac\\ManagerInterface as BaseManagerInterface;\n   15  \n   16  /**\n   17   * @author Dmitry Erofeev <dmeroff@gmail.com>\n   18   */\n   19: interface ManagerInterface extends BaseManagerInterface\n   20  {\n   21      /**\n\nD:\\code\\galaxy\\vendor\\mdmsoft\\yii2-admin\\components\\Configs.php:\n    8  use yii\\di\\Instance;\n    9  use yii\\helpers\\ArrayHelper;\n   10: use yii\\rbac\\ManagerInterface;\n   11  \n   12  /**\n   ..\n   45  \n   46      /**\n   47:      * @var ManagerInterface .\n   48       */\n   49      public $authManager = 'authManager';\n   ..\n  112          'userDb' => 'yii\\db\\Connection',\n  113          'cache' => 'yii\\caching\\Cache',\n  114:         'authManager' => 'yii\\rbac\\ManagerInterface',\n  115      ];\n  116  \n  ...\n  187  \n  188      /**\n  189:      * @return ManagerInterface\n  190       */\n  191      public static function authManager()\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2-debug\\panels\\UserPanel.php:\n  235              $authManager = Yii::$app->getAuthManager();\n  236  \n  237:             if ($authManager instanceof \\yii\\rbac\\ManagerInterface) {\n  238                  $roles = ArrayHelper::toArray($authManager->getRolesByUser($this->getUser()->id));\n  239                  foreach ($roles as &$role) {\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\base\\Application.php:\n   17   * @property \\yii\\web\\AssetManager $assetManager The asset manager application component. This property is\n   18   * read-only.\n   19:  * @property \\yii\\rbac\\ManagerInterface $authManager The auth manager application component. Null is returned\n   20   * if auth manager is not configured. This property is read-only.\n   21   * @property string $basePath The root directory of the application.\n   ..\n  592      /**\n  593       * Returns the auth manager for this application.\n  594:      * @return \\yii\\rbac\\ManagerInterface the auth manager application component.\n  595       * Null is returned if auth manager is not configured.\n  596       */\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\classes.php:\n  297    'yii\\rbac\\DbManager' => YII2_PATH . '/rbac/DbManager.php',\n  298    'yii\\rbac\\Item' => YII2_PATH . '/rbac/Item.php',\n  299:   'yii\\rbac\\ManagerInterface' => YII2_PATH . '/rbac/ManagerInterface.php',\n  300    'yii\\rbac\\Permission' => YII2_PATH . '/rbac/Permission.php',\n  301    'yii\\rbac\\PhpManager' => YII2_PATH . '/rbac/PhpManager.php',\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\rbac\\BaseManager.php:\n   14  \n   15  /**\n   16:  * BaseManager is a base class implementing [[ManagerInterface]] for RBAC management.\n   17   *\n   18   * For more details and usage information on DbManager, see the [guide article on security authorization](guide:security-authorization).\n   ..\n   26   * @since 2.0\n   27   */\n   28: abstract class BaseManager extends Component implements ManagerInterface\n   29  {\n   30      /**\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\rbac\\ManagerInterface.php:\n    9  \n   10  /**\n   11:  * For more details and usage information on ManagerInterface, see the [guide article on security authorization](guide:security-authorization).\n   12   *\n   13   * @author Qiang Xue <qiang.xue@gmail.com>\n   14   * @since 2.0\n   15   */\n   16: interface ManagerInterface extends CheckAccessInterface\n   17  {\n   18      /**\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\web\\User.php:\n  761       * By default this is the `authManager` application component.\n  762       * You may override this method to return a different auth manager instance if needed.\n  763:      * @return \\yii\\rbac\\ManagerInterface\n  764       * @since 2.0.6\n  765       * @deprecated since version 2.0.9, to be removed in 2.1. Use [[getAccessChecker()]] instead.\n\n22 matches across 10 files\n\n\nSearching 3823 files for \"ManagerInterface\"\n\nD:\\code\\galaxy\\vendor\\dektrium\\yii2-rbac\\Bootstrap.php:\n   13  \n   14  use dektrium\\rbac\\components\\DbManager;\n   15: use dektrium\\rbac\\components\\ManagerInterface;\n   16  use dektrium\\user\\Module as UserModule;\n   17  use yii\\base\\Application;\n   ..\n   47                      'class' => DbManager::className(),\n   48                  ]);\n   49:             } else if (!($authManager instanceof ManagerInterface)) {\n   50                  throw new InvalidConfigException('You have wrong authManager configuration');\n   51              }\n   ..\n   89      protected function checkAuthManagerConfigured(Application $app)\n   90      {\n   91:         return $app->authManager instanceof ManagerInterface;\n   92      }\n   93  }\n\nD:\\code\\galaxy\\vendor\\dektrium\\yii2-rbac\\components\\DbManager.php:\n   20   * @author Dmitry Erofeev <dmeroff@gmail.com>\n   21   */\n   22: class DbManager extends BaseDbManager implements ManagerInterface\n   23  {\n   24      /**\n\nD:\\code\\galaxy\\vendor\\dektrium\\yii2-rbac\\components\\ManagerInterface.php:\n   12  namespace dektrium\\rbac\\components;\n   13  \n   14: use yii\\rbac\\ManagerInterface as BaseManagerInterface;\n   15  \n   16  /**\n   17   * @author Dmitry Erofeev <dmeroff@gmail.com>\n   18   */\n   19: interface ManagerInterface extends BaseManagerInterface\n   20  {\n   21      /**\n\nD:\\code\\galaxy\\vendor\\mdmsoft\\yii2-admin\\components\\Configs.php:\n    8  use yii\\di\\Instance;\n    9  use yii\\helpers\\ArrayHelper;\n   10: use yii\\rbac\\ManagerInterface;\n   11  \n   12  /**\n   ..\n   45  \n   46      /**\n   47:      * @var ManagerInterface .\n   48       */\n   49      public $authManager = 'authManager';\n   ..\n  112          'userDb' => 'yii\\db\\Connection',\n  113          'cache' => 'yii\\caching\\Cache',\n  114:         'authManager' => 'yii\\rbac\\ManagerInterface',\n  115      ];\n  116  \n  ...\n  187  \n  188      /**\n  189:      * @return ManagerInterface\n  190       */\n  191      public static function authManager()\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2-debug\\panels\\UserPanel.php:\n  235              $authManager = Yii::$app->getAuthManager();\n  236  \n  237:             if ($authManager instanceof \\yii\\rbac\\ManagerInterface) {\n  238                  $roles = ArrayHelper::toArray($authManager->getRolesByUser($this->getUser()->id));\n  239                  foreach ($roles as &$role) {\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\base\\Application.php:\n   17   * @property \\yii\\web\\AssetManager $assetManager The asset manager application component. This property is\n   18   * read-only.\n   19:  * @property \\yii\\rbac\\ManagerInterface $authManager The auth manager application component. Null is returned\n   20   * if auth manager is not configured. This property is read-only.\n   21   * @property string $basePath The root directory of the application.\n   ..\n  592      /**\n  593       * Returns the auth manager for this application.\n  594:      * @return \\yii\\rbac\\ManagerInterface the auth manager application component.\n  595       * Null is returned if auth manager is not configured.\n  596       */\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\classes.php:\n  297    'yii\\rbac\\DbManager' => YII2_PATH . '/rbac/DbManager.php',\n  298    'yii\\rbac\\Item' => YII2_PATH . '/rbac/Item.php',\n  299:   'yii\\rbac\\ManagerInterface' => YII2_PATH . '/rbac/ManagerInterface.php',\n  300    'yii\\rbac\\Permission' => YII2_PATH . '/rbac/Permission.php',\n  301    'yii\\rbac\\PhpManager' => YII2_PATH . '/rbac/PhpManager.php',\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\rbac\\BaseManager.php:\n   14  \n   15  /**\n   16:  * BaseManager is a base class implementing [[ManagerInterface]] for RBAC management.\n   17   *\n   18   * For more details and usage information on DbManager, see the [guide article on security authorization](guide:security-authorization).\n   ..\n   26   * @since 2.0\n   27   */\n   28: abstract class BaseManager extends Component implements ManagerInterface\n   29  {\n   30      /**\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\rbac\\ManagerInterface.php:\n    9  \n   10  /**\n   11:  * For more details and usage information on ManagerInterface, see the [guide article on security authorization](guide:security-authorization).\n   12   *\n   13   * @author Qiang Xue <qiang.xue@gmail.com>\n   14   * @since 2.0\n   15   */\n   16: interface ManagerInterface extends CheckAccessInterface\n   17  {\n   18      /**\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\web\\User.php:\n  761       * By default this is the `authManager` application component.\n  762       * You may override this method to return a different auth manager instance if needed.\n  763:      * @return \\yii\\rbac\\ManagerInterface\n  764       * @since 2.0.6\n  765       * @deprecated since version 2.0.9, to be removed in 2.1. Use [[getAccessChecker()]] instead.\n\n22 matches across 10 files\n\n\nSearching 3823 files for \"implements ManagerInterface\"\n\nD:\\code\\galaxy\\vendor\\dektrium\\yii2-rbac\\components\\DbManager.php:\n   20   * @author Dmitry Erofeev <dmeroff@gmail.com>\n   21   */\n   22: class DbManager extends BaseDbManager implements ManagerInterface\n   23  {\n   24      /**\n\nD:\\code\\galaxy\\vendor\\yiisoft\\yii2\\rbac\\BaseManager.php:\n   26   * @since 2.0\n   27   */\n   28: abstract class BaseManager extends Component implements ManagerInterface\n   29  {\n   30      /**\n\n2 matches across 2 files\n\n\nSearching 10 files for \"authManager\"\n\nD:\\code\\galaxy\\common\\config\\main.php:\n   95              'class' => 'yii\\caching\\FileCache',\n   96          ],\n   97:         'authManager' => [\n   98              'class' => 'yii\\rbac\\DbManager',\n   99          ],\n\n1 match in 1 file\n\n\nSearching 10695 files for \"authManager\"\n\nD:\\code\\galaxy\\common\\config\\main.php:\n   95              'class' => 'yii\\caching\\FileCache',\n   96          ],\n   97:         'authManager' => [\n   98              'class' => 'dektrium\\rbac\\components\\DbManager', // or use 'yii\\rbac\\DbManager'\n   99          ],\n\nD:\\code\\galaxy\\star-api\\config\\main.php:\n   13      'bootstrap' => ['log'],\n   14      'modules' => [\n   15:         'authManager' => [\n   16              'class' => 'yii\\rbac\\DbManager', // or use 'yii\\rbac\\DbManager'\n   17          ]\n\nD:\\code\\galaxy\\star-citizen\\config\\main.php:\n   13      'bootstrap' => ['log'],\n   14      'modules' => [\n   15:         'authManager' => [\n   16              'class' => 'yii\\rbac\\DbManager', // or use 'yii\\rbac\\DbManager'\n   17          ]\n\nD:\\code\\galaxy\\star-cluster\\config\\main.php:\n   20              'class' => 'dektrium\\rbac\\Module',\n   21          ],\n   22:         'authManager' => [\n   23              'class' => 'yii\\rbac\\DbManager', // or use 'yii\\rbac\\DbManager'\n   24          ],\n\nD:\\code\\galaxy\\star-core\\config\\main.php:\n   42              'class' => 'core\\modules\\station\\Module',\n   43          ],\n   44:         'authManager' => [\n   45              'class' => 'dektrium\\rbac\\components\\DbManager', // or use 'yii\\rbac\\DbManager'\n   46          ],\n\nD:\\code\\galaxy\\star-home\\config\\main-core.php:\n   23              'class' => 'dektrium\\rbac\\Module',\n   24          ],\n   25:         'authManager' => [\n   26              'class' => 'yii\\rbac\\DbManager', // or use 'yii\\rbac\\DbManager'\n   27          ],\n   ..\n   69              'csrfParam' => '_backendCSRF',\n   70          ],\n   71:         'authManager' => [\n   72              'class' => 'yii\\rbac\\DbManager',\n   73          ],\n\nD:\\code\\galaxy\\star-home\\config\\main.php:\n   21              'class' => 'dektrium\\rbac\\Module',\n   22          ],\n   23:         'authManager' => [\n   24              'class' => 'yii\\rbac\\DbManager', // or use 'yii\\rbac\\DbManager'\n   25          ],\n   ..\n   69              'csrfParam' => '_frontendCSRF',\n   70          ],\n   71:         'authManager' => [\n   72              'class' => 'yii\\rbac\\DbManager',\n   73          ],\n\nD:\\code\\galaxy\\star-merchant\\config\\main.php:\n   22              'class' => 'dektrium\\rbac\\Module',\n   23          ],\n   24:         'authManager' => [\n   25              'class' => 'yii\\rbac\\DbManager', // or use 'yii\\rbac\\DbManager'\n   26          ],\n   ..\n   68              'csrfParam' => '_backendCSRF',\n   69          ],\n   70:         'authManager' => [\n   71              'class' => 'yii\\rbac\\DbManager',\n   72          ],\n\nD:\\code\\galaxy\\star-modules\\auth\\filters\\AccessRule.php:\n   40              $keys = array_map(function($v) { return ucfirst($v); }, $keys);\n   41              $key = implode($keys);\n   42:             if(\\Yii::$app->authManager->getPermission($key)){\n   43                  return $user->can($key, $this->params);\n   44              }else{\n\n\n\nSearching 10695 files for \"GoogleOpenId\"\n\nD:\\code\\galaxy\\common\\config\\main.php:\n  102              'clients' => [\n  103                  'google' => [\n  104:                     'class' => 'yii\\authclient\\clients\\GoogleOpenId',\n  105                  ],\n  106                  'facebook' => [\n\nD:\\code\\galaxy\\star-core\\runtime\\debug\\5aa240920f292.data:\n    1: a:12:{s:6:\"config\";s:10355:\"a:5:{s:10:\"phpVersion\";s:15:\"7.0.27-0+deb9u1\";s:10:\"yiiVersion\";s:8:\"2.0.14.1\";s:11:\"application\";a:8:{s:3:\"yii\";s:8:\"2.0.14.1\";s:4:\"name\";s:14:\"My Application\";s:7:\"version\";s:3:\"1.0\";s:8:\"language\";s:5:\"zh-CN\";s:14:\"sourceLanguage\";s:5:\"en-US\";s:7:\"charset\";s:5:\"UTF-8\";s:3:\"env\";s:3:\"dev\";s:5:\"debug\";b:1;}s:3:\"php\";a:5:{s:7:\"version\";s:15:\"7.0.27-0+deb9u1\";s:6:\"xdebug\";b:0;s:3:\"apc\";b:0;s:8:\"memcache\";b:1;s:9:\"memcached\";b:1;}s:10:\"extensions\";a:46:{s:18:\"mdmsoft/yii2-admin\";a:3:{s:4:\"name\";s:18:\"mdmsoft/yii2-admin\";s:7:\"version\";s:7:\"2.8.0.0\";s:5:\"alias\";a:1:{s:10:\"@mdm/admin\";s:45:\"/work/d/code/galaxy/vendor/mdmsoft/yii2-admin\";}}s:22:\"yiisoft/yii2-bootstrap\";a:3:{s:4:\"name\";s:22:\"yiisoft/yii2-bootstrap\";s:7:\"version\";s:7:\"2.0.8.0\";s:5:\"alias\";a:1:{s:14:\"@yii/bootstrap\";s:53:\"/work/d/code/galaxy/vendor/yiisoft/yii2-bootstrap/src\";}}s:25:\"kartik-v/yii2-krajee-base\";a:3:{s:4:\"name\";s:25:\"kartik-v/yii2-krajee-base\";s:7:\"version\";s:7:\"1.8.9.0\";s:5:\"alias\";a:1:{s:12:\"@kartik/base\";s:52:\"/work/d/code/galaxy/vendor/kartik-v/yii2-krajee-base\";}}s:30:\"kartik-v/yii2-widget-typeahead\";a:3:{s:4:\"name\";s:30:\"kartik-v/yii2-widget-typeahead\";s:7:\"version\";s:7:\"1.0.1.0\";s:5:\"alias\";a:1:{s:17:\"@kartik/typeahead\";s:57:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-typeahead\";}}s:30:\"kartik-v/yii2-widget-touchspin\";a:3:{s:4:\"name\";s:30:\"kartik-v/yii2-widget-touchspin\";s:7:\"version\";s:7:\"1.2.1.0\";s:5:\"alias\";a:1:{s:17:\"@kartik/touchspin\";s:57:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-touchspin\";}}s:31:\"kartik-v/yii2-widget-timepicker\";a:3:{s:4:\"name\";s:31:\"kartik-v/yii2-widget-timepicker\";s:7:\"version\";s:7:\"1.0.3.0\";s:5:\"alias\";a:1:{s:12:\"@kartik/time\";s:58:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-timepicker\";}}s:32:\"kartik-v/yii2-widget-switchinput\";a:3:{s:4:\"name\";s:32:\"kartik-v/yii2-widget-switchinput\";s:7:\"version\";s:7:\"1.3.1.0\";s:5:\"alias\";a:1:{s:19:\"@kartik/switchinput\";s:59:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-switchinput\";}}s:28:\"kartik-v/yii2-widget-spinner\";a:3:{s:4:\"name\";s:28:\"kartik-v/yii2-widget-spinner\";s:7:\"version\";s:7:\"1.0.0.0\";s:5:\"alias\";a:1:{s:15:\"@kartik/spinner\";s:55:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-spinner\";}}s:28:\"kartik-v/yii2-widget-sidenav\";a:3:{s:4:\"name\";s:28:\"kartik-v/yii2-widget-sidenav\";s:7:\"version\";s:7:\"1.0.0.0\";s:5:\"alias\";a:1:{s:15:\"@kartik/sidenav\";s:55:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-sidenav\";}}s:28:\"kartik-v/yii2-widget-select2\";a:3:{s:4:\"name\";s:28:\"kartik-v/yii2-widget-select2\";s:7:\"version\";s:7:\"2.1.1.0\";s:5:\"alias\";a:1:{s:15:\"@kartik/select2\";s:55:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-select2\";}}s:27:\"kartik-v/yii2-widget-rating\";a:3:{s:4:\"name\";s:27:\"kartik-v/yii2-widget-rating\";s:7:\"version\";s:7:\"1.0.3.0\";s:5:\"alias\";a:1:{s:14:\"@kartik/rating\";s:54:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-rating\";}}s:31:\"kartik-v/yii2-widget-rangeinput\";a:3:{s:4:\"name\";s:31:\"kartik-v/yii2-widget-rangeinput\";s:7:\"version\";s:7:\"1.0.1.0\";s:5:\"alias\";a:1:{s:13:\"@kartik/range\";s:58:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-rangeinput\";}}s:26:\"kartik-v/yii2-widget-growl\";a:3:{s:4:\"name\";s:26:\"kartik-v/yii2-widget-growl\";s:7:\"version\";s:7:\"1.1.1.0\";s:5:\"alias\";a:1:{s:13:\"@kartik/growl\";s:53:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-growl\";}}s:30:\"kartik-v/yii2-widget-fileinput\";a:3:{s:4:\"name\";s:30:\"kartik-v/yii2-widget-fileinput\";s:7:\"version\";s:7:\"1.0.6.0\";s:5:\"alias\";a:1:{s:12:\"@kartik/file\";s:57:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-fileinput\";}}s:28:\"kartik-v/yii2-widget-depdrop\";a:3:{s:4:\"name\";s:28:\"kartik-v/yii2-widget-depdrop\";s:7:\"version\";s:7:\"1.0.4.0\";s:5:\"alias\";a:1:{s:15:\"@kartik/depdrop\";s:55:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-depdrop\";}}s:35:\"kartik-v/yii2-widget-datetimepicker\";a:3:{s:4:\"name\";s:35:\"kartik-v/yii2-widget-datetimepicker\";s:7:\"version\";s:7:\"1.4.4.0\";s:5:\"alias\";a:1:{s:16:\"@kartik/datetime\";s:62:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-datetimepicker\";}}s:31:\"kartik-v/yii2-widget-datepicker\";a:3:{s:4:\"name\";s:31:\"kartik-v/yii2-widget-datepicker\";s:7:\"version\";s:7:\"1.4.3.0\";s:5:\"alias\";a:1:{s:12:\"@kartik/date\";s:58:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-datepicker\";}}s:31:\"kartik-v/yii2-widget-colorinput\";a:3:{s:4:\"name\";s:31:\"kartik-v/yii2-widget-colorinput\";s:7:\"version\";s:7:\"1.0.3.0\";s:5:\"alias\";a:1:{s:13:\"@kartik/color\";s:58:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-colorinput\";}}s:26:\"kartik-v/yii2-widget-alert\";a:3:{s:4:\"name\";s:26:\"kartik-v/yii2-widget-alert\";s:7:\"version\";s:7:\"1.1.1.0\";s:5:\"alias\";a:1:{s:13:\"@kartik/alert\";s:53:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-alert\";}}s:26:\"kartik-v/yii2-widget-affix\";a:3:{s:4:\"name\";s:26:\"kartik-v/yii2-widget-affix\";s:7:\"version\";s:7:\"1.0.0.0\";s:5:\"alias\";a:1:{s:13:\"@kartik/affix\";s:53:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-affix\";}}s:31:\"kartik-v/yii2-widget-activeform\";a:3:{s:4:\"name\";s:31:\"kartik-v/yii2-widget-activeform\";s:7:\"version\";s:7:\"1.4.9.0\";s:5:\"alias\";a:1:{s:12:\"@kartik/form\";s:58:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widget-activeform\";}}s:21:\"kartik-v/yii2-widgets\";a:3:{s:4:\"name\";s:21:\"kartik-v/yii2-widgets\";s:7:\"version\";s:7:\"3.4.0.0\";s:5:\"alias\";a:1:{s:15:\"@kartik/widgets\";s:48:\"/work/d/code/galaxy/vendor/kartik-v/yii2-widgets\";}}s:20:\"kartik-v/yii2-dialog\";a:3:{s:4:\"name\";s:20:\"kartik-v/yii2-dialog\";s:7:\"version\";s:7:\"1.0.3.0\";s:5:\"alias\";a:1:{s:14:\"@kartik/dialog\";s:47:\"/work/d/code/galaxy/vendor/kartik-v/yii2-dialog\";}}s:18:\"kartik-v/yii2-grid\";a:3:{s:4:\"name\";s:18:\"kartik-v/yii2-grid\";s:7:\"version\";s:7:\"3.1.7.0\";s:5:\"alias\";a:1:{s:12:\"@kartik/grid\";s:45:\"/work/d/code/galaxy/vendor/kartik-v/yii2-grid\";}}s:23:\"mihaildev/yii2-ckeditor\";a:3:{s:4:\"name\";s:23:\"mihaildev/yii2-ckeditor\";s:7:\"version\";s:7:\"1.0.1.0\";s:5:\"alias\";a:1:{s:19:\"@mihaildev/ckeditor\";s:50:\"/work/d/code/galaxy/vendor/mihaildev/yii2-ckeditor\";}}s:16:\"yiisoft/yii2-jui\";a:3:{s:4:\"name\";s:16:\"yiisoft/yii2-jui\";s:7:\"version\";s:7:\"2.0.7.0\";s:5:\"alias\";a:1:{s:8:\"@yii/jui\";s:43:\"/work/d/code/galaxy/vendor/yiisoft/yii2-jui\";}}s:23:\"mihaildev/yii2-elfinder\";a:3:{s:4:\"name\";s:23:\"mihaildev/yii2-elfinder\";s:7:\"version\";s:7:\"1.2.2.0\";s:5:\"alias\";a:1:{s:19:\"@mihaildev/elfinder\";s:50:\"/work/d/code/galaxy/vendor/mihaildev/yii2-elfinder\";}}s:27:\"2amigos/yii2-gallery-widget\";a:3:{s:4:\"name\";s:27:\"2amigos/yii2-gallery-widget\";s:7:\"version\";s:7:\"1.1.0.0\";s:5:\"alias\";a:1:{s:18:\"@dosamigos/gallery\";s:58:\"/work/d/code/galaxy/vendor/2amigos/yii2-gallery-widget/src\";}}s:31:\"2amigos/yii2-file-upload-widget\";a:3:{s:4:\"name\";s:31:\"2amigos/yii2-file-upload-widget\";s:7:\"version\";s:7:\"1.0.8.0\";s:5:\"alias\";a:1:{s:21:\"@dosamigos/fileupload\";s:62:\"/work/d/code/galaxy/vendor/2amigos/yii2-file-upload-widget/src\";}}s:26:\"creocoder/yii2-nested-sets\";a:3:{s:4:\"name\";s:26:\"creocoder/yii2-nested-sets\";s:7:\"version\";s:7:\"0.9.0.0\";s:5:\"alias\";a:1:{s:21:\"@creocoder/nestedsets\";s:57:\"/work/d/code/galaxy/vendor/creocoder/yii2-nested-sets/src\";}}s:21:\"gilek/yii2-gtreetable\";a:3:{s:4:\"name\";s:21:\"gilek/yii2-gtreetable\";s:7:\"version\";s:7:\"1.1.3.0\";s:5:\"alias\";a:1:{s:17:\"@gilek/gtreetable\";s:48:\"/work/d/code/galaxy/vendor/gilek/yii2-gtreetable\";}}s:23:\"yiisoft/yii2-httpclient\";a:3:{s:4:\"name\";s:23:\"yiisoft/yii2-httpclient\";s:7:\"version\";s:7:\"2.0.6.0\";s:5:\"alias\";a:1:{s:15:\"@yii/httpclient\";s:54:\"/work/d/code/galaxy/vendor/yiisoft/yii2-httpclient/src\";}}s:23:\"yiisoft/yii2-authclient\";a:3:{s:4:\"name\";s:23:\"yiisoft/yii2-authclient\";s:7:\"version\";s:7:\"2.1.5.0\";s:5:\"alias\";a:1:{s:15:\"@yii/authclient\";s:54:\"/work/d/code/galaxy/vendor/yiisoft/yii2-authclient/src\";}}s:24:\"yiisoft/yii2-swiftmailer\";a:3:{s:4:\"name\";s:24:\"yiisoft/yii2-swiftmailer\";s:7:\"version\";s:7:\"2.0.7.0\";s:5:\"alias\";a:1:{s:16:\"@yii/swiftmailer\";s:51:\"/work/d/code/galaxy/vendor/yiisoft/yii2-swiftmailer\";}}s:18:\"dektrium/yii2-user\";a:4:{s:4:\"name\";s:18:\"dektrium/yii2-user\";s:7:\"version\";s:8:\"0.9.13.0\";s:5:\"alias\";a:1:{s:14:\"@dektrium/user\";s:45:\"/work/d/code/galaxy/vendor/dektrium/yii2-user\";}s:9:\"bootstrap\";s:23:\"dektrium\\user\\Bootstrap\";}s:24:\"pheme/yii2-toggle-column\";a:3:{s:4:\"name\";s:24:\"pheme/yii2-toggle-column\";s:7:\"version\";s:7:\"0.7.0.0\";s:5:\"alias\";a:1:{s:11:\"@pheme/grid\";s:51:\"/work/d/code/galaxy/vendor/pheme/yii2-toggle-column\";}}s:19:\"pheme/yii2-settings\";a:3:{s:4:\"name\";s:19:\"pheme/yii2-settings\";s:7:\"version\";s:7:\"0.5.0.0\";s:5:\"alias\";a:1:{s:15:\"@pheme/settings\";s:46:\"/work/d/code/galaxy/vendor/pheme/yii2-settings\";}}s:28:\"omnilight/yii2-shopping-cart\";a:3:{s:4:\"name\";s:28:\"omnilight/yii2-shopping-cart\";s:7:\"version\";s:7:\"1.2.2.0\";s:5:\"alias\";a:1:{s:16:\"@yz/shoppingcart\";s:55:\"/work/d/code/galaxy/vendor/omnilight/yii2-shopping-cart\";}}s:27:\"c006/yii2-migration-utility\";a:3:{s:4:\"name\";s:27:\"c006/yii2-migration-utility\";s:7:\"version\";s:11:\"9999999-dev\";s:5:\"alias\";a:1:{s:23:\"@c006/utility/migration\";s:54:\"/work/d/code/galaxy/vendor/c006/yii2-migration-utility\";}}s:20:\"yiisoft/yii2-imagine\";a:3:{s:4:\"name\";s:20:\"yiisoft/yii2-imagine\";s:7:\"version\";s:7:\"2.1.1.0\";s:5:\"alias\";a:1:{s:12:\"@yii/imagine\";s:51:\"/work/d/code/galaxy/vendor/yiisoft/yii2-imagine/src\";}}s:41:\"himiklab/yii2-easy-thumbnail-image-helper\";a:3:{s:4:\"name\";s:41:\"himiklab/yii2-easy-thumbnail-image-helper\";s:7:\"version\";s:7:\"1.1.1.0\";s:5:\"alias\";a:1:{s:19:\"@himiklab/thumbnail\";s:68:\"/work/d/code/galaxy/vendor/himiklab/yii2-easy-thumbnail-image-helper\";}}s:18:\"dektrium/yii2-rbac\";a:4:{s:4:\"name\";s:18:\"dektrium/yii2-rbac\";s:7:\"version\";s:11:\"9999999-dev\";s:5:\"alias\";a:1:{s:14:\"@dektrium/rbac\";s:45:\"/work/d/code/galaxy/vendor/dektrium/yii2-rbac\";}s:9:\"bootstrap\";s:23:\"dektrium\\rbac\\Bootstrap\";}s:24:\"yiisoft/yii2-codeception\";a:3:{s:4:\"name\";s:24:\"yiisoft/yii2-codeception\";s:7:\"version\";s:7:\"2.0.6.0\";s:5:\"alias\";a:1:{s:16:\"@yii/codeception\";s:51:\"/work/d/code/galaxy/vendor/yiisoft/yii2-codeception\";}}s:18:\"yiisoft/yii2-debug\";a:3:{s:4:\"name\";s:18:\"yiisoft/yii2-debug\";s:7:\"version\";s:8:\"2.0.13.0\";s:5:\"alias\";a:1:{s:10:\"@yii/debug\";s:45:\"/work/d/code/galaxy/vendor/yiisoft/yii2-debug\";}}s:16:\"yiisoft/yii2-gii\";a:3:{s:4:\"name\";s:16:\"yiisoft/yii2-gii\";s:7:\"version\";s:7:\"2.0.6.0\";s:5:\"alias\";a:1:{s:8:\"@yii/gii\";s:43:\"/work/d/code/galaxy/vendor/yiisoft/yii2-gii\";}}s:18:\"yiisoft/yii2-faker\";a:3:{s:4:\"name\";s:18:\"yiisoft/yii2-faker\";s:7:\"version\";s:7:\"2.0.4.0\";s:5:\"alias\";a:1:{s:10:\"@yii/faker\";s:45:\"/work/d/code/galaxy/vendor/yiisoft/yii2-faker\";}}}}\";s:7:\"request\";s:3343:\"a:15:{s:7:\"flashes\";a:0:{}s:10:\"statusCode\";i:500;s:14:\"requestHeaders\";a:9:{s:6:\"cookie\";s:210:\"PHPSESSID=e5f1he49e4q7oolvbf99u2fpm6; _csrf=8c061b2d8ea38cecc78953d0f69499c3db9976161695548a776bff5105209afca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225pGx-nnOAjhsIqMUPK_mS2mdJ7i3XJ7F%22%3B%7D\";s:15:\"accept-language\";s:14:\"zh-CN,zh;q=0.8\";s:15:\"accept-encoding\";s:19:\"gzip, deflate, sdch\";s:6:\"accept\";s:74:\"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\";s:10:\"user-agent\";s:109:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36\";s:25:\"upgrade-insecure-requests\";s:1:\"1\";s:13:\"cache-control\";s:9:\"max-age=0\";s:10:\"connection\";s:10:\"keep-alive\";s:4:\"host\";s:19:\"star_core.dev:10080\";}s:15:\"responseHeaders\";a:4:{s:7:\"Expires\";s:29:\"Thu, 19 Nov 1981 08:52:00 GMT\";s:13:\"Cache-Control\";s:35:\"no-store, no-cache, must-revalidate\";s:6:\"Pragma\";s:8:\"no-cache\";s:12:\"Content-Type\";s:24:\"text/html; charset=UTF-8\";}s:5:\"route\";s:19:\"user/security/login\";s:6:\"action\";s:59:\"dektrium\\user\\controllers\\SecurityController::actionLogin()\";s:12:\"actionParams\";a:0:{}s:7:\"general\";a:5:{s:6:\"method\";s:3:\"GET\";s:6:\"isAjax\";b:0;s:6:\"isPjax\";b:0;s:7:\"isFlash\";b:0;s:18:\"isSecureConnection\";b:0;}s:11:\"requestBody\";a:0:{}s:6:\"SERVER\";a:34:{s:4:\"USER\";s:8:\"www-data\";s:4:\"HOME\";s:8:\"/var/www\";s:11:\"HTTP_COOKIE\";s:210:\"PHPSESSID=e5f1he49e4q7oolvbf99u2fpm6; _csrf=8c061b2d8ea38cecc78953d0f69499c3db9976161695548a776bff5105209afca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225pGx-nnOAjhsIqMUPK_mS2mdJ7i3XJ7F%22%3B%7D\";s:20:\"HTTP_ACCEPT_LANGUAGE\";s:14:\"zh-CN,zh;q=0.8\";s:20:\"HTTP_ACCEPT_ENCODING\";s:19:\"gzip, deflate, sdch\";s:11:\"HTTP_ACCEPT\";s:74:\"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\";s:15:\"HTTP_USER_AGENT\";s:109:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36\";s:30:\"HTTP_UPGRADE_INSECURE_REQUESTS\";s:1:\"1\";s:18:\"HTTP_CACHE_CONTROL\";s:9:\"max-age=0\";s:15:\"HTTP_CONNECTION\";s:10:\"keep-alive\";s:9:\"HTTP_HOST\";s:19:\"star_core.dev:10080\";s:15:\"SCRIPT_FILENAME\";s:43:\"/work/d/code/galaxy/star-core/web/index.php\";s:15:\"REDIRECT_STATUS\";s:3:\"200\";s:11:\"SERVER_NAME\";s:13:\"star_core.dev\";s:11:\"SERVER_PORT\";s:2:\"80\";s:11:\"SERVER_ADDR\";s:10:\"172.17.0.5\";s:11:\"REMOTE_PORT\";s:5:\"43720\";s:11:\"REMOTE_ADDR\";s:10:\"172.17.0.1\";s:15:\"SERVER_SOFTWARE\";s:12:\"nginx/1.10.3\";s:17:\"GATEWAY_INTERFACE\";s:7:\"CGI/1.1\";s:14:\"REQUEST_SCHEME\";s:4:\"http\";s:15:\"SERVER_PROTOCOL\";s:8:\"HTTP/1.1\";s:13:\"DOCUMENT_ROOT\";s:33:\"/work/d/code/galaxy/star-core/web\";s:12:\"DOCUMENT_URI\";s:10:\"/index.php\";s:11:\"REQUEST_URI\";s:11:\"/user/login\";s:11:\"SCRIPT_NAME\";s:10:\"/index.php\";s:14:\"CONTENT_LENGTH\";s:0:\"\";s:12:\"CONTENT_TYPE\";s:0:\"\";s:14:\"REQUEST_METHOD\";s:3:\"GET\";s:12:\"QUERY_STRING\";s:0:\"\";s:9:\"FCGI_ROLE\";s:9:\"RESPONDER\";s:8:\"PHP_SELF\";s:10:\"/index.php\";s:18:\"REQUEST_TIME_FLOAT\";d:1520582801.8626621;s:12:\"REQUEST_TIME\";i:1520582801;}s:3:\"GET\";a:0:{}s:4:\"POST\";a:0:{}s:6:\"COOKIE\";a:2:{s:9:\"PHPSESSID\";s:26:\"e5f1he49e4q7oolvbf99u2fpm6\";s:5:\"_csrf\";s:130:\"8c061b2d8ea38cecc78953d0f69499c3db9976161695548a776bff5105209afca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5pGx-nnOAjhsIqMUPK_mS2mdJ7i3XJ7F\";}\";}s:5:\"FILES\";a:0:{}s:7:\"SESSION\";a:2:{s:7:\"__flash\";a:0:{}s:11:\"__returnUrl\";s:1:\"/\";}}\";s:3:\"log\";s:12953:\"a:1:{s:8:\"messages\";a:47:{i:0;a:6:{i:0;s:51:\"Bootstrap with dektrium\\user\\Bootstrap::bootstrap()\";i:1;i:8;i:2;s:31:\"yii\\base\\Application::bootstrap\";i:3;d:1520582801.922406;i:4;a:0:{}i:5;i:899888;}i:1;a:6:{i:0;s:20:\"Loading module: user\";i:1;i:8;i:2;s:26:\"yii\\base\\Module::getModule\";i:3;d:1520582801.922421;i:4;a:0:{}i:5;i:900688;}i:2;a:6:{i:0;s:51:\"Bootstrap with dektrium\\rbac\\Bootstrap::bootstrap()\";i:1;i:8;i:2;s:31:\"yii\\base\\Application::bootstrap\";i:3;d:1520582801.9730949;i:4;a:0:{}i:5;i:1261440;}i:3;a:6:{i:0;s:20:\"Loading module: rbac\";i:1;i:8;i:2;s:26:\"yii\\base\\Module::getModule\";i:3;d:1520582801.973114;i:4;a:0:{}i:5;i:1261864;}i:4;a:6:{i:0;s:33:\"Bootstrap with yii\\log\\Dispatcher\";i:1;i:8;i:2;s:31:\"yii\\base\\Application::bootstrap\";i:3;d:1520582801.9925289;i:4;a:0:{}i:5;i:1393544;}i:5;a:6:{i:0;s:46:\"Bootstrap with matter\\Gravitation::bootstrap()\";i:1;i:8;i:2;s:31:\"yii\\base\\Application::bootstrap\";i:3;d:1520582801.996815;i:4;a:0:{}i:5;i:1394840;}i:6;a:6:{i:0;s:35:\"Bootstrap with yii\\base\\Application\";i:1;i:8;i:2;s:31:\"yii\\base\\Application::bootstrap\";i:3;d:1520582802.010036;i:4;a:0:{}i:5;i:1402160;}i:7;a:6:{i:0;s:21:\"Loading module: debug\";i:1;i:8;i:2;s:26:\"yii\\base\\Module::getModule\";i:3;d:1520582802.010067;i:4;a:0:{}i:5;i:1403160;}i:8;a:6:{i:0;s:15:\"Session started\";i:1;i:4;i:2;s:21:\"yii\\web\\Session::open\";i:3;d:1520582802.0576401;i:4;a:0:{}i:5;i:1585776;}i:9;a:6:{i:0;s:44:\"Bootstrap with yii\\debug\\Module::bootstrap()\";i:1;i:8;i:2;s:31:\"yii\\base\\Application::bootstrap\";i:3;d:1520582802.0615129;i:4;a:0:{}i:5;i:1650880;}i:10;a:6:{i:0;s:19:\"Loading module: gii\";i:1;i:8;i:2;s:26:\"yii\\base\\Module::getModule\";i:3;d:1520582802.0643549;i:4;a:0:{}i:5;i:1662952;}i:11;a:6:{i:0;s:42:\"Bootstrap with yii\\gii\\Module::bootstrap()\";i:1;i:8;i:2;s:31:\"yii\\base\\Application::bootstrap\";i:3;d:1520582802.0653851;i:4;a:0:{}i:5;i:1668400;}i:21;a:6:{i:0;s:38:\"Route requested: 'user/security/login'\";i:1;i:8;i:2;s:34:\"yii\\web\\Application::handleRequest\";i:3;d:1520582802.0696909;i:4;a:0:{}i:5;i:1697752;}i:22;a:6:{i:0;s:33:\"Route to run: user/security/login\";i:1;i:8;i:2;s:30:\"yii\\base\\Controller::runAction\";i:3;d:1520582802.0769849;i:4;a:0:{}i:5;i:1725272;}i:23;a:6:{i:0;s:75:\"Running action: dektrium\\user\\controllers\\SecurityController::actionLogin()\";i:1;i:8;i:2;s:36:\"yii\\base\\InlineAction::runWithParams\";i:3;d:1520582802.0803449;i:4;a:0:{}i:5;i:1744984;}i:24;a:6:{i:0;s:91:\"Rendering view file: /work/d/code/galaxy/vendor/dektrium/yii2-user/views/security/login.php\";i:1;i:8;i:2;s:25:\"yii\\base\\View::renderFile\";i:3;d:1520582802.084908;i:4;a:1:{i:0;a:5:{s:4:\"file\";s:80:\"/work/d/code/galaxy/vendor/dektrium/yii2-user/controllers/SecurityController.php\";s:4:\"line\";i:166;s:8:\"function\";s:6:\"render\";s:5:\"class\";s:19:\"yii\\base\\Controller\";s:4:\"type\";s:2:\"->\";}}i:5;i:1836472;}i:25;a:6:{i:0;s:83:\"Rendering view file: /work/d/code/galaxy/vendor/dektrium/yii2-user/views/_alert.php\";i:1;i:8;i:2;s:25:\"yii\\base\\View::renderFile\";i:3;d:1520582802.0889189;i:4;a:2:{i:0;a:5:{s:4:\"file\";s:70:\"/work/d/code/galaxy/vendor/dektrium/yii2-user/views/security/login.php\";s:4:\"line\";i:27;s:8:\"function\";s:6:\"render\";s:5:\"class\";s:13:\"yii\\base\\View\";s:4:\"type\";s:2:\"->\";}i:1;a:5:{s:4:\"file\";s:80:\"/work/d/code/galaxy/vendor/dektrium/yii2-user/controllers/SecurityController.php\";s:4:\"line\";i:166;s:8:\"function\";s:6:\"render\";s:5:\"class\";s:19:\"yii\\base\\Controller\";s:4:\"type\";s:2:\"->\";}}i:5;i:1860752;}i:26;a:6:{i:0;s:3234:\"ReflectionException: Class yii\\authclient\\clients\\GoogleOpenId does not exist in /work/d/code/galaxy/vendor/yiisoft/yii2/di/Container.php:428\n    2  Stack trace:\n    3  #0 /work/d/code/galaxy/vendor/yiisoft/yii2/di/Container.php(428): ReflectionClass->__construct('yii\\\\authclient\\\\...')\n\nD:\\code\\galaxy\\star-core\\runtime\\logs\\app.log:\n  127      'REQUEST_TIME' => 1520581187\n  128  ]\n  129: 2018-03-09 16:06:42 [172.17.0.1][-][e5f1he49e4q7oolvbf99u2fpm6][error][ReflectionException] ReflectionException: Class yii\\authclient\\clients\\GoogleOpenId does not exist in /work/d/code/galaxy/vendor/yiisoft/yii2/di/Container.php:428\n  130  Stack trace:\n  131  #0 /work/d/code/galaxy/vendor/yiisoft/yii2/di/Container.php(428): ReflectionClass->__construct('yii\\\\authclient\\\\...')\n\n\n\nSearching 3823 files for \"GoogleOpenId\"\n\nD:\\code\\galaxy\\common\\config\\main.php:\n  102              'clients' => [\n  103                  'google' => [\n  104:                     'class' => 'yii\\authclient\\clients\\GoogleOpenId',\n  105                  ],\n  106                  'facebook' => [\n\n1 match in 1 file\n\n\nSearching 45 files for \"withdrawal\"\n\nD:\\code\\galaxy\\console\\data\\galaxy-2015.6.24.sql:\n 4685  \n 4686  -- ----------------------------\n 4687: -- Table structure for `withdrawal`\n 4688  -- ----------------------------\n 4689: DROP TABLE IF EXISTS `withdrawal`;\n 4690: CREATE TABLE `withdrawal` (\n 4691:   `withdrawal_id` int(11) NOT NULL AUTO_INCREMENT,\n 4692    `user_id` int(11) NOT NULL,\n 4693:   `withdrawal_fee` double DEFAULT NULL,\n 4694:   `withdrawal_account` varchar(255) DEFAULT NULL,\n 4695    `account_name` varchar(255) DEFAULT NULL,\n 4696    `status` int(11) NOT NULL DEFAULT '0',\n 4697    `create_at` int(11) NOT NULL,\n 4698    `update_at` int(11) NOT NULL,\n 4699:   PRIMARY KEY (`withdrawal_id`)\n 4700  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;\n 4701  \n 4702  -- ----------------------------\n 4703: -- Records of withdrawal\n 4704  -- ----------------------------\n 4705  \n\n8 matches in 1 file\n\n\nSearching 45 files for \"refund\"\n\n0 matches",
 			"settings":
 			{
-				"buffer_size": 1074,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sh/startNP",
-			"settings":
-			{
-				"buffer_size": 1902,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 4674 files for \"/api/api/\"\n\nD:\\code\\yii2apps_tiens\\backend\\controllers\\UploadController.php:\n   86          $file_url = str_replace('\\\\', '/', $file_url);\n   87  \n   88:         $url = \\Yii::$app->params['weiyuan_api_host'] . '/api/api/document/saveFile';\n   89          $res = Curl::curl_post_file($file_url, $url);\n   90          $res = json_decode($res, true);\n\nD:\\code\\yii2apps_tiens\\backend\\controllers\\XieyimobanController.php:\n  138              }\n  139              $curl = new curl\\Curl();\n  140:             $url = \\Yii::$app->params['weiyuan_api_host'] . '/api/api/preView/pdfPreviewSignatureAdjust';\n  141              if ($curl->errorCode === null) {\n  142                  $response = $curl->setPostParams([\n\nD:\\code\\yii2apps_tiens\\common\\web_api\\weiyuan\\WeiyuanApi.php:\n   14       **/\n   15      static public  function getDocument($documentId,$is_full_url='',$document_type='png'){\n   16:         $res=Curl::curl_post_json(\\Yii::$app->params['weiyuan_api_host'].'/api/api/document/findDocumentListById',['documentId'=>$documentId]);\n   17          $res=json_decode($res,true);\n   18          if(!isset($res['status'])||$res['status']!=1000||!isset($res['result'])||$res['result']==''){\n\nD:\\code\\yii2apps_tiens\\frontend\\controllers\\UploadController.php:\n   93          $file_url = '@' . dirname(dirname(__FILE__)) . '/web/' . $filePath;\n   94          $file_url = str_replace('\\\\', '/', $file_url);\n   95:         $res = Curl::curl_post_file($file_url, \\Yii::$app->params['weiyuan_api_host'] . '/api/api/document/saveFile');\n   96          die(json_encode($res));\n   97          die('{\"jsonrpc\" : \"2.0\", \"error\" : {\"code\": 0}, \"result\": \"/' . $filePath . '\" ,\"real\":\"/' . $filePath . '\", \"id\" : \"id\"}');\n\n4 matches across 4 files\n",
-			"settings":
-			{
-				"buffer_size": 1756,
+				"buffer_size": 32870,
 				"line_ending": "Unix",
 				"name": "Find Results",
 				"scratch": true
 			}
 		},
 		{
-			"file": "/D/code/yii2apps_tiens/common/web_api/weiyuan/WeiyuanApi.php",
+			"file": "sh/debian8NginxPy3Php7.sh",
 			"settings":
 			{
-				"buffer_size": 3134,
+				"buffer_size": 1244,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/code/yii2apps_tiens/common/web_api/Curl.php",
+			"contents": "<?php\n\n$config = [\n    'components' => [\n        'db' => [\n            'class' => 'yii\\db\\Connection',\n            'dsn' => 'mysql:host=10.0.75.1;dbname=moblog',\n            'username' => 'root',\n            'password' => 'root',\n            'charset' => 'utf8',\n            'tablePrefix' => 'moblog_',\n        ],\n        'mailer' => [\n            'class' => 'yii\\swiftmailer\\Mailer',\n            'viewPath' => '@common/mail',\n            // send all mails to a file by default. You have to set\n            // 'useFileTransport' to false and configure a transport\n            // for the mailer to send real emails.\n            'useFileTransport' => true,\n        ],\n    ],\n];\nif (YII_ENV_DEV) {\n    // configuration adjustments for 'dev' environment\n    $config['bootstrap'][] = 'debug';\n    $config['modules']['debug'] = [\n        'class' => 'yii\\debug\\Module',\n        'allowedIPs' => ['192.168.*'],\n    ];\n\n    $config['bootstrap'][] = 'gii';\n    $config['modules']['gii'] = [\n        'class' => 'yii\\gii\\Module',\n        'allowedIPs' => ['192.168.*'],\n    ];\n}\n\nreturn $config;\n",
+			"file": "/D/code/MoBlog/common/config/main-local.php",
+			"file_size": 1082,
+			"file_write_time": 131650595742004092,
 			"settings":
 			{
-				"buffer_size": 3262,
-				"encoding": "UTF-8",
+				"buffer_size": 1082,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n$params = array_merge(\n    require(__DIR__ . '/../../common/config/params.php'),\n    require(__DIR__ . '/../../common/config/params-local.php'),\n    require(__DIR__ . '/params.php'),\n    require(__DIR__ . '/params-local.php')\n);\n\nreturn [\n    'id' => 'app-backend',\n    'basePath' => dirname(__DIR__),\n    'controllerNamespace' => 'backend\\controllers',\n    'bootstrap' => ['log'],\n    'modules' => [],\n    'components' => [\n        'user' => [\n            'identityClass' => 'common\\models\\User',\n            'enableAutoLogin' => true,\n        ],\n        'log' => [\n            'traceLevel' => YII_DEBUG ? 3 : 0,\n            'targets' => [\n                [\n                    'class' => 'yii\\log\\FileTarget',\n                    'levels' => ['error', 'warning'],\n                ],\n            ],\n        ],\n        'errorHandler' => [\n            'errorAction' => 'site/error',\n        ],\n        'frontendUrlManager' => require(__DIR__ . '/../../common/config/FrontendUrlManager.php'),\n    ],\n    'params' => $params,\n];\n",
+			"file": "/D/code/MoBlog/backend/config/main.php",
+			"file_size": 1032,
+			"file_write_time": 131650349611733009,
+			"settings":
+			{
+				"buffer_size": 1032,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\ndefined('YII_DEBUG') or define('YII_DEBUG', true);\ndefined('YII_ENV') or define('YII_ENV', 'dev');\n\nrequire(__DIR__ . '/../../vendor/autoload.php');\nrequire(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');\nrequire(__DIR__ . '/../../common/config/bootstrap.php');\nrequire(__DIR__ . '/../config/bootstrap.php');\n\n$config = yii\\helpers\\ArrayHelper::merge(\n    require(__DIR__ . '/../../common/config/main.php'),\n    require(__DIR__ . '/../../common/config/main-local.php'),\n    require(__DIR__ . '/../config/main.php'),\n    require(__DIR__ . '/../config/main-local.php')\n);\n\n$application = new yii\\web\\Application($config);\n$application->run();\n",
+			"file": "/D/code/MoBlog/backend/web/index.php",
+			"file_size": 648,
+			"file_write_time": 131650357984244119,
+			"settings":
+			{
+				"buffer_size": 648,
 				"line_ending": "Unix"
 			}
 		}
@@ -442,14 +461,129 @@
 	},
 	"expanded_folders":
 	[
-		"/D/tbqapp2",
-		"/D/tbqapp2/sh",
-		"/D/code/yiicms"
 	],
 	"file_history":
 	[
-		"/D/code/yii2blog/nginx.htaccess",
+		"/D/code/MoBlog/web/index.php",
+		"/D/code/MoBlog/web/admin.php",
+		"/D/code/galaxy/common/config/main.php",
+		"/D/code/galaxy/console/data/galaxy-2015.6.24.sql",
+		"/D/code/galaxy/star-core/config/main.php",
+		"/D/code/galaxy/vendor/dektrium/yii2-rbac/components/DbManager.php",
+		"/D/code/galaxy/vendor/dektrium/yii2-rbac/Bootstrap.php",
+		"/D/code/galaxy/vendor/dektrium/yii2-user/Module.php",
+		"/D/code/galaxy/vendor/dektrium/yii2-rbac/RbacWebModule.php",
+		"/D/code/galaxy/composer.json",
+		"/D/code/funshop/composer.json",
+		"/D/code/MoBlog/nginx.conf",
+		"/D/code/MoBlog/runtime/.gitignore",
+		"/D/code/galaxy/nginx.conf",
+		"/D/code/galaxy/common/config/main-local.php",
+		"/D/code/yii2apps_tiens/composer.json",
+		"/D/code/yii2_fecshop_app_advanced/vendor/fancyecommerce/fecshop/app/appfront/modules/Customer/controllers/AccountController.php",
+		"/D/code/yii2cms_liufee/composer.json",
+		"/D/code/dcms2/composer.json",
+		"/D/tbqapp2/sh/debian8NginxPy3Php7.sh",
+		"/D/code/yii2_fecshop_app_advanced/appfront/web/index.php",
+		"/D/code/yii2_fecshop_app_advanced/vendor/fancyecommerce/fecshop/services/Application.php",
+		"/D/code/yii2_fecshop_app_advanced/common/config/YiiRewriteMap.php",
+		"/D/code/yii2_fecshop_app_advanced/appfront/config/YiiRewriteMap.php",
+		"/D/code/yii2_fecshop_app_advanced/appfront/local/local_modules/Mytest/controllers/CustomerController.php",
+		"/D/code/yii2_fecshop_app_advanced/appfront/config/fecshop_local.php",
+		"/D/code/yii2_fecshop_app_advanced/common/config/fecshop_local_services/FecshopLang.php",
+		"/D/code/yii2_fecshop_app_advanced/appfront/config/fecshop_local_services/FecshopLang.php",
+		"/D/code/yii2_fecshop_app_advanced/appadmin/config/fecshop_local_services/FecshopLang.php",
+		"/D/code/yii2_fecshop_app_advanced/vendor/fancyecommerce/fecshop/config/services/FecshopLang.php",
+		"/D/code/yii2_fecshop_app_advanced/nginx.conf",
+		"/D/code/yii2_fecshop_app_advanced/console/config/fecshop_local_services/Sitemap.php",
+		"/D/code/yii2_fecshop_app_advanced/appfront/config/fecshop_local_services/Store.php",
+		"/D/code/yii2_fecshop_app_advanced/vendor/fancyecommerce/fecshop/app/appfront/config/appfront.php",
+		"/D/code/yii2_fecshop_app_advanced/vendor/fancyecommerce/fecshop/services/Store.php",
+		"/D/code/yii2_fecshop_app_advanced/vendor/fancyecommerce/fecshop/app/apphtml5/config/apphtml5.php",
+		"/D/code/yii2_fecshop_app_advanced/appfront/config/fecshop_local_services/Store_prod.php",
+		"/D/code/yii2_fecshop_app_advanced/vendor/fancyecommerce/fecshop/config/components/Store.php",
+		"/D/code/yii2_fecshop_app_advanced/vendor/fancyecommerce/fecshop/components/Store.php",
+		"/D/code/yii2_fecshop_app_advanced/README.md",
+		"/D/code/yii2_fecshop_app_advanced/logs/.gitignore",
+		"/E/环境配置文件/usr/local/nginx/conf/nginx.conf",
+		"/D/code/yii2cms_liufee/nginx.conf",
+		"/D/code/yii2_fecshop_app_advanced/.git/config",
+		"/D/code/yii2_fecshop_app_advanced/common/config/.gitignore",
+		"/D/code/yii2_fecshop_app_advanced/.gitignore",
+		"/D/code/yii2_fecshop_app_advanced/vendor/fancyecommerce/fecshop/migrations/README.md",
+		"/E/环境配置文件/usr/local/nginx/conf/conf.d/default.conf",
+		"/D/code/yii2_fecshop_app_advanced/common/config/main-local.php",
+		"/D/code/phpcms.tiens.com/statics/js/swfupload/handlers.js",
+		"/D/code/yii2_fecshop/composer.json",
+		"/D/code/yii2_fecshop/README.md",
+		"/D/code/yii2_fecshop_app_advanced/composer.json",
+		"/D/code/yii2BasicAdmin/composer.json",
+		"/D/code/phpcms.tiens.com/crossdomain.xml",
+		"/D/code/www.tiens.com/.gitignore",
+		"/D/code/www.tiens.com/header.php",
+		"/D/code/phpcms.tiens.com/statics/js/swfupload/unpack_swfupload.js",
+		"/D/code/yii2apps_tiens/backend/controllers/EmployeeLearningController.php",
+		"/D/code/yii2apps_tiens/backend/views/employee-learning/files_view.tpl",
+		"/D/code/yii2apps_tiens/backend/views/employee-learning/files_manager.tpl",
+		"/D/code/yii2apps_tiens/backend/controllers/YiqianxieyiController.php",
+		"/D/code/yii2apps_tiens/backend/controllers/XieyimobanController.php",
+		"/D/code/yii2apps_tiens/backend/views/xieyimoban/add.tpl",
+		"/D/code/yii2apps_tiens/backend/controllers/StudyFileController.php",
 		"/D/code/yii2apps_tiens/backend/runtime/logs/app.log",
+		"/D/code/yii2apps_tiens/vendor/yiisoft/yii2/db/Command.php",
+		"/D/code/yii2apps_tiens/vendor/yiisoft/yii2/db/Connection.php",
+		"/D/code/yii2apps_tiens/backend/views/employee-learning/index.tpl",
+		"/D/code/yii2apps_tiens/backend/models/ApplicantStudyDocument.php",
+		"/D/code/yii2apps_tiens/backend/runtime/Smarty/compile/0bae3fa3ff8fb6dbc022bb1573930f686d53f071_0.file.files_manager.tpl.php",
+		"/D/code/yii2apps_tiens/backend/views/study-file/index.tpl",
+		"/D/code/yii2apps_tiens/backend/views/xieyimoban/index.tpl",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/update.php",
+		"/D/code/www.tiens.com/footer.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/afterpay.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/order.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/task/changdaojiance.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/aftersales.php",
+		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/order.php",
+		"/C/Users/Administrator/Documents/s1s.csv",
+		"/D/code/yii2apps_tiens/vendor/yiisoft/yii2/db/QueryTrait.php",
+		"/D/code/yii2apps_tiens/vendor/yiisoft/yii2/db/QueryInterface.php",
+		"/D/code/tjtjs-ecstore/custom/b2c/lib/tasks/order/addencrypt.php",
+		"/D/code/yii2apps_tiens/backend/views/employee-learning/add.tpl",
+		"/D/code/tjtjs-ecstore/app/b2c/lib/order/pay.php",
+		"/D/code/yii2BasicAdmin/.git/config",
+		"/D/code/tbq_static/.git/config",
+		"/D/code/yiicms_qiyezhan/.git/config",
+		"/D/code/yii2cms_liufee/.git/config",
+		"/D/code/flaskblog/.git/config",
+		"/D/code/tjtjs-ecstore/app/webapi/lib/order.php",
+		"/D/code/yii2BasicAdmin/nginx.conf",
+		"/D/code/yii2BasicAdmin/config/db.php",
+		"/D/code/yii2BasicAdmin/config/web.php",
+		"/D/code/yii2BasicAdmin/config/params.php",
+		"/D/code/yii2BasicAdmin/views/layouts/main.php",
+		"/D/code/tjtjs-ecstore/custom/webapi/lib/api/rpc/request/order.php",
+		"/D/code/tjtjs-ecstore/app/webapi/lib/api/rpc/request/order.php",
+		"/D/code/tjtjs-ecstore/app/webapi/lib/api/rpc/request.php",
+		"/D/code/yii2BasicAdmin/vendor/mdmsoft/yii2-admin/components/MenuHelper.php",
+		"/D/code/yii2BasicAdmin/models/User.php",
+		"/D/code/yii2BasicAdmin/config/console.php",
+		"/D/code/yii2BasicAdmin/config/test.php",
+		"/D/code/yii2BasicAdmin/config/test_db.php",
+		"/D/code/yii2cms_liufee/common/config/main.php",
+		"/D/code/yii2cms_liufee/common/config/test-local.php",
+		"/D/tbqapp2/.gitignore",
+		"/D/code/yii2BasicAdmin/.gitignore",
+		"/D/code/yii2cms_liufee/frontend/nginx.conf",
+		"/D/code/yii2cms_liufee/backend/nginx.conf",
+		"/D/code/yii2BasicAdmin/README.md",
+		"/D/code/yii2cms_liufee/.gitignore",
+		"/D/code/yii2cms_liufee/README.md",
+		"/E/SQLyog_Ultimate_12.5.0_Downloadly.ir/SQLyog Ultimate 12.5.0/Serial.txt",
+		"/D/code/yii2cms_liufee/common/config/main-local.php",
+		"/D/code/yii2apps_tiens/common/web_api/weiyuan/WeiyuanApi.php",
+		"/D/code/yii2apps_tiens/common/web_api/Curl.php",
+		"/D/code/yiicms_qiyezhan/nginx.conf",
+		"/D/code/yii2blog/nginx.htaccess",
 		"/D/code/yii2-cms/common/config/main-local.php",
 		"/D/code/yii2-cms/README.md",
 		"/D/code/yii2-cms/frontend/nginx.conf",
@@ -457,125 +591,7 @@
 		"/D/code/yiicms/config/db.php",
 		"/D/code/yii2blog/config/db.php",
 		"/D/code/yiicms/nginx.conf",
-		"/D/code/yiicms/.gitignore",
-		"/D/code/yiicms/.git/config",
-		"/D/code/yiicms/init.txt",
-		"/D/code/yii2apps_tiens/backend/controllers/XieyimobanController.php",
-		"/D/code/yii2apps_tiens/backend/views/xieyimoban/add.tpl",
-		"/E/a.html",
-		"/D/code/flaskblog/.docs/待做工作.txt",
-		"/D/code/yii2apps_tiens/backend/controllers/UploadController.php",
-		"/D/code/yii2apps_tiens/frontend/controllers/UploadController.php",
-		"/D/tbqapp2/sh/debian8NginxPhpStart.sh",
-		"/D/tbqapp2/sh/debian8NginxPy3Php7.sh",
-		"/D/code/flaskblog/README.md",
-		"/D/code/flaskblog/uwsgi.ini",
-		"/D/code/flaskblog/nginx.conf",
-		"/D/code/flaskblog/wsgi.py",
-		"/D/code/flaskblog/.env/lib/python3.5/site-packages/flask/app.py",
-		"/D/code/flaskblog/run.py",
-		"/D/tbqapp2/py2-flask/demoapp/demoapp_uwsgi.ini",
-		"/D/tbqapp2/py2-flask/demoapp/hello.py",
-		"/D/tbqapp2/py2-flask/demoapp/nginx.conf",
-		"/D/code/flaskblog/config.py",
-		"/D/code/flaskblog/base.py",
-		"/D/code/flaskblog/requirements.txt",
-		"/D/code/flaskblog/app.py",
-		"/D/code/yii2apps_tiens/common/libs/Code.php",
-		"/D/tbqapp2/.gitignore",
-		"/D/code/yii2apps_tiens/backend/runtime/Smarty/compile/8e0086b25fdb6ca7e910e5a0eaaba72a380b820c_0.file.add.tpl.php",
-		"/D/code/yii2apps_tiens/backend/libs/AdminLog.php",
-		"/D/code/yii2apps_tiens/backend/views/employee-learning/index.tpl",
-		"/D/code/yii2apps_tiens/backend/views/employee-learning/files_manager.tpl",
-		"/D/code/yii2apps_tiens/backend/views/employee-learning/files_view.tpl",
-		"/D/code/yii2apps_tiens/backend/controllers/EmployeeLearningController.php",
-		"/D/code/flaskblog/templates/index.html",
-		"/D/code/flaskblog/templates/admin/index.html",
-		"/D/code/flaskblog/.env/lib/python3.6/site-packages/flask_admin/menu.py",
-		"/D/tbqapp2/git_my.txt",
-		"/D/code/flaskblog/.env/lib/python3.6/site-packages/flask_admin/base.py",
-		"/D/code/yii2blog/.gitignore",
-		"/D/code/yii2apps_tiens/backend/controllers/CompanyController.php",
-		"/D/code/yii2apps_tiens/backend/views/xieyimoban/index.tpl",
-		"/D/code/yii2apps_tiens/backend/libs/ControllerAdmin.php",
-		"/D/code/yii2apps_tiens/backend/web/js/img_upload.js",
-		"/D/code/yii2apps_tiens/backend/views/company/add.tpl",
-		"/D/code/yii2apps_tiens/backend/views/layouts/hui_base.tpl",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/wap/cart/index.html",
-		"/D/code/yii2apps_tiens/backend/views/study-file/index.tpl",
-		"/D/code/yii2apps_tiens/backend/models/ApplicantStudyDocument.php",
-		"/D/code/yii2apps_tiens/backend/models/StudyDocument.php",
-		"/D/code/yii2apps_tiens/backend/views/study-file/add.tpl",
-		"/D/code/tjtjs-ecstore/custom/b2c/view/wap/cart/item/index.html",
-		"/D/code/tjtjs-ecstore/app/pam/lib/account.php",
-		"/D/code/tjtjs-ecstore/config/config.test.php",
-		"/D/code/tjtjs-ecstore/app/pam/lib/auth.php",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/passport.php",
-		"/D/code/tjtjs-ecstore/app/base/lib/session.php",
-		"/D/code/tjtjs-ecstore/app/pam/lib/passport/desktop/basic.php",
-		"/D/code/tjtjs-ecstore/custom/pam/lib/callback.php",
-		"/D/code/tjtjs-ecstore/custom/desktop/lib/controller.php",
-		"/D/code/tjtjs-ecstore/app/desktop/controller/default.php",
-		"/D/code/tjtjs-ecstore/app/base/defined.php",
-		"/D/code/tjtjs-ecstore/app/entermembercenter/controller/default.php",
-		"/D/code/tjtjs-ecstore/app/entermembercenter/controller/register.php",
-		"/D/code/tjtjs-ecstore/app/desktop/lib/controller.php",
-		"/D/code/tjtjs-ecstore/app/aftersales/controller/admin/archive.php",
-		"/D/code/tjtjs-ecstore/app/entermembercenter/lib/auth/use.php",
-		"/D/code/tjtjs-ecstore/index.php",
-		"/D/code/tjtjs-ecstore/app/base/kernel.php",
-		"/D/code/yii2apps_tiens/backend/controllers/StudyFileController.php",
-		"/D/code/tjtjs-ecstore/.git/config",
-		"/D/code/yii2apps_tiens/backend/controllers/SiteController.php",
-		"/D/code/yii2apps_tiens/vendor/linslin/yii2-curl/Curl.php",
-		"/C/Users/Administrator/Documents/Tencent Files/51100112/FileRecv/document/controller/DocumentController.java",
-		"/D/code/yii2apps_tiens/common/models/ApplicantProfile.php",
-		"/D/code/yii2apps_tiens/common/models/VApplicantProfile.php",
-		"/D/code/flaskblog/model/article.py",
-		"/D/code/flaskblog/templates/article_view.html",
-		"/D/code/yii2apps_tiens/.git/config",
-		"/D/code/flaskblog/.env/lib/python3.6/site-packages/flask/helpers.py",
-		"/D/code/flaskblog/templates/_article.html",
-		"/D/code/flaskblog/python3.stackdump",
-		"/D/code/flaskblog3/app.py",
-		"/D/code/flaskblog3/config.py",
-		"/D/code/flaskblog2/app.py",
-		"/D/code/flaskblog2/config.py",
-		"/D/code/flaskblog/.gitignore",
-		"/D/code/flaskblog3/requirements.txt",
-		"/D/code/yii2apps_tiens/backend/web/index.php",
-		"/D/code/yii2apps_tiens/common/libs/AdminLog.php",
-		"/E/余罪-常书欣.txt",
-		"/D/tiens_hualang.conf",
-		"/E/Postmanwin64493/使用说明 .txt",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/order.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/changdaojiance/order.php",
-		"/D/code/tjtjs-ecstore/app/tiens/lib/task/jiyin/afterpay.php",
-		"/D/code/yii2apps_tiens/backend/views/applicant/index.tpl",
-		"/D/code/yii2apps_tiens/backend/views/employee-learning/add.tpl",
-		"/D/code/yii2apps_tiens/backend/config/main.php",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_login/mixins.py",
-		"/D/code/flaskblog/env/lib/python2.7/site-packages/flask_security/core.py",
-		"/D/code/flask-admin/examples/auth/app.py",
-		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask/app.py",
-		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/model/create.html",
-		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask_admin/model/base.py",
-		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask/templating.py",
-		"/D/code/flaskblog/env/lib/python3.6/site-packages/flask_admin/base.py",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/site/cart.php",
-		"/D/code/tjtjs-ecstore/app/b2c/view/site/cart/mini_cart.html",
-		"/D/code/flask-admin/flask_admin/templates/bootstrap3/admin/model/create.html",
-		"/D/code/tjtjs-ecstore/custom/b2c/controller/wap/cart.php",
-		"/D/code/flaskblog/.docs/171228.txt",
-		"/D/code/flaskblog/.env_py3/lib/python3.6/site-packages/flask_admin/base.py",
-		"/D/code/flaskblog/static/H-ui.admin/lib/html5shiv.js",
-		"/D/code/flaskblog2/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/master.html",
-		"/D/code/flaskblog2/base.py",
-		"/D/code/flaskblog2/templates/my_master.html",
-		"/D/code/flaskblog2/model/article.py",
-		"/D/code/flaskblog2/requirements.txt",
-		"/D/code/flaskblog2/templates/admin/base.html",
-		"/D/code/flaskblog2/env/lib/python3.6/site-packages/flask_admin/templates/bootstrap3/admin/base.html"
+		"/D/code/yiicms/.gitignore"
 	],
 	"find":
 	{
@@ -586,6 +602,31 @@
 		"height": 113.0,
 		"where_history":
 		[
+			"D:\\code\\galaxy,*.sql",
+			"D:\\code\\galaxy,*.php",
+			"D:\\code\\galaxy",
+			"D:\\code\\galaxy\\common",
+			"D:\\code\\galaxy,*.php",
+			"D:\\code\\galaxy\\star-core",
+			"D:\\code\\galaxy\\common\\config",
+			"D:\\code\\yii2_fecshop_app_advanced,*.php",
+			"D:\\code\\yii2_fecshop_app_advanced",
+			"D:\\code\\yii2_fecshop_app_advanced,*.php",
+			"D:\\code\\yii2_fecshop_app_advanced\\appfront",
+			"D:\\code\\www.tiens.com,*.php",
+			"D:\\code\\phpcms.tiens.com",
+			"D:\\code\\yii2apps_tiens,*.php,*.tpl",
+			"D:\\code\\yii2apps_tiens,*.php,*.html",
+			"D:\\code\\yii2apps_tiens",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\yii2apps_tiens\\backend\\views",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\yii2apps_tiens\\vendor",
+			"D:\\code\\yii2apps_tiens\\backend\\views",
+			"D:\\code\\tjtjs-ecstore,*.php",
+			"D:\\code\\tjtjs-ecstore",
+			"D:\\code\\yii2BasicAdmin",
 			"D:\\code\\yii2apps_tiens,*.php",
 			"D:\\code\\flaskblog",
 			"D:\\tbqapp2\\py2-flask\\demoapp",
@@ -688,31 +729,6 @@
 			"D:\\code\\yii2apps\\appbackend",
 			"D:\\code\\yii2apps",
 			"D:\\code\\yii2apps,*.php",
-			"D:\\code\\tjtjs-ecstore",
-			"D:\\code\\yii2apps,*.php",
-			"D:\\code\\yii2apps",
-			"D:\\code\\yii2apps\\appplus",
-			"D:\\code\\yii2apps\\appblog",
-			"D:\\code\\yii2apps",
-			"D:\\code\\yii2apps\\",
-			"D:\\code\\yii2apps\\appplus",
-			"D:\\code\\yii2apps\\appplus\\views",
-			"D:\\code\\koseven",
-			"D:\\code\\yii2apps\\appplus",
-			"D:\\code\\yii2apps",
-			"D:\\code\\yii2apps\\appplus",
-			"D:\\code\\yii2apps\\appblog",
-			"D:\\code\\yii2apps\\appplus",
-			"D:\\code\\Yii2-Plus",
-			"D:\\code\\yii2apps\\appblog",
-			"D:\\code\\yii2apps\\appplus",
-			"D:\\code\\yii2apps",
-			"D:\\code\\Yii2-Plus",
-			"D:\\code\\yii2apps\\vendor\\mdmsoft\\yii2-admin",
-			"D:\\code\\yii2apps\\appplus",
-			"D:\\code\\yii2apps\\appblog\\views",
-			"D:\\code\\tjtjs-ecstore\\custom\\b2c\\view\\site",
-			"D:\\code\\tjtjs-ecstore\\custom\\b2c\\view\\site\\product",
 			"D:\\code\\tjtjs-ecstore"
 		]
 	},
@@ -721,6 +737,68 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"refund",
+			"withdrawal",
+			"GoogleOpenId",
+			"authManager",
+			"implements ManagerInterface",
+			"ManagerInterface",
+			"authManager",
+			"dektrium",
+			"composer",
+			"extra.asset-installer-paths",
+			"asset",
+			"bower",
+			"actionlogin",
+			"CustomerController",
+			"customercontroller",
+			"defaultLangCode",
+			"cn",
+			"fr",
+			"fecshop.appfront.fancyecommerce.com",
+			"store",
+			"bootstrap",
+			"wwwlogs",
+			"appadmin",
+			"bower",
+			"display_error",
+			"FILE_EXCEEDS_SIZE_LIMIT",
+			"文件尺寸超过设定值",
+			"function createCommand",
+			"createFindCommand",
+			"function createFindCommand",
+			"function createCommand",
+			"function queryAll",
+			"->orderBy",
+			"order",
+			"查看已签协议",
+			"<td>员工编号</td",
+			"last_updated_stamp",
+			"created_stamp",
+			"company_sign_stamp",
+			"sign_stamp",
+			"study_stamp",
+			"order",
+			"tiens_task_changdaojiance",
+			"::do_yeji",
+			"function do_yeji",
+			"->do_yeji",
+			"导入时间",
+			"function do_yeji",
+			"yeji",
+			"function orderby",
+			"sort_name",
+			"sort",
+			"sort_name",
+			"岗位编号",
+			"岗位",
+			"check_order_info",
+			"addencrypt",
+			"::addencrypt",
+			"->addencrypt",
+			"addencrypt",
+			"权益码",
+			"MenuHelper::getAssignedMenu",
 			"Emil II, Sweden, Tier 9",
 			"KV-1, Soviet Union, Tier ",
 			"T-34-85, Soviet Unio",
@@ -786,69 +864,7 @@
 			"function setPostParams",
 			"setPostParams",
 			"function setOption",
-			"router",
-			"created_stamp",
-			"{{if",
-			"def url_for",
-			"delItem",
-			"::do_yeji",
-			"function do_yeji",
-			"submitIt",
-			"dynamic",
-			"class RoleMixin",
-			"class UserMixin",
-			"AttributeError",
-			"class UserMixin",
-			"BaseUserMixin",
-			"class BaseUserMixin",
-			"class UserMixin",
-			"auth_role_permission_ln",
-			"mini_cart.html",
-			"加入购物车成功",
-			"googleapi",
-			"include",
-			"bin",
-			"Email Address",
-			"Not yet signed up",
-			"AdminIndexView",
-			"current_user",
-			"expose",
-			"url_for",
-			"admin_helpers",
-			"templ",
-			"admin",
-			"url_for",
-			"redirect",
-			"login",
-			"AnonymousUser",
-			"login",
-			"login_required",
-			"current_user",
-			"expose",
-			"AdminIndexView",
-			"admin",
-			"index_view",
-			"admin_view",
-			"def has_role",
-			"render_template",
-			"_get_list_value",
-			"current_user",
-			"DateTime",
-			"MyModelView",
-			"Security",
-			"SQLAlchemyUserDatastore",
-			"UserMixin",
-			"BaseUserMixin",
-			"class UserMixin",
-			"UserMixin",
-			"class UserMixin",
-			"create_template",
-			"def create_view",
-			"form-article-add",
-			"editor",
-			"form_excluded_columns",
-			"column_exclude_list",
-			"edit_template"
+			"router"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -935,79 +951,15 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "sh/debian8NginxPy3Php7.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1074,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								238,
-								238
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "sh/startNP",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1902,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1756,
+						"buffer_size": 32870,
 						"regions":
 						{
 							"match":
@@ -1016,20 +968,288 @@
 								"regions":
 								[
 									[
-										237,
-										246
+										192,
+										208
 									],
 									[
-										577,
-										586
+										441,
+										457
 									],
 									[
-										990,
-										999
+										729,
+										745
 									],
 									[
-										1521,
-										1530
+										957,
+										973
+									],
+									[
+										1144,
+										1160
+									],
+									[
+										1168,
+										1184
+									],
+									[
+										1286,
+										1302
+									],
+									[
+										1315,
+										1331
+									],
+									[
+										1506,
+										1522
+									],
+									[
+										1591,
+										1607
+									],
+									[
+										1816,
+										1832
+									],
+									[
+										1908,
+										1924
+									],
+									[
+										2180,
+										2196
+									],
+									[
+										2581,
+										2597
+									],
+									[
+										2931,
+										2947
+									],
+									[
+										3263,
+										3279
+									],
+									[
+										3303,
+										3319
+									],
+									[
+										3596,
+										3612
+									],
+									[
+										3891,
+										3907
+									],
+									[
+										4066,
+										4082
+									],
+									[
+										4274,
+										4290
+									],
+									[
+										4598,
+										4614
+									],
+									[
+										4969,
+										4985
+									],
+									[
+										5218,
+										5234
+									],
+									[
+										5506,
+										5522
+									],
+									[
+										5734,
+										5750
+									],
+									[
+										5921,
+										5937
+									],
+									[
+										5945,
+										5961
+									],
+									[
+										6063,
+										6079
+									],
+									[
+										6092,
+										6108
+									],
+									[
+										6283,
+										6299
+									],
+									[
+										6368,
+										6384
+									],
+									[
+										6593,
+										6609
+									],
+									[
+										6685,
+										6701
+									],
+									[
+										6957,
+										6973
+									],
+									[
+										7358,
+										7374
+									],
+									[
+										7708,
+										7724
+									],
+									[
+										8040,
+										8056
+									],
+									[
+										8080,
+										8096
+									],
+									[
+										8373,
+										8389
+									],
+									[
+										8668,
+										8684
+									],
+									[
+										8843,
+										8859
+									],
+									[
+										9051,
+										9067
+									],
+									[
+										9375,
+										9391
+									],
+									[
+										9786,
+										9813
+									],
+									[
+										9980,
+										10007
+									],
+									[
+										10226,
+										10237
+									],
+									[
+										10504,
+										10515
+									],
+									[
+										10758,
+										10769
+									],
+									[
+										10999,
+										11010
+									],
+									[
+										11251,
+										11262
+									],
+									[
+										11508,
+										11519
+									],
+									[
+										11779,
+										11790
+									],
+									[
+										11988,
+										11999
+									],
+									[
+										12207,
+										12218
+									],
+									[
+										12417,
+										12428
+									],
+									[
+										12640,
+										12651
+									],
+									[
+										12849,
+										12860
+									],
+									[
+										13154,
+										13165
+									],
+									[
+										13495,
+										13507
+									],
+									[
+										30887,
+										30899
+									],
+									[
+										31371,
+										31383
+									],
+									[
+										31825,
+										31837
+									],
+									[
+										32091,
+										32101
+									],
+									[
+										32171,
+										32181
+									],
+									[
+										32205,
+										32215
+									],
+									[
+										32229,
+										32239
+									],
+									[
+										32324,
+										32334
+									],
+									[
+										32371,
+										32381
+									],
+									[
+										32618,
+										32628
+									],
+									[
+										32747,
+										32757
 									]
 								],
 								"scope": ""
@@ -1038,8 +1258,8 @@
 						"selection":
 						[
 							[
-								164,
-								164
+								32870,
+								32870
 							]
 						],
 						"settings":
@@ -1048,13 +1268,79 @@
 							"git_gutter_is_enabled": false,
 							"incomplete_sync": null,
 							"line_numbers": false,
-							"output_tag": 1,
+							"output_tag": 9,
 							"result_base_dir": "",
 							"result_file_regex": "^([^ \t].*):$",
 							"result_line_regex": "^ +([0-9]+):",
 							"scroll_past_end": true,
 							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 12108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sh/debian8NginxPy3Php7.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								598,
+								598
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/code/MoBlog/common/config/main-local.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								262,
+								262
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1065,19 +1351,53 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/D/code/yii2apps_tiens/common/web_api/weiyuan/WeiyuanApi.php",
-					"semi_transient": false,
+					"file": "/D/code/MoBlog/backend/config/main.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 3134,
+						"buffer_size": 1032,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								69,
-								69
+								503,
+								503
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/code/MoBlog/backend/web/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								268,
+								268
 							]
 						],
 						"settings":
@@ -1086,49 +1406,13 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/D/code/yii2apps_tiens/common/web_api/Curl.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3262,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								544,
-								535
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 300.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1186,6 +1470,38 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"common/config/yiirewritemap.ph",
+				"yii2_fecshop_app_advanced\\common\\config\\YiiRewriteMap.php"
+			],
+			[
+				"config/yiirewritemap.php",
+				"yii2_fecshop_app_advanced\\appfront\\config\\YiiRewriteMap.php"
+			],
+			[
+				"vendor/fancyecommerce/fecshop/app/appfront/config/appfront.php",
+				"yii2_fecshop_app_advanced\\vendor\\fancyecommerce\\fecshop\\app\\appfront\\config\\appfront.php"
+			],
+			[
+				"fecshop/components/store",
+				"yii2_fecshop_app_advanced\\vendor\\fancyecommerce\\fecshop\\components\\Store.php"
+			],
+			[
+				"fecshop/config/components/store.ph",
+				"yii2_fecshop_app_advanced\\vendor\\fancyecommerce\\fecshop\\config\\components\\Store.php"
+			],
+			[
+				"apphtml5.php",
+				"yii2_fecshop_app_advanced\\vendor\\fancyecommerce\\fecshop\\app\\apphtml5\\config\\apphtml5.php"
+			],
+			[
+				"fecshop/migrations",
+				"yii2_fecshop_app_advanced\\vendor\\fancyecommerce\\fecshop\\migrations\\README.md"
+			],
+			[
+				"common/config/fecshop_local_services/fecshoplang.php",
+				"yii2_fecshop_app_advanced\\common\\config\\fecshop_local_services\\FecshopLang.php"
+			],
 			[
 				"ii2apps_tiens/backend/libs/adminlog.p",
 				"yii2apps_tiens\\backend\\libs\\AdminLog.php"
@@ -1665,38 +1981,6 @@
 			[
 				"yii2-plus/common/models/loginform.php",
 				"Yii2-Plus\\common\\models\\LoginForm.php"
-			],
-			[
-				"yii2-plus/qiyu/controller.php",
-				"Yii2-Plus\\qiyu\\Controller.php"
-			],
-			[
-				"yii2-plus/backend/models/menu.php",
-				"Yii2-Plus\\backend\\models\\Menu.php"
-			],
-			[
-				"yii2-plus/backend/controllers/usercontroller.php",
-				"Yii2-Plus\\backend\\controllers\\UserController.php"
-			],
-			[
-				"pluvendor/yiisoft/yii2/base/view.php",
-				"Yii2-Plus\\vendor\\yiisoft\\yii2\\base\\View.php"
-			],
-			[
-				"wap/product/info/btn.html",
-				"tjtjs-ecstore\\custom\\b2c\\view\\wap\\product\\info\\btn.html"
-			],
-			[
-				"tjtj/model/member/goods",
-				"tjtjs-ecstore\\app\\b2c\\model\\member\\goods.php"
-			],
-			[
-				"/app/base/kernel.php",
-				"tjtjs-ecstore\\app\\base\\kernel.php"
-			],
-			[
-				"startnp",
-				"tbqapp2\\sh\\startNP"
 			]
 		],
 		"width": 0.0
