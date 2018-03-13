@@ -1,0 +1,311 @@
+/*
+Theme Name: Blog Era
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+
+*/
+
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+blockquote:before,q:before{
+	float:right;right:-10px;
+}
+blockquote p,q p{
+	text-align:right;
+}
+ul,ol{
+	margin:0 3em 1.5em 0;
+}
+li > ul,li > ol{
+	margin-right:1.5em;
+}
+.main-navigation{
+	float:right;
+}
+.main-navigation ul{
+	padding-right:0;
+}
+.main-navigation li{
+	float:right;
+}
+.main-navigation ul ul{
+	float:right;
+	/*right:-999em;*/
+}
+.main-navigation ul ul ul{
+	right:-999em;
+}
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul{
+	right:auto;
+}
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul{
+	right:100%;
+}
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,.post-navigation .nav-previous{
+	float:right;
+}
+.comment-navigation .nav-next,.posts-navigation .nav-next,.post-navigation .nav-next{
+	float:left;text-align:left;
+}
+.screen-reader-text:focus{
+	right:5px;
+}
+.alignleft{
+	float:right;margin-left:1.5em;
+}
+.alignright{
+	float:left;
+	margin-right:1.5em;
+}
+.aligncenter{
+	margin-right:auto;
+	margin-left:auto;
+}
+.wp-caption img[class*="wp-image-"]{
+	margin-right:auto;
+	margin-left:auto;
+}
+.wp-caption-text{
+	right:0;
+}
+.default-layout-full-width .site{
+	float:right !important;
+}
+.blog-col-1,
+.blog-col-2,
+.blog-col-3,
+.blog-col-4,
+.blog-col-5,
+.blog-col-6,
+.blog-col-7,
+.blog-col-8,
+.blog-col-9,
+.blog-col-10,
+.blog-col-11,
+.blog-col-12{
+	float:right;
+	padding-left:15px;
+	padding-right:15px;
+}
+.blog-row{
+	margin-right:-15px;
+	margin-left:-15px;
+}
+.top-address-part ul li i,
+.top-address-part ul li a i{
+	margin-left:10px;
+}
+.social-menu-part.social-left ul{
+	float:right;
+}
+.social-menu-part ul{
+	float:left;
+}
+.site-branding{
+	float:right;
+}
+.blog-slider-caption{
+	text-align:right;
+}
+.popular-post,
+.banner-side.top-part,
+.banner-side.bottom-part{
+	float:right;
+}
+.popular-post .popular-caption{
+	right:45%;
+}
+.blog-content-detail{
+	float:right;
+}
+.blog-content-detail:nth-child(3n+2){
+	margin-left:15px;
+}
+.blog-content-detail:nth-child(3n+3){
+	margin-right:15px;
+}
+.blog-layout-single .blog-content-detail:nth-child(3n+2){
+	margin-left:0px;
+}
+.blog-layout-single .blog-content-detail:nth-child(3n+3){
+	margin-right:0px;
+}
+.owl-nav{
+	right:0;
+}
+.owl-carousel .owl-nav .owl-prev{
+	right:0;
+}
+.owl-carousel .owl-nav .owl-next{
+	left:0;
+	right:auto;
+}
+.blog_era_widget_social.widget ul li{
+	float:right;
+}
+.widget.blog-section{
+	float:right;
+}
+.blog-section .post-featured-image{
+	float:right;
+}
+.blog-section .post,.blog-section .recent-post-wrapper{
+	float:right;
+}
+.v-center{
+	right:50%;
+}
+a.btn:after{
+	margin-right:5px;
+}
+a.btn:hover:after{
+	margin-right:10px;
+}
+.btn-primary:after{
+	right:50%;
+}
+.btn-secondary:after{
+	right:6px;
+}
+.btn-readmore:before{
+	border-left:2px 
+	solid #079CD4;left:-5px;
+}
+.btn-readmore:after{
+	border-right:2px 
+	solid #079CD4;right:-5px;
+}
+.overlay{
+	right:0;
+}
+.site-footer .widget-title{
+	text-align:right;
+}
+.site-footer .widget-title span:before{
+	right:0;
+	margin-right:0;
+}
+.widget-title span:before{
+	right:50%;
+	margin-right:-25px;
+}
+.widget ul ul{
+	padding-right:10px;
+}
+.widget_recent_comments li span a{
+	padding-right:20px!important;
+}
+.entry-content ul li a,.widget ul li a{
+	padding-right:20px;
+}
+.widget_recent_entries ul li a:before,
+.widget_pages li a:before,
+.widget_recent_comments li a:before,
+.widget_meta li a:before, .widget_nav_menu li a:before,
+.widget_categories li a:before,
+.entry-content ul li a:before,
+.widget_archive li a:before{
+	right:0;
+}
+.widget_search .search-field{
+	padding:7px 10px 7px 75px;
+}
+.widget_search .search-submit{
+	left:0;
+}
+.cat-links,
+.tags-links,
+.edit-link,
+.byline,
+.comments-link,
+.posted-on{
+	padding-left:15px;
+}
+.cat-links i,
+.entry-meta span i,
+.comments-link i,
+.tags-links i{
+	margin-left:5px;
+}
+.entry-content ol,
+.entry-content ul{
+	margin-right:0;
+}
+.entry-content ol li,
+.entry-content ul li{
+	text-align:right;
+}
+.navigation .nav-links .nav-previous a{
+	padding-right:30px;
+}
+.navigation .nav-links .nav-next a{
+	padding-left:30px;
+}
+.navigation .nav-previous:before{
+	right:13px;
+}
+.navigation .nav-next:after{
+	left:13px;
+}
+.navigation .nav-previous:hover:before{
+	right:0px;
+}
+.navigation .nav-next:hover:after{
+	left:0;
+}
+.footer-bottom,
+.banner-site,
+.banner-slider,
+.main-menu,.top-search,
+.social-menu-part,
+.top-menu{
+	float:right;
+}
+.global-layout-left #primary{
+	float:left;
+}
+.back-to-top{
+	left:30px;
+}
+
+
+@media screen and (max-width:1200px){
+    .blog-content-detail:nth-child(3n+3){
+    	margin-right:12px;
+    }
+    .blog-content-detail:nth-child(3n+2){
+    	margin-left:12px;
+    }
+}
+@media screen and (max-width:991px){
+    .blog-content-detail:nth-child(3n+3){
+    	margin-right:9px;
+    }
+    .blog-content-detail:nth-child(3n+2){
+    	margin-left:9px;
+    }
+}
+@media screen and (max-width:767px){
+    .banner-side.bottom-part{
+    	padding-right:7px;
+    }
+    .banner-side.top-part{
+    	padding-left:7px;
+    }
+}
+@media screen and (max-width:551px){
+    .widget.widget_recent_comments ul li < a{
+    	padding-right:0;
+    }
+}
+
