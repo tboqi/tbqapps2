@@ -1,5 +1,6 @@
 import sqlalchemy
-from sqlalchemy import create_engine, Column, Integer, String, DateTime
+import json
+from sqlalchemy import create_engine, Column, Integer, String, DateTime, PrimaryKeyConstraint, and_
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
@@ -66,37 +67,105 @@ class Post(BaseWp):
     export_tabs_detail = Column(String)
 
     def __repr__(self):
-        return self.ID
+        return self.post_title
 
-for article in session.query(Article):
-    post = Post()
-    post.post_author = 1
-    post.post_date = datetime.fromtimestamp(article.create_time)
-    post.post_date_gmt = datetime.fromtimestamp(article.create_time)
-    post.post_content = article.content
-    post.post_title = article.title
-    post.post_excerpt = ''
-    post.post_status = 'publish'
-    post.comment_status = 'open'
-    post.ping_status = 'open'
-    post.post_password = ''
-    post.post_name = article.title
-    post.to_ping = ''
-    post.pinged = ''
-    post.post_modified = datetime.fromtimestamp(article.create_time)
-    post.post_modified_gmt = datetime.fromtimestamp(article.create_time)
-    post.post_content_filtered = ''
-    post.post_parent = 0
-    post.guid = ''
-    post.menu_order = 0
-    post.post_type = 'post'
-    post.post_mime_type = ''
-    post.comment_count = 0
-    post.summary = article.summary
-    post.is_export = 1
-    post.export_category_name = article.category_name
-    post.export_tabs_detail = article.tabs_detail
 
-    sessionWp.add(post)
+class WPRelationship(BaseWp):
+    __tablename__ = 'wp_term_relationships'
+    __table_args__ = (
+        PrimaryKeyConstraint('object_id', 'term_taxonomy_id'),
+    )
+
+    object_id = Column(Integer)
+    term_taxonomy_id = Column(Integer)
+    term_order = Column(Integer)
+
+
+class WPTerm(BaseWp):
+    __tablename__ = 'wp_terms'
+
+    term_id = Column(Integer, primary_key=True)
+    name = Column(String)
+    slug = Column(String)
+    term_group = Column(Integer)
+
+
+class WPTermTaxonomy(BaseWp):
+    __tablename__ = 'wp_term_taxonomy'
+
+    term_taxonomy_id = Column(Integer, primary_key=True)
+    term_id = Column(Integer)
+    taxonomy = Column(String)
+    description = Column(String)
+    parent = Column(Integer)
+    count = Column(Integer)
+
+
+# for article in session.query(Article):
+#     post = Post()
+#     post.post_author = 1
+#     post.post_date = datetime.fromtimestamp(article.create_time)
+#     post.post_date_gmt = datetime.fromtimestamp(article.create_time)
+#     post.post_content = article.content
+#     post.post_title = article.title
+#     post.post_excerpt = ''
+#     post.post_status = 'publish'
+#     post.comment_status = 'open'
+#     post.ping_status = 'open'
+#     post.post_password = ''
+#     post.post_name = article.title
+#     post.to_ping = ''
+#     post.pinged = ''
+#     post.post_modified = datetime.fromtimestamp(article.create_time)
+#     post.post_modified_gmt = datetime.fromtimestamp(article.create_time)
+#     post.post_content_filtered = ''
+#     post.post_parent = 0
+#     post.guid = ''
+#     post.menu_order = 0
+#     post.post_type = 'post'
+#     post.post_mime_type = ''
+#     post.comment_count = 0
+#     post.summary = article.summary
+#     post.is_export = 1
+#     post.export_category_name = article.category_name
+#     post.export_tabs_detail = article.tabs_detail
+
+#     sessionWp.add(post)
+#     sessionWp.commit()
+#     print(post.ID)
+
+for post in sessionWp.query(Post).filter(Post.is_export == 1):
+    tabs = json.loads(post.export_tabs_detail)
+    for tab in tabs:
+        termCount = sessionWp.query(WPTerm).filter(
+            WPTerm.name == tab['tab']).count()
+        if termCount > 0:
+            term = sessionWp.query(WPTerm).filter(
+                WPTerm.name == tab['tab']).first()
+            pass
+        else:
+            term = WPTerm(name=tab['tab'], slug=tab['tab'], term_group=0)
+            sessionWp.add(term)
+            sessionWp.commit()
+            termTaxonomy = WPTermTaxonomy(
+                term_taxonomy_id=term.term_id, term_id=term.term_id, taxonomy='post_tag', description='', parent=0, count=0)
+            sessionWp.add(termTaxonomy)
+            sessionWp.commit()
+
+        relationshipCount = sessionWp.query(WPRelationship).filter(and_(
+            WPRelationship.object_id == post.ID, WPRelationship.term_taxonomy_id == term.term_id)).count()
+        if relationshipCount > 0:
+            break
+        wprelationship = WPRelationship(
+            object_id=post.ID, term_taxonomy_id=term.term_id, term_order=0)
+        sessionWp.add(wprelationship)
+        sessionWp.commit()
+
+    relationshipCount = sessionWp.query(WPRelationship).filter(and_(
+        WPRelationship.object_id == post.ID, WPRelationship.term_taxonomy_id == 2309)).count()
+    if relationshipCount > 0:
+        break
+    wprelationship = WPRelationship(
+        object_id=post.ID, term_taxonomy_id=2309, term_order=0)
+    sessionWp.add(wprelationship)
     sessionWp.commit()
-    print(post.ID)
