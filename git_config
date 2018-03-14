@@ -7,7 +7,7 @@
 	ignorecase = true
 	autocrlf = false
 [remote "origin"]
-	url = git@git.oschina.net:tbq2616/tbqapps2.git
+	url = git@gitee.net:tbq2616/tbqapps2.git
 	url = git@github.com:tboqi/tbqapps2.git
 	url = git@bitbucket.org:tboqi/tbqapps2.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
